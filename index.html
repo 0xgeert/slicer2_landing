@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="h-full bg-black scrollbar-thin scrollbar-track-zinc-900 scrollbar-thumb-white/55 text-white font-sans antialiased" style="zoom: 1">
+  <!-- -->
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://rsms.me" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Conditional Inter Font Loading . Safari is terrible with Inter. The rest likes it -->
+    <script>
+      ;(function () {
+        function isSafari() {
+          return /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+        }
+
+        if (!isSafari()) {
+          var link = document.createElement("link")
+          link.rel = "stylesheet"
+          link.href = "https://rsms.me/inter/inter.css"
+          document.head.appendChild(link)
+        }
+      })()
+    </script>
+
+    <title>Slicer - The most powerful onchain data for crypto traders</title>
+  </head>
+  <body class="h-full">
+    <div id="app" class="h-full"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

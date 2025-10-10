@@ -1,0 +1,691 @@
+<template>
+  <header id="header" class="bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed top-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-8xl mx-auto flex items-center justify-between">
+      <div class="flex items-center">
+        <div class="w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-lg">
+          <span class="text-black text-lg font-bold">S</span>
+        </div>
+        <span class="text-xl font-semibold tracking-tight">Slicer</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-12">
+        <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Express</span>
+        <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Simulate</span>
+        <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Deploy</span>
+      </nav>
+      <button class="bg-transparent border-2 border-accent-500/40 text-accent-500 hover:border-accent hover:bg-accent-500/10 px-6 py-3 rounded-xl transition-all duration-200 font-medium">
+        Join Waitlist
+      </button>
+    </div>
+  </header>
+
+<div class="relative">  
+  <div class="section-linear-bg">&nbsp;</div>
+  <main id="hero" class=" text-white pt-64 pb-24 px-8 flex items-center">
+    <div class="max-w-8xl mx-auto text-center">
+      <div class="mb-16">
+        <h1 class="text-7xl md:text-8xl mb-8 font-black tracking-tight leading-tighter">
+          NO MORE BAGHOLDING.<br>
+          <span class="text-accent-500">NO MORE WAITING.</span>
+        </h1>
+        <p class="text-xl md:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-5xl mx-auto">
+          Express. Simulate. Deploy. Repeat — until profit feels inevitable.
+        </p>
+      </div>
+      
+      <div class="backdrop-blur-sm rounded-2xl p-6   max-w-2xl mx-auto mb-12">
+        <div class="flex rounded-2xl overflow-hidden border-2 transition-all duration-200">
+          <input 
+            type="email" 
+            placeholder="Enter your email address" 
+            class="flex-1 bg-neutral-800/50 backdrop-blur-sm px-6 py-5 text-white placeholder-neutral-400 focus:outline-none text-lg"
+          >
+          <button class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-5 transition-colors duration-200 font-semibold text-lg">
+            Join Waitlist
+          </button>
+        </div>
+        <p class="text-neutral-300 text-balance text-sm mt-4">Get early access when Slicer 2.0 opens private beta.</p>
+      </div>
+      
+      <!-- <div class="mb-16">
+        <p class="text-neutral-400 text-sm mb-8">Why join?</p>
+        <p class="text-neutral-300 text-balance text-lg leading-relaxed max-w-4xl mx-auto">
+          Early members get priority invites, private feedback sessions, and access to the first strategy builder release.
+        </p>
+      </div> -->
+      
+      <div class="grid md:grid-cols-3 gap-12 mb-16 max-w-6xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 group-hover:border-accent-500/20 transition-all duration-300">
+            <div class="text-center">
+              <div class="text-accent-500 mb-2">
+                <i-fa-solid-brain class="w-8 h-8" />
+              </div>
+              <span class="text-neutral-300 text-sm font-medium">English idea → Filter blocks</span>
+            </div>
+          </div>
+          <h3 class="text-xl mb-1 font-semibold">Express Strategy</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">Natural language to precision filters</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 group-hover:border-accent-500/20 transition-all duration-300">
+            <div class="text-center">
+              <div class="text-accent-500 mb-2">
+                <i-fa-solid-chart-line class="w-8 h-8" />
+              </div>
+              <span class="text-neutral-300 text-sm font-medium">Performance chart rising</span>
+            </div>
+          </div>
+          <h3 class="text-xl mb-1 font-semibold">Simulate Results</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">6 months compressed to 6 seconds</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 group-hover:border-accent-500/20 transition-all duration-300">
+            <div class="text-center">
+              <div class="text-accent-500 mb-2">
+                <i-fa-solid-rocket class="w-8 h-8" />
+              </div>
+              <span class="text-neutral-300 text-sm font-medium">Trade execution UI</span>
+            </div>
+          </div>
+          <h3 class="text-xl mb-1 font-semibold">Deploy & Execute</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">Auto-trading with full transparency</p>
+        </div>
+      </div>
+      
+      <p class="text-neutral-500 text-lg font-light">For humans and AI agents alike</p>
+      
+      <!-- <div class="bg-neutral-900/30 backdrop-blur-sm rounded-xl p-6 border border-neutral-700/30 max-w-md mx-auto mb-12">
+        <p class="text-neutral-300 text-balance text-sm italic">
+          "If this existed six months ago, I wouldn't have missed that trade."
+        </p>
+        <p class="text-neutral-500 text-xs mt-2">— Beta tester</p>
+      </div> -->
+      
+
+    </div>
+  </main>
+</div>
+<div class="relative">  
+  <div class="section-linear-bg">&nbsp;</div>
+  <section id="express" class=" text-white py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <div class="max-w-8xl mx-auto">
+    
+      
+      <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
+        <div class="space-y-12">
+          <div>
+            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight mt-24 xl:-ml-8">
+              BUILD VISUALLY OR 
+              <span class="text-accent-500 ">SPEAK YOUR STRATEGY</span> 
+              INTO EXISTENCE.
+            </h2>
+            <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed text-balance">
+              10,000+ on-chain and off-chain filters. Pure creative freedom. Compose by hand, describe in English, or mix both. Total control either way.
+            </p>
+          </div>
+          
+          <div class="space-y-10">
+            <div>
+              <h3 class="text-3xl mb-6 font-bold text-accent-500  xl:-ml-8 text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS.</h3>
+              <div class="space-y-6 text-lg leading-relaxed">
+                <p class="text-neutral-300 text-balance">
+                  Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
+                </p>
+                <p class="text-neutral-300 text-balance">
+                  Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-10 border border-white/5 shadow-2xl">
+          <div class="mb-6">
+            <span class="text-sm text-neutral-400 bg-neutral-800/50 px-4 py-2 rounded-full">Natural Language → Filters</span>
+          </div>
+          
+          <div class="bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 rounded-2xl p-6 mb-8 border border-neutral-700/50">
+            <div class="mb-6">
+              <div class="bg-accent-500/10 border border-accent-500/20 rounded-xl p-6 mb-6">
+                <p class="text-neutral-200 text-lg leading-relaxed font-medium">
+                  "Buy when smart money accumulates for 48h while retail is exiting.<br>
+                  Sell when price doubles or after 72h."
+                </p>
+              </div>
+              
+              <div class="text-center text-accent-500 mb-6 text-sm font-medium">
+                <i-fa-solid-arrow-down class="w-5 h-5 inline" />
+                <span class="ml-2">Translates to entries and exits:</span>
+              </div>
+              
+              <div class="mb-6">
+                <h4 class="text-sm text-accent-500 mb-4 font-semibold uppercase tracking-wide">Entry Conditions:</h4>
+                <div class="space-y-4 mb-6">
+                  <div class="bg-neutral-700/50 rounded-xl p-5 border-l-4 border-accent-500">
+                    <div class="text-sm text-neutral-400 mb-1 font-medium">Filter 1</div>
+                    <div class="text-white font-mono text-sm">holders.slices.smart.net_flow > 0 for 48h</div>
+                  </div>
+                  
+                  <div class="bg-neutral-700/50 rounded-xl p-5 border-l-4 border-accent-500">
+                    <div class="text-sm text-neutral-400 mb-1 font-medium">Filter 2</div>
+                    <div class="text-white font-mono text-sm">holders.slices.retail.net_flow < 0 for 48h</div>
+                  </div>
+                </div>
+                
+                <div class="h-px bg-gradient-to-r from-transparent via-neutral-600 to-transparent mb-6"></div>
+                
+                <h4 class="text-sm text-accent-500 mb-4 font-semibold uppercase tracking-wide">Exit Conditions:</h4>
+                <div class="space-y-4">
+                  <div class="bg-neutral-700/50 rounded-xl p-5 border-l-4 border-accent-500">
+                    <div class="text-sm text-neutral-400 mb-1 font-medium">Filter 3</div>
+                    <div class="text-white font-mono text-sm">price.usd_change >= 100%</div>
+                  </div>
+                  
+                  <div class="bg-neutral-700/50 rounded-xl p-5 border-l-4 border-accent-500">
+                    <div class="text-sm text-neutral-400 mb-1 font-medium">Filter 4</div>
+                    <div class="text-white font-mono text-sm">time_held >= 72h</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="flex space-x-3">
+              <div class="w-3 h-3 bg-accent-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
+              <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
+              <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
+              <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
+            </div>
+            <div class="flex space-x-3">
+              <button class="w-10 h-10 bg-neutral-800 hover:bg-neutral-700 rounded-full flex items-center justify-center transition-colors duration-200 border border-neutral-700">
+                <i-fa-solid-chevron-left class="w-4 h-4 text-neutral-400" />
+              </button>
+              <button class="w-10 h-10 bg-neutral-800 hover:bg-neutral-700 rounded-full flex items-center justify-center transition-colors duration-200 border border-neutral-700">
+                <i-fa-solid-chevron-right class="w-4 h-4 text-neutral-400" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+          <div class="text-center">
+            <div class="flex items-center justify-center mx-auto mb-4">
+              <i-heroicons-solid-light-bulb class="w-10 h-10 text-accent-600" />
+            </div>
+            <h4 class="mb-2 font-semibold text-lg leading-tight">Natural Language</h4>
+            <p class="text-neutral-400 text-sm leading-tight">Describe strategies in plain English</p>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+          <div class="text-center">
+            <div class="flex items-center justify-center mx-auto mb-4">
+              <i-heroicons-solid-funnel class="w-10 h-10 text-accent-600" />
+            </div>
+            <h4 class="mb-2 font-semibold text-lg leading-tight">Precision Filtering</h4>
+            <p class="text-neutral-400 text-sm leading-tight">Hand-craft with 10,000+ metrics</p>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+          <div class="text-center">
+            <div class="flex items-center justify-center mx-auto mb-4">
+              <i-heroicons-solid-square-2-stack class="w-10 h-10 text-accent-600" />
+            </div>
+            <h4 class="mb-2 font-semibold text-lg leading-tight">Stacked Sources</h4>
+            <p class="text-neutral-400 text-sm leading-tight">Combine external signals with your filters</p>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+          <div class="text-center">
+            <div class="flex items-center justify-center mx-auto mb-4">
+              <i-heroicons-solid-chart-bar class="w-10 h-10 text-accent-600" />
+            </div>
+            <h4 class="mb-2 font-semibold text-lg leading-tight">Behavioral Signals</h4>
+            <p class="text-neutral-400 text-sm leading-tight">Track wallet patterns and holder dynamics</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="relative">  
+  <div class="section-linear-bg">&nbsp;</div>
+  <section id="simulate" class=" text-white py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto">
+      
+      
+      <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-10 border border-white/5 shadow-2xl">
+          <div class="mb-8">
+            <h3 class="text-xl mb-1 font-semibold">Strategy: "Buy when smart money accumulates + sell at 2x or after 72h"</h3>
+            <p class="text-neutral-400 text-sm">(Example results for demo)</p>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
+              <div class="text-3xl text-accent-500 font-bold mb-1">+247%</div>
+              <div class="text-neutral-400 text-sm font-medium">ROI</div>
+            </div>
+            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
+              <div class="text-3xl font-bold mb-1">68%</div>
+              <div class="text-neutral-400 text-sm font-medium">Win Rate</div>
+            </div>
+            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
+              <div class="text-3xl text-red-400 font-bold mb-1">-18%</div>
+              <div class="text-neutral-400 text-sm font-medium">Max DD</div>
+            </div>
+            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
+              <div class="text-3xl font-bold mb-1">2.4</div>
+              <div class="text-neutral-400 text-sm font-medium">Sharpe</div>
+            </div>
+            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
+              <div class="text-3xl font-bold mb-1">4.2d</div>
+              <div class="text-neutral-400 text-sm font-medium">Avg Hold</div>
+            </div>
+            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
+              <div class="text-3xl font-bold mb-1">43</div>
+              <div class="text-neutral-400 text-sm font-medium">Total Trades</div>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <div class="flex justify-between text-sm text-neutral-400 mb-3">
+              <span>6 months → 6 seconds animation</span>
+              <span>Progress: 100%</span>
+            </div>
+            <div class="w-full bg-neutral-700 rounded-full h-3 overflow-hidden">
+              <div class="bg-gradient-to-r from-accent to-accent-hover h-3 rounded-full w-full transition-all duration-300"></div>
+            </div>
+          </div>
+          
+          <div class="h-64 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-2xl mb-8 flex items-center justify-center border border-neutral-700/30">
+            <div class="text-center">
+              <div class="text-accent-500 mb-3">
+                <i-fa-solid-chart-area class="w-10 h-10" />
+              </div>
+              <span class="text-neutral-400 font-medium">Equity curve visualization</span>
+            </div>
+          </div>
+          
+          <div class="space-y-6">
+            <div>
+              <h4 class="mb-4 font-semibold text-accent-500">Exit Breakdown:</h4>
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-3">
+                  <span>• TP 100%: 18 trades</span>
+                  <span class="text-accent-500 font-medium">+284%</span>
+                </div>
+                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-3">
+                  <span>• Time 72h: 25 trades</span>
+                  <span class="text-accent-500 font-medium">+76%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="mb-4 font-semibold text-accent-500">Trade Size Impact:</h4>
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-3">
+                  <span>• $100:</span>
+                  <span>+247% (0.3% slip)</span>
+                </div>
+                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-3">
+                  <span>• $1,000:</span>
+                  <span>+213% (2.1%)</span>
+                </div>
+                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-3">
+                  <span>• $10,000:</span>
+                  <span>+156% (8.7%)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="w-full bg-accent-500 hover:bg-accent-600 text-black py-4 rounded-xl mt-8 transition-colors duration-200 font-semibold text-lg">
+            Run Simulation
+          </button>
+        </div>
+        
+        <div class="lg:text-right space-y-12 mt-24">
+          <div>
+            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-mr-8">
+              KNOW IF IT WINS 
+              <span class="text-accent-500  ">BEFORE YOU TRADE IT.</span>
+            </h2>
+            <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed text-balance text-balnce">
+              Replay six months in six seconds. See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
+            </p>
+          </div>
+          
+          <div class="space-y-8 text-lg">
+            <p class="text-neutral-300 text-balance leading-relaxed">
+              Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
+            </p>
+            
+            <h3 class="text-3xl mb-6 font-bold text-accent-500 text-balance xl:-mr-8">FLEXIBLE EXITS MATCH YOUR STRATEGY.</h3>
+            <p class="text-neutral-300 text-balance leading-relaxed">
+              Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-20">
+        <h3 class="text-4xl text-center mb-16 font-bold">Advanced Simulation Features</h3>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+            <div class="flex items-center space-x-4">
+              <div class="flex items-center justify-center flex-shrink-0">
+                <i-heroicons-solid-clock class="w-10 h-10 text-accent-600" />
+              </div>
+              <div class="flex-1">
+                <h4 class="mb-1 font-semibold text-lg leading-tight">Real-Time Backtesting</h4>
+                <p class="text-neutral-400 text-sm leading-tight">Historical data with live market conditions simulation</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+            <div class="flex items-center space-x-4">
+              <div class="flex items-center justify-center flex-shrink-0">
+                <i-heroicons-solid-chart-bar-square class="w-10 h-10 text-accent-600" />
+              </div>
+              <div class="flex-1">
+                <h4 class="mb-1 font-semibold text-lg leading-tight">Slippage Analysis</h4>
+                <p class="text-neutral-400 text-sm leading-tight">Accurate trade size impact modeling</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+            <div class="flex items-center space-x-4">
+              <div class="flex items-center justify-center flex-shrink-0">
+                <i-heroicons-solid-shield-check class="w-10 h-10 text-accent-600" />
+              </div>
+              <div class="flex-1">
+                <h4 class="mb-1 font-semibold text-lg leading-tight">Risk Metrics</h4>
+                <p class="text-neutral-400 text-sm leading-tight">Comprehensive drawdown and volatility analysis</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="relative">  
+  <div class="section-linear-bg">&nbsp;</div>
+  <section id="deploy" class=" text-white py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto">
+      
+      <div class="text-center mb-20">
+        <h2 class="text-6xl mb-10 font-black tracking-tight">
+          <span class="text-accent-500 ">DEPLOY ON YOUR TERMS.</span>
+        </h2>
+        <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto">
+          Hands-free or hands-on — either way, you're in charge. Full automation with complete transparency, or human-in-the-loop for final calls.
+        </p>
+        <p class="text-accent-500 text-lg mt-4 font-medium">Coming in private beta.</p>
+      </div>
+      
+      <div class="grid lg:grid-cols-5 gap-12">
+        <div class="lg:col-span-1">
+          <h3 class="text-xl mb-8 font-semibold text-accent-500">What's your style?</h3>
+          <div class="space-y-4">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-l-4 border-accent border border-white/5 relative">
+              <h4 class="mb-2 font-semibold">Hands-Off Auto-Trading</h4>
+              <p class="text-neutral-400 text-sm">Set it. Forget it. Smile.</p>
+            </div>
+            <div class="bg-neutral-800/50 rounded-2xl p-6 border border-neutral-700/50 hover:bg-neutral-700/50 cursor-pointer transition-all duration-200">
+              <h4 class="mb-2 font-semibold">Human-in-the-Loop</h4>
+              <p class="text-neutral-400 text-sm">Get notified. Approve trades. Stay in control.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:col-span-4">
+          <h3 class="text-3xl mb-8 font-bold text-accent-500">HANDS-OFF AUTO-TRADING</h3>
+          
+          <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
+              <h4 class="mb-6 font-semibold text-xl">Trade Configuration</h4>
+              <div class="space-y-6">
+                <div>
+                  <label class="block text-sm text-neutral-400 mb-2 font-medium">Trade Size</label>
+                  <input type="text" value="$1,000" class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200">
+                </div>
+                <div>
+                  <label class="block text-sm text-neutral-400 mb-2 font-medium">Max Slippage</label>
+                  <input type="text" value="2%" class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200">
+                </div>
+                <div>
+                  <label class="block text-sm text-neutral-400 mb-2 font-medium">Gas Priority</label>
+                  <select class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200">
+                    <option>Medium</option>
+                    <option>High</option>
+                    <option>Low</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm text-neutral-400 mb-2 font-medium">Notifications</label>
+                  <select class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200">
+                    <option>Telegram</option>
+                    <option>Email</option>
+                    <option>Both</option>
+                  </select>
+                </div>
+              </div>
+              
+              <button class="w-full bg-accent-500 hover:bg-accent-600 text-black py-4 rounded-xl mt-8 transition-colors duration-200 font-semibold text-lg">
+                Deploy Strategy
+              </button>
+            </div>
+            
+            <div class="space-y-8">
+              <div class="space-y-4 text-lg">
+                <p class="text-neutral-300 text-balance">✓ Trades executed 24/7.</p>
+                <p class="text-neutral-300 text-balance">✓ Every entry logged.</p>
+                <p class="text-neutral-300 text-balance">✓ Every exit transparent.</p>
+                <p class="text-neutral-300 text-balance">✓ Full P&L tracking.</p>
+                <p class="text-accent-500 font-medium">✓ Switch modes anytime.</p>
+              </div>
+              
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
+                <h5 class="mb-4 font-semibold text-accent-500">Security Features</h5>
+                <ul class="text-sm text-neutral-400 space-y-2 leading-relaxed">
+                  <li>• Non-custodial wallet integration</li>
+                  <li>• Configurable position limits</li>
+                  <li>• Emergency stop functionality</li>
+                  <li>• Real-time monitoring dashboard</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-20 grid md:grid-cols-3 gap-10">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center justify-center flex-shrink-0">
+              <i-heroicons-solid-cpu-chip class="w-10 h-10 text-accent-600" />
+            </div>
+            <div class="flex-1">
+              <h4 class="mb-1 font-semibold text-lg leading-tight">Full Automation</h4>
+              <p class="text-neutral-400 text-sm leading-tight">24/7 execution with complete transparency</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center justify-center flex-shrink-0">
+              <i-heroicons-solid-user-circle class="w-10 h-10 text-accent-600" />
+            </div>
+            <div class="flex-1">
+              <h4 class="mb-1 font-semibold text-lg leading-tight">Human Oversight</h4>
+              <p class="text-neutral-400 text-sm leading-tight">Approve trades before execution</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center justify-center flex-shrink-0">
+              <i-heroicons-solid-cog-6-tooth class="w-10 h-10 text-accent-600" />
+            </div>
+            <div class="flex-1">
+              <h4 class="mb-1 font-semibold text-lg leading-tight">Custom Integration</h4>
+              <p class="text-neutral-400 text-sm leading-tight">Webhook support for external systems</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="relative">  
+  <div class="section-linear-bg">&nbsp;</div>
+  <section id="cta" class="text-white py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="mb-16">
+        <h2 class="text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight">
+          STOP GUESSING.<br>
+          <span class="text-accent-500">START SLICING.</span>
+        </h2>
+        <h3 class="text-4xl mb-8 font-bold text-accent-500">JOIN THE WAITLIST FOR EARLY ACCESS.</h3>
+      </div>
+      
+      <div class="max-w-lg mx-auto mb-12">
+        <div class="flex rounded-2xl overflow-hidden border-2 border-accent-500/20 focus-within:border-accent transition-all duration-200">
+          <input 
+            type="email" 
+            placeholder="Enter your email address" 
+            class="flex-1 bg-neutral-800/50 backdrop-blur-sm px-6 py-5 text-white placeholder-neutral-400 focus:outline-none text-lg"
+          >
+          <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg">
+            Claim Your Spot
+          </button>
+        </div>
+      </div>
+      
+      <div class="space-y-4 mb-12">
+        <p class="text-neutral-400 font-medium">Be first to access the private beta.</p>
+        <p class="text-neutral-500 text-sm">No spam. Unsubscribe anytime.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="flex items-center justify-center space-x-3 text-neutral-400">
+          <i-heroicons-solid-user-group class="w-5 h-5 text-accent-600" />
+          <span class="text-sm">First 500 users</span>
+        </div>
+        <div class="flex items-center justify-center space-x-3 text-neutral-400">
+          <i-heroicons-solid-chat-bubble-bottom-center-text class="w-5 h-5 text-accent-600" />
+          <span class="text-sm">Private feedback sessions</span>
+        </div>
+        <div class="flex items-center justify-center space-x-3 text-neutral-400">
+          <i-heroicons-solid-star class="w-5 h-5 text-accent-600" />
+          <span class="text-sm">Priority access</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="relative">  
+  <footer id="footer" class="bg-black text-neutral-400 py-16  border-t border-white/5  px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto">
+      <div class="grid md:grid-cols-5 gap-12 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center mb-6">
+            <div class="w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-lg">
+              <span class="text-black text-lg font-bold">S</span>
+            </div>
+            <span class="text-xl text-white font-semibold tracking-tight">Slicer</span>
+          </div>
+          <p class="text-lg leading-relaxed max-w-md">Express. Simulate. Deploy. Repeat — until profit feels inevitable.</p>
+          <div class="flex space-x-6 mt-8">
+            <span class="hover:text-accent-500 transition-colors cursor-pointer text-xl">
+              <i-fab-twitter class="w-5 h-5" />
+            </span>
+            <span class="hover:text-accent-500 transition-colors cursor-pointer text-xl">
+              <i-fab-linkedin class="w-5 h-5" />
+            </span>
+            <span class="hover:text-accent-500 transition-colors cursor-pointer text-xl">
+              <i-fab-github class="w-5 h-5" />
+            </span>
+            <span class="hover:text-accent-500 transition-colors cursor-pointer text-xl">
+              <i-fab-discord class="w-5 h-5" />
+            </span>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-white mb-6 font-semibold text-lg">Product</h4>
+          <ul class="space-y-3">
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Express</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Simulate</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Deploy</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Analytics</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">API</span></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white mb-6 font-semibold text-lg">Resources</h4>
+          <ul class="space-y-3">
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Documentation</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">API Reference</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Community</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Blog</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Tutorials</span></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white mb-6 font-semibold text-lg">Company</h4>
+          <ul class="space-y-3">
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">About</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Careers</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Privacy</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Terms</span></li>
+            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Security</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm">© 2025 Slicer Inc. All rights reserved.</p>
+        <div class="flex items-center space-x-6 mt-4 md:mt-0">
+          <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Privacy Policy</span>
+          <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Terms of Service</span>
+          <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Cookie Policy</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</template>
+
+<script>
+
+export default {
+  name: "App",
+  
+}
+</script>
+
+<style scoped>
+
+.section-linear-bg{
+  @apply bg-gradient-to-b from-zinc-800 to-transparent absolute h-[300px] w-full -z-10;
+}
+</style>
