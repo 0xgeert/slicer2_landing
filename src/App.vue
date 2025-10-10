@@ -142,9 +142,10 @@
             </p>
           </div>
           
-          <div class="space-y-10">
+          <!-- EVERY SIGNAL, EVERY SLICE section - desktop only -->
+          <div class="hidden lg:block space-y-10">
             <div>
-              <h3 class="text-2xl lg:text-3xl mb-6 font-bold text-accent-500  xl:-ml-8 lg:text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+              <h3 class="text-2xl lg:text-3xl mb-6 font-bold text-accent-500 xl:-ml-8 lg:text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
               <div class="space-y-6 text-lg leading-relaxed">
                 <p class="text-neutral-300 lg:text-balance">
                   Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
@@ -157,7 +158,7 @@
           </div>
         </div>
         
-        <div class="lg:mt-12 xl:-mr-8">
+        <div class="-mt-20 lg:mt-12 xl:-mr-8">
           <div class="mb-8">
             <div class="flex space-x-3 justify-center">
               <div class="w-3 h-3 bg-accent-500 rounded-full"></div>
@@ -168,7 +169,7 @@
             </div>
           </div>
 
-            <div class="mb-8">
+            <div class="lg:mb-8">
               <div class="flex flex-col items-center space-y-4">
                 <!-- Speech bubble container -->
                 <div class="relative inline-block">
@@ -234,7 +235,20 @@
         </div>
       </div>
       
-      <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-4 -mt-12 font-bold">Advanced Expression Features</h3>
+      <!-- EVERY SIGNAL, EVERY SLICE section - moved below right column for mobile -->
+      <div class="lg:hidden mb-12">
+        <h3 class="text-2xl lg:text-3xl mb-6 font-bold text-accent-500 text-center lg:text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+        <div class="space-y-6 text-lg leading-relaxed">
+          <p class="text-neutral-300 lg:text-balance">
+            Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
+          </p>
+          <p class="text-neutral-300 lg:text-balance">
+            Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
+          </p>
+        </div>
+      </div>
+      
+      <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-4  font-bold">Advanced Expression Features</h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
           <div class="text-center">
