@@ -481,7 +481,7 @@
       </div>
       
       <div>
-        <h3 class="text-2xl log:text-4xl text-center mb-4 lg:mb-16 font-bold">Advanced Simulation Features</h3>
+        <h3 class="text-2xl log:text-4xl text-center mb-6 font-bold lg:hidden">Advanced Simulation Features</h3>
         <div class="grid md:grid-cols-3 gap-4 lg:gap-10">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
