@@ -2,10 +2,7 @@
   <header id="header" class="bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed top-0 w-full z-50 transition-all duration-300">
     <div class="max-w-8xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
-        <div class="w-10 h-10 bg-gradient-to-br from-accent-500 to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-lg">
-          <span class="text-black text-lg font-bold">S</span>
-        </div>
-        <span class="text-xl font-semibold tracking-tight">Slicer</span>
+        <img src="/src/assets/logo.png" alt="Slicer" class="h-8 w-auto">
       </div>
       <nav class="hidden md:flex items-center space-x-12">
         <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Express</span>
@@ -20,9 +17,14 @@
 
 <div class="relative">  
   <div class="section-linear-bg">&nbsp;</div>
-  <main id="hero" class=" text-white pt-64 pb-24 px-8 flex items-center">
-    <div class="max-w-8xl mx-auto text-center">
-      <div class="mb-16">
+
+  <main id="hero" class=" text-white pt-64 pb-24 px-8 flex items-center relative">
+
+    <div class="max-w-8xl mx-auto text-center relative z-10">
+
+      <div class="mb-16 relative">
+      <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/15 to-transparent blur-3xl pointer-events-none"></div>
+
         <h1 class="text-7xl md:text-8xl mb-8 font-black tracking-tight leading-tighter">
           NO MORE BAGHOLDING.<br>
           <span class="text-accent-500">NO MORE WAITING.</span>
@@ -54,8 +56,8 @@
       </div> -->
       
       <div class="grid md:grid-cols-3 gap-12 mb-16 max-w-6xl mx-auto">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
-          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 group-hover:border-accent-500/20 transition-all duration-300">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
+          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50  transition-all duration-300">
             <div class="text-center">
               <div class="text-accent-500 mb-2">
                 <i-fa-solid-brain class="w-8 h-8" />
@@ -67,8 +69,8 @@
           <p class="text-neutral-400 text-sm leading-relaxed">Natural language to precision filters</p>
         </div>
         
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
-          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 group-hover:border-accent-500/20 transition-all duration-300">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
+          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50  transition-all duration-300">
             <div class="text-center">
               <div class="text-accent-500 mb-2">
                 <i-fa-solid-chart-line class="w-8 h-8" />
@@ -80,8 +82,8 @@
           <p class="text-neutral-400 text-sm leading-relaxed">6 months compressed to 6 seconds</p>
         </div>
         
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
-          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 group-hover:border-accent-500/20 transition-all duration-300">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
+          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
               <div class="text-accent-500 mb-2">
                 <i-fa-solid-rocket class="w-8 h-8" />
@@ -172,7 +174,11 @@
                   <i-fa-solid-arrow-down class="w-6 h-6 inline" />
                 </div>
                 
-                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 w-full max-w-2xl shadow-lg">
+                <!-- Large radial glow surrounding the card -->
+                <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
+          
+
+                <div class="bg-zinc-950/80 rounded-2xl p-6 border border-white/10 w-full max-w-2xl shadow-2xl relative z-10">
                   <h4 class="font-semibold text-accent-500 text-sm mb-3">Entry Conditions:</h4>
                   <div class="space-y-3">
                     <div class="bg-white/5 rounded-xl px-5 py-3 flex items-center justify-between ">
@@ -191,7 +197,7 @@
                   <i-fa-solid-arrow-down class="w-6 h-6 inline" />
                 </div>
                 
-                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 w-full max-w-2xl shadow-lg">
+                <div class="bg-zinc-950/80 rounded-2xl p-6 border border-white/10 w-full max-w-2xl shadow-2xl relative z-10">
                   <h4 class="font-semibold text-accent-500 text-sm mb-3">Exit Conditions:</h4>
                   <div class="space-y-3">
                     <div class="bg-white/5  rounded-xl px-5 py-3 flex items-center justify-between ">
@@ -213,7 +219,7 @@
       </div>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
           <div class="text-center">
             <div class="flex items-center justify-center mx-auto mb-4">
               <i-heroicons-solid-light-bulb class="w-10 h-10 text-accent-600" />
@@ -223,7 +229,7 @@
           </div>
         </div>
         
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
           <div class="text-center">
             <div class="flex items-center justify-center mx-auto mb-4">
               <i-heroicons-solid-funnel class="w-10 h-10 text-accent-600" />
@@ -233,7 +239,7 @@
           </div>
         </div>
         
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
           <div class="text-center">
             <div class="flex items-center justify-center mx-auto mb-4">
               <i-heroicons-solid-square-2-stack class="w-10 h-10 text-accent-600" />
@@ -243,7 +249,7 @@
           </div>
         </div>
         
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 group">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
           <div class="text-center">
             <div class="flex items-center justify-center mx-auto mb-4">
               <i-heroicons-solid-chart-bar class="w-10 h-10 text-accent-600" />
@@ -263,95 +269,100 @@
       
       
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
-        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-7 border border-white/5 shadow-2xl">
-          <div class="mb-6">
-            <h3 class="text-lg mb-1 font-semibold">Strategy: "Buy when smart money accumulates + sell at 2x or after 72h"</h3>
-            <p class="text-neutral-400 text-xs">(Example results for demo)</p>
-          </div>
+        <div class="relative">
+          <!-- Large radial glow surrounding the card -->
+          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
           
-          <div class="grid grid-cols-2 gap-4 mb-6">
-            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
-              <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-accent-500 via-green-400 to-accent-500 bg-clip-text text-transparent">+247%</div>
-              <div class="text-neutral-400 text-xs font-medium">ROI</div>
+          <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl">
+            <div class="mb-6">
+              <h3 class="text-lg mb-1 font-semibold">Strategy: "Buy when smart money accumulates + sell at 2x or after 72h"</h3>
+              <p class="text-neutral-400 text-xs">(Example results for demo)</p>
             </div>
-            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
-              <div class="text-3xl font-bold mb-1">68%</div>
-              <div class="text-neutral-400 text-xs font-medium">Win Rate</div>
-            </div>
-            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
-              <div class="text-3xl text-red-400 font-bold mb-1">-18%</div>
-              <div class="text-neutral-400 text-xs font-medium">Max DD</div>
-            </div>
-            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
-              <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">2.4</div>
-              <div class="text-neutral-400 text-xs font-medium">Sharpe</div>
-            </div>
-            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
-              <div class="text-3xl font-bold mb-1">4.2d</div>
-              <div class="text-neutral-400 text-xs font-medium">Avg Hold</div>
-            </div>
-            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
-              <div class="text-3xl font-bold mb-1">43</div>
-              <div class="text-neutral-400 text-xs font-medium">Total Trades</div>
-            </div>
-          </div>
-          
-          <div class="mb-6">
-            <div class="flex justify-between text-xs text-neutral-400 mb-2">
-              <span>6 months → 6 seconds animation</span>
-              <span>Progress: 100%</span>
-            </div>
-            <div class="w-full bg-neutral-700 rounded-full h-2 overflow-hidden">
-              <div class="bg-gradient-to-r from-accent-500 to-accent-hover h-2 rounded-full w-full transition-all duration-300"></div>
-            </div>
-          </div>
-          
-          <div class="h-48 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-2xl mb-6 flex items-center justify-center border border-neutral-700/30">
-            <div class="text-center">
-              <div class="text-accent-500 mb-3">
-                <i-fa-solid-chart-area class="w-8 h-8" />
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+                <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-accent-500 via-green-400 to-accent-500 bg-clip-text text-transparent">+247%</div>
+                <div class="text-neutral-400 text-xs font-medium">ROI</div>
               </div>
-              <span class="text-neutral-400 text-sm font-medium">Equity curve visualization</span>
+              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+                <div class="text-3xl font-bold mb-1">68%</div>
+                <div class="text-neutral-400 text-xs font-medium">Win Rate</div>
+              </div>
+              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+                <div class="text-3xl text-red-400 font-bold mb-1">-18%</div>
+                <div class="text-neutral-400 text-xs font-medium">Max DD</div>
+              </div>
+              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+                <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">2.4</div>
+                <div class="text-neutral-400 text-xs font-medium">Sharpe</div>
+              </div>
+              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+                <div class="text-3xl font-bold mb-1">4.2d</div>
+                <div class="text-neutral-400 text-xs font-medium">Avg Hold</div>
+              </div>
+              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+                <div class="text-3xl font-bold mb-1">43</div>
+                <div class="text-neutral-400 text-xs font-medium">Total Trades</div>
+              </div>
             </div>
-          </div>
-          
-          <div class="space-y-5">
-            <div>
-              <h4 class="mb-3 font-semibold text-accent-500 text-sm">Exit Breakdown:</h4>
-              <div class="space-y-2 text-sm">
-                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
-                  <span class="text-sm">• TP 100%: 18 trades</span>
-                  <span class="text-accent-500 font-semibold bg-gradient-to-r from-accent-500 to-green-400 bg-clip-text text-transparent">+284%</span>
+            
+            <div class="mb-6">
+              <div class="flex justify-between text-xs text-neutral-400 mb-2">
+                <span>6 months → 6 seconds animation</span>
+                <span>Progress: 100%</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2 overflow-hidden">
+                <div class="bg-gradient-to-r from-accent-500 to-accent-hover h-2 rounded-full w-full transition-all duration-300"></div>
+              </div>
+            </div>
+            
+            <div class="h-48 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-2xl mb-6 flex items-center justify-center border border-neutral-700/30">
+              <div class="text-center">
+                <div class="text-accent-500 mb-3">
+                  <i-fa-solid-chart-area class="w-8 h-8" />
                 </div>
-                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
-                  <span class="text-sm">• Time 72h: 25 trades</span>
-                  <span class="text-accent-500 font-semibold">+76%</span>
+                <span class="text-neutral-400 text-sm font-medium">Equity curve visualization</span>
+              </div>
+            </div>
+            
+            <div class="space-y-5">
+              <div>
+                <h4 class="mb-3 font-semibold text-accent-500 text-sm">Exit Breakdown:</h4>
+                <div class="space-y-2 text-sm">
+                  <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
+                    <span class="text-sm">• TP 100%: 18 trades</span>
+                    <span class="text-accent-500 font-semibold bg-gradient-to-r from-accent-500 to-green-400 bg-clip-text text-transparent">+284%</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
+                    <span class="text-sm">• Time 72h: 25 trades</span>
+                    <span class="text-accent-500 font-semibold">+76%</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h4 class="mb-3 font-semibold text-accent-500 text-sm">Trade Size Impact:</h4>
+                <div class="space-y-2 text-sm">
+                  <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
+                    <span class="text-sm">• $100:</span>
+                    <span class="text-sm">+247% (0.3% slip)</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
+                    <span class="text-sm">• $1,000:</span>
+                    <span class="text-sm">+213% (2.1%)</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
+                    <span class="text-sm">• $10,000:</span>
+                    <span class="text-sm">+156% (8.7%)</span>
+                  </div>
                 </div>
               </div>
             </div>
             
-            <div>
-              <h4 class="mb-3 font-semibold text-accent-500 text-sm">Trade Size Impact:</h4>
-              <div class="space-y-2 text-sm">
-                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
-                  <span class="text-sm">• $100:</span>
-                  <span class="text-sm">+247% (0.3% slip)</span>
-                </div>
-                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
-                  <span class="text-sm">• $1,000:</span>
-                  <span class="text-sm">+213% (2.1%)</span>
-                </div>
-                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
-                  <span class="text-sm">• $10,000:</span>
-                  <span class="text-sm">+156% (8.7%)</span>
-                </div>
-              </div>
-            </div>
+            <button class="w-full bg-accent-500 hover:bg-accent-600 text-black py-4 rounded-xl mt-6 transition-colors duration-200 font-semibold text-lg">
+              Run Simulation
+            </button>
           </div>
-          
-          <button class="w-full bg-accent-500 hover:bg-accent-600 text-black py-4 rounded-xl mt-6 transition-colors duration-200 font-semibold text-lg">
-            Run Simulation
-          </button>
         </div>
         
         <div class="lg:text-right space-y-12 mt-24">
@@ -381,7 +392,7 @@
       <div class="mt-20">
         <h3 class="text-4xl text-center mb-16 font-bold">Advanced Simulation Features</h3>
         <div class="grid md:grid-cols-3 gap-10">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
               <div class="flex items-center justify-center flex-shrink-0">
                 <i-heroicons-solid-clock class="w-10 h-10 text-accent-600" />
@@ -393,7 +404,7 @@
             </div>
           </div>
           
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
               <div class="flex items-center justify-center flex-shrink-0">
                 <i-heroicons-solid-chart-bar-square class="w-10 h-10 text-accent-600" />
@@ -405,7 +416,7 @@
             </div>
           </div>
           
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
               <div class="flex items-center justify-center flex-shrink-0">
                 <i-heroicons-solid-shield-check class="w-10 h-10 text-accent-600" />
@@ -513,7 +524,7 @@
       </div>
       
       <div class="mt-20 grid md:grid-cols-3 gap-10">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 flex">
           <div class="flex items-center space-x-4">
             <div class="flex items-center justify-center flex-shrink-0">
               <i-heroicons-solid-cpu-chip class="w-10 h-10 text-accent-600" />
@@ -525,7 +536,7 @@
           </div>
         </div>
         
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
           <div class="flex items-center space-x-4">
             <div class="flex items-center justify-center flex-shrink-0">
               <i-heroicons-solid-user-circle class="w-10 h-10 text-accent-600" />
@@ -537,7 +548,7 @@
           </div>
         </div>
         
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-500/30 transition-all duration-300 flex">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
           <div class="flex items-center space-x-4">
             <div class="flex items-center justify-center flex-shrink-0">
               <i-heroicons-solid-cog-6-tooth class="w-10 h-10 text-accent-600" />
@@ -561,7 +572,7 @@
           STOP GUESSING.<br>
           <span class="text-accent-500">START SLICING.</span>
         </h2>
-        <h3 class="text-4xl mb-8 font-bold text-accent-500">JOIN THE WAITLIST FOR EARLY ACCESS.</h3>
+        <h3 class="text-4xl mb-8 font-bold ">JOIN THE WAITLIST FOR EARLY ACCESS.</h3>
       </div>
       
       <div class="max-w-lg mx-auto mb-12">
@@ -600,73 +611,17 @@
   </section>
 </div>
 <div class="relative">  
-  <footer id="footer" class="bg-black text-neutral-400 py-16  border-t border-white/5  px-4 sm:px-6 lg:px-8">
+  <footer id="footer" class="bg-black text-neutral-400 py-16 border-t border-white/5 px-4 sm:px-6 lg:px-8">
     <div class="max-w-8xl mx-auto">
-      <div class="grid md:grid-cols-5 gap-12 mb-12">
-        <div class="md:col-span-2">
-          <div class="flex items-center mb-6">
-            <div class="w-10 h-10 bg-gradient-to-br from-accent-500 to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-lg">
-              <span class="text-black text-lg font-bold">S</span>
-            </div>
-            <span class="text-xl text-white font-semibold tracking-tight">Slicer</span>
-          </div>
-          <p class="text-lg leading-relaxed max-w-md">Express. Simulate. Deploy. Repeat — until profit feels inevitable.</p>
-          <div class="flex space-x-6 mt-8">
-            <span class="hover:text-accent-500 transition-colors cursor-pointer text-xl">
-              <i-fab-twitter class="w-5 h-5" />
-            </span>
-            <span class="hover:text-accent-500 transition-colors cursor-pointer text-xl">
-              <i-fab-linkedin class="w-5 h-5" />
-            </span>
-            <span class="hover:text-accent-500 transition-colors cursor-pointer text-xl">
-              <i-fab-github class="w-5 h-5" />
-            </span>
-            <span class="hover:text-accent-500 transition-colors cursor-pointer text-xl">
-              <i-fab-discord class="w-5 h-5" />
-            </span>
-          </div>
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div class="mb-6 md:mb-0">
+          <img src="/src/assets/logo.png" alt="Slicer" class="h-8 w-auto mb-3">
+          <p class="text-sm text-neutral-500">Express. Simulate. Deploy. Repeat — until profit feels inevitable.</p>
         </div>
         
-        <div>
-          <h4 class="text-white mb-6 font-semibold text-lg">Product</h4>
-          <ul class="space-y-3">
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Express</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Simulate</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Deploy</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Analytics</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">API</span></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 class="text-white mb-6 font-semibold text-lg">Resources</h4>
-          <ul class="space-y-3">
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Documentation</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">API Reference</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Community</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Blog</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Tutorials</span></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 class="text-white mb-6 font-semibold text-lg">Company</h4>
-          <ul class="space-y-3">
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">About</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Careers</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Privacy</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Terms</span></li>
-            <li><span class="hover:text-accent-500 transition-colors cursor-pointer">Security</span></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-sm">© 2025 Slicer Inc. All rights reserved.</p>
-        <div class="flex items-center space-x-6 mt-4 md:mt-0">
-          <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Privacy Policy</span>
-          <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Terms of Service</span>
-          <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Cookie Policy</span>
+        <div class="flex items-center space-x-6">
+          <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Terms</span>
+          <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Privacy</span>
         </div>
       </div>
     </div>

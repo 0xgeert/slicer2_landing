@@ -18,6 +18,9 @@ module.exports = {
       backdropBlur: {
         xs: "3px",
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       colors: {
         ui: {
           // 50: '#232423', // '#201F1D',
