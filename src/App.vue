@@ -143,7 +143,7 @@
           </div>
         </div>
         
-        <div class="mt-12 xl:-mr-8">
+        <div class="lg:mt-12 xl:-mr-8">
           <div class="mb-8">
             <div class="flex space-x-3 justify-center">
               <div class="w-3 h-3 bg-accent-500 rounded-full"></div>
@@ -213,11 +213,11 @@
                 </div>
               </div>
             </div>
-          
-      
+        
         </div>
       </div>
       
+      <h3 class="lg:hidden text-4xl text-center mb-16 -mt-12 font-bold">Advanced Expression Features</h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
           <div class="text-center">
@@ -268,6 +268,17 @@
     <div class="max-w-8xl mx-auto">
       
       
+      <!-- Mobile-first text section -->
+      <div class="lg:hidden mb-12">
+        <h2 class="text-4xl mb-6 leading-tighter font-black tracking-tight text-center">
+          KNOW IF IT WINS 
+          <span class="text-accent-500">BEFORE YOU TRADE IT</span>
+        </h2>
+        <p class="text-lg text-neutral-300 mb-8 italic font-light leading-relaxed text-balance text-center">
+          Replay six months in six seconds. See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
+        </p>
+      </div>
+
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
         <div class="relative">
           <!-- Large radial glow surrounding the card -->
@@ -366,7 +377,8 @@
         </div>
         
         <div class="lg:text-right space-y-12 mt-24">
-          <div>
+          <!-- Desktop-only text section -->
+          <div class="hidden lg:block">
             <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-mr-8">
               KNOW IF IT WINS 
               <span class="text-accent-500  ">BEFORE YOU TRADE IT</span>
@@ -376,15 +388,17 @@
             </p>
           </div>
           
-          <div class="space-y-8 text-lg">
-            <p class="text-neutral-300 text-balance leading-relaxed">
-              Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
-            </p>
-            
-            <h3 class="text-3xl mb-6 font-bold text-accent-500 text-balance xl:-mr-8">FLEXIBLE EXITS MATCH YOUR STRATEGY</h3>
-            <p class="text-neutral-300 text-balance leading-relaxed">
-              Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
-            </p>
+          <div>
+            <div class="space-y-8 text-lg -mt-36 lg:mt-0">
+              <p class="text-neutral-300 lg:text-balance leading-relaxed">
+                Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
+              </p>
+              
+              <h3 class="text-3xl mb-6 font-bold text-accent-500 lg:text-balance xl:-mr-8">FLEXIBLE EXITS MATCH YOUR STRATEGY</h3>
+              <p class="text-neutral-300 lg:text-balance leading-relaxed">
+                Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -447,76 +461,232 @@
         <p class="text-accent-500 text-lg mt-4 font-medium">Coming in private beta.</p>
       </div>
       
-      <div class="grid lg:grid-cols-5 gap-12">
-        <div class="lg:col-span-1">
-          <h3 class="text-xl mb-8 font-semibold text-accent-500">What's your style?</h3>
-          <div class="space-y-4">
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-l-4 border-accent-500 border border-white/5 relative">
-              <h4 class="mb-2 font-semibold">Hands-Off Auto-Trading</h4>
-              <p class="text-neutral-400 text-sm">Set it. Forget it. Smile.</p>
-            </div>
-            <div class="bg-neutral-800/50 rounded-2xl p-6 border border-neutral-700/50 hover:bg-neutral-700/50 cursor-pointer transition-all duration-200">
-              <h4 class="mb-2 font-semibold">Human-in-the-Loop</h4>
-              <p class="text-neutral-400 text-sm">Get notified. Approve trades. Stay in control.</p>
-            </div>
-          </div>
+      <!-- Horizontal Tabs -->
+      <div class="max-w-6xl mx-auto">
+        <!-- Tab Navigation -->
+        <div class="flex space-x-1 mb-16 bg-neutral-800/30 rounded-2xl p-2 border border-white/5">
+          <button 
+            @click="activeTab = 'hands-off'"
+            :class="[
+              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200',
+              activeTab === 'hands-off' 
+                ? 'bg-accent-500 text-black' 
+                : 'text-neutral-400 hover:text-white hover:bg-white/5'
+            ]"
+          >
+            Hands-Off Auto-Trading
+          </button>
+          <button 
+            @click="activeTab = 'human-loop'"
+            :class="[
+              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200',
+              activeTab === 'human-loop' 
+                ? 'bg-accent-500 text-black' 
+                : 'text-neutral-400 hover:text-white hover:bg-white/5'
+            ]"
+          >
+            Human-in-the-Loop
+          </button>
         </div>
-        
-        <div class="lg:col-span-4">
-          <h3 class="text-3xl mb-8 font-bold text-accent-500">HANDS-OFF AUTO-TRADING</h3>
-          
-          <div class="grid md:grid-cols-2 gap-12">
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
-              <h4 class="mb-6 font-semibold text-xl">Trade Configuration</h4>
-              <div class="space-y-6">
-                <div>
-                  <label class="block text-sm text-neutral-400 mb-2 font-medium">Trade Size</label>
-                  <input type="text" value="$1,000" class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-200">
-                </div>
-                <div>
-                  <label class="block text-sm text-neutral-400 mb-2 font-medium">Max Slippage</label>
-                  <input type="text" value="2%" class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-200">
-                </div>
-                <div>
-                  <label class="block text-sm text-neutral-400 mb-2 font-medium">Gas Priority</label>
-                  <select class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-200">
-                    <option>Medium</option>
-                    <option>High</option>
-                    <option>Low</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="block text-sm text-neutral-400 mb-2 font-medium">Notifications</label>
-                  <select class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-200">
-                    <option>Telegram</option>
-                    <option>Email</option>
-                    <option>Both</option>
-                  </select>
-                </div>
-              </div>
-              
-              <button class="w-full bg-accent-500 hover:bg-accent-600 text-black py-4 rounded-xl mt-8 transition-colors duration-200 font-semibold text-lg">
-                Deploy Strategy
-              </button>
+
+        <!-- Tab Content -->
+        <div class="min-h-[600px]">
+          <!-- Hands-Off Auto-Trading Tab -->
+          <div v-if="activeTab === 'hands-off'" class="space-y-8">
+            <div class="text-center mb-12">
+              <h3 class="text-4xl mb-4 font-bold text-accent-500">HANDS-OFF AUTO-TRADING</h3>
+              <p class="text-xl text-neutral-300 italic">Set it. Forget it. Smile.</p>
             </div>
             
-            <div class="space-y-8">
-              <div class="space-y-4 text-lg">
-                <p class="text-neutral-300 text-balance">✓ Trades executed 24/7.</p>
-                <p class="text-neutral-300 text-balance">✓ Every entry logged.</p>
-                <p class="text-neutral-300 text-balance">✓ Every exit transparent.</p>
-                <p class="text-neutral-300 text-balance">✓ Full P&L tracking.</p>
-                <p class="text-accent-500 font-medium">✓ Switch modes anytime.</p>
+            <div class="grid md:grid-cols-2 gap-12">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/5 max-w-md w-full mx-auto ">
+                <div class="flex items-center mb-4">
+                  <i-heroicons-solid-cog-6-tooth class="w-5 h-5 text-accent-500 mr-3" />
+                  <h4 class="font-semibold text-xl">Trade Configuration</h4>
+                </div>
+                <div class="space-y-4">
+                  <div>
+                    <label class="flex items-center text-sm text-neutral-400 mb-2 font-medium">
+                      <i-heroicons-solid-currency-dollar class="w-4 h-4 mr-2" />
+                      Trade Size
+                    </label>
+                    <div class="relative">
+                      <input type="text" value="$1,000" disabled class="w-full bg-neutral-800/30 border border-neutral-700/30 rounded-xl pl-12 pr-4 py-3 text-neutral-500 cursor-not-allowed">
+                      <i-heroicons-solid-currency-dollar class="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-500" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="flex items-center text-sm text-neutral-400 mb-2 font-medium">
+                      <i-heroicons-solid-chart-bar class="w-4 h-4 mr-2" />
+                      Max Slippage
+                    </label>
+                    <div class="relative">
+                      <input type="text" value="2%" disabled class="w-full bg-neutral-800/30 border border-neutral-700/30 rounded-xl pl-12 pr-4 py-3 text-neutral-500 cursor-not-allowed">
+                      <i-heroicons-solid-chart-bar class="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-500" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="flex items-center text-sm text-neutral-400 mb-2 font-medium">
+                      <i-heroicons-solid-bolt class="w-4 h-4 mr-2" />
+                      Gas Priority
+                    </label>
+                    <div class="relative">
+                      <select disabled class="w-full bg-neutral-800/30 border border-neutral-700/30 rounded-xl pl-12 pr-10 py-3 text-neutral-500 cursor-not-allowed appearance-none">
+                        <option>Medium</option>
+                        <option>High</option>
+                        <option>Low</option>
+                      </select>
+                      <i-heroicons-solid-bolt class="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-500" />
+                      <i-heroicons-solid-chevron-down class="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-500 pointer-events-none" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="flex items-center text-sm text-neutral-400 mb-2 font-medium">
+                      <i-heroicons-solid-bell class="w-4 h-4 mr-2" />
+                      Notifications
+                    </label>
+                    <div class="relative">
+                      <select disabled class="w-full bg-neutral-800/30 border border-neutral-700/30 rounded-xl pl-12 pr-10 py-3 text-neutral-500 cursor-not-allowed appearance-none">
+                        <option>Telegram</option>
+                        <option>Email</option>
+                        <option>Both</option>
+                      </select>
+                      <i-heroicons-solid-bell class="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-500" />
+                      <i-heroicons-solid-chevron-down class="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-500 pointer-events-none" />
+                    </div>
+                  </div>
+                </div>
+                
+                <button disabled class="w-full bg-neutral-600 text-neutral-400 py-3 rounded-xl mt-6 cursor-not-allowed font-semibold text-lg flex items-center justify-center">
+                  <i-heroicons-solid-play class="w-5 h-5 mr-2" />
+                  Deploy Strategy
+                </button>
               </div>
               
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
-                <h5 class="mb-4 font-semibold text-accent-500">Security Features</h5>
-                <ul class="text-sm text-neutral-400 space-y-2 leading-relaxed">
-                  <li>• Non-custodial wallet integration</li>
-                  <li>• Configurable position limits</li>
-                  <li>• Emergency stop functionality</li>
-                  <li>• Real-time monitoring dashboard</li>
-                </ul>
+              <div class="space-y-8 flex flex-col items-center justify-center gap-8">
+                <div class="grid gap-4 text-lg  items-center justify-center">
+                  <p class="text-neutral-300 text-balance">✓ Trades executed 24/7.</p>
+                  <p class="text-neutral-300 text-balance">✓ Every entry logged.</p>
+                  <p class="text-neutral-300 text-balance">✓ Every exit transparent.</p>
+                  <p class="text-neutral-300 text-balance">✓ Full P&L tracking.</p>
+                  <p class="text-accent-500 font-medium col-span-2">✓ Switch modes anytime.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full max-w-md">
+                  <h5 class="mb-4 font-semibold text-accent-500">Security Features</h5>
+                  <ul class="text-sm text-neutral-400 space-y-2 leading-relaxed">
+                    <li>• Non-custodial wallet integration</li>
+                    <li>• Configurable position limits</li>
+                    <li>• Emergency stop functionality</li>
+                    <li>• Real-time monitoring dashboard</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Human-in-the-Loop Tab -->
+          <div v-if="activeTab === 'human-loop'" class="space-y-8">
+            <div class="text-center mb-12">
+              <h3 class="text-4xl mb-4 font-bold text-accent-500">HUMAN-IN-THE-LOOP</h3>
+              <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+              <div class="space-y-8 max-w-md w-full mx-auto lg:mx-0 lg:max-w-none">
+                <!-- Trade Alert Mockup -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
+                  <h4 class="mb-4 font-semibold text-accent-500">Trade Alert Example</h4>
+                  <div class="bg-neutral-900/50 rounded-xl p-4 border border-neutral-700/30">
+                    <div class="mb-3">
+                      <h5 class="text-lg font-semibold text-white">New Match: $TOKEN</h5>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <span class="text-neutral-400">Breakout Score:</span>
+                        <span class="text-accent-500 font-semibold">82</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span class="text-neutral-400">Smart Money:</span>
+                        <span class="text-green-400 font-semibold">+$47k (6h)</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span class="text-neutral-400">Entry:</span>
+                        <span class="text-white font-semibold">$0.02334</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span class="text-neutral-400">Exit:</span>
+                        <span class="text-white font-semibold">TP 10x or SL 20%</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span class="text-neutral-400">Backtest ROI:</span>
+                        <span class="text-green-400 font-semibold">+156%</span>
+                      </div>
+                    </div>
+                    <div class="flex space-x-2 mt-4">
+                      <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-colors">
+                        Approve
+                      </button>
+                      <button class="flex-1 bg-neutral-600 hover:bg-neutral-700 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-colors">
+                        Skip
+                      </button>
+                      <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-colors">
+                        Info
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Notification Channels -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
+                  <h5 class="mb-4 font-semibold text-accent-500">Notification Channels</h5>
+                  <div class="space-y-3 text-sm">
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Email</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">In-browser push</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Telegram</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Webhooks</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="space-y-8 flex flex-col items-center justify-center gap-8">
+                <div class="grid gap-4 text-lg items-center justify-center ">
+                  <p class="text-neutral-300 text-balance">✓ Trade alerts sent instantly.</p>
+                  <p class="text-neutral-300 text-balance">✓ One-click approve/decline.</p>
+                  <p class="text-neutral-300 text-balance">✓ Full trade context provided.</p>
+                  <p class="text-neutral-300 text-balance">✓ Complete audit trail.</p>
+                  <p class="text-accent-500 font-medium col-span-2">✓ Switch modes anytime.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full max-w-md">
+                  <h5 class="mb-4 font-semibold text-accent-500">Control Features</h5>
+                  <ul class="text-sm text-neutral-400 space-y-2 leading-relaxed">
+                    <li>• Real-time trade notifications</li>
+                    <li>• Detailed trade reasoning</li>
+                    <li>• Emergency stop override</li>
+                    <li>• Approval history tracking</li>
+                  </ul>
+                </div>
+
+                <!-- Usage Philosophy -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full max-w-md">
+                  <h5 class="mb-4 font-semibold text-accent-500">Usage Philosophy</h5>
+                  <p class="text-sm text-neutral-300 leading-relaxed">
+                    Use as pure analytics, approve high-conviction setups only, or pipe signals to your own trading infrastructure.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -543,7 +713,7 @@
             </div>
             <div class="flex-1">
               <h4 class="mb-1 font-semibold text-lg leading-tight">Human Oversight</h4>
-              <p class="text-neutral-400 text-sm leading-tight text-balance">Approve trades before execution</p>
+              <p class="text-neutral-400 text-sm leading-tight text-balance">Optionally review or approve trades before execution</p>
             </div>
           </div>
         </div>
@@ -565,7 +735,7 @@
 </div>
 <div class="relative">  
   <div class="section-linear-bg">&nbsp;</div>
-  <section id="cta" class="text-white py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="cta" class="text-white pt-32 pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
       <div class="mb-16">
         <h2 class="text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight">
@@ -588,12 +758,12 @@
         </div>
       </div>
       
-      <div class="space-y-4 mb-12">
+      <div class="space-y-1 mb-8">
         <p class="text-neutral-400 font-medium">Be first to access the private beta.</p>
         <p class="text-neutral-500 text-sm">No spam. Unsubscribe anytime.</p>
       </div>
       
-      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-2 lg:gap-0 max-w-4xl mx-auto">
         <div class="flex items-center justify-center space-x-3 text-neutral-400">
           <i-heroicons-solid-user-group class="w-5 h-5 text-accent-600" />
           <span class="text-sm">First 500 users</span>
@@ -634,7 +804,11 @@
 
 export default {
   name: "App",
-  
+  data() {
+    return {
+      activeTab: 'hands-off'
+    }
+  }
 }
 </script>
 
