@@ -63,7 +63,7 @@
               <span class="text-neutral-300 text-sm font-medium">English idea → Filter blocks</span>
             </div>
           </div>
-          <h3 class="text-xl mb-1 font-semibold">Express Strategy</h3>
+          <h3 class="text-xl mb-1 font-semibold">Express Trade Strategy</h3>
           <p class="text-neutral-400 text-sm leading-relaxed">Natural language to precision filters</p>
         </div>
         
@@ -141,7 +141,7 @@
           </div>
         </div>
         
-        <div class="mt-4 xl:-mr-8">
+        <div class="mt-12 xl:-mr-8">
           <div class="mb-8">
             <div class="flex space-x-3 justify-center">
               <div class="w-3 h-3 bg-accent-500 rounded-full"></div>
@@ -168,39 +168,39 @@
                   </div>
                 </div>
                 
-                <div class="text-center text-accent-500 text-sm font-medium mt-8">
+                <div class="text-center text-accent-400/80 text-sm font-medium mt-8">
                   <i-fa-solid-arrow-down class="w-6 h-6 inline" />
                 </div>
                 
-                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 w-full max-w-2xl shadow-lg">
-                  <h4 class="text-sm text-accent-500 mb-6 font-bold uppercase tracking-wider">Entry Conditions</h4>
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 w-full max-w-2xl shadow-lg">
+                  <h4 class="font-semibold text-accent-500 text-sm mb-3">Entry Conditions:</h4>
                   <div class="space-y-3">
-                    <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 flex items-center justify-between hover:border-accent-500/30 transition-all">
-                      <span class="text-neutral-200 text-sm">Smart money net flow</span>
+                    <div class="bg-white/5 rounded-xl px-5 py-3 flex items-center justify-between ">
+                      <span class="text-blue-300 text-sm">Smart money net flow</span>
                       <span class="text-accent-500 font-bold text-sm">> 0 for 48h</span>
                     </div>
                     
-                    <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 flex items-center justify-between hover:border-accent-500/30 transition-all">
-                      <span class="text-neutral-200 text-sm">Retail money net flow</span>
+                    <div class="bg-white/5 rounded-xl px-5 py-3 flex items-center justify-between ">
+                      <span class="text-blue-300 text-sm">Retail money net flow</span>
                       <span class="text-accent-500 font-bold text-sm">< 0 for 48h</span>
                     </div>
                   </div>
                 </div>
                 
-                <div class="text-center text-accent-500 text-sm font-medium mt-6">
+                <div class="text-center text-accent-400/80 text-sm font-medium mt-6">
                   <i-fa-solid-arrow-down class="w-6 h-6 inline" />
                 </div>
                 
-                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 w-full max-w-2xl shadow-lg">
-                  <h4 class="text-sm text-accent-500 mb-6 font-bold uppercase tracking-wider">Exit Conditions</h4>
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 w-full max-w-2xl shadow-lg">
+                  <h4 class="font-semibold text-accent-500 text-sm mb-3">Exit Conditions:</h4>
                   <div class="space-y-3">
-                    <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 flex items-center justify-between hover:border-accent-500/30 transition-all">
-                      <span class="text-neutral-200 text-sm">Price change</span>
+                    <div class="bg-white/5  rounded-xl px-5 py-3 flex items-center justify-between ">
+                      <span class="text-blue-300 text-sm">Price change</span>
                       <span class="text-accent-500 font-bold text-sm">≥ 100%</span>
                     </div>
                     
-                    <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 flex items-center justify-between hover:border-accent-500/30 transition-all">
-                      <span class="text-neutral-200 text-sm">Time held</span>
+                    <div class="bg-white/5  rounded-xl px-5 py-3 flex items-center justify-between ">
+                      <span class="text-blue-300 text-sm">Time held</span>
                       <span class="text-accent-500 font-bold text-sm">≥ 72h</span>
                     </div>
                   </div>
@@ -263,93 +263,93 @@
       
       
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
-        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-10 border border-white/5 shadow-2xl">
-          <div class="mb-8">
-            <h3 class="text-xl mb-1 font-semibold">Strategy: "Buy when smart money accumulates + sell at 2x or after 72h"</h3>
-            <p class="text-neutral-400 text-sm">(Example results for demo)</p>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-7 border border-white/5 shadow-2xl">
+          <div class="mb-6">
+            <h3 class="text-lg mb-1 font-semibold">Strategy: "Buy when smart money accumulates + sell at 2x or after 72h"</h3>
+            <p class="text-neutral-400 text-xs">(Example results for demo)</p>
           </div>
           
-          <div class="grid grid-cols-2 gap-6 mb-8">
-            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
-              <div class="text-3xl text-accent-500 font-bold mb-1">+247%</div>
-              <div class="text-neutral-400 text-sm font-medium">ROI</div>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+              <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-accent-500 via-green-400 to-accent-500 bg-clip-text text-transparent">+247%</div>
+              <div class="text-neutral-400 text-xs font-medium">ROI</div>
             </div>
-            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
+            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
               <div class="text-3xl font-bold mb-1">68%</div>
-              <div class="text-neutral-400 text-sm font-medium">Win Rate</div>
+              <div class="text-neutral-400 text-xs font-medium">Win Rate</div>
             </div>
-            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
+            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
               <div class="text-3xl text-red-400 font-bold mb-1">-18%</div>
-              <div class="text-neutral-400 text-sm font-medium">Max DD</div>
+              <div class="text-neutral-400 text-xs font-medium">Max DD</div>
             </div>
-            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
-              <div class="text-3xl font-bold mb-1">2.4</div>
-              <div class="text-neutral-400 text-sm font-medium">Sharpe</div>
+            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+              <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">2.4</div>
+              <div class="text-neutral-400 text-xs font-medium">Sharpe</div>
             </div>
-            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
+            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
               <div class="text-3xl font-bold mb-1">4.2d</div>
-              <div class="text-neutral-400 text-sm font-medium">Avg Hold</div>
+              <div class="text-neutral-400 text-xs font-medium">Avg Hold</div>
             </div>
-            <div class="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700/30">
+            <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
               <div class="text-3xl font-bold mb-1">43</div>
-              <div class="text-neutral-400 text-sm font-medium">Total Trades</div>
+              <div class="text-neutral-400 text-xs font-medium">Total Trades</div>
             </div>
           </div>
           
-          <div class="mb-8">
-            <div class="flex justify-between text-sm text-neutral-400 mb-3">
+          <div class="mb-6">
+            <div class="flex justify-between text-xs text-neutral-400 mb-2">
               <span>6 months → 6 seconds animation</span>
               <span>Progress: 100%</span>
             </div>
-            <div class="w-full bg-neutral-700 rounded-full h-3 overflow-hidden">
-              <div class="bg-gradient-to-r from-accent-500 to-accent-hover h-3 rounded-full w-full transition-all duration-300"></div>
+            <div class="w-full bg-neutral-700 rounded-full h-2 overflow-hidden">
+              <div class="bg-gradient-to-r from-accent-500 to-accent-hover h-2 rounded-full w-full transition-all duration-300"></div>
             </div>
           </div>
           
-          <div class="h-64 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-2xl mb-8 flex items-center justify-center border border-neutral-700/30">
+          <div class="h-48 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-2xl mb-6 flex items-center justify-center border border-neutral-700/30">
             <div class="text-center">
               <div class="text-accent-500 mb-3">
-                <i-fa-solid-chart-area class="w-10 h-10" />
+                <i-fa-solid-chart-area class="w-8 h-8" />
               </div>
-              <span class="text-neutral-400 font-medium">Equity curve visualization</span>
+              <span class="text-neutral-400 text-sm font-medium">Equity curve visualization</span>
             </div>
           </div>
           
-          <div class="space-y-6">
+          <div class="space-y-5">
             <div>
-              <h4 class="mb-4 font-semibold text-accent-500">Exit Breakdown:</h4>
-              <div class="space-y-3 text-sm">
-                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-3">
-                  <span>• TP 100%: 18 trades</span>
-                  <span class="text-accent-500 font-medium">+284%</span>
+              <h4 class="mb-3 font-semibold text-accent-500 text-sm">Exit Breakdown:</h4>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
+                  <span class="text-sm">• TP 100%: 18 trades</span>
+                  <span class="text-accent-500 font-semibold bg-gradient-to-r from-accent-500 to-green-400 bg-clip-text text-transparent">+284%</span>
                 </div>
-                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-3">
-                  <span>• Time 72h: 25 trades</span>
-                  <span class="text-accent-500 font-medium">+76%</span>
+                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
+                  <span class="text-sm">• Time 72h: 25 trades</span>
+                  <span class="text-accent-500 font-semibold">+76%</span>
                 </div>
               </div>
             </div>
             
             <div>
-              <h4 class="mb-4 font-semibold text-accent-500">Trade Size Impact:</h4>
-              <div class="space-y-3 text-sm">
-                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-3">
-                  <span>• $100:</span>
-                  <span>+247% (0.3% slip)</span>
+              <h4 class="mb-3 font-semibold text-accent-500 text-sm">Trade Size Impact:</h4>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
+                  <span class="text-sm">• $100:</span>
+                  <span class="text-sm">+247% (0.3% slip)</span>
                 </div>
-                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-3">
-                  <span>• $1,000:</span>
-                  <span>+213% (2.1%)</span>
+                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
+                  <span class="text-sm">• $1,000:</span>
+                  <span class="text-sm">+213% (2.1%)</span>
                 </div>
-                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-3">
-                  <span>• $10,000:</span>
-                  <span>+156% (8.7%)</span>
+                <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
+                  <span class="text-sm">• $10,000:</span>
+                  <span class="text-sm">+156% (8.7%)</span>
                 </div>
               </div>
             </div>
           </div>
           
-          <button class="w-full bg-accent-500 hover:bg-accent-600 text-black py-4 rounded-xl mt-8 transition-colors duration-200 font-semibold text-lg">
+          <button class="w-full bg-accent-500 hover:bg-accent-600 text-black py-4 rounded-xl mt-6 transition-colors duration-200 font-semibold text-lg">
             Run Simulation
           </button>
         </div>
