@@ -2,7 +2,7 @@
   <header id="header" class="bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed top-0 w-full z-50 transition-all duration-300">
     <div class="max-w-8xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
-        <div class="w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-lg">
+        <div class="w-10 h-10 bg-gradient-to-br from-accent-500 to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-lg">
           <span class="text-black text-lg font-bold">S</span>
         </div>
         <span class="text-xl font-semibold tracking-tight">Slicer</span>
@@ -12,7 +12,7 @@
         <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Simulate</span>
         <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Deploy</span>
       </nav>
-      <button class="bg-transparent border-2 border-accent-500/40 text-accent-500 hover:border-accent hover:bg-accent-500/10 px-6 py-3 rounded-xl transition-all duration-200 font-medium">
+      <button class="bg-transparent border-2 border-accent-500/40 text-accent-500 hover:border-accent-500 hover:bg-accent-500/10 px-6 py-3 rounded-xl transition-all duration-200 font-medium">
         Join Waitlist
       </button>
     </div>
@@ -302,7 +302,7 @@
               <span>Progress: 100%</span>
             </div>
             <div class="w-full bg-neutral-700 rounded-full h-3 overflow-hidden">
-              <div class="bg-gradient-to-r from-accent to-accent-hover h-3 rounded-full w-full transition-all duration-300"></div>
+              <div class="bg-gradient-to-r from-accent-500 to-accent-hover h-3 rounded-full w-full transition-all duration-300"></div>
             </div>
           </div>
           
@@ -440,7 +440,7 @@
         <div class="lg:col-span-1">
           <h3 class="text-xl mb-8 font-semibold text-accent-500">What's your style?</h3>
           <div class="space-y-4">
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-l-4 border-accent border border-white/5 relative">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-l-4 border-accent-500 border border-white/5 relative">
               <h4 class="mb-2 font-semibold">Hands-Off Auto-Trading</h4>
               <p class="text-neutral-400 text-sm">Set it. Forget it. Smile.</p>
             </div>
@@ -460,15 +460,15 @@
               <div class="space-y-6">
                 <div>
                   <label class="block text-sm text-neutral-400 mb-2 font-medium">Trade Size</label>
-                  <input type="text" value="$1,000" class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200">
+                  <input type="text" value="$1,000" class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-200">
                 </div>
                 <div>
                   <label class="block text-sm text-neutral-400 mb-2 font-medium">Max Slippage</label>
-                  <input type="text" value="2%" class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200">
+                  <input type="text" value="2%" class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-200">
                 </div>
                 <div>
                   <label class="block text-sm text-neutral-400 mb-2 font-medium">Gas Priority</label>
-                  <select class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200">
+                  <select class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-200">
                     <option>Medium</option>
                     <option>High</option>
                     <option>Low</option>
@@ -476,7 +476,7 @@
                 </div>
                 <div>
                   <label class="block text-sm text-neutral-400 mb-2 font-medium">Notifications</label>
-                  <select class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200">
+                  <select class="w-full bg-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 text-white focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-200">
                     <option>Telegram</option>
                     <option>Email</option>
                     <option>Both</option>
@@ -565,7 +565,7 @@
       </div>
       
       <div class="max-w-lg mx-auto mb-12">
-        <div class="flex rounded-2xl overflow-hidden border-2 border-accent-500/20 focus-within:border-accent transition-all duration-200">
+        <div class="flex rounded-2xl overflow-hidden border-2 border-accent-500/20 focus-within:border-accent-500 transition-all duration-200">
           <input 
             type="email" 
             placeholder="Enter your email address" 
@@ -605,7 +605,7 @@
       <div class="grid md:grid-cols-5 gap-12 mb-12">
         <div class="md:col-span-2">
           <div class="flex items-center mb-6">
-            <div class="w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-lg">
+            <div class="w-10 h-10 bg-gradient-to-br from-accent-500 to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-lg">
               <span class="text-black text-lg font-bold">S</span>
             </div>
             <span class="text-xl text-white font-semibold tracking-tight">Slicer</span>
