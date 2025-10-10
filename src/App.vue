@@ -126,10 +126,8 @@
 <div class="relative">  
   <div class="section-linear-bg">&nbsp;</div>
   <section id="express" class=" text-white py-16 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
-    <div class="max-w-8xl mx-auto">
-    
-      
-      <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
+    <div class="max-w-8xl mx-auto lg:pt-12">
+      <div class="grid lg:grid-cols-2 gap-20 items-start mb-12">
         <div class="space-y-12">
           <div>
             <h2 class="text-4xl lg:text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8">
@@ -145,20 +143,42 @@
           <!-- EVERY SIGNAL, EVERY SLICE section - desktop only -->
           <div class="hidden lg:block space-y-10">
             <div>
-              <h3 class="text-2xl lg:text-3xl mb-6 font-bold text-accent-500 xl:-ml-8 lg:text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
-              <div class="space-y-6 text-lg leading-relaxed">
-                <p class="text-neutral-300 lg:text-balance">
-                  Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
-                </p>
-                <p class="text-neutral-300 lg:text-balance">
-                  Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
-                </p>
+              <button 
+                @click="toggleSignalSection"
+                class="group w-full text-left focus:outline-none transition-all duration-200 hover:bg-white/5 rounded-lg py-4 px-6 -my-4 -mx-6 "
+              >
+                <div class="flex items-center justify-between">
+                  <h3 class="text-2xl lg:text-3xl font-bold text-accent-500 xl:-ml-8 lg:text-balance group-hover:text-accent-400 transition-colors">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+                  <div class="flex items-center justify-center">
+                    <i-heroicons-solid-chevron-down 
+                      :class="[
+                        'w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',
+                        isSignalSectionExpanded ? 'rotate-180' : 'rotate-0'
+                      ]"
+                    />
+                  </div>
+                </div>
+              </button>
+              <div 
+                :class="[
+                  'overflow-hidden transition-all duration-500 ease-in-out mt-4',
+                  isSignalSectionExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                ]"
+              >
+                <div class="space-y-6 text-lg leading-relaxed pt-4">
+                  <p class="text-neutral-300 lg:text-balance">
+                    Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
+                  </p>
+                  <p class="text-neutral-300 lg:text-balance">
+                    Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="-mt-20 lg:mt-12 xl:-mr-8">
+        <div class="-mt-20  xl:-mr-8">
           <div class="mb-8">
             <div class="flex space-x-3 justify-center">
               <div class="w-3 h-3 bg-accent-500 rounded-full"></div>
@@ -236,19 +256,41 @@
       </div>
       
       <!-- EVERY SIGNAL, EVERY SLICE section - moved below right column for mobile -->
-      <div class="lg:hidden mb-12">
-        <h3 class="text-2xl lg:text-3xl mb-6 font-bold text-accent-500 text-center lg:text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
-        <div class="space-y-6 text-lg leading-relaxed">
-          <p class="text-neutral-300 lg:text-balance">
-            Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
-          </p>
-          <p class="text-neutral-300 lg:text-balance">
-            Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
-          </p>
+      <div class="lg:hidden mb-12 max-w-2xl mx-auto">
+        <button 
+          @click="toggleSignalSection"
+          class="group w-full text-left focus:outline-none transition-all duration-200  rounded-lg p-2 -m-2"
+        >
+          <div class="flex items-center justify-between">
+            <h3 class="text-2xl lg:text-3xl  font-bold text-accent-500 lg:text-balance group-hover:text-accent-400 transition-colors">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+            <div class="flex items-center justify-center">
+              <i-heroicons-solid-chevron-down 
+                :class="[
+                  'w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',
+                  isSignalSectionExpanded ? 'rotate-180' : 'rotate-0'
+                ]"
+              />
+            </div>
+          </div>
+        </button>
+        <div 
+          :class="[
+            'overflow-hidden transition-all duration-500 ease-in-out max-w-2xl mx-auto mt-4',
+            isSignalSectionExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          ]"
+        >
+          <div class="space-y-6 text-lg leading-relaxed pt-4">
+            <p class="text-neutral-300 lg:text-balance">
+              Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
+            </p>
+            <p class="text-neutral-300 lg:text-balance">
+              Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
+            </p>
+          </div>
         </div>
       </div>
       
-      <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-4  font-bold">Advanced Expression Features</h3>
+      <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-6 font-bold">Advanced Expression Features</h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
           <div class="text-center">
@@ -853,7 +895,13 @@ export default {
   name: "App",
   data() {
     return {
-      activeTab: 'hands-off'
+      activeTab: 'hands-off',
+      isSignalSectionExpanded: false
+    }
+  },
+  methods: {
+    toggleSignalSection() {
+      this.isSignalSectionExpanded = !this.isSignalSectionExpanded
     }
   }
 }
