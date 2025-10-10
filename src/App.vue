@@ -34,17 +34,31 @@
         </p>
       </div>
       
-      <div class="backdrop-blur-sm rounded-2xl p-6   max-w-2xl mx-auto mb-12">
-        <div class="flex rounded-2xl overflow-hidden border-2 transition-all duration-200">
+      <div class="backdrop-blur-sm rounded-2xl p-5 sm:p-6 max-w-2xl mx-auto mb-12">
+        <!-- Mobile: Separate input and button -->
+        <div class="flex flex-col space-y-3 sm:hidden">
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="flex-1 bg-neutral-800/50 backdrop-blur-sm px-6 py-5 text-white placeholder-neutral-400 focus:outline-none text-lg"
+            class="w-full bg-neutral-800/50 backdrop-blur-sm px-4 py-4 text-white placeholder-neutral-400 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
           >
-          <button class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-5 transition-colors duration-200 font-semibold text-lg">
+          <button class="w-full bg-accent-500 hover:bg-accent-600 text-white px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl">
             Join Waitlist
           </button>
         </div>
+        
+        <!-- Desktop: Integrated input and button -->
+        <div class="hidden sm:flex rounded-2xl overflow-hidden border-2 border-neutral-700/30 transition-all duration-200">
+          <input 
+            type="email" 
+            placeholder="Enter your email address" 
+            class="flex-1 bg-neutral-800/50 backdrop-blur-sm px-6 py-5 text-white placeholder-neutral-400 focus:outline-none text-lg border-0"
+          >
+          <button class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0">
+            Join Waitlist
+          </button>
+        </div>
+        
         <p class="text-neutral-300 lg:text-balance text-sm mt-4">Get early access when Slicer 2.0 opens private beta.</p>
       </div>
       
@@ -566,7 +580,7 @@
               </div>
               
               <div class="space-y-8 flex flex-col items-center justify-center gap-8">
-                <div class="grid gap-4 text-lg  items-center justify-center">
+                <div class="lg:grid gap-4 text-lg  items-center justify-center">
                   <p class="text-neutral-300 lg:text-balance">✓ Trades executed 24/7.</p>
                   <p class="text-neutral-300 lg:text-balance">✓ Every entry logged.</p>
                   <p class="text-neutral-300 lg:text-balance">✓ Every exit transparent.</p>
@@ -594,7 +608,7 @@
               <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-12">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
               <div class="space-y-8 max-w-md w-full mx-auto lg:mx-0 lg:max-w-none">
                 <!-- Trade Alert Mockup -->
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
@@ -663,8 +677,8 @@
                 </div>
               </div>
               
-              <div class="lg:space-y-8 flex flex-col items-center justify-center gap-8">
-                <div class="lg:grid gap-4 text-lg items-center justify-center ">
+              <div class="lg:space-y-8 flex flex-col items-center justify-center gap-4 lg:gap-8">
+                <div class="lg:grid gap-4 text-lg items-center justify-center mb-4 lg:mb-0">
                   <p class="text-neutral-300 lg:text-balance">✓ Trade alerts sent instantly.</p>
                   <p class="text-neutral-300 lg:text-balance">✓ One-click approve/decline.</p>
                   <p class="text-neutral-300 lg:text-balance">✓ Full trade context provided.</p>
@@ -748,13 +762,26 @@
       </div>
       
       <div class="max-w-lg mx-auto mb-12">
-        <div class="flex rounded-2xl overflow-hidden border-2 border-accent-500/20 focus-within:border-accent-500 transition-all duration-200">
+        <!-- Mobile: Separate input and button -->
+        <div class="flex flex-col space-y-3 sm:hidden">
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="flex-1 bg-neutral-800/50 backdrop-blur-sm px-6 py-5 text-white placeholder-neutral-400 focus:outline-none text-lg"
+            class="w-full bg-neutral-800/50 backdrop-blur-sm px-4 py-4 text-white placeholder-neutral-400 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
           >
-          <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg">
+          <button class="w-full bg-accent-500 hover:bg-accent-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl">
+            Claim Your Spot
+          </button>
+        </div>
+        
+        <!-- Desktop: Integrated input and button -->
+        <div class="hidden sm:flex rounded-2xl overflow-hidden border-2 border-accent-500/20 focus-within:border-accent-500 transition-all duration-200">
+          <input 
+            type="email" 
+            placeholder="Enter your email address" 
+            class="flex-1 bg-neutral-800/50 backdrop-blur-sm px-6 py-5 text-white placeholder-neutral-400 focus:outline-none text-lg border-0"
+          >
+          <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0">
             Claim Your Spot
           </button>
         </div>
