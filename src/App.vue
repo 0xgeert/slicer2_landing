@@ -26,8 +26,8 @@
       <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/15 to-transparent blur-3xl pointer-events-none"></div>
 
         <h1 class="text-7xl md:text-8xl mb-8 font-black tracking-tight leading-tighter">
-          NO MORE BAGHOLDING.<br>
-          <span class="text-accent-500">NO MORE WAITING.</span>
+          NO MORE BAGHOLDING<br>
+          <span class="text-accent-500">NO MORE WAITING</span>
         </h1>
         <p class="text-xl md:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-5xl mx-auto">
           Express. Simulate. Deploy. Repeat — until profit feels inevitable.
@@ -121,7 +121,7 @@
             <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8">
               BUILD VISUALLY OR 
               <span class="text-accent-500 ">SPEAK YOUR STRATEGY</span> 
-              INTO EXISTENCE.
+              INTO EXISTENCE
             </h2>
             <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed text-balance">
               10,000+ on-chain and off-chain filters. Pure creative freedom. Compose by hand, describe in English, or mix both. Total control either way.
@@ -130,7 +130,7 @@
           
           <div class="space-y-10">
             <div>
-              <h3 class="text-3xl mb-6 font-bold text-accent-500  xl:-ml-8 text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS.</h3>
+              <h3 class="text-3xl mb-6 font-bold text-accent-500  xl:-ml-8 text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
               <div class="space-y-6 text-lg leading-relaxed">
                 <p class="text-neutral-300 text-balance">
                   Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
@@ -369,7 +369,7 @@
           <div>
             <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-mr-8">
               KNOW IF IT WINS 
-              <span class="text-accent-500  ">BEFORE YOU TRADE IT.</span>
+              <span class="text-accent-500  ">BEFORE YOU TRADE IT</span>
             </h2>
             <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed text-balance text-balnce">
               Replay six months in six seconds. See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
@@ -381,7 +381,7 @@
               Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
             </p>
             
-            <h3 class="text-3xl mb-6 font-bold text-accent-500 text-balance xl:-mr-8">FLEXIBLE EXITS MATCH YOUR STRATEGY.</h3>
+            <h3 class="text-3xl mb-6 font-bold text-accent-500 text-balance xl:-mr-8">FLEXIBLE EXITS MATCH YOUR STRATEGY</h3>
             <p class="text-neutral-300 text-balance leading-relaxed">
               Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
             </p>
@@ -439,7 +439,7 @@
       
       <div class="text-center mb-20">
         <h2 class="text-6xl mb-10 font-black tracking-tight">
-          <span class="text-accent-500 ">DEPLOY ON YOUR TERMS.</span>
+          <span class="text-accent-500 ">DEPLOY ON YOUR TERMS</span>
         </h2>
         <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto">
           Hands-free or hands-on — either way, you're in charge. Full automation with complete transparency, or human-in-the-loop for final calls.
@@ -569,10 +569,10 @@
     <div class="max-w-5xl mx-auto text-center">
       <div class="mb-16">
         <h2 class="text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight">
-          STOP GUESSING.<br>
-          <span class="text-accent-500">START SLICING.</span>
+          STOP GUESSING<br>
+          <span class="text-accent-500">START SLICING</span>
         </h2>
-        <h3 class="text-4xl mb-8 font-bold ">JOIN THE WAITLIST FOR EARLY ACCESS.</h3>
+        <h3 class="text-4xl mb-8 font-bold ">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
       </div>
       
       <div class="max-w-lg mx-auto mb-12">
