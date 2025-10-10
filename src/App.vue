@@ -18,12 +18,12 @@
 <div class="relative">  
   <div class="section-linear-bg">&nbsp;</div>
 
-  <main id="hero" class=" text-white pt-64 pb-24 px-4 sm:px-6 lg:px-8 flex items-center relative">
+  <main id="hero" class=" text-white pt-40 lg:pt-64 pb-24 px-4 sm:px-6 lg:px-8 flex items-center relative">
 
     <div class="max-w-6xl mx-auto text-center relative z-10">
 
       <div class="mb-16 relative">
-      <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-apple-500/15 to-transparent blur-3xl pointer-events-none"></div>
+        <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-apple-500/15 to-transparent blur-3xl pointer-events-none"></div>
 
         <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter">
           NO MORE BAGHOLDING<br>
@@ -40,7 +40,7 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="w-full bg-neutral-800/50 backdrop-blur-sm px-4 py-4 text-white placeholder-neutral-400 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
+            class="w-full bg-white/10 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
           >
           <button class="w-full bg-accent-500 hover:bg-accent-600 text-white px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl">
             Join Waitlist
@@ -52,14 +52,14 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="flex-1 bg-neutral-800/50 backdrop-blur-sm px-6 py-5 text-white placeholder-neutral-400 focus:outline-none text-lg border-0"
+            class="flex-1 bg-white/10 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
           >
           <button class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0">
             Join Waitlist
           </button>
         </div>
         
-        <p class="text-neutral-300 lg:text-balance text-sm mt-4">Get early access when Slicer 2.0 opens private beta.</p>
+        <p class="text-neutral-300 text-balance text-sm mt-4">Get early access when Slicer 2.0 opens private beta.</p>
       </div>
       
       <!-- <div class="mb-16">
@@ -173,7 +173,7 @@
                 <!-- Speech bubble container -->
                 <div class="relative inline-block">
                   <div class="bg-white rounded-3xl px-8 py-6 shadow-xl max-w-xl relative">
-                    <p class="text-gray-800 text-2xl leading-relaxed font-medium italic text-center lg:text-balance">
+                    <p class="text-gray-800 text-xl lg:text-2xl lg:leading-relaxed font-medium italic text-center text-balance">
                       Buy when smart money accumulates for 48h while retail is exiting.<br>
                       Sell when price doubles or after 72h.
                     </p>
@@ -189,19 +189,20 @@
                 </div>
                 
                 <!-- Large radial glow surrounding the card -->
-                <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
+                
           
 
                 <div class="bg-zinc-950/80 rounded-2xl p-6 border border-white/10 w-full max-w-2xl shadow-2xl relative z-10">
+                  <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
                   <h4 class="font-semibold text-accent-500 text-sm mb-3">Entry Conditions:</h4>
                   <div class="space-y-3">
                     <div class="bg-white/5 rounded-xl px-5 py-3 flex items-center justify-between ">
-                      <span class="text-blue-300 text-sm">Smart money net flow</span>
+                      <span class="text-blue-300 text-sm font-medium">Smart money net flow</span>
                       <span class="text-accent-500 font-bold text-sm">> 0 for 48h</span>
                     </div>
                     
                     <div class="bg-white/5 rounded-xl px-5 py-3 flex items-center justify-between ">
-                      <span class="text-blue-300 text-sm">Retail money net flow</span>
+                      <span class="text-blue-300 text-sm font-medium">Retail money net flow</span>
                       <span class="text-accent-500 font-bold text-sm">< 0 for 48h</span>
                     </div>
                   </div>
@@ -212,15 +213,17 @@
                 </div>
                 
                 <div class="bg-zinc-950/80 rounded-2xl p-6 border border-white/10 w-full max-w-2xl shadow-2xl relative z-10">
+                  <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
+
                   <h4 class="font-semibold text-accent-500 text-sm mb-3">Exit Conditions:</h4>
                   <div class="space-y-3">
                     <div class="bg-white/5  rounded-xl px-5 py-3 flex items-center justify-between ">
-                      <span class="text-blue-300 text-sm">Price change</span>
+                      <span class="text-blue-300 text-sm font-medium">Price change</span>
                       <span class="text-accent-500 font-bold text-sm">≥ 100%</span>
                     </div>
                     
                     <div class="bg-white/5  rounded-xl px-5 py-3 flex items-center justify-between ">
-                      <span class="text-blue-300 text-sm">Time held</span>
+                      <span class="text-blue-300 text-sm font-medium">Time held</span>
                       <span class="text-accent-500 font-bold text-sm">≥ 72h</span>
                     </div>
                   </div>
@@ -299,36 +302,37 @@
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
         <div class="relative">
           <!-- Large radial glow surrounding the card -->
-          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
+          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/50 via-white-50 lg:from-white/20 lg:via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
           
           <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl">
+            
             <div class="mb-6">
-              <h3 class="text-lg mb-1 font-semibold">Strategy: "Buy when smart money accumulates + sell at 2x or after 72h"</h3>
+              <h3 class="text-lg mb-1 font-semibold ">Strategy: "Buy when smart money accumulates + sell at 2x or after 72h"</h3>
               <p class="text-neutral-400 text-xs">(Example results for demo)</p>
             </div>
             
             <div class="grid grid-cols-2 gap-4 mb-6">
-              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
                 <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-accent-500 via-green-400 to-accent-500 bg-clip-text text-transparent">+247%</div>
                 <div class="text-neutral-400 text-xs font-medium">ROI</div>
               </div>
-              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
                 <div class="text-3xl font-bold mb-1">68%</div>
                 <div class="text-neutral-400 text-xs font-medium">Win Rate</div>
               </div>
-              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
                 <div class="text-3xl text-red-400 font-bold mb-1">-18%</div>
                 <div class="text-neutral-400 text-xs font-medium">Max DD</div>
               </div>
-              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
                 <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">2.4</div>
                 <div class="text-neutral-400 text-xs font-medium">Sharpe</div>
               </div>
-              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
                 <div class="text-3xl font-bold mb-1">4.2d</div>
                 <div class="text-neutral-400 text-xs font-medium">Avg Hold</div>
               </div>
-              <div class="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/30">
+              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
                 <div class="text-3xl font-bold mb-1">43</div>
                 <div class="text-neutral-400 text-xs font-medium">Total Trades</div>
               </div>
@@ -357,12 +361,12 @@
               <div>
                 <h4 class="mb-3 font-semibold text-accent-500 text-sm">Exit Breakdown:</h4>
                 <div class="space-y-2 text-sm">
-                  <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
-                    <span class="text-sm">• TP 100%: 18 trades</span>
+                  <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
+                    <span class="text-sm">TP 100%: 18 trades</span>
                     <span class="text-accent-500 font-semibold bg-gradient-to-r from-accent-500 to-green-400 bg-clip-text text-transparent">+284%</span>
                   </div>
-                  <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
-                    <span class="text-sm">• Time 72h: 25 trades</span>
+                  <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
+                    <span class="text-sm">Time 72h: 25 trades</span>
                     <span class="text-accent-500 font-semibold">+76%</span>
                   </div>
                 </div>
@@ -371,16 +375,16 @@
               <div>
                 <h4 class="mb-3 font-semibold text-accent-500 text-sm">Trade Size Impact:</h4>
                 <div class="space-y-2 text-sm">
-                  <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
-                    <span class="text-sm">• $100:</span>
+                  <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
+                    <span class="text-sm">$100:</span>
                     <span class="text-sm">+247% (0.3% slip)</span>
                   </div>
-                  <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
-                    <span class="text-sm">• $1,000:</span>
+                  <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
+                    <span class="text-sm">$1,000:</span>
                     <span class="text-sm">+213% (2.1%)</span>
                   </div>
-                  <div class="flex justify-between items-center bg-neutral-800/30 rounded-lg p-2.5">
-                    <span class="text-sm">• $10,000:</span>
+                  <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
+                    <span class="text-sm">$10,000:</span>
                     <span class="text-sm">+156% (8.7%)</span>
                   </div>
                 </div>
@@ -393,7 +397,7 @@
           </div>
         </div>
         
-        <div class="lg:text-right space-y-12 mt-24">
+        <div class="lg:text-right space-y-12 mt-32">
           <!-- Desktop-only text section -->
           <div class="hidden lg:block">
             <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-mr-8">
@@ -480,7 +484,7 @@
       <!-- Horizontal Tabs -->
       <div class="max-w-6xl mx-auto">
         <!-- Tab Navigation -->
-        <div class="flex space-x-1 mb-16 bg-neutral-800/30 rounded-2xl p-2 border border-white/5">
+        <div class="flex space-x-1 mb-16 bg-white/10 rounded-2xl p-2 border border-white/5">
           <button 
             @click="activeTab = 'hands-off'"
             :class="[
@@ -527,7 +531,7 @@
                       Trade Size
                     </label>
                     <div class="relative">
-                      <input type="text" value="$1,000" disabled class="w-full bg-neutral-800/30 border border-neutral-700/30 rounded-xl pl-12 pr-4 py-3 text-neutral-500 cursor-not-allowed">
+                      <input type="text" value="$1,000" disabled class="w-full bg-white/10 border border-neutral-700/30 rounded-xl pl-12 pr-4 py-3 text-neutral-500 cursor-not-allowed">
                       <i-heroicons-solid-currency-dollar class="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-500" />
                     </div>
                   </div>
@@ -537,7 +541,7 @@
                       Max Slippage
                     </label>
                     <div class="relative">
-                      <input type="text" value="2%" disabled class="w-full bg-neutral-800/30 border border-neutral-700/30 rounded-xl pl-12 pr-4 py-3 text-neutral-500 cursor-not-allowed">
+                      <input type="text" value="2%" disabled class="w-full bg-white/10 border border-neutral-700/30 rounded-xl pl-12 pr-4 py-3 text-neutral-500 cursor-not-allowed">
                       <i-heroicons-solid-chart-bar class="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-500" />
                     </div>
                   </div>
@@ -547,7 +551,7 @@
                       Gas Priority
                     </label>
                     <div class="relative">
-                      <select disabled class="w-full bg-neutral-800/30 border border-neutral-700/30 rounded-xl pl-12 pr-10 py-3 text-neutral-500 cursor-not-allowed appearance-none">
+                      <select disabled class="w-full bg-white/10 border border-neutral-700/30 rounded-xl pl-12 pr-10 py-3 text-neutral-500 cursor-not-allowed appearance-none">
                         <option>Medium</option>
                         <option>High</option>
                         <option>Low</option>
@@ -562,7 +566,7 @@
                       Notifications
                     </label>
                     <div class="relative">
-                      <select disabled class="w-full bg-neutral-800/30 border border-neutral-700/30 rounded-xl pl-12 pr-10 py-3 text-neutral-500 cursor-not-allowed appearance-none">
+                      <select disabled class="w-full bg-white/10 border border-neutral-700/30 rounded-xl pl-12 pr-10 py-3 text-neutral-500 cursor-not-allowed appearance-none">
                         <option>Telegram</option>
                         <option>Email</option>
                         <option>Both</option>
@@ -767,7 +771,7 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="w-full bg-neutral-800/50 backdrop-blur-sm px-4 py-4 text-white placeholder-neutral-400 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
+            class="w-full bg-white/10 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
           >
           <button class="w-full bg-accent-500 hover:bg-accent-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl">
             Claim Your Spot
@@ -779,7 +783,7 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="flex-1 bg-neutral-800/50 backdrop-blur-sm px-6 py-5 text-white placeholder-neutral-400 focus:outline-none text-lg border-0"
+            class="flex-1 bg-white/10 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
           >
           <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0">
             Claim Your Spot
