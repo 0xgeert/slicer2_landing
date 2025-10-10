@@ -25,11 +25,11 @@
       <div class="mb-16 relative">
         <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-apple-500/15 to-transparent blur-3xl pointer-events-none"></div>
 
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter">
           NO MORE BAGHOLDING<br>
           <span class="text-accent-500">NO MORE WAITING</span>
         </h1>
-        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-4xl mx-auto px-4">
+        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-4xl mx-auto px-4 text-balance">
           Express. Simulate. Deploy. Repeat — until profit feels inevitable.
         </p>
       </div>
@@ -132,7 +132,7 @@
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
         <div class="space-y-12">
           <div>
-            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8">
+            <h2 class="text-4xl lg:text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8">
               BUILD VISUALLY OR 
               <span class="text-accent-500 ">SPEAK YOUR STRATEGY</span> 
               INTO EXISTENCE
@@ -144,7 +144,7 @@
           
           <div class="space-y-10">
             <div>
-              <h3 class="text-3xl mb-6 font-bold text-accent-500  xl:-ml-8 lg:text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+              <h3 class="text-2xl lg:text-3xl mb-6 font-bold text-accent-500  xl:-ml-8 lg:text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
               <div class="space-y-6 text-lg leading-relaxed">
                 <p class="text-neutral-300 lg:text-balance">
                   Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
@@ -287,7 +287,7 @@
       
       <!-- Mobile-first text section -->
       <div class="lg:hidden mb-12">
-        <h2 class="text-6xl mb-6 leading-tighter font-black tracking-tight ">
+        <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-tight ">
           KNOW IF IT WINS 
           <span class="text-accent-500">BEFORE YOU TRADE IT</span>
         </h2>
@@ -415,7 +415,7 @@
                 Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
               </p>
               
-              <h3 class="text-3xl mb-6 font-bold text-accent-500 lg:text-balance xl:-mr-8">FLEXIBLE EXITS MATCH YOUR STRATEGY</h3>
+              <h3 class="text-2xl lg:text-3xl mb-6 font-bold text-accent-500 lg:text-balance xl:-mr-8">FLEXIBLE EXITS MATCH YOUR STRATEGY</h3>
               <p class="text-neutral-300 lg:text-balance leading-relaxed">
                 Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
               </p>
@@ -473,7 +473,7 @@
     <div class="max-w-8xl mx-auto">
       
       <div class="lg:text-center mb-12 lg:mb-20">
-        <h2 class="text-6xl mb-10 font-black tracking-tight">
+        <h2 class="text-4xl lg:text-6xl mb-10 font-black tracking-tight">
           <span class="text-accent-500 ">DEPLOY ON YOUR TERMS</span>
         </h2>
         <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto">
@@ -514,7 +514,7 @@
           <!-- Hands-Off Auto-Trading Tab -->
           <div v-if="activeTab === 'hands-off'" class="space-y-8">
             <div class="lg:text-center mb-12">
-              <h3 class="text-4xl mb-4 font-bold text-accent-500">HANDS-OFF AUTO-TRADING</h3>
+              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-accent-500">HANDS-OFF AUTO-TRADING</h3>
               <p class="text-xl text-neutral-300 italic">Set it. Forget it. Smile.</p>
             </div>
             
@@ -608,7 +608,7 @@
           <!-- Human-in-the-Loop Tab -->
           <div v-if="activeTab === 'human-loop'" class="space-y-8">
             <div class="lg:text-center mb-12">
-              <h3 class="text-4xl mb-4 font-bold text-accent-500">HUMAN-IN-THE-LOOP</h3>
+              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-accent-500">HUMAN-IN-THE-LOOP</h3>
               <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
             </div>
             
@@ -758,7 +758,7 @@
   <section id="cta" class="text-white pt-32 pb-12 lg:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
       <div class="mb-16">
-        <h2 class="text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight">
+        <h2 class="text-5xl lg:text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight">
           STOP GUESSING<br>
           <span class="text-accent-500">START SLICING</span>
         </h2>
