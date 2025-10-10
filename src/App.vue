@@ -18,23 +18,23 @@
 <div class="relative">  
   <div class="section-linear-bg">&nbsp;</div>
 
-  <main id="hero" class=" text-white pt-64 pb-24 px-8 flex items-center relative">
+  <main id="hero" class=" text-white pt-64 pb-24 px-4 sm:px-6 lg:px-8 flex items-center relative">
 
-    <div class="max-w-8xl mx-auto text-center relative z-10">
+    <div class="max-w-6xl mx-auto text-center relative z-10">
 
       <div class="mb-16 relative">
-      <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/15 to-transparent blur-3xl pointer-events-none"></div>
+      <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-apple-500/15 to-transparent blur-3xl pointer-events-none"></div>
 
-        <h1 class="text-7xl md:text-8xl mb-8 font-black tracking-tight leading-tighter">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter">
           NO MORE BAGHOLDING<br>
           <span class="text-accent-500">NO MORE WAITING</span>
         </h1>
-        <p class="text-xl md:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-5xl mx-auto">
+        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-4xl mx-auto px-4">
           Express. Simulate. Deploy. Repeat — until profit feels inevitable.
         </p>
       </div>
       
-      <div class="backdrop-blur-sm rounded-2xl p-5 sm:p-6 max-w-2xl mx-auto mb-12">
+      <div class="backdrop-blur-sm rounded-2xl p-4 sm:p-5 lg:p-6 max-w-2xl mx-4 sm:mx-auto mb-12">
         <!-- Mobile: Separate input and button -->
         <div class="flex flex-col space-y-3 sm:hidden">
           <input 
@@ -69,7 +69,7 @@
         </p>
       </div> -->
       
-      <div class="grid md:grid-cols-3 gap-12 mb-16 max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12 mb-16 max-w-5xl mx-auto px-4">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
           <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50  transition-all duration-300">
             <div class="text-center">
