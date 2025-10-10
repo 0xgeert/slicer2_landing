@@ -116,7 +116,7 @@
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
         <div class="space-y-12">
           <div>
-            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight mt-24 xl:-ml-8">
+            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8">
               BUILD VISUALLY OR 
               <span class="text-accent-500 ">SPEAK YOUR STRATEGY</span> 
               INTO EXISTENCE.
@@ -141,74 +141,74 @@
           </div>
         </div>
         
-        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-10 border border-white/5 shadow-2xl">
-          <div class="mb-6">
-            <span class="text-sm text-neutral-400 bg-neutral-800/50 px-4 py-2 rounded-full">Natural Language → Filters</span>
-          </div>
-          
-          <div class="bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 rounded-2xl p-6 mb-8 border border-neutral-700/50">
-            <div class="mb-6">
-              <div class="bg-accent-500/10 border border-accent-500/20 rounded-xl p-6 mb-6">
-                <p class="text-neutral-200 text-lg leading-relaxed font-medium">
-                  "Buy when smart money accumulates for 48h while retail is exiting.<br>
-                  Sell when price doubles or after 72h."
-                </p>
-              </div>
-              
-              <div class="text-center text-accent-500 mb-6 text-sm font-medium">
-                <i-fa-solid-arrow-down class="w-5 h-5 inline" />
-                <span class="ml-2">Translates to entries and exits:</span>
-              </div>
-              
-              <div class="mb-6">
-                <h4 class="text-sm text-accent-500 mb-4 font-semibold uppercase tracking-wide">Entry Conditions:</h4>
-                <div class="space-y-4 mb-6">
-                  <div class="bg-neutral-700/50 rounded-xl p-5 border-l-4 border-accent-500">
-                    <div class="text-sm text-neutral-400 mb-1 font-medium">Filter 1</div>
-                    <div class="text-white font-mono text-sm">holders.slices.smart.net_flow > 0 for 48h</div>
-                  </div>
-                  
-                  <div class="bg-neutral-700/50 rounded-xl p-5 border-l-4 border-accent-500">
-                    <div class="text-sm text-neutral-400 mb-1 font-medium">Filter 2</div>
-                    <div class="text-white font-mono text-sm">holders.slices.retail.net_flow < 0 for 48h</div>
-                  </div>
-                </div>
-                
-                <div class="h-px bg-gradient-to-r from-transparent via-neutral-600 to-transparent mb-6"></div>
-                
-                <h4 class="text-sm text-accent-500 mb-4 font-semibold uppercase tracking-wide">Exit Conditions:</h4>
-                <div class="space-y-4">
-                  <div class="bg-neutral-700/50 rounded-xl p-5 border-l-4 border-accent-500">
-                    <div class="text-sm text-neutral-400 mb-1 font-medium">Filter 3</div>
-                    <div class="text-white font-mono text-sm">price.usd_change >= 100%</div>
-                  </div>
-                  
-                  <div class="bg-neutral-700/50 rounded-xl p-5 border-l-4 border-accent-500">
-                    <div class="text-sm text-neutral-400 mb-1 font-medium">Filter 4</div>
-                    <div class="text-white font-mono text-sm">time_held >= 72h</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="flex items-center justify-between">
-            <div class="flex space-x-3">
+        <div class="mt-4 xl:-mr-8">
+          <div class="mb-8">
+            <div class="flex space-x-3 justify-center">
               <div class="w-3 h-3 bg-accent-500 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
             </div>
-            <div class="flex space-x-3">
-              <button class="w-10 h-10 bg-neutral-800 hover:bg-neutral-700 rounded-full flex items-center justify-center transition-colors duration-200 border border-neutral-700">
-                <i-fa-solid-chevron-left class="w-4 h-4 text-neutral-400" />
-              </button>
-              <button class="w-10 h-10 bg-neutral-800 hover:bg-neutral-700 rounded-full flex items-center justify-center transition-colors duration-200 border border-neutral-700">
-                <i-fa-solid-chevron-right class="w-4 h-4 text-neutral-400" />
-              </button>
-            </div>
           </div>
+
+            <div class="mb-8">
+              <div class="flex flex-col items-center space-y-4">
+                <!-- Speech bubble container -->
+                <div class="relative inline-block">
+                  <div class="bg-white rounded-3xl px-8 py-6 shadow-xl max-w-xl relative">
+                    <p class="text-gray-800 text-2xl leading-relaxed font-medium italic text-center text-balance">
+                      Buy when smart money accumulates for 48h while retail is exiting.<br>
+                      Sell when price doubles or after 72h.
+                    </p>
+                    <!-- Speech bubble tail - top right -->
+                    <div class="absolute -top-3 right-8">
+                      <div class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-b-[20px] border-b-white"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="text-center text-accent-500 text-sm font-medium mt-8">
+                  <i-fa-solid-arrow-down class="w-6 h-6 inline" />
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 w-full max-w-2xl shadow-lg">
+                  <h4 class="text-sm text-accent-500 mb-6 font-bold uppercase tracking-wider">Entry Conditions</h4>
+                  <div class="space-y-3">
+                    <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 flex items-center justify-between hover:border-accent-500/30 transition-all">
+                      <span class="text-neutral-200 text-sm">Smart money net flow</span>
+                      <span class="text-accent-500 font-bold text-sm">> 0 for 48h</span>
+                    </div>
+                    
+                    <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 flex items-center justify-between hover:border-accent-500/30 transition-all">
+                      <span class="text-neutral-200 text-sm">Retail money net flow</span>
+                      <span class="text-accent-500 font-bold text-sm">< 0 for 48h</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="text-center text-accent-500 text-sm font-medium mt-6">
+                  <i-fa-solid-arrow-down class="w-6 h-6 inline" />
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 w-full max-w-2xl shadow-lg">
+                  <h4 class="text-sm text-accent-500 mb-6 font-bold uppercase tracking-wider">Exit Conditions</h4>
+                  <div class="space-y-3">
+                    <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 flex items-center justify-between hover:border-accent-500/30 transition-all">
+                      <span class="text-neutral-200 text-sm">Price change</span>
+                      <span class="text-accent-500 font-bold text-sm">≥ 100%</span>
+                    </div>
+                    
+                    <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 flex items-center justify-between hover:border-accent-500/30 transition-all">
+                      <span class="text-neutral-200 text-sm">Time held</span>
+                      <span class="text-accent-500 font-bold text-sm">≥ 72h</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+      
         </div>
       </div>
       
@@ -219,7 +219,7 @@
               <i-heroicons-solid-light-bulb class="w-10 h-10 text-accent-600" />
             </div>
             <h4 class="mb-2 font-semibold text-lg leading-tight">Natural Language</h4>
-            <p class="text-neutral-400 text-sm leading-tight">Describe strategies in plain English</p>
+            <p class="text-neutral-400 text-sm leading-tight text-balance">Describe strategies in plain English</p>
           </div>
         </div>
         
@@ -229,7 +229,7 @@
               <i-heroicons-solid-funnel class="w-10 h-10 text-accent-600" />
             </div>
             <h4 class="mb-2 font-semibold text-lg leading-tight">Precision Filtering</h4>
-            <p class="text-neutral-400 text-sm leading-tight">Hand-craft with 10,000+ metrics</p>
+            <p class="text-neutral-400 text-sm leading-tight text-balance">Hand-craft with 10,000+ metrics</p>
           </div>
         </div>
         
@@ -239,7 +239,7 @@
               <i-heroicons-solid-square-2-stack class="w-10 h-10 text-accent-600" />
             </div>
             <h4 class="mb-2 font-semibold text-lg leading-tight">Stacked Sources</h4>
-            <p class="text-neutral-400 text-sm leading-tight">Combine external signals with your filters</p>
+            <p class="text-neutral-400 text-sm leading-tight text-balance">Combine external signals with your filters</p>
           </div>
         </div>
         
@@ -249,7 +249,7 @@
               <i-heroicons-solid-chart-bar class="w-10 h-10 text-accent-600" />
             </div>
             <h4 class="mb-2 font-semibold text-lg leading-tight">Behavioral Signals</h4>
-            <p class="text-neutral-400 text-sm leading-tight">Track wallet patterns and holder dynamics</p>
+            <p class="text-neutral-400 text-sm leading-tight text-balance">Track wallet patterns and holder dynamics</p>
           </div>
         </div>
       </div>
@@ -388,7 +388,7 @@
               </div>
               <div class="flex-1">
                 <h4 class="mb-1 font-semibold text-lg leading-tight">Real-Time Backtesting</h4>
-                <p class="text-neutral-400 text-sm leading-tight">Historical data with live market conditions simulation</p>
+                <p class="text-neutral-400 text-sm leading-tight text-balance">Historical data with live market conditions simulation</p>
               </div>
             </div>
           </div>
@@ -400,7 +400,7 @@
               </div>
               <div class="flex-1">
                 <h4 class="mb-1 font-semibold text-lg leading-tight">Slippage Analysis</h4>
-                <p class="text-neutral-400 text-sm leading-tight">Accurate trade size impact modeling</p>
+                <p class="text-neutral-400 text-sm leading-tight text-balance">Accurate trade size impact modeling</p>
               </div>
             </div>
           </div>
@@ -412,7 +412,7 @@
               </div>
               <div class="flex-1">
                 <h4 class="mb-1 font-semibold text-lg leading-tight">Risk Metrics</h4>
-                <p class="text-neutral-400 text-sm leading-tight">Comprehensive drawdown and volatility analysis</p>
+                <p class="text-neutral-400 text-sm leading-tight text-balance">Comprehensive drawdown and volatility analysis</p>
               </div>
             </div>
           </div>
@@ -520,7 +520,7 @@
             </div>
             <div class="flex-1">
               <h4 class="mb-1 font-semibold text-lg leading-tight">Full Automation</h4>
-              <p class="text-neutral-400 text-sm leading-tight">24/7 execution with complete transparency</p>
+              <p class="text-neutral-400 text-sm leading-tight text-balance">24/7 execution with complete transparency</p>
             </div>
           </div>
         </div>
@@ -532,7 +532,7 @@
             </div>
             <div class="flex-1">
               <h4 class="mb-1 font-semibold text-lg leading-tight">Human Oversight</h4>
-              <p class="text-neutral-400 text-sm leading-tight">Approve trades before execution</p>
+              <p class="text-neutral-400 text-sm leading-tight text-balance">Approve trades before execution</p>
             </div>
           </div>
         </div>
@@ -544,7 +544,7 @@
             </div>
             <div class="flex-1">
               <h4 class="mb-1 font-semibold text-lg leading-tight">Custom Integration</h4>
-              <p class="text-neutral-400 text-sm leading-tight">Webhook support for external systems</p>
+              <p class="text-neutral-400 text-sm leading-tight text-balance">Webhook support for external systems</p>
             </div>
           </div>
         </div>
