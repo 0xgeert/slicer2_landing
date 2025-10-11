@@ -255,20 +255,18 @@
       <!-- /grid -->
 
       <!-- BRIDGE: “Every signal…” now centered under both columns on desktop -->
-      <div class="hidden lg:block  mb-2 max-w-[44rem] mx-auto">
+      <div class="hidden lg:flex  mb-2 max-w-[44rem] mx-auto  flex-col items-center">
         <button
           @click="toggleSignalSection"
-          class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6"
+          class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6 flex  items-center justify-center gap-2"
         >
-          <div class="flex items-center justify-between gap-2">
-            <h3 class="w-full text-xl font-bold text-lime-500/85 text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+            <h3 class="text-xl font-bold text-lime-500/85 text-balance">Every signal, every slice, at your fingertips</h3>
             <i-heroicons-solid-chevron-down
               :class="[
                 'w-6 h-6 text-lime-500 group-hover:text-lime-400 transition-all duration-300',
                 isSignalSectionExpanded ? 'rotate-180' : 'rotate-0'
               ]"
             />
-          </div>
         </button>
 
         <div
