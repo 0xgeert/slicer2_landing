@@ -185,7 +185,7 @@
           </div>
 
           <div class="lg:mb-6">
-            <div class="flex flex-col items-center space-y-4">
+            <div class="flex flex-col items-center ">
               <!-- Speech bubble -->
               <div class="relative inline-block">
                 <div class="bg-white rounded-3xl px-8 py-6 shadow-white/10 shadow-xl max-w-lg lg:max-w-xl relative ">
@@ -1352,45 +1352,54 @@ button:hover .arrow {
     opacity: 0.5 !important;
   }
 }
-
-@keyframes dataFlowBounce {
-  0% {
-    background-position: 0% -60%;
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.4;
-  }
-  50% {
-    background-position: 0% 120%;
-    opacity: 1;
-  }
-  90% {
-    opacity: 0.4;
-  }
-  100% {
-    background-position: 0% -20%;
-    opacity: 0;
-  }
+/* configurable tokens (optional) */
+:root{
+  --df-color: rgba(180,255,120,1);   /* core lime */
+  --df-soft : rgba(180,255,120,.6);  /* shoulder */
+  --df-dur  : 1.6s;                  /* duration */
 }
 
-.data-flow-line {
-  height: 2rem;
+/* container: fixed size, clips the moving pulse */
+.data-flow-line{
+  position: relative;
   width: 2px;
+  height: 2.5rem;           /* tweak as needed */
   border-radius: 9999px;
-  overflow: hidden;
-  background: linear-gradient(to bottom, 
-    transparent 0%,                 
-    rgba(180,255,120,0.0) 10%,
-    rgba(180,255,120,0.7) 40%,      
-    rgba(180,255,120,1) 50%,
-    rgba(180,255,120,0.7) 60%,
-    rgba(180,255,120,0.0) 90%,
-    transparent 100%                
-  );
-  background-size: 100% 200%;
-  animation: dataFlowBounce 1.5s linear infinite;
+  overflow: hidden;         /* ensures perfect symmetry at ends */
+  background: transparent;  /* no bg animation here */
 }
 
+/* the moving pulse */
+.data-flow-line::before{
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  width: 100%;
+  /* make the pulse a bit taller than the container
+     so it can fade in/out inside the clip */
+  height: 120%;
+  top: -10%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(180,255,120,0) 10%,
+    var(--df-soft) 40%,
+    var(--df-color) 50%,
+    var(--df-soft) 60%,
+    rgba(180,255,120,0) 90%,
+    transparent 100%
+  );
+  animation: dataFlowOsc var(--df-dur) ease-in-out infinite;
+  will-change: transform;
+}
+
+/* top -> bottom -> top with a tiny dwell at each end */
+@keyframes dataFlowOsc{
+  0%   { transform: translateY(-10%); opacity: 0; }
+  10%  { opacity: .5; }
+  45%  { transform: translateY(10%);  opacity: 1; }  /* just inside bottom */
+  55%  { transform: translateY(10%);  opacity: 1; }  /* micro-hold */
+  90%  { opacity: .5; }
+}
 
 </style>
