@@ -49,13 +49,13 @@
         </div>
         
         <!-- Desktop: Integrated input and button -->
-        <div class="hidden sm:flex rounded-2xl  border-2 border-neutral-700/30 transition-all duration-200">
+        <div class="hidden sm:flex rounded-2xl overflow-hidden border-2 border-neutral-700/30 transition-all duration-200">
           <input 
             type="email" 
             placeholder="Enter your email address" 
             class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
           >
-          <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0">
+          <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0 rounded-r-2xl">
             Join Waitlist
           </button>
         </div>
@@ -304,7 +304,7 @@
       <div class="lg:hidden  max-w-2xl mx-auto mt-4">
         <button 
           @click="toggleSignalSection"
-          class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg py-2 px-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
+          class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg p-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
         > More on expressing your strategy
           <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',isSignalSectionExpanded ? 'rotate-180' : 'rotate-0']" />
         </button>
@@ -350,7 +350,7 @@
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
         <div class="relative ">
           <!-- Large radial glow surrounding the card -->
-          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/40 from-10% lg:from-white/20 lg:via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
+          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/30  lg:from-white/20 lg:via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
           
           <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl">
             
@@ -395,35 +395,79 @@
               </div>
             </div>
             
-            <div class="space-y-5">
+            <div class="space-y-8">
               <div>
-                <h4 class="mb-3 font-semibold text-white/80 text-sm">Exit Breakdown</h4>
-                <div class="space-y-2 text-sm">
-                  <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-100">TP 500%</span>
-                    <span class=" text-blue-400">7 trades</span>
+                <button 
+                  @click="toggleExitBreakdown"
+                  class="group w-full text-left focus:outline-none transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-3 px-4 -my-3 cursor-pointer"
+                >
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-semibold text-white/80 text-sm">Exit Breakdown</h4>
+                    <div class="flex items-center justify-center">
+                      <i-heroicons-solid-chevron-down 
+                        :class="[
+                          'w-4 h-4 text-accent-500 group-hover:text-accent-400 transition-all duration-300',
+                          isExitBreakdownExpanded ? 'rotate-180' : 'rotate-0'
+                        ]"
+                      />
+                    </div>
                   </div>
-                  <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-100">Time 72h</span>
-                    <span class=" text-blue-400">25 trades</span>
+                </button>
+                <div 
+                  :class="[
+                    'overflow-hidden transition-all duration-500 ease-in-out',
+                    isExitBreakdownExpanded ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'
+                  ]"
+                >
+                  <div class="space-y-2 text-sm pt-6">
+                    <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
+                      <span class="text-sm text-amber-100">TP 500%</span>
+                      <span class=" text-blue-400">7 trades</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
+                      <span class="text-sm text-amber-100">Time 72h</span>
+                      <span class=" text-blue-400">25 trades</span>
+                    </div>
                   </div>
                 </div>
               </div>
               
               <div>
-                <h4 class="mb-3 font-semibold text-white/80 text-sm">Trade Size Impact</h4>
-                <div class="space-y-2 text-sm">
-                  <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-100">$100</span>
-                    <span class="text-sm text-apple-400">+247% <span class=" text-blue-400">(0.3% slip)</span></span>
+                <button 
+                  @click="toggleTradeSizeImpact"
+                  class="group w-full text-left focus:outline-none transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-3 px-4 -my-3 cursor-pointer"
+                >
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-semibold text-white/80 text-sm">Trade Size Impact</h4>
+                    <div class="flex items-center justify-center">
+                      <i-heroicons-solid-chevron-down 
+                        :class="[
+                          'w-4 h-4 text-accent-500 group-hover:text-accent-400 transition-all duration-300',
+                          isTradeSizeImpactExpanded ? 'rotate-180' : 'rotate-0'
+                        ]"
+                      />
+                    </div>
                   </div>
-                  <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-100">$1,000</span>
-                    <span class="text-sm text-apple-400">+213% <span class=" text-blue-400">(2.1%)</span></span>
-                  </div>
-                  <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-100">$10,000</span>
-                    <span class="text-sm text-apple-400">+156% <span class=" text-blue-400">(8.7%)</span></span>
+                </button>
+                <div 
+                  :class="[
+                    'overflow-hidden transition-all duration-500 ease-in-out',
+                    isTradeSizeImpactExpanded ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                  ]"
+                >
+                  <div class="space-y-2 text-sm pt-6">
+                    <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
+                      <span class="text-sm text-amber-100">$100</span>
+                      <span class="text-sm text-apple-400">+247% <span class=" text-blue-400">(0.3% slip)</span></span>
+                    </div>
+                    <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
+                      <span class="text-sm text-amber-100">$1,000</span>
+                      <span class="text-sm text-apple-400">+213% <span class=" text-blue-400">(2.1%)</span></span>
+                    </div>
+                    <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
+                      <span class="text-sm text-amber-100">$10,000</span>
+                      <span class="text-sm text-apple-400">+156% <span class=" text-blue-400">(8.7%)</span></span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -904,7 +948,7 @@
             placeholder="Enter your email address" 
             class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
           >
-          <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0">
+          <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0 rounded-r-2xl">
             Claim Your Spot
           </button>
         </div>
@@ -961,7 +1005,9 @@ export default {
     return {
       activeTab: 'hands-off',
       isSignalSectionExpanded: false,
-      isExitsSectionExpanded: false
+      isExitsSectionExpanded: false,
+      isExitBreakdownExpanded: false,
+      isTradeSizeImpactExpanded: false
     }
   },
   methods: {
@@ -970,6 +1016,12 @@ export default {
     },
     toggleExitsSection() {
       this.isExitsSectionExpanded = !this.isExitsSectionExpanded
+    },
+    toggleExitBreakdown() {
+      this.isExitBreakdownExpanded = !this.isExitBreakdownExpanded
+    },
+    toggleTradeSizeImpact() {
+      this.isTradeSizeImpactExpanded = !this.isTradeSizeImpactExpanded
     }
   }
 }
