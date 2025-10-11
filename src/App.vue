@@ -1,10 +1,8 @@
 <template>
 <div class="relative">
   <!-- gradients: purple linear + black radial -->
-  <div>
-    <div class="fixed inset-0 bg-gradient-to-b from-purple-950 via-purple-900/20 to-transparent h-[500px] pointer-events-none -z-10"></div>
-    <div class="fixed inset-0 bg-gradient-radial from-zinc-950  to-transparent pointer-events-none -z-10"></div>
-  </div>
+  <div class="absolute inset-0 bg-gradient-to-b from-purple-950 via-purple-900/20 to-transparent h-[80vh] pointer-events-none -z-10"></div>
+  <div class="absolute inset-0 bg-gradient-radial from-zinc-950  to-transparent pointer-events-none -z-10"></div>
   <header id="header" :class="['bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
     <div class="max-w-8xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
