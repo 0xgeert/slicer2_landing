@@ -136,7 +136,7 @@
               INTO EXISTENCE
             </h2>
             <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance">
-              10,000+ on-chain and off-chain filters. Pure creative freedom. Compose by hand, describe in English, or mix both. Total control either way.
+              <span class="text-white font-semibold">10,000+ on-chain and off-chain filters.</span> Pure creative freedom. Compose by hand, describe in English, or mix both. Total control either way.
             </p>
           </div>
           
@@ -254,32 +254,7 @@
         </div>
       </div>
       
-      <!-- EVERY SIGNAL, EVERY SLICE section - moved below right column for mobile -->
-      <div class="lg:hidden  max-w-2xl mx-auto -mt-4">
-        <button 
-          @click="toggleSignalSection"
-          class="w-full flex gap-2 items-center text-lg justify-center rounded-lg p-3 transition-all duration-300"
-        > More info on composing slices
-          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',isSignalSectionExpanded ? 'rotate-180' : 'rotate-0']" />
-        </button>
-        <div 
-            :class="[
-              'overflow-hidden transition-all duration-500 ease-in-out mt-4',
-              isSignalSectionExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-            ]"
-          >
-          <div class="space-y-6 text-lg leading-relaxed pt-4">
-            <p class="text-neutral-300 lg:text-balance">
-              Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
-            </p>
-            <p class="text-neutral-300 lg:text-balance">
-              Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="mt-20">
+      <div class="mt-12 lg:mt-20">
         <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-6 font-bold text-white/80">Advanced Expression Features</h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
@@ -323,6 +298,31 @@
           </div>
         </div>
       </div>
+
+      <!-- EVERY SIGNAL, EVERY SLICE section - moved below right column for mobile -->
+      <div class="lg:hidden  max-w-2xl mx-auto mt-4">
+        <button 
+          @click="toggleSignalSection"
+          class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg py-2 px-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
+        > More on expressing your strategy
+          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',isSignalSectionExpanded ? 'rotate-180' : 'rotate-0']" />
+        </button>
+        <div 
+            :class="[
+              'overflow-hidden transition-all duration-500 ease-in-out mt-4',
+              isSignalSectionExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            ]"
+          >
+          <div class="space-y-4 text-lg leading-relaxed pt-4">
+            <p class="text-neutral-300 lg:text-balance">
+              Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
+            </p>
+            <p class="text-neutral-300 lg:text-balance">
+              Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>
@@ -339,7 +339,7 @@
           <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
         </h2>
         <p class="text-lg text-neutral-300 mb-8 italic font-light leading-relaxed ">
-          Replay six months in six seconds. See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
+          <span class="font-semibold text-white">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
         </p>
         <p class="text-neutral-300 ">
           Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
@@ -385,16 +385,6 @@
               </div>
             </div>
             
-            <div class="mb-6">
-              <div class="flex justify-between text-xs text-neutral-400 mb-2">
-                <span>6 months → 6 seconds animation</span>
-                <span>Progress: 100%</span>
-              </div>
-              <div class="w-full bg-neutral-700 rounded-full h-2 overflow-hidden">
-                <div class="bg-gradient-to-r from-accent-500 to-accent-hover h-2 rounded-full w-full transition-all duration-300"></div>
-              </div>
-            </div>
-            
             <div class="h-48 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-2xl mb-6 flex items-center justify-center border border-neutral-700/30">
               <div class="text-center">
                 <div class="text-accent-500 mb-3">
@@ -435,6 +425,16 @@
                     <span class="text-sm text-apple-400">+156% <span class=" text-blue-400">(8.7%)</span></span>
                   </div>
                 </div>
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <div class="flex justify-between text-xs text-neutral-400 mb-2">
+                <span>6 months → 6 seconds animation</span>
+                <span>Progress: 100%</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2 overflow-hidden">
+                <div class="bg-gradient-to-r from-accent-500 to-accent-hover h-2 rounded-full w-full transition-all duration-300"></div>
               </div>
             </div>
             
