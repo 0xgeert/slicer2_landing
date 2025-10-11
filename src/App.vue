@@ -149,64 +149,32 @@
     </div>
   </main>
 </div>
+
 <div class="relative overflow-hidden">  
   <div class="section-linear-bg">&nbsp;</div>
-  <section id="express" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
-    <div class="max-w-8xl mx-auto ">
-      <div class="grid lg:grid-cols-2 gap-20 items-start mb-12">
-        <div class="space-y-12">
-          <div class="text-center lg:text-left pt-8 lg:pt-16">
-            <h2 class="text-4xl lg:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
-              BUILD VISUALLY OR 
-              <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span> 
+  <section id="express" class="text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto">
+
+      <!-- 2-col narrative: Copy (L) → Example (R) -->
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-28 items-start mb-6 lg:mb-16">
+        <!-- LEFT: Headline + paragraph -->
+        <div class="space-y-10">
+          <div class="text-center lg:text-left pt-6 lg:pt-16">
+            <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-[-0.015em] gradient-text-yellow text-balance">
+              BUILD VISUALLY OR
+              <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span>
               INTO EXISTENCE
             </h2>
-            <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance lg:ml-6">
-              <span class="text-white font-semibold">10,000+ on-chain and off-chain filters.</span> Pure creative freedom. <span class="text-white font-semibold">Compose by hand, describe in English, or mix both.</span> Total control either way.
+            <p class="text-xl text-neutral-300 mb-0 italic font-light leading-relaxed text-balance  lg:ml-6">
+              <span class="text-white font-semibold">10,000+ on-chain and off-chain filters.</span> Pure creative freedom.
+              <span class="text-white font-semibold">Compose by hand, describe in English, or mix both.</span> Total control either way.
             </p>
           </div>
-          
-          <!-- EVERY SIGNAL, EVERY SLICE section - desktop only -->
-          <div class="hidden lg:block space-y-10">
-            <div>
-              <button 
-                @click="toggleSignalSection"
-                class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-lg py-4 px-6 -my-4"
-              >
-                <div class="flex items-center justify-between gap-2">
-                  <h3 class="w-full text-xl font-bold text-lime-500/80 text-balance transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
-                  <div class="flex items-center justify-center">
-                    <i-heroicons-solid-chevron-down 
-                      :class="[
-                        'w-6 h-6 text-lime-500 group-hover:text-lime-400 transition-all duration-300',
-                        isSignalSectionExpanded ? 'rotate-180' : 'rotate-0'
-                      ]"
-                    />
-                  </div>
-                </div>
-              </button>
-              <div 
-                :class="[
-                  'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
-                  isSignalSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
-                ]"
-                :style="{ transform: 'translateZ(0)' }"
-              >
-                <div class="space-y-6 text-lg leading-relaxed pt-4">
-                  <p class="text-neutral-300 lg:text-balance">
-                    Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
-                  </p>
-                  <p class="text-neutral-300 lg:text-balance">
-                    Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        
-        <div class="-mt-20 lg:mt-12 ">
-          <div class="mb-8">
+
+        <!-- RIGHT: Speech → Filter demo (scaled/uncrowded) -->
+        <div class="mt-4 lg:mt-6 xl:pl-8 xl:-mr-8">
+          <div class="mb-6">
             <div class="flex space-x-3 justify-center">
               <div class="w-3 h-3 bg-lime-500 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
@@ -216,75 +184,116 @@
             </div>
           </div>
 
-            <div class="lg:mb-8">
-              <div class="flex flex-col items-center space-y-4">
-                <!-- Speech bubble container -->
-                <div class="relative inline-block">
-                  <div class="bg-white rounded-3xl px-8 py-6 shadow-xl max-w-xl relative">
-                    <p class="text-gray-800 text-xl lg:text-2xl lg:leading-relaxed font-medium italic text-center text-balance">
-                      Buy when smart money accumulates for 48h while retail is exiting.<br>
-                      Sell when price goes up 5x or after 72h.
-                    </p>
-                    <!-- Speech bubble tail - top right -->
-                    <div class="absolute -top-3 right-8">
-                      <div class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-b-[20px] border-b-white"></div>
-                    </div>
+          <div class="lg:mb-6">
+            <div class="flex flex-col items-center space-y-4">
+              <!-- Speech bubble -->
+              <div class="relative inline-block">
+                <div class="bg-white rounded-3xl px-8 py-6 shadow-white/10 shadow-xl max-w-lg lg:max-w-xl relative ">
+                  <p class="text-gray-800 text-lg lg:text-2xl lg:leading-relaxed font-medium italic text-center text-balance">
+                    Buy when smart money accumulates for 48h while retail is exiting.<br>
+                    Sell when price goes up 5x or after 72h.
+                  </p>
+                  <!-- Tail -->
+                  <div class="absolute -top-3 right-8">
+                    <div class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-b-[20px] border-b-white"></div>
                   </div>
                 </div>
-                
-                <div class="text-center text-lime-400/80 text-sm font-medium mt-8">
-                  <i-fa-solid-arrow-down class="w-6 h-6 inline" />
-                </div>
-                
+              </div>
 
-                <div class="bg-zinc-950/80 rounded-2xl  border border-white/5 w-full max-w-2xl shadow-2xl relative z-10">
-                  <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
-                  
-                  <div>
-                    <!-- Buy Conditions -->
-                    <div class="inline-block rounded-lg p-2">
-                      <div class="inline-block bg-lime-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-lime-400 text-sm font-semibold">Buy at</span>
-                        <i-heroicons-solid-chevron-down class="w-3 h-3 text-lime-400 ml-1 inline" />
-                      </div>
-                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-amber-100 text-sm font-medium">Smart money net flow</span>
-                        <span class="text-blue-400 font-medium text-sm ml-2">> 0 for 48h</span>
-                      </div>
-                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2">
-                        <span class="text-amber-100 text-sm font-medium">Retail money net flow</span>
-                        <span class="text-blue-400 font-medium text-sm ml-2">< 0 for 48h</span>
-                      </div>
+
+              <span class="data-flow-line "></span>
+
+
+              <!-- Filter blocks -->
+              <div class="bg-zinc-950/80 rounded-2xl border border-white/5 w-full max-w-2xl shadow-2xl relative z-10">
+                <div class="absolute inset-0 -inset-x-24 -inset-y-24 bg-gradient-radial from-white/15 via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
+
+                <div class="p-2">
+                  <!-- Buy -->
+                  <div class="inline-block rounded-lg p-2">
+                    <div class="inline-block bg-lime-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
+                      <span class="text-lime-400 text-sm font-semibold">Buy at</span>
+                      <i-heroicons-solid-chevron-down class="w-3 h-3 text-lime-400 ml-1 inline" />
                     </div>
-                    
-                    <!-- Sell Conditions -->
-                    <div class="inline-block rounded-lg p-2">
-                      <div class="inline-block bg-red-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-red-400 text-sm font-semibold">Sell at</span>
-                        <i-heroicons-solid-chevron-down class="w-3 h-3 text-red-400 ml-1 inline" />
-                      </div>
-                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-amber-100 text-sm font-medium">Price change</span>
-                        <span class="text-blue-400 font-medium text-sm ml-2">≥ 500%</span>
-                      </div>
-                      <div class="inline-block px-1 py-2 mr-2 mb-2 italic text-xs text-neutral-400">OR</div>
-                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-amber-100 text-sm font-medium">Time held</span>
-                        <span class="text-blue-400 font-medium text-sm ml-2">≥ 72h</span>
-                      </div>
+                    <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
+                      <span class="text-amber-100 text-sm font-medium">Smart money net flow</span>
+                      <span class="text-blue-400 font-medium text-sm ml-2">&gt; 0 for 48h</span>
+                    </div>
+                    <div class="inline-block bg-white/5 rounded-lg px-3 py-2">
+                      <span class="text-amber-100 text-sm font-medium">Retail money net flow</span>
+                      <span class="text-blue-400 font-medium text-sm ml-2">&lt; 0 for 48h</span>
+                    </div>
+                  </div>
+
+                  <!-- Sell -->
+                  <div class="inline-block rounded-lg p-2">
+                    <div class="inline-block bg-red-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
+                      <span class="text-red-400 text-sm font-semibold">Sell at</span>
+                      <i-heroicons-solid-chevron-down class="w-3 h-3 text-red-400 ml-1 inline" />
+                    </div>
+                    <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
+                      <span class="text-amber-100 text-sm font-medium">Price change</span>
+                      <span class="text-blue-400 font-medium text-sm ml-2">≥ 500%</span>
+                    </div>
+                    <div class="inline-block px-1 py-2 mr-2 mb-2 italic text-xs text-neutral-400">OR</div>
+                    <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
+                      <span class="text-amber-100 text-sm font-medium">Time held</span>
+                      <span class="text-blue-400 font-medium text-sm ml-2">≥ 72h</span>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- /Filter blocks -->
             </div>
-        
+          </div>
+        </div>
+        <!-- /RIGHT -->
+      </div>
+      <!-- /grid -->
+
+      <!-- BRIDGE: “Every signal…” now centered under both columns on desktop -->
+      <div class="hidden lg:block  mb-2 max-w-[44rem] mx-auto">
+        <button
+          @click="toggleSignalSection"
+          class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <h3 class="w-full text-xl font-bold text-lime-500/85 text-balance">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+            <i-heroicons-solid-chevron-down
+              :class="[
+                'w-6 h-6 text-lime-500 group-hover:text-lime-400 transition-all duration-300',
+                isSignalSectionExpanded ? 'rotate-180' : 'rotate-0'
+              ]"
+            />
+          </div>
+        </button>
+
+        <div
+          :class="[
+            'overflow-hidden transition-all duration-500 ease-in-out mt-3 will-change-transform',
+            isSignalSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+          ]"
+          :style="{ transform: 'translateZ(0)' }"
+        >
+          <div class="space-y-5 text-lg leading-relaxed pt-3 px-6">
+            <p class="text-neutral-300 ">
+              Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
+            </p>
+            <p class="text-neutral-300">
+              Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
+            </p>
+          </div>
         </div>
       </div>
-      
-      <div class="mt-12 lg:mt-20">
+
+      <!-- Subtle divider gradient before features -->
+      <div class="pointer-events-none mt-16 mb-12 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+      <!-- FEATURES -->
+      <div class="mt-14 lg:mt-28">
         <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-6 font-bold text-white/80">Advanced Expression Features</h3>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
                 <i-heroicons-solid-light-bulb class="w-10 h-10 text-lime-600" />
@@ -293,7 +302,7 @@
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Describe strategies in plain English</p>
             </div>
           </div>
-          
+
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
@@ -303,7 +312,7 @@
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Hand-craft with 10,000+ metrics</p>
             </div>
           </div>
-          
+
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
@@ -313,8 +322,8 @@
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Combine external signals with your filters</p>
             </div>
           </div>
-          
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
+
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
                 <i-heroicons-solid-chart-bar class="w-10 h-10 text-lime-600" />
@@ -326,21 +335,23 @@
         </div>
       </div>
 
-      <!-- EVERY SIGNAL, EVERY SLICE section - moved below right column for mobile -->
-      <div class="lg:hidden  max-w-2xl mx-auto mt-4">
-        <button 
+      <!-- MOBILE: “More on expressing your strategy” (unchanged) -->
+      <div class="lg:hidden max-w-2xl mx-auto mt-6">
+        <button
           @click="toggleSignalSection"
           class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg p-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
-        > More on expressing your strategy
+        >
+          More on expressing your strategy
           <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-lime-500 group-hover:text-lime-400 transition-all duration-300',isSignalSectionExpanded ? 'rotate-180' : 'rotate-0']" />
         </button>
-        <div 
-            :class="[
-              'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
-              isSignalSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
-            ]"
-            :style="{ transform: 'translateZ(0)' }"
-          >
+
+        <div
+          :class="[
+            'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
+            isSignalSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+          ]"
+          :style="{ transform: 'translateZ(0)' }"
+        >
           <div class="space-y-4 text-lg leading-relaxed pt-4">
             <p class="text-neutral-300 lg:text-balance">
               Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
@@ -351,9 +362,11 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 </div>
+
 <div class="relative overflow-hidden">  
   <div class="section-linear-bg">&nbsp;</div>
   <section id="simulate" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -374,7 +387,7 @@
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
+      <div class="grid lg:grid-cols-2 gap-28 items-start mb-24">
         <div class="relative ">
           <!-- Large radial glow surrounding the card -->
           <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/30  lg:from-white/20 lg:via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
@@ -1339,4 +1352,45 @@ button:hover .arrow {
     opacity: 0.5 !important;
   }
 }
+
+@keyframes dataFlowBounce {
+  0% {
+    background-position: 0% -60%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  50% {
+    background-position: 0% 120%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    background-position: 0% -20%;
+    opacity: 0;
+  }
+}
+
+.data-flow-line {
+  height: 2rem;
+  width: 2px;
+  border-radius: 9999px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, 
+    transparent 0%,                 
+    rgba(180,255,120,0.0) 10%,
+    rgba(180,255,120,0.7) 40%,      
+    rgba(180,255,120,1) 50%,
+    rgba(180,255,120,0.7) 60%,
+    rgba(180,255,120,0.0) 90%,
+    transparent 100%                
+  );
+  background-size: 100% 200%;
+  animation: dataFlowBounce 1.5s linear infinite;
+}
+
+
 </style>
