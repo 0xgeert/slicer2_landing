@@ -25,9 +25,9 @@
       <div class="mb-16 relative">
         <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-apple-500/15 to-transparent blur-3xl pointer-events-none"></div>
 
-        <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">
           NO MORE BAGHOLDING<br>
-          <span class="text-accent-500">NO MORE WAITING</span>
+          <span class="bg-gradient-to-r from-apple-400 via-apple-300 to-apple-500 bg-clip-text text-transparent">NO MORE WAITING</span>
         </h1>
         <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-4xl mx-auto px-4 text-balance">
           Express. Simulate. Deploy. Repeat — until profit feels inevitable.
@@ -130,9 +130,9 @@
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-12">
         <div class="space-y-12">
           <div>
-            <h2 class="text-4xl lg:text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8">
+            <h2 class="text-4xl lg:text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8 bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">
               BUILD VISUALLY OR 
-              <span class="text-accent-500 ">SPEAK YOUR STRATEGY</span> 
+              <span class="bg-gradient-to-r from-apple-400 via-apple-300 to-apple-500 bg-clip-text text-transparent">SPEAK YOUR STRATEGY</span> 
               INTO EXISTENCE
             </h2>
             <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance">
@@ -148,7 +148,7 @@
                 class="group w-full text-left focus:outline-none transition-all duration-200 hover:bg-white/5 rounded-lg py-4 px-6 -my-4 -mx-6 "
               >
                 <div class="flex items-center justify-between">
-                  <h3 class="text-2xl lg:text-3xl font-bold text-accent-500 xl:-ml-8 lg:text-balance group-hover:text-accent-400 transition-colors">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+                  <h3 class="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent xl:-ml-8 lg:text-balance group-hover:from-apple-400 group-hover:via-apple-300 group-hover:to-apple-500 transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
                   <div class="flex items-center justify-center">
                     <i-heroicons-solid-chevron-down 
                       :class="[
@@ -262,7 +262,7 @@
           class="group w-full text-left focus:outline-none transition-all duration-200  rounded-lg p-2 -m-2"
         >
           <div class="flex items-center justify-between">
-            <h3 class="text-2xl lg:text-3xl  font-bold text-accent-500 lg:text-balance group-hover:text-accent-400 transition-colors">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+            <h3 class="text-2xl lg:text-3xl  font-bold bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent lg:text-balance group-hover:from-apple-400 group-hover:via-apple-300 group-hover:to-apple-500 transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
             <div class="flex items-center justify-center">
               <i-heroicons-solid-chevron-down 
                 :class="[
@@ -290,7 +290,7 @@
         </div>
       </div>
       
-      <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-6 font-bold">Advanced Expression Features</h3>
+      <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-6 font-bold bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">Advanced Expression Features</h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
           <div class="text-center">
@@ -343,9 +343,9 @@
       
       <!-- Mobile-first text section -->
       <div class="lg:hidden mb-12">
-        <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-tight ">
+        <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-tight bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">
           KNOW IF IT WINS 
-          <span class="text-accent-500">BEFORE YOU TRADE IT</span>
+          <span class="bg-gradient-to-r from-apple-400 via-apple-300 to-apple-500 bg-clip-text text-transparent">BEFORE YOU TRADE IT</span>
         </h2>
         <p class="text-lg text-neutral-300 mb-8 italic font-light leading-relaxed ">
           Replay six months in six seconds. See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
@@ -456,9 +456,9 @@
         <div class="lg:text-right space-y-12 mt-32">
           <!-- Desktop-only text section -->
           <div class="hidden lg:block">
-            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-mr-8">
+            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-mr-8 bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">
               KNOW IF IT WINS 
-              <span class="text-accent-500  ">BEFORE YOU TRADE IT</span>
+              <span class="bg-gradient-to-r from-apple-400 via-apple-300 to-apple-500 bg-clip-text text-transparent">BEFORE YOU TRADE IT</span>
             </h2>
             <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance text-balnce">
               Replay six months in six seconds. See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
@@ -471,7 +471,7 @@
                 Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
               </p>
               
-              <h3 class="text-2xl lg:text-3xl mb-6 font-bold text-accent-500 lg:text-balance xl:-mr-8">FLEXIBLE EXITS MATCH YOUR STRATEGY</h3>
+              <h3 class="text-2xl lg:text-3xl mb-6 font-bold bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent lg:text-balance xl:-mr-8">FLEXIBLE EXITS MATCH YOUR STRATEGY</h3>
               <p class="text-neutral-300 lg:text-balance leading-relaxed">
                 Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
               </p>
@@ -481,7 +481,7 @@
       </div>
       
       <div>
-        <h3 class="text-2xl log:text-4xl text-center mb-6 font-bold lg:hidden">Advanced Simulation Features</h3>
+        <h3 class="text-2xl log:text-4xl text-center mb-6 font-bold lg:hidden bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">Advanced Simulation Features</h3>
         <div class="grid md:grid-cols-3 gap-4 lg:gap-10">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
@@ -530,7 +530,7 @@
       
       <div class="lg:text-center mb-12 lg:mb-20">
         <h2 class="text-4xl lg:text-6xl mb-10 font-black tracking-tight">
-          <span class="text-accent-500 ">DEPLOY ON YOUR TERMS</span>
+          <span class="bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">DEPLOY ON YOUR TERMS</span>
         </h2>
         <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto">
           Hands-free or hands-on — either way, you're in charge. Full automation with complete transparency, or human-in-the-loop for final calls.
@@ -570,7 +570,7 @@
           <!-- Hands-Off Auto-Trading Tab -->
           <div v-if="activeTab === 'hands-off'" class="space-y-8">
             <div class="lg:text-center mb-12">
-              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-accent-500">HANDS-OFF AUTO-TRADING</h3>
+              <h3 class="text-2xl lg:text-4xl mb-4 font-bold bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">HANDS-OFF AUTO-TRADING</h3>
               <p class="text-xl text-neutral-300 italic">Set it. Forget it. Smile.</p>
             </div>
             
@@ -664,7 +664,7 @@
           <!-- Human-in-the-Loop Tab -->
           <div v-if="activeTab === 'human-loop'" class="space-y-8">
             <div class="lg:text-center mb-12">
-              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-accent-500">HUMAN-IN-THE-LOOP</h3>
+              <h3 class="text-2xl lg:text-4xl mb-4 font-bold bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">HUMAN-IN-THE-LOOP</h3>
               <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
             </div>
             
@@ -814,11 +814,11 @@
   <section id="cta" class="text-white pt-32 pb-12 lg:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
       <div class="mb-16">
-        <h2 class="text-5xl lg:text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight">
+        <h2 class="text-5xl lg:text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">
           STOP GUESSING<br>
-          <span class="text-accent-500">START SLICING</span>
+          <span class="bg-gradient-to-r from-apple-400 via-apple-300 to-apple-500 bg-clip-text text-transparent">START SLICING</span>
         </h2>
-        <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
+        <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance bg-gradient-to-r from-apple-500 via-apple-400 to-apple-600 bg-clip-text text-transparent">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
       </div>
       
       <div class="max-w-lg mx-auto mb-12">
