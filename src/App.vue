@@ -654,7 +654,7 @@
   <section id="deploy" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-8xl mx-auto">
       
-      <div class="text-center lg:text-left lg:text-center mb-12 lg:mb-20 pt-8 lg:pt-16">
+      <div class="text-center mb-12 lg:mb-20 pt-8 lg:pt-16">
         <h2 class="text-4xl lg:text-6xl mb-4 font-black tracking-tight text-balance">
           <span class="gradient-text-yellow">DEPLOY <span class="gradient-text-yellow2">ON YOUR TERMS</span></span>
         </h2>
