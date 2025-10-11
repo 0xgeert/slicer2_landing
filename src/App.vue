@@ -1,14 +1,14 @@
 <template>
 <div class="">
-  <header id="header" class="bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed top-0 w-full z-50 transition-all duration-300">
+  <header id="header" :class="['bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
     <div class="max-w-8xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
         <img src="/src/assets/logo.png" alt="Slicer" class="h-8 w-auto">
       </div>
       <nav class="hidden md:flex items-center space-x-12">
-        <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Express</span>
-        <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Simulate</span>
-        <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Deploy</span>
+        <button @click="scrollToSection('express', 100)" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Express</button>
+        <button @click="scrollToSection('simulate', 100)" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Simulate</button>
+        <button @click="scrollToSection('deploy', 100)" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Deploy</button>
       </nav>
       <button class="cta-ghost font-medium flex items-center justify-center gap-2">
         Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
@@ -19,13 +19,12 @@
 <div class="relative overflow-hidden">  
   <div class="section-linear-bg">&nbsp;</div>
 
-  <main id="hero" class="hero hero-glow text-white pt-40 lg:pt-64 pb-16 lg:pb-24 px-4 sm:px-6 lg:px-8 flex items-center relative">
+  <main id="hero" class="hero hero-glow text-white pt-28 lg:pt-52 pb-20 lg:pb-32 px-4 sm:px-6 lg:px-8 flex items-center relative">
 
     <div class="max-w-6xl mx-auto text-center relative z-10">
 
       <div class="mb-16 relative">
-
-        <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter">
+        <h1 class="text-[3.3rem] leading-[1] text-5xl lg:text-7xl xl:text-8xl mb-4 font-black tracking-tight leading-tighter">
           <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">BAGHOLDING</span></span><br>
           <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">WAITING</span></span>
         </h1>
@@ -34,7 +33,7 @@
         </p>
       </div>
       
-      <div class="cta-container backdrop-blur-sm rounded-2xl p-4 sm:p-5 lg:p-6 max-w-2xl mx-4 sm:mx-auto mb-12 -mt-8 lg:mt-0">
+      <div id='cta-container' class="cta-container backdrop-blur-sm rounded-2xl px-4 pt-4 sm:px-5 sm:pt-5 lg:px-6 lg:pt-6 max-w-2xl mx-4 sm:mx-auto -mt-10 lg:mt-0">
         <!-- Mobile: Separate input and button -->
         <div class="flex flex-col space-y-3 sm:hidden">
           <input 
@@ -42,7 +41,7 @@
             placeholder="Enter your email address" 
             class="w-full bg-white/15 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-lime-500 transition-all duration-200"
           >
-          <button class="w-full bg-lime-500 hover:bg-lime-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2">
+          <button class="w-full bg-lime-500 hover:bg-lime-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -54,19 +53,36 @@
             placeholder="Enter your email address" 
             class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg rounded-2xl border-2 border-neutral-700/30 focus:border-lime-500 transition-all duration-200"
           >
-          <button class="bg-lime-500 hover:bg-lime-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105">
+          <button class="bg-lime-500 hover:bg-lime-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
-        
-        <div class="text-center mt-4">
-          <p class="text-neutral-300 text-balance text-xs lg:text-sm">Get early access when Slicer 2.0 opens private beta. — No spam. Unsubscribe anytime.</p>
-          <div class="mt-2 hidden sm:block">
-            <a class="cta-inline text-sm" href="#simulate">Watch a 6-second sim <span class="arrow">→</span></a>
-          </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p class="text-neutral-300 text-balance text-xs lg:text-sm">Get early access when Slicer 2.0 opens private beta. — No spam. Unsubscribe anytime.</p>
+        <div class="mt-2 hidden sm:block">
+          <a class="cta-inline text-sm" href="#simulate">Watch a 6-second sim <span class="arrow">→</span></a>
         </div>
       </div>
       
+       <!-- Scroll cue arrow -->
+       <div class="mt-20 mb-24 flex justify-center">
+        <button 
+            @click="scrollToSection('express', 100)"
+            aria-label="Scroll to next section"
+            class="group inline-flex p-4 rounded-full 
+                  text-neutral-200/80 outline-none transition-all duration-200
+                  border-4 border-neutral-200/20
+                  bg-transparent
+                  hover:bg-neutral-200/10
+                  motion-safe:animate-[nudge_3s_ease-in-out_infinite]
+                  cursor-pointer"
+        >
+          <i-heroicons-solid-arrow-down class="w-8 h-8" />
+        </button>
+      </div>
+
       <!-- <div class="mb-16">
         <p class="text-neutral-400 text-sm mb-8">Why join?</p>
         <p class="text-neutral-300 lg:text-balance text-lg leading-relaxed max-w-4xl mx-auto">
@@ -130,12 +146,12 @@
 </div>
 <div class="relative overflow-hidden">  
   <div class="section-linear-bg">&nbsp;</div>
-  <section id="express" class=" text-white py-16 lg:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
+  <section id="express" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
     <div class="max-w-8xl mx-auto ">
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-12">
         <div class="space-y-12">
-          <div class="text-center md:text-left">
-            <h2 class="text-4xl lg:text-6xl mb-10 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
+          <div class="text-center md:text-left pt-8 lg:pt-16">
+            <h2 class="text-4xl lg:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
               BUILD VISUALLY OR 
               <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span> 
               INTO EXISTENCE
@@ -335,13 +351,13 @@
 </div>
 <div class="relative overflow-hidden">  
   <div class="section-linear-bg">&nbsp;</div>
-  <section id="simulate" class=" text-white py-16 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="simulate" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-8xl mx-auto">
       
       
       <!-- Mobile-first text section -->
-      <div class="lg:hidden mb-12 text-center md:text-left">
-        <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
+      <div class="lg:hidden mb-12 text-center md:text-left pt-8 lg:pt-16">
+        <h2 class="text-4xl lg:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
           KNOW IF IT WINS 
           <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
         </h2>
@@ -617,11 +633,11 @@
 </div>
 <div class="relative">  
   <div class="section-linear-bg">&nbsp;</div>
-  <section id="deploy" class=" text-white py-16 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="deploy" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-8xl mx-auto">
       
-      <div class="text-center md:text-left lg:text-center mb-12 lg:mb-20">
-        <h2 class="text-4xl lg:text-6xl mb-10 font-black tracking-tight text-balance">
+      <div class="text-center md:text-left lg:text-center mb-12 lg:mb-20 pt-8 lg:pt-16">
+        <h2 class="text-4xl lg:text-6xl mb-4 font-black tracking-tight text-balance">
           <span class="gradient-text-yellow">DEPLOY <span class="gradient-text-yellow2">ON YOUR TERMS</span></span>
         </h2>
         <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto text-balance">
@@ -951,9 +967,9 @@
 </div>
 <div class="relative">  
   <div class="section-linear-bg">&nbsp;</div>
-  <section id="cta" class="text-white pt-20 lg:pt-32 pb-12 lg:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="cta" class="text-white pt-20 lg:pt-32 pb-20 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
-      <div class="mb-12 lg:mb-16">
+      <div class="mb-12 lg:mb-16 pt-8 lg:pt-16">
         <h2 class="text-5xl lg:text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight gradient-text-yellow text-balance">
           STOP GUESSING <span class="gradient-text-yellow2">START SLICING</span>
         </h2>
@@ -1039,7 +1055,8 @@ export default {
       isSignalSectionExpanded: false,
       isExitsSectionExpanded: false,
       isExitBreakdownExpanded: false,
-      isTradeSizeImpactExpanded: false
+      isTradeSizeImpactExpanded: false,
+      isHeaderVisible: true
     }
   },
   methods: {
@@ -1054,6 +1071,65 @@ export default {
     },
     toggleTradeSizeImpact() {
       this.isTradeSizeImpactExpanded = !this.isTradeSizeImpactExpanded
+    },
+    scrollToSection(sectionId, offset = 0) {
+      const element = document.getElementById(sectionId)
+      if (!element) {
+        console.warn(`Element with id "${sectionId}" not found`)
+        return
+      }
+      
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - offset
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    },
+    checkJoinWaitlistVisibility() {
+      const ctaContainer = document.getElementById('cta-container')
+      
+      if (!ctaContainer) {
+        this.isHeaderVisible = true
+        return
+      }
+      
+      const rect = ctaContainer.getBoundingClientRect()
+      
+      // More lenient visibility check for mobile
+      const isAnyWaitlistButtonVisible = rect.top < window.innerHeight && rect.bottom > 0
+      
+      // Hide header if waitlist button is visible
+      this.isHeaderVisible = !isAnyWaitlistButtonVisible
+    }
+  },
+  mounted() {
+    // Throttled scroll handler for better performance
+    let scrollTimeout
+    const throttledScrollHandler = () => {
+      if (scrollTimeout) return
+      scrollTimeout = setTimeout(() => {
+        this.checkJoinWaitlistVisibility()
+        scrollTimeout = null
+      }, 16) // ~60fps
+    }
+    
+    // Add scroll listeners for both desktop and mobile
+    window.addEventListener('scroll', throttledScrollHandler, { passive: true })
+    window.addEventListener('touchmove', throttledScrollHandler, { passive: true })
+    
+    // Check initial state
+    this.checkJoinWaitlistVisibility()
+    
+    // Store handler for cleanup
+    this.scrollHandler = throttledScrollHandler
+  },
+  beforeUnmount() {
+    // Clean up scroll listeners
+    if (this.scrollHandler) {
+      window.removeEventListener('scroll', this.scrollHandler)
+      window.removeEventListener('touchmove', this.scrollHandler)
     }
   }
 }
@@ -1200,14 +1276,43 @@ button:hover .arrow {
   animation: fadeInUp 0.6s ease 0.94s both;
 }
 
-/* Scroll cue animation */
-@keyframes nudgeDown {
+
+@keyframes nudge {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(4px); }
+  50% { transform: translateY(6px); }
 }
 
-.scroll-cue {
-  animation: nudgeDown 3s ease-in-out infinite;
+
+/* Neon glow effect for primary CTAs */
+.neon-glow {
+  position: relative;
+}
+
+.neon-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, 
+    rgba(183, 255, 54, 0.6), 
+    rgba(34, 197, 94, 0.4), 
+    rgba(183, 255, 54, 0.6), 
+    rgba(16, 185, 129, 0.4)
+  );
+  border-radius: 18px;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.7;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.neon-glow:hover::before {
+  opacity: 1;
+  filter: blur(12px);
+}
+
+.neon-glow:focus::before {
+  opacity: 1;
+  filter: blur(12px);
 }
 
 /* Accessibility: respect reduced motion */
@@ -1216,6 +1321,11 @@ button:hover .arrow {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition: none !important;
+  }
+  
+  .neon-glow::before {
+    filter: blur(4px) !important;
+    opacity: 0.5 !important;
   }
 }
 </style>
