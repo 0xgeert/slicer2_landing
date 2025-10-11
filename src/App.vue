@@ -125,8 +125,8 @@
 </div>
 <div class="relative">  
   <div class="section-linear-bg">&nbsp;</div>
-  <section id="express" class=" text-white py-16 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
-    <div class="max-w-8xl mx-auto lg:pt-12">
+  <section id="express" class=" text-white py-16 lg:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <div class="max-w-8xl mx-auto ">
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-12">
         <div class="space-y-12">
           <div>
@@ -178,7 +178,7 @@
           </div>
         </div>
         
-        <div class="-mt-20  xl:-mr-8">
+        <div class="-mt-20  lg:mt-12 xl:-mr-8">
           <div class="mb-8">
             <div class="flex space-x-3 justify-center">
               <div class="w-3 h-3 bg-accent-500 rounded-full"></div>
@@ -213,39 +213,41 @@
                 
           
 
-                <div class="bg-zinc-950/80 rounded-2xl p-6 border border-white/10 w-full max-w-2xl shadow-2xl relative z-10">
+                <div class="bg-zinc-950/80 rounded-2xl  border border-white/5 w-full max-w-2xl shadow-2xl relative z-10">
                   <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
-                  <h4 class="font-semibold text-white/80 text-sm mb-3">Entry Conditions:</h4>
-                  <div class="space-y-3">
-                    <div class="bg-white/5 rounded-xl px-5 py-3 flex items-center justify-between ">
-                      <span class="text-amber-300 text-sm font-medium">Smart money net flow</span>
-                      <span class="text-blue-400 font-bold text-sm">> 0 for 48h</span>
+                  
+                  <div>
+                    <!-- Buy Conditions -->
+                    <div class="inline-block rounded-lg p-2">
+                      <div class="inline-block bg-accent-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-accent-400 text-sm font-semibold">Buy at</span>
+                        <i-heroicons-solid-chevron-down class="w-3 h-3 text-accent-400 ml-1 inline" />
+                      </div>
+                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-amber-300 text-sm font-medium">Smart money net flow</span>
+                        <span class="text-blue-400 font-bold text-sm ml-2">> 0 for 48h</span>
+                      </div>
+                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2">
+                        <span class="text-amber-300 text-sm font-medium">Retail money net flow</span>
+                        <span class="text-blue-400 font-bold text-sm ml-2">< 0 for 48h</span>
+                      </div>
                     </div>
                     
-                    <div class="bg-white/5 rounded-xl px-5 py-3 flex items-center justify-between ">
-                      <span class="text-amber-300 text-sm font-medium">Retail money net flow</span>
-                      <span class="text-blue-400 font-bold text-sm">< 0 for 48h</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="text-center text-accent-400/80 text-sm font-medium mt-6">
-                  <i-fa-solid-arrow-down class="w-6 h-6 inline" />
-                </div>
-                
-                <div class="bg-zinc-950/80 rounded-2xl p-6 border border-white/10 w-full max-w-2xl shadow-2xl relative z-10">
-                  <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
-
-                  <h4 class="font-semibold text-white/80 text-sm mb-3">Exit Conditions:</h4>
-                  <div class="space-y-3">
-                    <div class="bg-white/5  rounded-xl px-5 py-3 flex items-center justify-between ">
-                      <span class="text-amber-300 text-sm font-medium">Price change</span>
-                      <span class="text-blue-400 font-bold text-sm">≥ 100%</span>
-                    </div>
-                    
-                    <div class="bg-white/5  rounded-xl px-5 py-3 flex items-center justify-between ">
-                      <span class="text-amber-300 text-sm font-medium">Time held</span>
-                      <span class="text-blue-400 font-bold text-sm">≥ 72h</span>
+                    <!-- Sell Conditions -->
+                    <div class="inline-block rounded-lg p-2">
+                      <div class="inline-block bg-red-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-red-400 text-sm font-semibold">Sell at</span>
+                        <i-heroicons-solid-chevron-down class="w-3 h-3 text-red-400 ml-1 inline" />
+                      </div>
+                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-amber-300 text-sm font-medium">Price change</span>
+                        <span class="text-blue-400 font-bold text-sm ml-2">≥ 100%</span>
+                      </div>
+                      <div class="inline-block px-1 py-2 mr-2 mb-2 italic text-xs text-neutral-400">OR</div>
+                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-amber-300 text-sm font-medium">Time held</span>
+                        <span class="text-blue-400 font-bold text-sm ml-2">≥ 72h</span>
+                      </div>
                     </div>
                   </div>
                 </div>
