@@ -22,12 +22,12 @@
 <div class="relative overflow-hidden">  
   <div class="section-linear-bg">&nbsp;</div>
 
-  <main id="hero" class="hero hero-glow text-white pt-28 lg:pt-52 pb-20 lg:pb-32 px-4 sm:px-6 lg:px-8 flex items-center relative">
+  <main id="hero" class="hero hero-glow text-white pt-28 md:pt-44 lg:pt-52 xl:pt-60 pb-20 lg:pb-32 xl:pb-32 px-4 sm:px-6 lg:px-8 xl:px-8 flex items-center relative">
 
     <div class="max-w-6xl mx-auto text-center relative z-10">
 
       <div class="mb-16 relative">
-        <h1 class="text-[3.3rem] leading-[1] text-5xl lg:text-7xl xl:text-8xl mb-4 font-black tracking-tight leading-tighter">
+        <h1 class="text-[3.3rem] leading-[1] text-6xl md:text-7xl lg:text-8xl mb-4 font-black tracking-tight leading-tighter">
           <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">BAGHOLDING</span></span><br>
           <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">WAITING</span></span>
         </h1>
@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <div class="text-center mt-4 text-neutral-300 text-balance text-xs lg:text-sm hero-text">
+      <div class="text-center mt-4 text-neutral-300 text-balance text-xs md:text-sm hero-text">
         <p class="hero-text-line">Get early access when Slicer 2.0 opens private beta.</p>
         <p class="hero-text-line"> No spam. Unsubscribe anytime.</p>
          <div class="mt-4 hidden sm:block hero-link">
@@ -163,7 +163,7 @@
         <!-- LEFT: Headline + paragraph -->
         <div class="space-y-10">
           <div class="text-center lg:text-left pt-6 lg:pt-16">
-            <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-[-0.015em] gradient-text-yellow text-balance">
+            <h2 class="text-[2.6rem] leading-[1] md:text-6xl lg:text-6xl mb-6 leading-tighter font-black tracking-[-0.015em] gradient-text-yellow text-balance">
               BUILD VISUALLY OR
               <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span>
               INTO EXISTENCE
@@ -293,7 +293,7 @@
       <div class="pointer-events-none mt-16 mb-12 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
       <!-- FEATURES -->
-      <div class="mt-14 lg:mt-28">
+      <div class="mt-14 lg:mt-28 max-w-2xl lg:max-w-none mx-auto">
         <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-6 font-bold text-white/80">Advanced Expression Features</h3>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
@@ -377,15 +377,15 @@
       
       
       <!-- Mobile-first text section -->
-      <div class="lg:hidden mb-12 text-center lg:text-left pt-8 lg:pt-16">
-        <h2 class="text-4xl lg:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
+      <div class="lg:hidden mb-12 text-center pt-8  max-w-4xl  mx-auto">
+        <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
           KNOW IF IT WINS 
           <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
         </h2>
-        <p class="text-lg text-neutral-300 mb-8 italic font-light leading-relaxed ">
+        <p class="text-lg text-neutral-300 mb-8 italic font-light leading-relaxed text-balance">
           <span class="font-semibold text-white">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. <br/><span class="font-semibold text-white">Just optimize → test → repeat.</span>
         </p>
-        <p class="text-neutral-300 text-left">
+        <p class="text-neutral-300 text-balance max-w-2xl mx-auto">
           Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
         </p>
       </div>
@@ -393,9 +393,9 @@
       <div class="grid lg:grid-cols-2 gap-28 items-start mb-24">
         <div class="relative ">
           <!-- Large radial glow surrounding the card -->
-          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/30  lg:from-white/20 lg:via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
+          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/30 via-amber-500/10 lg:from-white/20 lg:via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
           
-          <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl">
+          <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl max-w-2xl lg:max-w-none mx-auto">
             
             <div class="mb-6">
               <h3 class="text-lg mb-1 font-semibold ">Strategy: "Buy when smart money accumulates + sell at 5x or after 72h"</h3>
@@ -658,7 +658,7 @@
     <div class="max-w-8xl mx-auto">
       
       <div class="text-center mb-12 lg:mb-20 pt-8 lg:pt-16">
-        <h2 class="text-4xl lg:text-6xl mb-4 font-black tracking-tight text-balance">
+        <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 font-black tracking-tight text-balance">
           <span class="gradient-text-yellow">DEPLOY <span class="gradient-text-yellow2">ON YOUR TERMS</span></span>
         </h2>
         <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto text-balance">
@@ -667,7 +667,7 @@
       </div>
       
       <!-- Horizontal Tabs -->
-      <div class="max-w-5xl mx-auto">
+      <div class="max-w-4xl mx-auto">
         <!-- Tab Navigation -->
         <div class="flex space-x-1 mb-16 bg-white/10 rounded-2xl p-2 border border-white/5">
           <button 
@@ -716,7 +716,7 @@
                       Trade Size
                     </label>
                     <div class="relative">
-                      <input type="text" value="$1,000" disabled class="w-full bg-white/10 border border-neutral-700/30 rounded-xl px-3 py-1.5 md:px-4 md:py-2 text-neutral-200 cursor-not-allowed text-xs md:text-sm">
+                      <input type="text" value="$1,000" disabled class="w-full bg-white/10 border border-neutral-700/30 rounded-xl px-3 py-1.5 md:px-4 md:py-2 text-neutral-200 text-xs md:text-sm">
                     </div>
                   </div>
                   <div>
@@ -990,14 +990,14 @@
   <div class="section-linear-bg">&nbsp;</div>
   <section id="cta" class="text-white pt-20 lg:pt-32 pb-20 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
-      <div class="mb-12 lg:mb-16 pt-8 lg:pt-16">
-        <h2 class="text-5xl lg:text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight gradient-text-yellow text-balance">
+      <div class="mb-12 lg:mb-16 pt-8 lg:pt-16 hero-glow">
+        <h2 class="text-[2.6rem] leading-[1] md:text-7xl lg:text-8xl mb-12  font-black tracking-tight gradient-text-yellow text-balance">
           STOP GUESSING <span class="gradient-text-yellow2">START SLICING</span>
         </h2>
         <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance gradient-text-lime">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
       </div>
       
-      <div class="max-w-lg mx-auto mb-12">
+      <div class="max-w-2xl mx-auto mb-12">
         <!-- Mobile: Separate input and button -->
         <div class="flex flex-col space-y-3 sm:hidden">
           <input 
@@ -1023,12 +1023,12 @@
         </div>
       </div>
       
-      <div class="space-y-1 mb-8">
+      <div class="space-y-1 mb-12">
         <p class="text-neutral-400 font-medium">Be first to access the private beta.</p>
         <p class="text-neutral-500 text-sm">No spam. Unsubscribe anytime.</p>
       </div>
       
-      <div class="grid md:grid-cols-3 gap-2 lg:gap-0 max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-2 max-w-2xl mx-auto">
         <div class="flex items-center justify-center space-x-3 text-neutral-400">
           <i-heroicons-solid-user-group class="w-5 h-5 text-lime-600" />
           <span class="text-sm">First 500 users</span>
@@ -1217,7 +1217,7 @@ export default {
   bottom: 0;
   pointer-events: none;
   background:
-    radial-gradient(48rem 20rem at 50% 18%, rgba(255,207,64,.20), transparent 65%),
+    radial-gradient(48rem 20rem at 50% 18%, rgba(255,207,64,.15), transparent 50%),
     radial-gradient(52rem 26rem at 50% 42%, rgba(183,255,54,.10), transparent 70%);
   filter: blur(2px);
 }
