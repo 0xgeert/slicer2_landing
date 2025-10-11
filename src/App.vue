@@ -26,9 +26,9 @@
       <div class="mb-16 relative ">
         <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
 
-        <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter gradient-text-yellow">
-          NO MORE BAGHOLDING<br>
-          <span class="gradient-text-yellow2">NO MORE WAITING</span>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter">
+          <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">BAGHOLDING</span></span><br>
+          <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">WAITING</span></span>
         </h1>
         <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-4xl mx-auto px-4 text-balance">
           Express. Simulate. Deploy. Repeat — until profit feels inevitable.
@@ -162,9 +162,10 @@
               </button>
               <div 
                 :class="[
-                  'overflow-hidden transition-all duration-500 ease-in-out mt-4',
-                  isSignalSectionExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
+                  isSignalSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
                 ]"
+                :style="{ transform: 'translateZ(0)' }"
               >
                 <div class="space-y-6 text-lg leading-relaxed pt-4">
                   <p class="text-neutral-300 lg:text-balance">
@@ -257,7 +258,7 @@
       
       <div class="mt-12 lg:mt-20">
         <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-6 font-bold text-white/80">Advanced Expression Features</h3>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
@@ -310,9 +311,10 @@
         </button>
         <div 
             :class="[
-              'overflow-hidden transition-all duration-500 ease-in-out mt-4',
-              isSignalSectionExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+              'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
+              isSignalSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
             ]"
+            :style="{ transform: 'translateZ(0)' }"
           >
           <div class="space-y-4 text-lg leading-relaxed pt-4">
             <p class="text-neutral-300 lg:text-balance">
@@ -415,9 +417,10 @@
                 </button>
                 <div 
                   :class="[
-                    'overflow-hidden transition-all duration-500 ease-in-out',
-                    isExitBreakdownExpanded ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'
+                    'overflow-hidden transition-all duration-500 ease-in-out will-change-transform',
+                    isExitBreakdownExpanded ? 'max-h-32 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
                   ]"
+                  :style="{ transform: 'translateZ(0)' }"
                 >
                   <div class="space-y-2 text-sm pt-6">
                     <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
@@ -451,9 +454,10 @@
                 </button>
                 <div 
                   :class="[
-                    'overflow-hidden transition-all duration-500 ease-in-out',
-                    isTradeSizeImpactExpanded ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                    'overflow-hidden transition-all duration-500 ease-in-out will-change-transform',
+                    isTradeSizeImpactExpanded ? 'max-h-40 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
                   ]"
+                  :style="{ transform: 'translateZ(0)' }"
                 >
                   <div class="space-y-2 text-sm pt-6">
                     <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
@@ -501,9 +505,9 @@
             </p>
           </div>
           
-          <div>
+          <div class="hidden lg:block">
             <div class="space-y-8 text-lg -mt-36 lg:mt-0">
-              <p class="text-neutral-300 lg:text-balance leading-relaxed hidden lg:block">
+              <p class="text-neutral-300 lg:text-balance leading-relaxed">
                 Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
               </p>
               
@@ -512,7 +516,7 @@
                 class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-lg py-4 px-6 -my-4"
               >
                 <div class="flex items-center justify-between gap-2">
-                  <h3 class="w-full text-xl font-bold text-apple-500/80 text-balance  transition-all lg:text-right">Flexible exits match your strategy</h3>
+                  <h3 class="w-full text-xl font-bold text-apple-500/80 text-balance transition-all lg:text-right">Flexible exits match your strategy</h3>
                   <div class="flex items-center justify-center">
                     <i-heroicons-solid-chevron-down 
                       :class="[
@@ -525,9 +529,10 @@
               </button>
               <div 
                 :class="[
-                  'overflow-hidden transition-all duration-500 ease-in-out mt-4',
-                  isExitsSectionExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
+                  isExitsSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
                 ]"
+                :style="{ transform: 'translateZ(0)' }"
               >
                 <div class="space-y-6 text-lg leading-relaxed pt-4">
                   <p class="text-neutral-300 lg:text-balance">
@@ -540,8 +545,8 @@
         </div>
       </div>
       
-      <div>
-        <h3 class="text-2xl log:text-4xl text-center mb-6 font-bold lg:hidden text-white/80 -mt-16 lg:mt-0">Advanced Simulation Features</h3>
+      <div class="-mt-36 lg:mt-0">
+        <h3 class="text-2xl log:text-4xl text-center mb-6 font-bold lg:hidden text-white/80  lg:mt-0">Advanced Simulation Features</h3>
         <div class="grid md:grid-cols-3 gap-4 lg:gap-10">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
@@ -580,6 +585,29 @@
           </div>
         </div>
       </div>
+
+      <!-- Flexible exits section - moved below Advanced Simulation Features for mobile -->
+      <div class="lg:hidden max-w-2xl mx-auto mt-4">
+        <button 
+          @click="toggleExitsSection"
+          class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg p-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
+        > Exits match your strategy
+          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',isExitsSectionExpanded ? 'rotate-180' : 'rotate-0']" />
+        </button>
+        <div 
+          :class="[
+            'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
+            isExitsSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+          ]"
+          :style="{ transform: 'translateZ(0)' }"
+        >
+          <div class="space-y-4 text-lg leading-relaxed pt-4">
+            <p class="text-neutral-300 lg:text-balance">
+              Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>
@@ -590,7 +618,7 @@
       
       <div class="lg:text-center mb-12 lg:mb-20">
         <h2 class="text-4xl lg:text-6xl mb-10 font-black tracking-tight text-balance">
-          <span class="gradient-text-yellow">DEPLOY ON YOUR TERMS</span>
+          <span class="gradient-text-yellow">DEPLOY <span class="gradient-text-yellow2">ON YOUR TERMS</span></span>
         </h2>
         <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto text-balance">
           Hands-free or hands-on — either way, you're in charge. Full automation with complete transparency, or human-in-the-loop for final calls.
@@ -694,7 +722,7 @@
               </div>
               
               <div class="flex flex-col items-center justify-center gap-8 ">
-                <div class="space-y-3 text-lg py-6 text-neutral-300">
+                <div class="space-y-3 text-xl py-6 text-neutral-300">
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-clock class="w-5 h-5 text-accent-500" />
                     <span>Trades executed 24/7</span>
@@ -819,7 +847,7 @@
               </div>
               
               <div class="flex flex-col items-center justify-center gap-8 pt-6">
-                <div class="space-y-3 text-lg mb-4 lg:mb-0 text-neutral-300 ">
+                <div class="space-y-3 text-xl mb-4 lg:mb-0 text-neutral-300 ">
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-bolt class="w-5 h-5 text-accent-500" />
                     <span>Trade alerts sent instantly</span>
@@ -919,7 +947,7 @@
 </div>
 <div class="relative">  
   <div class="section-linear-bg">&nbsp;</div>
-  <section id="cta" class="text-white pt-32 pb-12 lg:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="cta" class="text-white pt-20 lg:pt-32 pb-12 lg:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
       <div class="mb-12 lg:mb-16">
         <h2 class="text-5xl lg:text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight gradient-text-yellow text-balance">
