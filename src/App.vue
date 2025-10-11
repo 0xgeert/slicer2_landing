@@ -23,11 +23,11 @@
     <div class="max-w-6xl mx-auto text-center relative z-10">
 
       <div class="mb-16 relative">
-        <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-apple-500/15 to-transparent blur-3xl pointer-events-none"></div>
+        <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-amber-500/15 to-transparent blur-3xl pointer-events-none"></div>
 
-        <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter gradient-text">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter gradient-text-yellow">
           NO MORE BAGHOLDING<br>
-          <span class="gradient-text-accent">NO MORE WAITING</span>
+          <span class="gradient-text-yellow2">NO MORE WAITING</span>
         </h1>
         <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-4xl mx-auto px-4 text-balance">
           Express. Simulate. Deploy. Repeat — until profit feels inevitable.
@@ -42,7 +42,7 @@
             placeholder="Enter your email address" 
             class="w-full bg-white/10 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
           >
-          <button class="w-full bg-accent-500 hover:bg-accent-600 text-white px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl">
+          <button class="w-full bg-accent-500 hover:bg-accent-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl">
             Join Waitlist
           </button>
         </div>
@@ -54,7 +54,7 @@
             placeholder="Enter your email address" 
             class="flex-1 bg-white/10 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
           >
-          <button class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0">
+          <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0">
             Join Waitlist
           </button>
         </div>
@@ -130,9 +130,9 @@
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-12">
         <div class="space-y-12">
           <div>
-            <h2 class="text-4xl lg:text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8 gradient-text">
+            <h2 class="text-4xl lg:text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8 gradient-text-yellow">
               BUILD VISUALLY OR 
-              <span class="gradient-text-accent">SPEAK YOUR STRATEGY</span> 
+              <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span> 
               INTO EXISTENCE
             </h2>
             <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance">
@@ -209,12 +209,9 @@
                   <i-fa-solid-arrow-down class="w-6 h-6 inline" />
                 </div>
                 
-                <!-- Large radial glow surrounding the card -->
-                
-          
 
                 <div class="bg-zinc-950/80 rounded-2xl  border border-white/5 w-full max-w-2xl shadow-2xl relative z-10">
-                  <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
+                  <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/20 via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
                   
                   <div>
                     <!-- Buy Conditions -->
@@ -224,11 +221,11 @@
                         <i-heroicons-solid-chevron-down class="w-3 h-3 text-accent-400 ml-1 inline" />
                       </div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-amber-300 text-sm font-medium">Smart money net flow</span>
+                        <span class="text-amber-100 text-sm font-medium">Smart money net flow</span>
                         <span class="text-blue-400 font-bold text-sm ml-2">> 0 for 48h</span>
                       </div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2">
-                        <span class="text-amber-300 text-sm font-medium">Retail money net flow</span>
+                        <span class="text-amber-100 text-sm font-medium">Retail money net flow</span>
                         <span class="text-blue-400 font-bold text-sm ml-2">< 0 for 48h</span>
                       </div>
                     </div>
@@ -240,12 +237,12 @@
                         <i-heroicons-solid-chevron-down class="w-3 h-3 text-red-400 ml-1 inline" />
                       </div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-amber-300 text-sm font-medium">Price change</span>
+                        <span class="text-amber-100 text-sm font-medium">Price change</span>
                         <span class="text-blue-400 font-bold text-sm ml-2">≥ 100%</span>
                       </div>
                       <div class="inline-block px-1 py-2 mr-2 mb-2 italic text-xs text-neutral-400">OR</div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-amber-300 text-sm font-medium">Time held</span>
+                        <span class="text-amber-100 text-sm font-medium">Time held</span>
                         <span class="text-blue-400 font-bold text-sm ml-2">≥ 72h</span>
                       </div>
                     </div>
@@ -264,7 +261,7 @@
           class="group w-full text-left focus:outline-none transition-all duration-200  rounded-lg p-2 -m-2"
         >
           <div class="flex items-center justify-between">
-            <h3 class="text-2xl lg:text-3xl  font-bold gradient-text lg:text-balance group-hover:gradient-text-accent transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+            <h3 class="text-2xl lg:text-3xl  font-bold gradient-text-yellowlg:text-balance group-hover:gradient-text-yellow2 transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
             <div class="flex items-center justify-center">
               <i-heroicons-solid-chevron-down 
                 :class="[
@@ -345,9 +342,9 @@
       
       <!-- Mobile-first text section -->
       <div class="lg:hidden mb-12">
-        <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-tight gradient-text">
+        <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-tight gradient-text-yellow">
           KNOW IF IT WINS 
-          <span class="gradient-text-accent">BEFORE YOU TRADE IT</span>
+          <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
         </h2>
         <p class="text-lg text-neutral-300 mb-8 italic font-light leading-relaxed ">
           Replay six months in six seconds. See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
@@ -360,7 +357,7 @@
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
         <div class="relative">
           <!-- Large radial glow surrounding the card -->
-          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/50 via-white-50 lg:from-white/20 lg:via-apple-500/10 to-transparent blur-3xl pointer-events-none"></div>
+          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/50 via-amber-50 lg:from-white/20 lg:via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
           
           <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl">
             
@@ -420,11 +417,11 @@
                 <h4 class="mb-3 font-semibold text-white/80 text-sm">Exit Breakdown:</h4>
                 <div class="space-y-2 text-sm">
                   <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-300">TP 100%: 18 trades</span>
+                    <span class="text-sm text-amber-100">TP 100%: 18 trades</span>
                     <span class="text-accent-500 font-semibold bg-gradient-to-r from-accent-500 to-green-400 bg-clip-text text-transparent">+284%</span>
                   </div>
                   <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-300">Time 72h: 25 trades</span>
+                    <span class="text-sm text-amber-100">Time 72h: 25 trades</span>
                     <span class="text-accent-500 font-semibold">+76%</span>
                   </div>
                 </div>
@@ -434,15 +431,15 @@
                 <h4 class="mb-3 font-semibold text-white/80 text-sm">Trade Size Impact:</h4>
                 <div class="space-y-2 text-sm">
                   <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-300">$100</span>
+                    <span class="text-sm text-amber-100">$100</span>
                     <span class="text-sm text-apple-400">+247% <span class=" text-blue-400">(0.3% slip)</span></span>
                   </div>
                   <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-300">$1,000</span>
+                    <span class="text-sm text-amber-100">$1,000</span>
                     <span class="text-sm text-apple-400">+213% <span class=" text-blue-400">(2.1%)</span></span>
                   </div>
                   <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-300">$10,000</span>
+                    <span class="text-sm text-amber-100">$10,000</span>
                     <span class="text-sm text-apple-400">+156% <span class=" text-blue-400">(8.7%)</span></span>
                   </div>
                 </div>
@@ -458,9 +455,9 @@
         <div class="lg:text-right space-y-12 mt-32">
           <!-- Desktop-only text section -->
           <div class="hidden lg:block">
-            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-mr-8 gradient-text">
+            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-mr-8 gradient-text-yellow">
               KNOW IF IT WINS 
-              <span class="gradient-text-accent">BEFORE YOU TRADE IT</span>
+              <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
             </h2>
             <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance text-balnce">
               Replay six months in six seconds. See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
@@ -532,7 +529,7 @@
       
       <div class="lg:text-center mb-12 lg:mb-20">
         <h2 class="text-4xl lg:text-6xl mb-10 font-black tracking-tight">
-          <span class="gradient-text">DEPLOY ON YOUR TERMS</span>
+          <span class="gradient-text-yellow">DEPLOY ON YOUR TERMS</span>
         </h2>
         <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto">
           Hands-free or hands-on — either way, you're in charge. Full automation with complete transparency, or human-in-the-loop for final calls.
@@ -640,12 +637,12 @@
               </div>
               
               <div class="space-y-8 flex flex-col items-center justify-center gap-8">
-                <div class="lg:grid gap-4 text-lg  items-center justify-center">
-                  <p class="text-neutral-300 lg:text-balance">✓ Trades executed 24/7.</p>
-                  <p class="text-neutral-300 lg:text-balance">✓ Every entry logged.</p>
-                  <p class="text-neutral-300 lg:text-balance">✓ Every exit transparent.</p>
-                  <p class="text-neutral-300 lg:text-balance">✓ Full P&L tracking.</p>
-                  <p class="text-accent-500 font-medium col-span-2">✓ Switch modes anytime.</p>
+                <div class="lg:grid gap-4 text-lg  items-center justify-center text-neutral-300 lg:text-balance">
+                  <span>✓ Trades executed 24/7</span>
+                  <span>✓ Every entry logged</span>
+                  <span>✓ Every exit transparent</span>
+                  <span>✓ Full P&L tracking</span>
+                  <span>✓ Switch modes anytime</span>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full max-w-md">
@@ -738,12 +735,12 @@
               </div>
               
               <div class="lg:space-y-8 flex flex-col items-center justify-center gap-4 lg:gap-8">
-                <div class="lg:grid gap-4 text-lg items-center justify-center mb-4 lg:mb-0">
-                  <p class="text-neutral-300 lg:text-balance">✓ Trade alerts sent instantly.</p>
-                  <p class="text-neutral-300 lg:text-balance">✓ One-click approve/decline.</p>
-                  <p class="text-neutral-300 lg:text-balance">✓ Full trade context provided.</p>
-                  <p class="text-neutral-300 lg:text-balance">✓ Complete audit trail.</p>
-                  <p class="text-accent-500 font-medium col-span-2">✓ Switch modes anytime.</p>
+                <div class="lg:grid gap-4 text-lg items-center justify-center mb-4 lg:mb-0 text-neutral-300 lg:text-balance">
+                  <span>✓ Trade alerts sent instantly</span>
+                  <span>✓ One-click approve/decline</span>
+                  <span>✓ Full trade context provided</span>
+                  <span>✓ Complete audit trail</span>
+                  <span>✓ Switch modes anytime</span>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full max-w-md">
@@ -814,8 +811,8 @@
   <section id="cta" class="text-white pt-32 pb-12 lg:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
       <div class="mb-16">
-        <h2 class="text-5xl lg:text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight gradient-text text-balance">
-          STOP GUESSING START SLICING
+        <h2 class="text-5xl lg:text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight gradient-text-yellow text-balance">
+          STOP GUESSING <span class="gradient-text-yellow2">START SLICING</span>
         </h2>
         <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance gradient-text-accent">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
       </div>
@@ -913,14 +910,22 @@ export default {
 
 
 :root {
-  --gradient-main: linear-gradient(to right, theme('colors.yellow.400'), theme('colors.amber.300'), theme('colors.yellow.500'), theme('colors.amber.400'));
-  /* --gradient-accent: linear-gradient(to right, theme('colors.apple.600'), theme('colors.emerald.400'), theme('colors.apple.500'), theme('colors.emerald.600')); */
-  --gradient-accent: linear-gradient(to right, theme('colors.amber.200'), theme('colors.yellow.300'), theme('colors.amber.300'));
+  --gradient-yellow: linear-gradient(to right, theme('colors.yellow.400'), theme('colors.amber.300'), theme('colors.yellow.500'), theme('colors.amber.400'));
+  --gradient-yellow2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.yellow.300'), theme('colors.amber.300'));
+  --gradient-accent: linear-gradient(to right, theme('colors.apple.600'), theme('colors.emerald.400'), theme('colors.apple.500'), theme('colors.emerald.600'));
  
 }
 /* Apply gradients to text */
-.gradient-text {
-  background: var(--gradient-main);
+.gradient-text-yellow{
+  background: var(--gradient-yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-yellow2 {
+  background: var(--gradient-yellow2);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
