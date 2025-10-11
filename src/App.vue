@@ -587,8 +587,8 @@
               <p class="text-xl text-neutral-300 italic">Set it. Forget it. Smile.</p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-12">
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/5 max-w-md w-full mx-auto ">
+            <div class="grid md:grid-cols-2 max-w-lg md:max-w-4xl mx-auto gap-6">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/5 w-full ">
                 <div class="flex items-center mb-4">
                   <i-heroicons-solid-cog-6-tooth class="w-5 h-5 text-accent-500 mr-3" />
                   <h4 class="font-semibold text-xl">Trade Configuration</h4>
@@ -650,23 +650,50 @@
                 </button>
               </div>
               
-              <div class="space-y-8 flex flex-col items-center justify-center gap-8">
-                <div class="lg:grid gap-4 text-lg  items-center justify-center text-neutral-300 lg:text-balance">
-                  <span>✓ Trades executed 24/7</span>
-                  <span>✓ Every entry logged</span>
-                  <span>✓ Every exit transparent</span>
-                  <span>✓ Full P&L tracking</span>
-                  <span>✓ Switch modes anytime</span>
+              <div class="flex flex-col items-center justify-center gap-6 ">
+                <div class="space-y-3 text-lg py-6 text-neutral-300">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                    <span>Trades executed 24/7</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                    <span>Every entry logged</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                    <span>Every exit transparent</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                    <span>Full P&L tracking</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                    <span>Switch modes anytime</span>
+                  </div>
                 </div>
                 
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full max-w-md">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full">
                   <h5 class="mb-4 font-semibold text-accent-500">Security Features</h5>
-                  <ul class="text-sm text-neutral-400 space-y-2 leading-relaxed">
-                    <li>• Non-custodial wallet integration</li>
-                    <li>• Configurable position limits</li>
-                    <li>• Emergency stop functionality</li>
-                    <li>• Real-time monitoring dashboard</li>
-                  </ul>
+                  <div class="space-y-3 text-sm">
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Non-custodial wallet integration</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Configurable position limits</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Emergency stop functionality</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Real-time monitoring dashboard</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -674,13 +701,13 @@
 
           <!-- Human-in-the-Loop Tab -->
           <div v-if="activeTab === 'human-loop'" class="space-y-8">
-            <div class="lg:text-center mb-12">
+            <div class="text-center ">
               <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-apple-400/80">HUMAN-IN-THE-LOOP</h3>
               <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
-              <div class="space-y-8 max-w-md w-full mx-auto lg:mx-0 lg:max-w-none">
+            <div class="grid md:grid-cols-2 max-w-lg md:max-w-4xl mx-auto gap-6">
+              <div class="space-y-6 w-full mx-auto lg:mx-0  ">
                 <!-- Trade Alert Mockup -->
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
                   <h4 class="mb-4 font-semibold text-accent-500">Trade Alert Example</h4>
@@ -748,27 +775,54 @@
                 </div>
               </div>
               
-              <div class="lg:space-y-8 flex flex-col items-center justify-center gap-4 lg:gap-8">
-                <div class="lg:grid gap-4 text-lg items-center justify-center mb-4 lg:mb-0 text-neutral-300 lg:text-balance">
-                  <span>✓ Trade alerts sent instantly</span>
-                  <span>✓ One-click approve/decline</span>
-                  <span>✓ Full trade context provided</span>
-                  <span>✓ Complete audit trail</span>
-                  <span>✓ Switch modes anytime</span>
+              <div class="flex flex-col items-center justify-center gap-6 pt-6">
+                <div class="space-y-3 text-lg mb-4 lg:mb-0 text-neutral-300 ">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                    <span>Trade alerts sent instantly</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                    <span>One-click approve/decline</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                    <span>Full trade context provided</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                    <span>Complete audit trail</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                    <span>Switch modes anytime</span>
+                  </div>
                 </div>
                 
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full max-w-md">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full ">
                   <h5 class="mb-4 font-semibold text-accent-500">Control Features</h5>
-                  <ul class="text-sm text-neutral-400 space-y-2 leading-relaxed">
-                    <li>• Real-time trade notifications</li>
-                    <li>• Detailed trade reasoning</li>
-                    <li>• Emergency stop override</li>
-                    <li>• Approval history tracking</li>
-                  </ul>
+                  <div class="space-y-3 text-sm">
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Real-time trade notifications</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Detailed trade reasoning</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Emergency stop override</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span class="text-neutral-300">Approval history tracking</span>
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Usage Philosophy -->
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full max-w-md">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full">
                   <h5 class="mb-4 font-semibold text-accent-500">Usage Philosophy</h5>
                   <p class="text-sm text-neutral-300 leading-relaxed">
                     Use as pure analytics, approve high-conviction setups only, or pipe signals to your own trading infrastructure.
