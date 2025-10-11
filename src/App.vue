@@ -10,8 +10,8 @@
         <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Simulate</span>
         <span class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium">Deploy</span>
       </nav>
-      <button class="bg-transparent border-2 border-accent-500/40 text-accent-500 hover:border-accent-500 hover:bg-accent-500/10 px-6 py-3 rounded-xl transition-all duration-200 font-medium">
-        Join Waitlist
+      <button class="cta-ghost font-medium flex items-center justify-center gap-2">
+        Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
       </button>
     </div>
   </header>
@@ -19,48 +19,52 @@
 <div class="relative overflow-hidden">  
   <div class="section-linear-bg">&nbsp;</div>
 
-  <main id="hero" class=" text-white pt-40 lg:pt-64 pb-24 px-4 sm:px-6 lg:px-8 flex items-center relative">
+  <main id="hero" class="hero hero-glow text-white pt-40 lg:pt-64 pb-16 lg:pb-24 px-4 sm:px-6 lg:px-8 flex items-center relative">
 
     <div class="max-w-6xl mx-auto text-center relative z-10">
 
-      <div class="mb-16 relative ">
-        <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
+      <div class="mb-16 relative">
 
         <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter">
           <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">BAGHOLDING</span></span><br>
           <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">WAITING</span></span>
         </h1>
-        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-4xl mx-auto px-4 text-balance">
-          Express. Simulate. Deploy. Repeat — until profit feels inevitable.
+        <p class="sub text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-16 italic font-light leading-relaxed max-w-4xl mx-auto px-4 text-balance">
+          <span class="font-semibold text-white">Express. Simulate. Deploy. Repeat</span> — until profit feels inevitable.
         </p>
       </div>
       
-      <div class="backdrop-blur-sm rounded-2xl p-4 sm:p-5 lg:p-6 max-w-2xl mx-4 sm:mx-auto mb-12 -mt-8 lg:mt-0">
+      <div class="cta-container backdrop-blur-sm rounded-2xl p-4 sm:p-5 lg:p-6 max-w-2xl mx-4 sm:mx-auto mb-12 -mt-8 lg:mt-0">
         <!-- Mobile: Separate input and button -->
         <div class="flex flex-col space-y-3 sm:hidden">
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="w-full bg-white/15 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
+            class="w-full bg-white/15 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-lime-500 transition-all duration-200"
           >
-          <button class="w-full bg-accent-500 hover:bg-accent-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl">
-            Join Waitlist
+          <button class="w-full bg-lime-500 hover:bg-lime-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2">
+            Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
         
-        <!-- Desktop: Integrated input and button -->
-        <div class="hidden sm:flex rounded-2xl overflow-hidden border-2 border-neutral-700/30 transition-all duration-200">
+        <!-- Desktop: Separate input and button -->
+        <div class="hidden sm:flex gap-4">
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
+            class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg rounded-2xl border-2 border-neutral-700/30 focus:border-lime-500 transition-all duration-200"
           >
-          <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0 rounded-r-2xl">
-            Join Waitlist
+          <button class="bg-lime-500 hover:bg-lime-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105">
+            Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
         
-        <p class="text-neutral-300 text-balance text-xs lg:text-sm mt-4">Get early access when Slicer 2.0 opens private beta.</p>
+        <div class="text-center mt-4">
+          <p class="text-neutral-300 text-balance text-xs lg:text-sm">Get early access when Slicer 2.0 opens private beta. — No spam. Unsubscribe anytime.</p>
+          <div class="mt-2 hidden sm:block">
+            <a class="cta-inline text-sm" href="#simulate">Watch a 6-second sim <span class="arrow">→</span></a>
+          </div>
+        </div>
       </div>
       
       <!-- <div class="mb-16">
@@ -70,11 +74,11 @@
         </p>
       </div> -->
       
-      <div class="grid md:grid-cols-3 gap-8 lg:gap-12 mb-16 max-w-5xl mx-auto px-4">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
-          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50  transition-all duration-300">
+      <div class="hero-steps grid md:grid-cols-3 gap-8 lg:gap-12 mb-16 max-w-5xl mx-auto px-4">
+        <div class="step bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
+          <div class="h-40 rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
-              <div class="text-accent-500 mb-2">
+              <div class="text-lime-500 mb-2">
                 <i-fa-solid-brain class="w-8 h-8" />
               </div>
               <span class="text-neutral-300 text-sm font-medium">English idea → Filter blocks</span>
@@ -84,10 +88,10 @@
           <p class="text-neutral-400 text-sm leading-relaxed">Natural language to precision filters</p>
         </div>
         
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
-          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50  transition-all duration-300">
+        <div class="step bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
+          <div class="h-40 rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
-              <div class="text-accent-500 mb-2">
+              <div class="text-lime-500 mb-2">
                 <i-fa-solid-chart-line class="w-8 h-8" />
               </div>
               <span class="text-neutral-300 text-sm font-medium">Performance chart rising</span>
@@ -97,10 +101,10 @@
           <p class="text-neutral-400 text-sm leading-relaxed">6 months compressed to 6 seconds</p>
         </div>
         
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
-          <div class="h-40  rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
+        <div class="step bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
+          <div class="h-40 rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
-              <div class="text-accent-500 mb-2">
+              <div class="text-lime-500 mb-2">
                 <i-fa-solid-rocket class="w-8 h-8" />
               </div>
               <span class="text-neutral-300 text-sm font-medium">Trade execution UI</span>
@@ -130,7 +134,7 @@
     <div class="max-w-8xl mx-auto ">
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-12">
         <div class="space-y-12">
-          <div>
+          <div class="text-center md:text-left">
             <h2 class="text-4xl lg:text-6xl mb-10 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
               BUILD VISUALLY OR 
               <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span> 
@@ -149,11 +153,11 @@
                 class="group w-full text-left focus:outline-none transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-4 px-6 -my-4 cursor-pointer"
               >
                 <div class="flex items-center justify-between">
-                  <h3 class="text-3xl font-bold  lg:text-balance gradient-text-accent transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+                  <h3 class="text-3xl font-bold  lg:text-balance gradient-text-lime transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
                   <div class="flex items-center justify-center">
                     <i-heroicons-solid-chevron-down 
                       :class="[
-                        'w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',
+                        'w-6 h-6 text-lime-500 group-hover:text-lime-400 transition-all duration-300',
                         isSignalSectionExpanded ? 'rotate-180' : 'rotate-0'
                       ]"
                     />
@@ -183,7 +187,7 @@
         <div class="-mt-20 lg:mt-12 ">
           <div class="mb-8">
             <div class="flex space-x-3 justify-center">
-              <div class="w-3 h-3 bg-accent-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-lime-500 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
@@ -207,7 +211,7 @@
                   </div>
                 </div>
                 
-                <div class="text-center text-accent-400/80 text-sm font-medium mt-8">
+                <div class="text-center text-lime-400/80 text-sm font-medium mt-8">
                   <i-fa-solid-arrow-down class="w-6 h-6 inline" />
                 </div>
                 
@@ -218,9 +222,9 @@
                   <div>
                     <!-- Buy Conditions -->
                     <div class="inline-block rounded-lg p-2">
-                      <div class="inline-block bg-accent-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-accent-400 text-sm font-semibold">Buy at</span>
-                        <i-heroicons-solid-chevron-down class="w-3 h-3 text-accent-400 ml-1 inline" />
+                      <div class="inline-block bg-lime-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-lime-400 text-sm font-semibold">Buy at</span>
+                        <i-heroicons-solid-chevron-down class="w-3 h-3 text-lime-400 ml-1 inline" />
                       </div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
                         <span class="text-amber-100 text-sm font-medium">Smart money net flow</span>
@@ -262,7 +266,7 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
-                <i-heroicons-solid-light-bulb class="w-10 h-10 text-accent-600" />
+                <i-heroicons-solid-light-bulb class="w-10 h-10 text-lime-600" />
               </div>
               <h4 class="mb-2 font-semibold text-lg leading-tight">Natural Language</h4>
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Describe strategies in plain English</p>
@@ -272,7 +276,7 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
-                <i-heroicons-solid-funnel class="w-10 h-10 text-accent-600" />
+                <i-heroicons-solid-funnel class="w-10 h-10 text-lime-600" />
               </div>
               <h4 class="mb-2 font-semibold text-lg leading-tight">Precision Filtering</h4>
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Hand-craft with 10,000+ metrics</p>
@@ -282,7 +286,7 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
-                <i-heroicons-solid-square-2-stack class="w-10 h-10 text-accent-600" />
+                <i-heroicons-solid-square-2-stack class="w-10 h-10 text-lime-600" />
               </div>
               <h4 class="mb-2 font-semibold text-lg leading-tight">Stacked Sources</h4>
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Combine external signals with your filters</p>
@@ -292,7 +296,7 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
-                <i-heroicons-solid-chart-bar class="w-10 h-10 text-accent-600" />
+                <i-heroicons-solid-chart-bar class="w-10 h-10 text-lime-600" />
               </div>
               <h4 class="mb-2 font-semibold text-lg leading-tight">Behavioral Signals</h4>
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Track wallet patterns and holder dynamics</p>
@@ -307,7 +311,7 @@
           @click="toggleSignalSection"
           class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg p-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
         > More on expressing your strategy
-          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',isSignalSectionExpanded ? 'rotate-180' : 'rotate-0']" />
+          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-lime-500 group-hover:text-lime-400 transition-all duration-300',isSignalSectionExpanded ? 'rotate-180' : 'rotate-0']" />
         </button>
         <div 
             :class="[
@@ -336,7 +340,7 @@
       
       
       <!-- Mobile-first text section -->
-      <div class="lg:hidden mb-12">
+      <div class="lg:hidden mb-12 text-center md:text-left">
         <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
           KNOW IF IT WINS 
           <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
@@ -344,7 +348,7 @@
         <p class="text-lg text-neutral-300 mb-8 italic font-light leading-relaxed ">
           <span class="font-semibold text-white">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. <br/><span class="font-semibold text-white">Just optimize → test → repeat.</span>
         </p>
-        <p class="text-neutral-300 ">
+        <p class="text-neutral-300 text-left">
           Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
         </p>
       </div>
@@ -363,7 +367,7 @@
             
             <div class="grid grid-cols-2 gap-4 mb-6">
               <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
-                <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-accent-500 via-green-400 to-accent-500 bg-clip-text text-transparent">+247%</div>
+                <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-lime-500 via-green-400 to-lime-500 bg-clip-text text-transparent">+247%</div>
                 <div class="text-neutral-400 text-xs font-medium">ROI</div>
               </div>
               <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
@@ -390,7 +394,7 @@
             
             <div class="h-48 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-2xl mb-6 flex items-center justify-center border border-neutral-700/30">
               <div class="text-center">
-                <div class="text-accent-500 mb-3">
+                <div class="text-lime-500 mb-3">
                   <i-fa-solid-chart-area class="w-8 h-8" />
                 </div>
                 <span class="text-neutral-400 text-sm font-medium">Equity curve visualization</span>
@@ -408,7 +412,7 @@
                     <div class="flex items-center justify-center">
                       <i-heroicons-solid-chevron-down 
                         :class="[
-                          'w-4 h-4 text-accent-500 group-hover:text-accent-400 transition-all duration-300',
+                          'w-4 h-4 text-lime-500 group-hover:text-lime-400 transition-all duration-300',
                           isExitBreakdownExpanded ? 'rotate-180' : 'rotate-0'
                         ]"
                       />
@@ -445,7 +449,7 @@
                     <div class="flex items-center justify-center">
                       <i-heroicons-solid-chevron-down 
                         :class="[
-                          'w-4 h-4 text-accent-500 group-hover:text-accent-400 transition-all duration-300',
+                          'w-4 h-4 text-lime-500 group-hover:text-lime-400 transition-all duration-300',
                           isTradeSizeImpactExpanded ? 'rotate-180' : 'rotate-0'
                         ]"
                       />
@@ -462,15 +466,15 @@
                   <div class="space-y-2 text-sm pt-6">
                     <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
                       <span class="text-sm text-amber-100">$100</span>
-                      <span class="text-sm text-apple-400">+247% <span class=" text-blue-400">(0.3% slip)</span></span>
+                      <span class="text-sm text-lime-400">+247% <span class=" text-blue-400">(0.3% slip)</span></span>
                     </div>
                     <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
                       <span class="text-sm text-amber-100">$1,000</span>
-                      <span class="text-sm text-apple-400">+213% <span class=" text-blue-400">(2.1%)</span></span>
+                      <span class="text-sm text-lime-400">+213% <span class=" text-blue-400">(2.1%)</span></span>
                     </div>
                     <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
                       <span class="text-sm text-amber-100">$10,000</span>
-                      <span class="text-sm text-apple-400">+156% <span class=" text-blue-400">(8.7%)</span></span>
+                      <span class="text-sm text-lime-400">+156% <span class=" text-blue-400">(8.7%)</span></span>
                     </div>
                   </div>
                 </div>
@@ -483,11 +487,11 @@
                 <span>Progress: 100%</span>
               </div>
               <div class="w-full bg-neutral-700 rounded-full h-2 overflow-hidden">
-                <div class="bg-gradient-to-r from-accent-500 to-accent-hover h-2 rounded-full w-full transition-all duration-300"></div>
+                <div class="bg-gradient-to-r from-lime-500 to-lime-hover h-2 rounded-full w-full transition-all duration-300"></div>
               </div>
             </div>
             
-            <button class="w-full bg-accent-500 hover:bg-accent-600 text-black py-4 rounded-xl mt-6 transition-colors duration-200 font-semibold text-lg">
+            <button class="w-full bg-lime-500 hover:bg-lime-600 text-black py-4 rounded-xl mt-6 transition-colors duration-200 font-semibold text-lg">
               Run Simulation
             </button>
           </div>
@@ -516,11 +520,11 @@
                 class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-lg py-4 px-6 -my-4"
               >
                 <div class="flex items-center justify-between gap-2">
-                  <h3 class="w-full text-xl font-bold text-apple-500/80 text-balance transition-all lg:text-right">Flexible exits match your strategy</h3>
+                  <h3 class="w-full text-xl font-bold text-lime-500/80 text-balance transition-all lg:text-right">Flexible exits match your strategy</h3>
                   <div class="flex items-center justify-center">
                     <i-heroicons-solid-chevron-down 
                       :class="[
-                        'w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',
+                        'w-6 h-6 text-lime-500 group-hover:text-lime-400 transition-all duration-300',
                         isExitsSectionExpanded ? 'rotate-180' : 'rotate-0'
                       ]"
                     />
@@ -551,7 +555,7 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
               <div class="flex items-center justify-center flex-shrink-0">
-                <i-heroicons-solid-clock class="w-10 h-10 text-accent-600" />
+                <i-heroicons-solid-clock class="w-10 h-10 text-lime-600" />
               </div>
               <div class="flex-1">
                 <h4 class="mb-1 font-semibold text-lg leading-tight">Real-Time Backtesting</h4>
@@ -563,7 +567,7 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
               <div class="flex items-center justify-center flex-shrink-0">
-                <i-heroicons-solid-chart-bar-square class="w-10 h-10 text-accent-600" />
+                <i-heroicons-solid-chart-bar-square class="w-10 h-10 text-lime-600" />
               </div>
               <div class="flex-1">
                 <h4 class="mb-1 font-semibold text-lg leading-tight">Slippage Analysis</h4>
@@ -575,7 +579,7 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
               <div class="flex items-center justify-center flex-shrink-0">
-                <i-heroicons-solid-shield-check class="w-10 h-10 text-accent-600" />
+                <i-heroicons-solid-shield-check class="w-10 h-10 text-lime-600" />
               </div>
               <div class="flex-1">
                 <h4 class="mb-1 font-semibold text-lg leading-tight">Risk Metrics</h4>
@@ -592,7 +596,7 @@
           @click="toggleExitsSection"
           class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg p-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
         > Exits match your strategy
-          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',isExitsSectionExpanded ? 'rotate-180' : 'rotate-0']" />
+          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-lime-500 group-hover:text-lime-400 transition-all duration-300',isExitsSectionExpanded ? 'rotate-180' : 'rotate-0']" />
         </button>
         <div 
           :class="[
@@ -616,12 +620,12 @@
   <section id="deploy" class=" text-white py-16 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-8xl mx-auto">
       
-      <div class="lg:text-center mb-12 lg:mb-20">
+      <div class="text-center md:text-left lg:text-center mb-12 lg:mb-20">
         <h2 class="text-4xl lg:text-6xl mb-10 font-black tracking-tight text-balance">
           <span class="gradient-text-yellow">DEPLOY <span class="gradient-text-yellow2">ON YOUR TERMS</span></span>
         </h2>
         <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto text-balance">
-          Hands-free or hands-on — either way, you're in charge. Full automation with complete transparency, or human-in-the-loop for final calls.
+          Hands-free or hands-on — either way, you're in charge. <span class="font-semibold text-white">Full automation with complete transparency</span>, or human-in-the-loop for final calls.
         </p>
       </div>
       
@@ -634,7 +638,7 @@
             :class="[
               'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200',
               activeTab === 'hands-off' 
-                ? 'bg-accent-500 text-black' 
+                ? 'bg-lime-500 text-black' 
                 : 'text-neutral-400 hover:text-white hover:bg-white/5'
             ]"
           >
@@ -645,7 +649,7 @@
             :class="[
               'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200',
               activeTab === 'human-loop' 
-                ? 'bg-accent-500 text-black' 
+                ? 'bg-lime-500 text-black' 
                 : 'text-neutral-400 hover:text-white hover:bg-white/5'
             ]"
           >
@@ -658,14 +662,14 @@
           <!-- Hands-Off Auto-Trading Tab -->
           <div v-if="activeTab === 'hands-off'" class="space-y-8">
             <div class="text-center mb-12">
-              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-apple-400/80">HANDS-OFF AUTO-TRADING</h3>
+              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-lime-400/80">HANDS-OFF AUTO-TRADING</h3>
               <p class="text-xl text-neutral-300 italic">Set it. Forget it. Smile.</p>
             </div>
             
             <div class="grid md:grid-cols-2 max-w-lg md:max-w-4xl mx-auto gap-8">
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/5 w-full">
                 <div class="flex items-center mb-4">
-                  <i-heroicons-solid-cog-6-tooth class="w-5 h-5 text-accent-500 mr-3" />
+                  <i-heroicons-solid-cog-6-tooth class="w-5 h-5 text-lime-500 mr-3" />
                   <h4 class="font-semibold text-xl">Trade Configuration</h4>
                 </div>
                 <div class="space-y-4">
@@ -724,44 +728,44 @@
               <div class="flex flex-col items-center justify-center gap-8 ">
                 <div class="space-y-3 text-xl py-6 text-neutral-300">
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-clock class="w-5 h-5 text-accent-500" />
+                    <i-heroicons-solid-clock class="w-5 h-5 text-lime-500" />
                     <span>Trades executed 24/7</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-document-text class="w-5 h-5 text-accent-500" />
+                    <i-heroicons-solid-document-text class="w-5 h-5 text-lime-500" />
                     <span>Every entry logged</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-eye class="w-5 h-5 text-accent-500" />
+                    <i-heroicons-solid-eye class="w-5 h-5 text-lime-500" />
                     <span>Every exit transparent</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-chart-bar class="w-5 h-5 text-accent-500" />
+                    <i-heroicons-solid-chart-bar class="w-5 h-5 text-lime-500" />
                     <span>Full P&L tracking</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-accent-500" />
+                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-lime-500" />
                     <span>Switch modes anytime</span>
                   </div>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full">
-                  <h5 class="mb-4 font-semibold text-accent-500">Security Features</h5>
+                  <h5 class="mb-4 font-semibold text-lime-500">Security Features</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Non-custodial wallet integration</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Configurable position limits</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Emergency stop functionality</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Real-time monitoring dashboard</span>
                     </div>
                   </div>
@@ -773,7 +777,7 @@
           <!-- Human-in-the-Loop Tab -->
           <div v-if="activeTab === 'human-loop'" class="space-y-8">
             <div class="text-center ">
-              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-apple-400/80">HUMAN-IN-THE-LOOP</h3>
+              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-lime-400/80">HUMAN-IN-THE-LOOP</h3>
               <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
             </div>
             
@@ -781,7 +785,7 @@
               <div class="space-y-8 w-full mx-auto lg:mx-0  ">
                 <!-- Trade Alert Mockup -->
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
-                  <h4 class="mb-4 font-semibold text-accent-500">Trade Alert Example</h4>
+                  <h4 class="mb-4 font-semibold text-lime-500">Trade Alert Example</h4>
                   <div class="bg-neutral-900/50 rounded-xl p-4 border border-neutral-700/30">
                     <div class="mb-3">
                       <h5 class="text-lg font-semibold text-white">New Match: $TOKEN</h5>
@@ -789,7 +793,7 @@
                     <div class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <span class="text-neutral-400">Breakout Score:</span>
-                        <span class="text-accent-500 font-semibold">82</span>
+                        <span class="text-lime-500 font-semibold">82</span>
                       </div>
                       <div class="flex justify-between">
                         <span class="text-neutral-400">Smart Money:</span>
@@ -824,22 +828,22 @@
 
                 <!-- Notification Channels -->
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
-                  <h5 class="mb-4 font-semibold text-accent-500">Notification Channels</h5>
+                  <h5 class="mb-4 font-semibold text-lime-500">Notification Channels</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Email</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">In-browser push</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Telegram</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Webhooks</span>
                     </div>
                   </div>
@@ -849,44 +853,44 @@
               <div class="flex flex-col items-center justify-center gap-8 pt-6">
                 <div class="space-y-3 text-xl mb-4 lg:mb-0 text-neutral-300 ">
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-bolt class="w-5 h-5 text-accent-500" />
+                    <i-heroicons-solid-bolt class="w-5 h-5 text-lime-500" />
                     <span>Trade alerts sent instantly</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-cursor-arrow-rays class="w-5 h-5 text-accent-500" />
+                    <i-heroicons-solid-cursor-arrow-rays class="w-5 h-5 text-lime-500" />
                     <span>One-click approve/decline</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-information-circle class="w-5 h-5 text-accent-500" />
+                    <i-heroicons-solid-information-circle class="w-5 h-5 text-lime-500" />
                     <span>Full trade context provided</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-clipboard-document-list class="w-5 h-5 text-accent-500" />
+                    <i-heroicons-solid-clipboard-document-list class="w-5 h-5 text-lime-500" />
                     <span>Complete audit trail</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-accent-500" />
+                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-lime-500" />
                     <span>Switch modes anytime</span>
                   </div>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full ">
-                  <h5 class="mb-4 font-semibold text-accent-500">Control Features</h5>
+                  <h5 class="mb-4 font-semibold text-lime-500">Control Features</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Real-time trade notifications</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Detailed trade reasoning</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Emergency stop override</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
                       <span class="text-neutral-300">Approval history tracking</span>
                     </div>
                   </div>
@@ -894,7 +898,7 @@
 
                 <!-- Usage Philosophy -->
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full">
-                  <h5 class="mb-4 font-semibold text-accent-500">Usage Philosophy</h5>
+                  <h5 class="mb-4 font-semibold text-lime-500">Usage Philosophy</h5>
                   <p class="text-sm text-neutral-300 leading-relaxed">
                     Use as pure analytics, approve high-conviction setups only, or pipe signals to your own trading infrastructure.
                   </p>
@@ -909,7 +913,7 @@
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 flex">
           <div class="flex items-center space-x-4">
             <div class="flex items-center justify-center flex-shrink-0">
-              <i-heroicons-solid-cpu-chip class="w-10 h-10 text-accent-600" />
+              <i-heroicons-solid-cpu-chip class="w-10 h-10 text-lime-600" />
             </div>
             <div class="flex-1">
               <h4 class="mb-1 font-semibold text-lg leading-tight">Full Automation</h4>
@@ -921,7 +925,7 @@
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
           <div class="flex items-center space-x-4">
             <div class="flex items-center justify-center flex-shrink-0">
-              <i-heroicons-solid-user-circle class="w-10 h-10 text-accent-600" />
+              <i-heroicons-solid-user-circle class="w-10 h-10 text-lime-600" />
             </div>
             <div class="flex-1">
               <h4 class="mb-1 font-semibold text-lg leading-tight">Human Oversight</h4>
@@ -933,7 +937,7 @@
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
           <div class="flex items-center space-x-4">
             <div class="flex items-center justify-center flex-shrink-0">
-              <i-heroicons-solid-cog-6-tooth class="w-10 h-10 text-accent-600" />
+              <i-heroicons-solid-cog-6-tooth class="w-10 h-10 text-lime-600" />
             </div>
             <div class="flex-1">
               <h4 class="mb-1 font-semibold text-lg leading-tight">Custom Integration</h4>
@@ -953,7 +957,7 @@
         <h2 class="text-5xl lg:text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight gradient-text-yellow text-balance">
           STOP GUESSING <span class="gradient-text-yellow2">START SLICING</span>
         </h2>
-        <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance gradient-text-accent">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
+        <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance gradient-text-lime">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
       </div>
       
       <div class="max-w-lg mx-auto mb-12">
@@ -962,22 +966,22 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="w-full bg-white/15 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
+            class="w-full bg-white/15 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-lime-500 transition-all duration-200"
           >
-          <button class="w-full bg-accent-500 hover:bg-accent-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl">
-            Claim Your Spot
+          <button class="w-full bg-lime-500 hover:bg-lime-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2">
+            Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
         
         <!-- Desktop: Integrated input and button -->
-        <div class="hidden sm:flex rounded-2xl overflow-hidden border-2 border-accent-500/20 focus-within:border-accent-500 transition-all duration-200">
+        <div class="hidden sm:flex rounded-2xl overflow-hidden border-2 border-lime-500/20 focus-within:border-lime-500 transition-all duration-200">
           <input 
             type="email" 
             placeholder="Enter your email address" 
             class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
           >
-          <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0 rounded-r-2xl">
-            Claim Your Spot
+          <button class="bg-lime-500 hover:bg-lime-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0 rounded-r-2xl flex items-center justify-center gap-2">
+            Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
       </div>
@@ -989,15 +993,15 @@
       
       <div class="grid md:grid-cols-3 gap-2 lg:gap-0 max-w-4xl mx-auto">
         <div class="flex items-center justify-center space-x-3 text-neutral-400">
-          <i-heroicons-solid-user-group class="w-5 h-5 text-accent-600" />
+          <i-heroicons-solid-user-group class="w-5 h-5 text-lime-600" />
           <span class="text-sm">First 500 users</span>
         </div>
         <div class="flex items-center justify-center space-x-3 text-neutral-400">
-          <i-heroicons-solid-chat-bubble-bottom-center-text class="w-5 h-5 text-accent-600" />
+          <i-heroicons-solid-chat-bubble-bottom-center-text class="w-5 h-5 text-lime-600" />
           <span class="text-sm">Private feedback sessions</span>
         </div>
         <div class="flex items-center justify-center space-x-3 text-neutral-400">
-          <i-heroicons-solid-star class="w-5 h-5 text-accent-600" />
+          <i-heroicons-solid-star class="w-5 h-5 text-lime-600" />
           <span class="text-sm">Priority access</span>
         </div>
       </div>
@@ -1010,13 +1014,13 @@
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
         <div class="mb-6 md:mb-0">
           <img src="/src/assets/logo.png" alt="Slicer" class="h-8 w-auto mb-3">
-          <p class="text-sm text-neutral-500">Express. Simulate. Deploy. Repeat — until profit feels inevitable.</p>
+          <p class="text-sm text-neutral-500 text-balance"><span class="font-semibold text-white/80">Express. Simulate. Deploy. Repeat</span> — until profit feels inevitable.</p>
         </div>
         
-        <div class="flex items-center space-x-6">
-          <!-- <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Terms</span> -->
-          <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Privacy</span>
-        </div>
+        <!-- <div class="flex items-center space-x-6">
+          <span class="text-sm hover:text-lime-500 transition-colors cursor-pointer">Terms</span>
+          <span class="text-sm hover:text-lime-500 transition-colors cursor-pointer">Privacy</span>
+        </div> -->
       </div>
     </div>
   </footer>
@@ -1062,11 +1066,19 @@ export default {
 
 
 :root {
+  --bg: #0b0b0b;
+  --ink: #f5f5f5;
+  --muted: #bdbdbd;
+  --headline: #ffdf57;
+  --headline-2: #ffc93a;
+  --lime: #b7ff36;
+  --lime-weak: rgba(183,255,54,.18);
+  
   --gradient-yellow: linear-gradient(to right, theme('colors.yellow.400'), theme('colors.amber.300'), theme('colors.yellow.500'), theme('colors.amber.400'));
   --gradient-yellow2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.yellow.300'), theme('colors.amber.300'));
-  --gradient-accent: linear-gradient(to right, theme('colors.apple.600'), theme('colors.emerald.400'), theme('colors.apple.500'), theme('colors.emerald.600'));
- 
+  --gradient-lime: linear-gradient(to right, theme('colors.lime.600'), theme('colors.emerald.400'), theme('colors.lime.500'), theme('colors.emerald.600'));
 }
+
 /* Apply gradients to text */
 .gradient-text-yellow{
   background: var(--gradient-yellow);
@@ -1084,11 +1096,126 @@ export default {
   color: transparent;
 }
 
-.gradient-text-accent {
-  background: var(--gradient-accent);
+.gradient-text-lime {
+  background: var(--gradient-lime);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+}
+
+/* Hero cinematic depth */
+.hero-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(48rem 20rem at 50% 18%, rgba(255,207,64,.18), transparent 65%),
+    radial-gradient(52rem 26rem at 50% 42%, rgba(183,255,54,.10), transparent 70%);
+  filter: blur(2px);
+}
+
+/* CTA Ghost Button */
+.cta-ghost {
+  border: 2px solid var(--lime);
+  color: var(--ink);
+  padding: 0.9rem 1.2rem;
+  border-radius: 14px;
+  box-shadow: 0 0 0 0 var(--lime-weak);
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
+}
+
+.cta-ghost:hover {
+  transform: translateY(-1px);
+  background: rgba(183,255,54,.08);
+  box-shadow: 0 0 28px 2px var(--lime-weak);
+}
+
+/* Arrow animation for all CTAs */
+.arrow {
+  display: inline-block !important;
+  transform: translateX(0) !important;
+  transition: transform .22s ease !important;
+}
+
+.cta-ghost:hover .arrow,
+button:hover .arrow {
+  transform: translateX(4px) !important;
+}
+
+/* Inline secondary CTA */
+.cta-inline {
+  margin-left: 1rem;
+  color: #e6e6e6;
+  opacity: .9;
+  transition: opacity .2s ease, text-decoration .2s ease;
+}
+
+.cta-inline:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Step card base styles */
+.step {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animation sequence */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(1.01);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero h1 {
+  animation: fadeInUp 0.8s ease 0.1s both;
+}
+
+.hero .sub {
+  animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.hero .cta-container {
+  animation: fadeInUp 0.8s ease 0.5s both;
+}
+
+.hero-steps .step:nth-child(1) {
+  animation: fadeInUp 0.6s ease 0.7s both;
+}
+
+.hero-steps .step:nth-child(2) {
+  animation: fadeInUp 0.6s ease 0.82s both;
+}
+
+.hero-steps .step:nth-child(3) {
+  animation: fadeInUp 0.6s ease 0.94s both;
+}
+
+/* Scroll cue animation */
+@keyframes nudgeDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+.scroll-cue {
+  animation: nudgeDown 3s ease-in-out infinite;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
 }
 </style>
