@@ -137,7 +137,7 @@
               INTO EXISTENCE
             </h2>
             <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance">
-              <span class="text-white font-semibold">10,000+ on-chain and off-chain filters.</span> Pure creative freedom. Compose by hand, describe in English, or mix both. Total control either way.
+              <span class="text-white font-semibold">10,000+ on-chain and off-chain filters.</span> Pure creative freedom. <span class="text-white font-semibold">Compose by hand, describe in English, or mix both.</span> Total control either way.
             </p>
           </div>
           
@@ -342,7 +342,7 @@
           <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
         </h2>
         <p class="text-lg text-neutral-300 mb-8 italic font-light leading-relaxed ">
-          <span class="font-semibold text-white">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
+          <span class="font-semibold text-white">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. <br/><span class="font-semibold text-white">Just optimize → test → repeat.</span>
         </p>
         <p class="text-neutral-300 ">
           Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
@@ -501,7 +501,7 @@
               <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
             </h2>
             <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance text-balnce">
-              Replay six months in six seconds. See ROI, win rate, drawdown. No weeks of uncertainty. Just optimize → test → repeat.
+              <span class="font-semibold text-white">Replay six months in six seconds.</span> <br/>See ROI, win rate, drawdown. <br/>No weeks of uncertainty. <br/><span class="font-semibold text-white">Just optimize → test → repeat.</span>
             </p>
           </div>
           
