@@ -1,5 +1,10 @@
 <template>
-<div class="">
+<div class="relative">
+  <!-- gradients: purple linear + black radial -->
+  <div>
+    <div class="fixed inset-0 bg-gradient-to-b from-purple-950 via-purple-900/20 to-transparent h-[500px] pointer-events-none -z-10"></div>
+    <div class="fixed inset-0 bg-gradient-radial from-zinc-950  to-transparent pointer-events-none -z-10"></div>
+  </div>
   <header id="header" :class="['bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
     <div class="max-w-8xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
@@ -1171,7 +1176,12 @@ export default {
   --gradient-yellow: linear-gradient(to right, theme('colors.yellow.400'), theme('colors.amber.300'), theme('colors.yellow.500'), theme('colors.amber.400'));
   --gradient-yellow2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.yellow.300'), theme('colors.amber.300'));
   --gradient-lime: linear-gradient(to right, theme('colors.lime.600'), theme('colors.emerald.400'), theme('colors.lime.500'), theme('colors.emerald.600'));
+
+  --df-color: rgba(180,255,120,1);   /* core lime */
+  --df-soft : rgba(180,255,120,.6);  /* shoulder */
+  --df-dur  : 1.6s;                  /* duration */
 }
+
 
 /* Apply gradients to text */
 .gradient-text-yellow{
@@ -1200,12 +1210,16 @@ export default {
 
 /* Hero cinematic depth */
 .hero-glow::before {
+  display: block;
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   pointer-events: none;
   background:
-    radial-gradient(48rem 20rem at 50% 18%, rgba(255,207,64,.18), transparent 65%),
+    radial-gradient(48rem 20rem at 50% 18%, rgba(255,207,64,.20), transparent 65%),
     radial-gradient(52rem 26rem at 50% 42%, rgba(183,255,54,.10), transparent 70%);
   filter: blur(2px);
 }
@@ -1351,12 +1365,6 @@ button:hover .arrow {
     filter: blur(4px) !important;
     opacity: 0.5 !important;
   }
-}
-/* configurable tokens (optional) */
-:root{
-  --df-color: rgba(180,255,120,1);   /* core lime */
-  --df-soft : rgba(180,255,120,.6);  /* shoulder */
-  --df-dur  : 1.6s;                  /* duration */
 }
 
 /* container: fixed size, clips the moving pulse */
