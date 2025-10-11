@@ -23,7 +23,7 @@
     <div class="max-w-6xl mx-auto text-center relative z-10">
 
       <div class="mb-16 relative">
-        <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-amber-500/15 to-transparent blur-3xl pointer-events-none"></div>
+        <div class="absolute inset-0 -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-32 bg-gradient-radial from-white/20 via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
 
         <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-black tracking-tight leading-tighter gradient-text-yellow">
           NO MORE BAGHOLDING<br>
@@ -34,13 +34,13 @@
         </p>
       </div>
       
-      <div class="backdrop-blur-sm rounded-2xl p-4 sm:p-5 lg:p-6 max-w-2xl mx-4 sm:mx-auto mb-12">
+      <div class="backdrop-blur-sm rounded-2xl p-4 sm:p-5 lg:p-6 max-w-2xl mx-4 sm:mx-auto mb-12 -mt-8 lg:mt-0">
         <!-- Mobile: Separate input and button -->
         <div class="flex flex-col space-y-3 sm:hidden">
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="w-full bg-white/10 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
+            class="w-full bg-white/15 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
           >
           <button class="w-full bg-accent-500 hover:bg-accent-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl">
             Join Waitlist
@@ -52,14 +52,14 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="flex-1 bg-white/10 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
+            class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
           >
           <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0">
             Join Waitlist
           </button>
         </div>
         
-        <p class="text-neutral-300 text-balance text-sm mt-4">Get early access when Slicer 2.0 opens private beta.</p>
+        <p class="text-neutral-300 text-balance text-xs lg:text-sm mt-4">Get early access when Slicer 2.0 opens private beta.</p>
       </div>
       
       <!-- <div class="mb-16">
@@ -130,7 +130,7 @@
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-12">
         <div class="space-y-12">
           <div>
-            <h2 class="text-4xl lg:text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8 gradient-text-yellow">
+            <h2 class="text-4xl lg:text-6xl mb-10 leading-tighter font-black tracking-tight xl:-ml-8 gradient-text-yellow text-balance">
               BUILD VISUALLY OR 
               <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span> 
               INTO EXISTENCE
@@ -145,10 +145,10 @@
             <div>
               <button 
                 @click="toggleSignalSection"
-                class="group w-full text-left focus:outline-none transition-all duration-200 hover:bg-white/5 rounded-lg py-4 px-6 -my-4 -mx-6 "
+                class="group w-full text-left focus:outline-none transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-4 px-6 -my-4 -mx-6  xl:-ml-8 cursor-pointer"
               >
                 <div class="flex items-center justify-between">
-                  <h3 class="text-2xl lg:text-3xl font-bold  xl:-ml-8 lg:text-balance gradient-text-accent transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+                  <h3 class="text-3xl font-bold  lg:text-balance gradient-text-accent transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
                   <div class="flex items-center justify-center">
                     <i-heroicons-solid-chevron-down 
                       :class="[
@@ -222,11 +222,11 @@
                       </div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
                         <span class="text-amber-100 text-sm font-medium">Smart money net flow</span>
-                        <span class="text-blue-400 font-bold text-sm ml-2">> 0 for 48h</span>
+                        <span class="text-blue-400 font-medium text-sm ml-2">> 0 for 48h</span>
                       </div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2">
                         <span class="text-amber-100 text-sm font-medium">Retail money net flow</span>
-                        <span class="text-blue-400 font-bold text-sm ml-2">< 0 for 48h</span>
+                        <span class="text-blue-400 font-medium text-sm ml-2">< 0 for 48h</span>
                       </div>
                     </div>
                     
@@ -238,12 +238,12 @@
                       </div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
                         <span class="text-amber-100 text-sm font-medium">Price change</span>
-                        <span class="text-blue-400 font-bold text-sm ml-2">≥ 100%</span>
+                        <span class="text-blue-400 font-medium text-sm ml-2">≥ 100%</span>
                       </div>
                       <div class="inline-block px-1 py-2 mr-2 mb-2 italic text-xs text-neutral-400">OR</div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
                         <span class="text-amber-100 text-sm font-medium">Time held</span>
-                        <span class="text-blue-400 font-bold text-sm ml-2">≥ 72h</span>
+                        <span class="text-blue-400 font-medium text-sm ml-2">≥ 72h</span>
                       </div>
                     </div>
                   </div>
@@ -255,29 +255,19 @@
       </div>
       
       <!-- EVERY SIGNAL, EVERY SLICE section - moved below right column for mobile -->
-      <div class="lg:hidden mb-12 max-w-2xl mx-auto">
+      <div class="lg:hidden mb-8 max-w-2xl mx-auto -mt-4">
         <button 
           @click="toggleSignalSection"
-          class="group w-full text-left focus:outline-none transition-all duration-200  rounded-lg p-2 -m-2"
-        >
-          <div class="flex items-center justify-between">
-            <h3 class="text-2xl lg:text-3xl  font-bold gradient-text-yellowlg:text-balance group-hover:gradient-text-yellow2 transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
-            <div class="flex items-center justify-center">
-              <i-heroicons-solid-chevron-down 
-                :class="[
-                  'w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',
-                  isSignalSectionExpanded ? 'rotate-180' : 'rotate-0'
-                ]"
-              />
-            </div>
-          </div>
+          class="w-full flex gap-2 items-center text-lg justify-center rounded-lg p-3 transition-all duration-300"
+        > More info on composing slices
+          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',isSignalSectionExpanded ? 'rotate-180' : 'rotate-0']" />
         </button>
         <div 
-          :class="[
-            'overflow-hidden transition-all duration-500 ease-in-out max-w-2xl mx-auto mt-4',
-            isSignalSectionExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-          ]"
-        >
+            :class="[
+              'overflow-hidden transition-all duration-500 ease-in-out mt-4',
+              isSignalSectionExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            ]"
+          >
           <div class="space-y-6 text-lg leading-relaxed pt-4">
             <p class="text-neutral-300 lg:text-balance">
               Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
@@ -342,7 +332,7 @@
       
       <!-- Mobile-first text section -->
       <div class="lg:hidden mb-12">
-        <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-tight gradient-text-yellow">
+        <h2 class="text-4xl lg:text-6xl mb-6 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
           KNOW IF IT WINS 
           <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
         </h2>
@@ -357,7 +347,7 @@
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
         <div class="relative">
           <!-- Large radial glow surrounding the card -->
-          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/50 via-amber-50 lg:from-white/20 lg:via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
+          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/40 from-10% lg:from-white/20 lg:via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
           
           <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl">
             
@@ -417,12 +407,12 @@
                 <h4 class="mb-3 font-semibold text-white/80 text-sm">Exit Breakdown:</h4>
                 <div class="space-y-2 text-sm">
                   <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-100">TP 100%: 18 trades</span>
-                    <span class="text-accent-500 font-semibold bg-gradient-to-r from-accent-500 to-green-400 bg-clip-text text-transparent">+284%</span>
+                    <span class="text-sm text-amber-100">TP 100%</span>
+                    <span class="text-accent-500 bg-gradient-to-r from-accent-500 to-green-400 bg-clip-text text-transparent">+284% <span class=" text-blue-400">(18 trades)</span></span>
                   </div>
                   <div class="flex justify-between items-center bg-white/10 rounded-lg p-2.5">
-                    <span class="text-sm text-amber-100">Time 72h: 25 trades</span>
-                    <span class="text-accent-500 font-semibold">+76%</span>
+                    <span class="text-sm text-amber-100">Time 72h</span>
+                    <span class="text-accent-500">+76% <span class=" text-blue-400">(25 trades)</span></span>
                   </div>
                 </div>
               </div>
@@ -452,7 +442,7 @@
           </div>
         </div>
         
-        <div class="lg:text-right space-y-12 mt-32">
+        <div class="lg:text-right space-y-12 mt-8 lg:mt-44">
           <!-- Desktop-only text section -->
           <div class="hidden lg:block">
             <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight xl:-mr-8 gradient-text-yellow">
@@ -470,17 +460,41 @@
                 Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
               </p>
               
-              <h3 class="text-2xl lg:text-3xl mb-6 font-bold gradient-text-accent lg:text-balance xl:-mr-8">FLEXIBLE EXITS MATCH YOUR STRATEGY</h3>
-              <p class="text-neutral-300 lg:text-balance leading-relaxed">
-                Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
-              </p>
+              <button 
+                @click="toggleExitsSection"
+                class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-lg py-4 px-6 -my-4 xl:-ml-6 xl:-mr-8"
+              >
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="w-full text-xl font-bold text-apple-500/80 text-balance  transition-all lg:text-right">Flexible exits match your strategy</h3>
+                  <div class="flex items-center justify-center">
+                    <i-heroicons-solid-chevron-down 
+                      :class="[
+                        'w-6 h-6 text-accent-500 group-hover:text-accent-400 transition-all duration-300',
+                        isExitsSectionExpanded ? 'rotate-180' : 'rotate-0'
+                      ]"
+                    />
+                  </div>
+                </div>
+              </button>
+              <div 
+                :class="[
+                  'overflow-hidden transition-all duration-500 ease-in-out mt-4',
+                  isExitsSectionExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                ]"
+              >
+                <div class="space-y-6 text-lg leading-relaxed pt-4">
+                  <p class="text-neutral-300 lg:text-balance">
+                    Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       
       <div>
-        <h3 class="text-2xl log:text-4xl text-center mb-6 font-bold lg:hidden text-white/80">Advanced Simulation Features</h3>
+        <h3 class="text-2xl log:text-4xl text-center mb-6 font-bold lg:hidden text-white/80 -mt-16 lg:mt-0">Advanced Simulation Features</h3>
         <div class="grid md:grid-cols-3 gap-4 lg:gap-10">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
@@ -528,10 +542,10 @@
     <div class="max-w-8xl mx-auto">
       
       <div class="lg:text-center mb-12 lg:mb-20">
-        <h2 class="text-4xl lg:text-6xl mb-10 font-black tracking-tight">
+        <h2 class="text-4xl lg:text-6xl mb-10 font-black tracking-tight text-balance">
           <span class="gradient-text-yellow">DEPLOY ON YOUR TERMS</span>
         </h2>
-        <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto">
+        <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto text-balance">
           Hands-free or hands-on — either way, you're in charge. Full automation with complete transparency, or human-in-the-loop for final calls.
         </p>
       </div>
@@ -569,7 +583,7 @@
           <!-- Hands-Off Auto-Trading Tab -->
           <div v-if="activeTab === 'hands-off'" class="space-y-8">
             <div class="lg:text-center mb-12">
-              <h3 class="text-2xl lg:text-4xl mb-4 font-bold gradient-text-accent">HANDS-OFF AUTO-TRADING</h3>
+              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-apple-400/80">HANDS-OFF AUTO-TRADING</h3>
               <p class="text-xl text-neutral-300 italic">Set it. Forget it. Smile.</p>
             </div>
             
@@ -661,7 +675,7 @@
           <!-- Human-in-the-Loop Tab -->
           <div v-if="activeTab === 'human-loop'" class="space-y-8">
             <div class="lg:text-center mb-12">
-              <h3 class="text-2xl lg:text-4xl mb-4 font-bold gradient-text-accent">HUMAN-IN-THE-LOOP</h3>
+              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-apple-400/80">HUMAN-IN-THE-LOOP</h3>
               <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
             </div>
             
@@ -810,7 +824,7 @@
   <div class="section-linear-bg">&nbsp;</div>
   <section id="cta" class="text-white pt-32 pb-12 lg:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
-      <div class="mb-16">
+      <div class="mb-12 lg:mb-16">
         <h2 class="text-5xl lg:text-7xl md:text-8xl mb-12 leading-[0.9] font-black tracking-tight gradient-text-yellow text-balance">
           STOP GUESSING <span class="gradient-text-yellow2">START SLICING</span>
         </h2>
@@ -823,7 +837,7 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="w-full bg-white/10 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
+            class="w-full bg-white/15 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-accent-500 transition-all duration-200"
           >
           <button class="w-full bg-accent-500 hover:bg-accent-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl">
             Claim Your Spot
@@ -835,7 +849,7 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="flex-1 bg-white/10 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
+            class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
           >
           <button class="bg-accent-500 hover:bg-accent-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0">
             Claim Your Spot
@@ -866,7 +880,7 @@
   </section>
 </div>
 <div class="relative">  
-  <footer id="footer" class="bg-black text-neutral-400 py-16 border-t border-white/5 px-4 sm:px-6 lg:px-8">
+  <footer id="footer" class="bg-black text-neutral-400 pt-16 pb-4 border-t border-white/5 px-4 sm:px-6 lg:px-8">
     <div class="max-w-8xl mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
         <div class="mb-6 md:mb-0">
@@ -875,7 +889,7 @@
         </div>
         
         <div class="flex items-center space-x-6">
-          <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Terms</span>
+          <!-- <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Terms</span> -->
           <span class="text-sm hover:text-accent-500 transition-colors cursor-pointer">Privacy</span>
         </div>
       </div>
@@ -892,12 +906,16 @@ export default {
   data() {
     return {
       activeTab: 'hands-off',
-      isSignalSectionExpanded: false
+      isSignalSectionExpanded: false,
+      isExitsSectionExpanded: false
     }
   },
   methods: {
     toggleSignalSection() {
       this.isSignalSectionExpanded = !this.isSignalSectionExpanded
+    },
+    toggleExitsSection() {
+      this.isExitsSectionExpanded = !this.isExitsSectionExpanded
     }
   }
 }
