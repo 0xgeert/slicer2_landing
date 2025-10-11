@@ -59,15 +59,16 @@
         </div>
       </div>
 
-      <div class="text-center mt-4">
-        <p class="text-neutral-300 text-balance text-xs lg:text-sm">Get early access when Slicer 2.0 opens private beta. — No spam. Unsubscribe anytime.</p>
-        <div class="mt-2 hidden sm:block">
-          <a class="cta-inline text-sm" href="#simulate">Watch a 6-second sim <span class="arrow">→</span></a>
-        </div>
+      <div class="text-center mt-4 text-neutral-300 text-balance text-xs lg:text-sm hero-text">
+        <p class="hero-text-line">Get early access when Slicer 2.0 opens private beta.</p>
+        <p class="hero-text-line"> No spam. Unsubscribe anytime.</p>
+         <div class="mt-4 hidden sm:block hero-link">
+           <button @click="scrollToSection('simulate', 100)" class="hover:underline  text-lime-300/80 transition-all duration-200 bg-transparent border-none outline-none cursor-pointer">Watch a 6-second sim <span class="arrow">→</span></button>
+         </div>
       </div>
       
        <!-- Scroll cue arrow -->
-       <div class="mt-20 mb-24 flex justify-center">
+       <div class="my-20 flex justify-center flex-col items-center gap-8 hero-scroll">
         <button 
             @click="scrollToSection('express', 100)"
             aria-label="Scroll to next section"
@@ -81,7 +82,8 @@
         >
           <i-heroicons-solid-arrow-down class="w-8 h-8" />
         </button>
-      </div>
+       </div>
+
 
       <!-- <div class="mb-16">
         <p class="text-neutral-400 text-sm mb-8">Why join?</p>
@@ -131,8 +133,6 @@
         </div>
       </div>
       
-      <p class="text-neutral-500 text-lg font-light">For humans and AI agents alike</p>
-      
       <!-- <div class="bg-neutral-900/30 backdrop-blur-sm rounded-xl p-6 border border-neutral-700/30 max-w-md mx-auto mb-12">
         <p class="text-neutral-300 lg:text-balance text-sm italic">
           "If this existed six months ago, I wouldn't have missed that trade."
@@ -140,6 +140,11 @@
         <p class="text-neutral-500 text-xs mt-2">— Beta tester</p>
       </div> -->
       
+
+      <!-- Whisper text -->
+      <div class="text-center mb-8 hero-whisper">
+        <p class="text-white/80 text-lg font-light italic">For humans and AI agents alike</p>
+      </div>
 
     </div>
   </main>
@@ -150,13 +155,13 @@
     <div class="max-w-8xl mx-auto ">
       <div class="grid lg:grid-cols-2 gap-20 items-start mb-12">
         <div class="space-y-12">
-          <div class="text-center md:text-left pt-8 lg:pt-16">
+          <div class="text-center lg:text-left pt-8 lg:pt-16">
             <h2 class="text-4xl lg:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
               BUILD VISUALLY OR 
               <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span> 
               INTO EXISTENCE
             </h2>
-            <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance">
+            <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance lg:ml-6">
               <span class="text-white font-semibold">10,000+ on-chain and off-chain filters.</span> Pure creative freedom. <span class="text-white font-semibold">Compose by hand, describe in English, or mix both.</span> Total control either way.
             </p>
           </div>
@@ -166,10 +171,10 @@
             <div>
               <button 
                 @click="toggleSignalSection"
-                class="group w-full text-left focus:outline-none transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-4 px-6 -my-4 cursor-pointer"
+                class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-lg py-4 px-6 -my-4"
               >
-                <div class="flex items-center justify-between">
-                  <h3 class="text-3xl font-bold  lg:text-balance gradient-text-lime transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="w-full text-xl font-bold text-lime-500/80 text-balance transition-all">EVERY SIGNAL, EVERY SLICE, AT YOUR FINGERTIPS</h3>
                   <div class="flex items-center justify-center">
                     <i-heroicons-solid-chevron-down 
                       :class="[
@@ -356,7 +361,7 @@
       
       
       <!-- Mobile-first text section -->
-      <div class="lg:hidden mb-12 text-center md:text-left pt-8 lg:pt-16">
+      <div class="lg:hidden mb-12 text-center lg:text-left pt-8 lg:pt-16">
         <h2 class="text-4xl lg:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
           KNOW IF IT WINS 
           <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
@@ -636,7 +641,7 @@
   <section id="deploy" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-8xl mx-auto">
       
-      <div class="text-center md:text-left lg:text-center mb-12 lg:mb-20 pt-8 lg:pt-16">
+      <div class="text-center lg:text-left lg:text-center mb-12 lg:mb-20 pt-8 lg:pt-16">
         <h2 class="text-4xl lg:text-6xl mb-4 font-black tracking-tight text-balance">
           <span class="gradient-text-yellow">DEPLOY <span class="gradient-text-yellow2">ON YOUR TERMS</span></span>
         </h2>
@@ -984,19 +989,19 @@
             placeholder="Enter your email address" 
             class="w-full bg-white/15 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-lime-500 transition-all duration-200"
           >
-          <button class="w-full bg-lime-500 hover:bg-lime-600 text-black px-6 py-4 transition-colors duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2">
+          <button class="w-full bg-lime-500 hover:bg-lime-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
         
-        <!-- Desktop: Integrated input and button -->
-        <div class="hidden sm:flex rounded-2xl overflow-hidden border-2 border-lime-500/20 focus-within:border-lime-500 transition-all duration-200">
+        <!-- Desktop: Separate input and button -->
+        <div class="hidden sm:flex gap-4">
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg border-0"
+            class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg rounded-2xl border-2 border-neutral-700/30 focus:border-lime-500 transition-all duration-200"
           >
-          <button class="bg-lime-500 hover:bg-lime-600 text-black px-8 py-5 transition-colors duration-200 font-semibold text-lg border-0 rounded-r-2xl flex items-center justify-center gap-2">
+          <button class="bg-lime-500 hover:bg-lime-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -1056,7 +1061,7 @@ export default {
       isExitsSectionExpanded: false,
       isExitBreakdownExpanded: false,
       isTradeSizeImpactExpanded: false,
-      isHeaderVisible: true
+      isHeaderVisible: false
     }
   },
   methods: {
@@ -1220,20 +1225,6 @@ button:hover .arrow {
   transform: translateX(4px) !important;
 }
 
-/* Inline secondary CTA */
-.cta-inline {
-  margin-left: 1rem;
-  color: #e6e6e6;
-  opacity: .9;
-  transition: opacity .2s ease, text-decoration .2s ease;
-}
-
-.cta-inline:hover {
-  opacity: 1;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 /* Step card base styles */
 .step {
   position: relative;
@@ -1262,6 +1253,26 @@ button:hover .arrow {
 
 .hero .cta-container {
   animation: fadeInUp 0.8s ease 0.5s both;
+}
+
+.hero .hero-link {
+  animation: fadeInUp 0.8s ease 0.7s both;
+}
+
+.hero .hero-text-line {
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.hero .hero-text-line:nth-child(2) {
+  animation: fadeInUp 0.8s ease 0.65s both;
+}
+
+.hero .hero-scroll {
+  animation: fadeInUp 0.8s ease 0.8s both;
+}
+
+.hero .hero-whisper {
+  animation: fadeInUp 0.8s ease 0.9s both;
 }
 
 .hero-steps .step:nth-child(1) {
