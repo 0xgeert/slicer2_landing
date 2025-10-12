@@ -1,5 +1,10 @@
 <template>
 <div class="relative">
+  <!-- Top-left ghost logo -->
+  <!-- <div class="absolute top-8 left-8 z-40">
+    <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto opacity-30">
+  </div> -->
+  
   <!-- SVG gradient definition for icons -->
   <svg width="0" height="0" style="position: absolute;">
     <defs>
@@ -15,7 +20,7 @@
   <header id="header" :class="['bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
     <div class="max-w-8xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
-        <img src="/src/assets/logo.png" alt="Slicer" class="h-8 w-auto">
+        <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto">
       </div>
       <nav class="hidden md:flex items-center space-x-12">
         <button @click="scrollToSection('express', 100)" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Express</button>
@@ -1117,7 +1122,7 @@
     <div class="max-w-8xl mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
         <div class="mb-6 md:mb-0">
-          <img src="/src/assets/logo.png" alt="Slicer" class="h-8 w-auto mb-3">
+          <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto mb-3">
           <p class="text-sm text-neutral-500 text-balance"><span class="font-semibold text-white/80">Express. Simulate. Deploy. Repeat</span> — until profit feels inevitable.</p>
         </div>
         
