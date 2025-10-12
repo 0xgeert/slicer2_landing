@@ -245,40 +245,42 @@
 
 
               <!-- Filter blocks -->
-              <div class="bg-zinc-950/80 rounded-2xl border border-white/5 w-full max-w-2xl shadow-2xl relative z-10">
-                <div class="absolute inset-0 -inset-x-24 -inset-y-24 blur-3xl pointer-events-none" style="background: var(--gradient-radial-glow);"></div>
+               
+              <div class="relative rounded-2xl border border-white/15 w-full max-w-2xl shadow-2xl">
+                <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10" style="background: var(--gradient-radial-feature-backdrop);"></div>
+                <div class="w-full h-full bg-zinc-500/10 rounded-2xl">
+                  <div class="p-2">
+                    <!-- Buy -->
+                    <div class="inline-block rounded-lg p-2">
+                      <div class="inline-block bg-violet-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-violet-400/80 text-sm font-semibold">Buy at</span>
+                        <i-heroicons-solid-chevron-down class="w-3 h-3 text-violet-400/80 ml-1 inline" />
+                      </div>
+                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-amber-100 text-sm font-medium">Smart money net flow</span>
+                        <span class="text-blue-400 font-medium text-sm ml-2">&gt; 0 for 48h</span>
+                      </div>
+                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2">
+                        <span class="text-amber-100 text-sm font-medium">Retail money net flow</span>
+                        <span class="text-blue-400 font-medium text-sm ml-2">&lt; 0 for 48h</span>
+                      </div>
+                    </div>
 
-                <div class="p-2">
-                  <!-- Buy -->
-                  <div class="inline-block rounded-lg p-2">
-                    <div class="inline-block bg-violet-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
-                      <span class="text-violet-400/80 text-sm font-semibold">Buy at</span>
-                      <i-heroicons-solid-chevron-down class="w-3 h-3 text-violet-400/80 ml-1 inline" />
-                    </div>
-                    <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
-                      <span class="text-amber-100 text-sm font-medium">Smart money net flow</span>
-                      <span class="text-blue-400 font-medium text-sm ml-2">&gt; 0 for 48h</span>
-                    </div>
-                    <div class="inline-block bg-white/5 rounded-lg px-3 py-2">
-                      <span class="text-amber-100 text-sm font-medium">Retail money net flow</span>
-                      <span class="text-blue-400 font-medium text-sm ml-2">&lt; 0 for 48h</span>
-                    </div>
-                  </div>
-
-                  <!-- Sell -->
-                  <div class="inline-block rounded-lg p-2">
-                    <div class="inline-block bg-red-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
-                      <span class="text-red-400 text-sm font-semibold">Sell at</span>
-                      <i-heroicons-solid-chevron-down class="w-3 h-3 text-red-400 ml-1 inline" />
-                    </div>
-                    <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
-                      <span class="text-amber-100 text-sm font-medium">Price change</span>
-                      <span class="text-blue-400 font-medium text-sm ml-2">≥ 500%</span>
-                    </div>
-                    <div class="inline-block px-1 py-2 mr-2 mb-2 italic text-xs text-neutral-400">OR</div>
-                    <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
-                      <span class="text-amber-100 text-sm font-medium">Time held</span>
-                      <span class="text-blue-400 font-medium text-sm ml-2">≥ 72h</span>
+                    <!-- Sell -->
+                    <div class="inline-block rounded-lg p-2">
+                      <div class="inline-block bg-red-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-red-400 text-sm font-semibold">Sell at</span>
+                        <i-heroicons-solid-chevron-down class="w-3 h-3 text-red-400 ml-1 inline" />
+                      </div>
+                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-amber-100 text-sm font-medium">Price change</span>
+                        <span class="text-blue-400 font-medium text-sm ml-2">≥ 500%</span>
+                      </div>
+                      <div class="inline-block px-1 py-2 mr-2 mb-2 italic text-xs text-neutral-400">OR</div>
+                      <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-amber-100 text-sm font-medium">Time held</span>
+                        <span class="text-blue-400 font-medium text-sm ml-2">≥ 72h</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -436,7 +438,7 @@
       <div class="grid lg:grid-cols-2 gap-28 items-start mb-24">
         <div class="relative ">
           <!-- Large radial glow surrounding the card -->
-          <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none" style="background: var(--gradient-radial-glow-large);"></div>
+          <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none" style="background: var(--gradient-radial-feature-backdrop);"></div>
           
           <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl max-w-2xl lg:max-w-none mx-auto">
             
@@ -1279,8 +1281,11 @@ export default {
   --gradient-yellow2:       linear-gradient(to right, var(--amber-200), var(--yellow-300), var(--amber-300));
   --gradient-hero-glow:     radial-gradient(48rem 20rem at 50% 18%, var(--yellow-300-t-15), transparent 50%),
                              radial-gradient(52rem 26rem at 50% 42%, var(--violet-400-t-10), transparent 70%);
-  --gradient-radial-glow:        radial-gradient(circle, var(--white-t-15), var(--amber-500-t-10), transparent);
-  --gradient-radial-glow-large:  radial-gradient(circle, var(--white-t-30), var(--amber-500-t-10), transparent);
+  --gradient-radial-feature-backdrop: radial-gradient(
+    circle, 
+    color-mix(in oklch,theme('colors.violet.950') 70%, transparent), 
+    transparent
+  );
 }
 
 /* sRGB (non-P3) screens → richer but balanced */
