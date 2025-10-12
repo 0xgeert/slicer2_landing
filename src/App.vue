@@ -125,8 +125,10 @@
         <div class="step bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
           <div class="h-40 rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
-              <div class="text-violet-500/80 mb-2">
-                <i-fa-solid-brain class="w-8 h-8" />
+              <div class="mb-2">
+                <div class="gradient-icon-wrapper">
+                  <i-fa-solid-brain class="w-8 h-8" />
+                </div>
               </div>
               <span class="text-neutral-300 text-sm font-medium">English idea → Filter blocks</span>
             </div>
@@ -138,8 +140,10 @@
         <div class="step bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
           <div class="h-40 rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
-              <div class="text-violet-500/80 mb-2">
-                <i-fa-solid-chart-line class="w-8 h-8" />
+              <div class="mb-2">
+                <div class="gradient-icon-wrapper">
+                  <i-fa-solid-chart-line class="w-8 h-8" />
+                </div>
               </div>
               <span class="text-neutral-300 text-sm font-medium">Performance chart rising</span>
             </div>
@@ -151,8 +155,10 @@
         <div class="step bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
           <div class="h-40 rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
-              <div class="text-violet-500/80 mb-2">
-                <i-fa-solid-rocket class="w-8 h-8" />
+              <div class="mb-2">
+                <div class="gradient-icon-wrapper">
+                  <i-fa-solid-rocket class="w-8 h-8" />
+                </div>
               </div>
               <span class="text-neutral-300 text-sm font-medium">Trade execution UI</span>
             </div>
