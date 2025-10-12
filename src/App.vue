@@ -1,8 +1,7 @@
 <template>
 <div class="relative">
   <!-- gradients: purple linear + black radial -->
-  <div class="absolute inset-0 bg-gradient-to-b from-purple-950 via-purple-900/20 to-transparent h-[80vh] pointer-events-none -z-10"></div>
-  <div class="absolute inset-0 bg-gradient-radial from-zinc-950  to-transparent pointer-events-none -z-10"></div>
+  <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10" style="background: var(--gradient-purple);"></div>
   <header id="header" :class="['bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
     <div class="max-w-8xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
@@ -20,7 +19,6 @@
   </header>
 
 <div class="relative overflow-hidden">  
-  <div class="section-linear-bg">&nbsp;</div>
 
   <main id="hero" class="hero hero-glow text-white pt-28 md:pt-44 lg:pt-52 xl:pt-60 pb-20 lg:pb-32 xl:pb-32 px-4 sm:px-6 lg:px-8 xl:px-8 flex items-center relative">
 
@@ -36,13 +34,24 @@
         </p>
       </div>
       
+      
+
+
       <div id='cta-container' class="cta-container backdrop-blur-sm rounded-2xl px-4 pt-4 sm:px-5 sm:pt-5 lg:px-6 lg:pt-6 max-w-2xl mx-4 sm:mx-auto -mt-10 lg:mt-0">
         <!-- Mobile: Separate input and button -->
         <div class="flex flex-col space-y-3 sm:hidden">
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="w-full bg-white/15 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-lime-500 transition-all duration-200"
+            class="
+              w-full  px-4 py-4 rounded-2xl 
+              bg-white/5 border border-white/10 
+              backdrop-blur-sm
+              text-white 
+              focus:bg-white/10 focus:border-lime-500 
+              focus:outline-none
+              transition duration-200
+              placeholder-white/80"
           >
           <button class="w-full bg-lime-500 hover:bg-lime-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
@@ -54,7 +63,14 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg rounded-2xl border-2 border-neutral-700/30 focus:border-lime-500 transition-all duration-200"
+            class="flex-1 px-6 py-5 rounded-2xl 
+              bg-white/5 border border-white/10 
+              backdrop-blur-sm
+              text-white 
+              focus:bg-white/10 focus:border-lime-500 
+              focus:outline-none
+              transition duration-200
+              placeholder-white/80"
           >
           <button class="bg-lime-500 hover:bg-lime-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
@@ -77,7 +93,7 @@
             aria-label="Scroll to next section"
             class="group inline-flex p-4 rounded-full 
                   text-neutral-200/80 outline-none transition-all duration-200
-                  border-4 border-neutral-200/20
+                  border-2 md:border-4 border-neutral-200/20
                   bg-transparent
                   hover:bg-neutral-200/10
                   motion-safe:animate-[nudge_3s_ease-in-out_infinite]
@@ -209,7 +225,7 @@
 
               <!-- Filter blocks -->
               <div class="bg-zinc-950/80 rounded-2xl border border-white/5 w-full max-w-2xl shadow-2xl relative z-10">
-                <div class="absolute inset-0 -inset-x-24 -inset-y-24 bg-gradient-radial from-white/15 via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
+                <div class="absolute inset-0 -inset-x-24 -inset-y-24 blur-3xl pointer-events-none" style="background: var(--gradient-radial-glow);"></div>
 
                 <div class="p-2">
                   <!-- Buy -->
@@ -391,7 +407,7 @@
       <div class="grid lg:grid-cols-2 gap-28 items-start mb-24">
         <div class="relative ">
           <!-- Large radial glow surrounding the card -->
-          <div class="absolute inset-0 -inset-x-32 -inset-y-32 bg-gradient-radial from-white/30 via-amber-500/10 lg:from-white/20 lg:via-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
+          <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none" style="background: var(--gradient-radial-glow-large);"></div>
           
           <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl max-w-2xl lg:max-w-none mx-auto">
             
@@ -986,6 +1002,9 @@
 </div>
 <div class="relative">  
   <div class="section-linear-bg">&nbsp;</div>
+  <!-- gradients: purple linear + black radial -->
+  <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10" style="background: var(--gradient-purple);"></div>
+
   <section id="cta" class="text-white pt-20 lg:pt-32 pb-20 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
       <div class="mb-12 lg:mb-16 pt-8 lg:pt-16 hero-glow">
@@ -1001,7 +1020,14 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="w-full bg-white/15 backdrop-blur-sm px-4 py-4 text-white placeholder-white/80 focus:outline-none text-base rounded-2xl border-2 border-transparent focus:border-lime-500 transition-all duration-200"
+            class="w-full px-4 py-4 rounded-2xl 
+              bg-white/5 border border-white/10 
+              backdrop-blur-sm
+              text-white 
+              focus:bg-white/10 focus:border-lime-500 
+              focus:outline-none
+              transition duration-200
+              placeholder-white/80"
           >
           <button class="w-full bg-lime-500 hover:bg-lime-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
@@ -1013,7 +1039,14 @@
           <input 
             type="email" 
             placeholder="Enter your email address" 
-            class="flex-1 bg-white/15 backdrop-blur-sm px-6 py-5 text-white placeholder-white/80 focus:outline-none text-lg rounded-2xl border-2 border-neutral-700/30 focus:border-lime-500 transition-all duration-200"
+            class="flex-1 px-6 py-5 rounded-2xl 
+              bg-white/5 border border-white/10 
+              backdrop-blur-sm
+              text-white 
+              focus:bg-white/10 focus:border-lime-500 
+              focus:outline-none
+              transition duration-200
+              placeholder-white/80"
           >
           <button class="bg-lime-500 hover:bg-lime-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
@@ -1159,24 +1192,64 @@ export default {
   @apply bg-gradient-to-b from-zinc-800 to-transparent absolute h-[300px] w-full -z-10;
 }
 
-
+/* ===== gamut-aware color system (OKLCH) ===== */
 :root {
-  --bg: #0b0b0b;
-  --ink: #f5f5f5;
-  --muted: #bdbdbd;
-  --headline: #ffdf57;
-  --headline-2: #ffc93a;
-  --lime: #b7ff36;
-  --lime-weak: rgba(183,255,54,.18);
-  
-  --gradient-yellow: linear-gradient(to right, theme('colors.yellow.400'), theme('colors.amber.300'), theme('colors.yellow.500'), theme('colors.amber.400'));
-  --gradient-yellow2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.yellow.300'), theme('colors.amber.300'));
-  --gradient-lime: linear-gradient(to right, theme('colors.lime.600'), theme('colors.emerald.400'), theme('colors.lime.500'), theme('colors.emerald.600'));
+  /* knobs: neutral on P3, tuned for sRGB below */
+  --chroma-scale: 1;
+  --lightness-bump: 1;
 
-  --df-color: rgba(180,255,120,1);   /* core lime */
-  --df-soft : rgba(180,255,120,.6);  /* shoulder */
-  --df-dur  : 1.6s;                  /* duration */
+  /* neutrals */
+  --zinc-950:  oklch(5% 0 0);
+  --white:     oklch(100% 0 0);
+
+  /* yellows / golds */
+  --amber-200:  oklch(calc(92% * var(--lightness-bump)) calc(0.08 * var(--chroma-scale)) 75);
+  --amber-300:  oklch(calc(88% * var(--lightness-bump)) calc(0.12 * var(--chroma-scale)) 75);
+  --amber-400:  oklch(calc(82% * var(--lightness-bump)) calc(0.16 * var(--chroma-scale)) 75);
+  --amber-500:  oklch(calc(70% * var(--lightness-bump)) calc(0.20 * var(--chroma-scale)) 75);
+
+  --yellow-300: oklch(calc(90% * var(--lightness-bump)) calc(0.12 * var(--chroma-scale)) 85);
+  --yellow-400: oklch(calc(85% * var(--lightness-bump)) calc(0.15 * var(--chroma-scale)) 85);
+  --yellow-500: oklch(calc(80% * var(--lightness-bump)) calc(0.18 * var(--chroma-scale)) 85);
+
+  /* greens (incl. lime-400 you referenced) */
+  --lime-400:    oklch(calc(80% * var(--lightness-bump)) calc(0.20 * var(--chroma-scale)) 120);
+  --lime-500:    oklch(calc(65% * var(--lightness-bump)) calc(0.16 * var(--chroma-scale)) 120);
+  --lime-600:    oklch(calc(55% * var(--lightness-bump)) calc(0.15 * var(--chroma-scale)) 120);
+  --emerald-400: oklch(calc(75% * var(--lightness-bump)) calc(0.12 * var(--chroma-scale)) 160);
+  --emerald-600: oklch(calc(55% * var(--lightness-bump)) calc(0.14 * var(--chroma-scale)) 160);
+
+  /* purples */
+  --purple-900:  oklch(calc(25% * var(--lightness-bump)) calc(0.12 * var(--chroma-scale)) 280);
+  --purple-950:  oklch(calc(15% * var(--lightness-bump)) calc(0.08 * var(--chroma-scale)) 280);
+
+  /* translucent helpers (lazy-resolve from base tokens) */
+  --white-t-15:      color-mix(in oklch, var(--white) 15%, transparent);
+  --white-t-30:      color-mix(in oklch, var(--white) 30%, transparent);
+  --amber-500-t-10:  color-mix(in oklch, var(--amber-500) 10%, transparent);
+  --yellow-300-t-15: color-mix(in oklch, var(--yellow-300) 15%, transparent);
+  --lime-400-t-10:   color-mix(in oklch, var(--lime-400) 10%, transparent);
+  --purple-900-t-80: color-mix(in oklch, var(--purple-900) 80%, transparent);
+
+  /* gradients (exhaustive, incl. lime) */
+  --gradient-lime:          linear-gradient(to right, var(--lime-600), var(--emerald-400), var(--lime-500), var(--emerald-600));
+  --gradient-purple:        linear-gradient(to bottom, var(--purple-900-t-80), transparent);
+  --gradient-yellow:        linear-gradient(to right, var(--yellow-400), var(--amber-300), var(--yellow-500), var(--amber-400));
+  --gradient-yellow2:       linear-gradient(to right, var(--amber-200), var(--yellow-300), var(--amber-300));
+  --gradient-hero-glow:     radial-gradient(48rem 20rem at 50% 18%, var(--yellow-300-t-15), transparent 50%),
+                             radial-gradient(52rem 26rem at 50% 42%, var(--lime-400-t-10), transparent 70%);
+  --gradient-radial-glow:        radial-gradient(circle, var(--white-t-15), var(--amber-500-t-10), transparent);
+  --gradient-radial-glow-large:  radial-gradient(circle, var(--white-t-30), var(--amber-500-t-10), transparent);
 }
+
+/* sRGB (non-P3) screens → richer but balanced */
+@media not (color-gamut: p3){
+  :root{
+    --chroma-scale: 1.15;   /* try 1.25–1.45 */
+    --lightness-bump: 1.1; /* tiny lift to avoid muddy yellows */
+  }
+}
+
 
 
 /* Apply gradients to text */
@@ -1214,26 +1287,24 @@ export default {
   right: 0;
   bottom: 0;
   pointer-events: none;
-  background:
-    radial-gradient(48rem 20rem at 50% 18%, rgba(255,207,64,.15), transparent 50%),
-    radial-gradient(52rem 26rem at 50% 42%, rgba(183,255,54,.10), transparent 70%);
+  background: var(--gradient-hero-glow);
   filter: blur(2px);
 }
 
 /* CTA Ghost Button */
 .cta-ghost {
-  border: 2px solid var(--lime);
-  color: var(--ink);
+  border: 2px solid #b7ff36;
+  color: #f5f5f5;
   padding: 0.9rem 1.2rem;
   border-radius: 14px;
-  box-shadow: 0 0 0 0 var(--lime-weak);
+  box-shadow: 0 0 0 0 rgba(183,255,54,.18);
   transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
 }
 
 .cta-ghost:hover {
   transform: translateY(-1px);
   background: rgba(183,255,54,.08);
-  box-shadow: 0 0 28px 2px var(--lime-weak);
+  box-shadow: 0 0 28px 2px rgba(183,255,54,.18);
 }
 
 /* Arrow animation for all CTAs */
@@ -1387,13 +1458,13 @@ button:hover .arrow {
     to bottom,
     transparent 0%,
     rgba(180,255,120,0) 10%,
-    var(--df-soft) 40%,
-    var(--df-color) 50%,
-    var(--df-soft) 60%,
+    rgba(180,255,120,.6) 40%,
+    rgba(180,255,120,1) 50%,
+    rgba(180,255,120,.6) 60%,
     rgba(180,255,120,0) 90%,
     transparent 100%
   );
-  animation: dataFlowOsc var(--df-dur) ease-in-out infinite;
+  animation: dataFlowOsc 1.6s ease-in-out infinite;
   will-change: transform;
 }
 
