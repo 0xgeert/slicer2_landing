@@ -246,7 +246,7 @@
 
               <!-- Filter blocks -->
                
-              <div class="relative rounded-2xl border border-white/15 w-full max-w-2xl shadow-2xl">
+              <div class="relative rounded-2xl border border-white/10 w-full max-w-2xl shadow-2xl">
                 <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10" style="background: var(--gradient-radial-feature-backdrop);"></div>
                 <div class="w-full h-full bg-zinc-500/10 rounded-2xl">
                   <div class="p-2">
@@ -293,8 +293,8 @@
       </div>
       <!-- /grid -->
 
-      <!-- BRIDGE: “Every signal…” now centered under both columns on desktop -->
-      <div class="hidden lg:flex  mb-2 max-w-[44rem] mx-auto  flex-col items-center">
+      <!-- BRIDGE: “Every signal…” now centered under both columns on desktop and mobile alike -->
+      <div class="flex mt-32 lg:mt-0 mb-2 max-w-2xl mx-auto  flex-col items-center ">
         <button
           @click="toggleSignalSection"
           class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6 flex  items-center justify-center gap-2"
@@ -382,35 +382,6 @@
           </div>
         </div>
       </div>
-
-      <!-- MOBILE: “More on expressing your strategy” (unchanged) -->
-      <div class="lg:hidden max-w-2xl mx-auto mt-6">
-        <button
-          @click="toggleSignalSection"
-          class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg p-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
-        >
-          More on expressing your strategy
-          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',isSignalSectionExpanded ? 'rotate-180' : 'rotate-0']" />
-        </button>
-
-        <div
-          :class="[
-            'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
-            isSignalSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
-          ]"
-          :style="{ transform: 'translateZ(0)' }"
-        >
-          <div class="space-y-4 text-lg leading-relaxed pt-4">
-            <p class="text-neutral-300 lg:text-balance">
-              Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
-            </p>
-            <p class="text-neutral-300 lg:text-balance">
-              Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
-            </p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 </div>
@@ -435,7 +406,7 @@
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-28 items-start mb-24">
+      <div class="grid lg:grid-cols-2 lg:gap-28 items-start lg:mb-24 mb-12">
         <div class="relative ">
           <!-- Large radial glow surrounding the card -->
           <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none" style="background: var(--gradient-radial-feature-backdrop);"></div>
@@ -596,42 +567,49 @@
               <p class="text-neutral-300 lg:text-balance leading-relaxed">
                 Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
               </p>
-              
-              <button 
-                @click="toggleExitsSection"
-                class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-lg py-4 px-6 -my-4"
-              >
-                <div class="flex items-center justify-between gap-2">
-                  <h3 class="w-full text-xl font-bold text-violet-500/80/80 text-balance transition-all lg:text-right">Flexible exits match your strategy</h3>
-                  <div class="flex items-center justify-center">
-                    <i-heroicons-solid-chevron-down 
-                      :class="[
-                        'w-6 h-6 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',
-                        isExitsSectionExpanded ? 'rotate-180' : 'rotate-0'
-                      ]"
-                    />
-                  </div>
-                </div>
-              </button>
-              <div 
-                :class="[
-                  'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
-                  isExitsSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
-                ]"
-                :style="{ transform: 'translateZ(0)' }"
-              >
-                <div class="space-y-6 text-lg leading-relaxed pt-4">
-                  <p class="text-neutral-300 lg:text-balance">
-                    Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
-                  </p>
-                </div>
-              </div>
+            
             </div>
           </div>
         </div>
       </div>
       
-      <div class="-mt-36 lg:mt-0">
+      <div class="flex mb-2 max-w-2xl mx-auto  flex-col items-center">
+        <button 
+          @click="toggleExitsSection"
+          class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6 flex items-center justify-center gap-2"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <h3 class="w-full text-xl font-bold text-violet-500/80/80 text-balance transition-all lg:text-right">Flexible exits match your strategy</h3>
+            <div class="flex items-center justify-center">
+              <i-heroicons-solid-chevron-down 
+                :class="[
+                  'w-6 h-6 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',
+                  isExitsSectionExpanded ? 'rotate-180' : 'rotate-0'
+                ]"
+              />
+            </div>
+          </div>
+        </button>
+        <div 
+          :class="[
+            'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
+            isExitsSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+          ]"
+          :style="{ transform: 'translateZ(0)' }"
+        >
+          <div class="space-y-6 text-lg leading-relaxed pt-4">
+            <p class="text-neutral-300">
+              Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
+            </p>
+          </div>
+        </div>
+      </div>
+
+       <!-- Subtle divider gradient before features -->
+       <div class="pointer-events-none mt-16 mb-12 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+
+      <div class="mt-14 lg:mt-28">
         <h3 class="text-2xl log:text-4xl text-center mb-6 font-bold lg:hidden text-white/80  lg:mt-0">Advanced Simulation Features</h3>
         <div class="grid md:grid-cols-3 gap-4 lg:gap-10">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
@@ -678,28 +656,6 @@
         </div>
       </div>
 
-      <!-- Flexible exits section - moved below Advanced Simulation Features for mobile -->
-      <div class="lg:hidden max-w-2xl mx-auto mt-4">
-        <button 
-          @click="toggleExitsSection"
-          class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg p-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
-        > Exits match your strategy
-          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',isExitsSectionExpanded ? 'rotate-180' : 'rotate-0']" />
-        </button>
-        <div 
-          :class="[
-            'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
-            isExitsSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
-          ]"
-          :style="{ transform: 'translateZ(0)' }"
-        >
-          <div class="space-y-4 text-lg leading-relaxed pt-4">
-            <p class="text-neutral-300 lg:text-balance">
-              Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 </div>
@@ -1054,7 +1010,7 @@
         <h2 class="text-[2.6rem] leading-[1] md:text-7xl lg:text-8xl mb-12  font-black tracking-tight gradient-text-yellow text-balance">
           STOP GUESSING <span class="gradient-text-yellow2">START SLICING</span>
         </h2>
-        <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance gradient-text-lime">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
+        <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance gradient-text-secondary">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
       </div>
       
       <div class="max-w-2xl mx-auto mb-12">
@@ -1275,7 +1231,7 @@ export default {
   --purple-900-t-80: color-mix(in oklch, var(--purple-900) 80%, transparent);
 
   /* gradients (exhaustive, incl. secondary) */
-  --gradient-secondary-color:          linear-gradient(to right, var(--violet-600), var(--violet-400), var(--violet-500), var(--violet-600));
+  --gradient-secondary-color:  linear-gradient(to right, var(--violet-400), var(--violet-600));
   --gradient-purple:        linear-gradient(to bottom, var(--purple-900-t-80), transparent);
   --gradient-yellow:        linear-gradient(to right, var(--yellow-400), var(--amber-300), var(--yellow-500), var(--amber-400));
   --gradient-yellow2:       linear-gradient(to right, var(--amber-200), var(--yellow-300), var(--amber-300));
@@ -1315,7 +1271,7 @@ export default {
   color: transparent;
 }
 
-.gradient-text-lime {
+.gradient-text-secondary {
   background: var(--gradient-secondary-color);
   -webkit-background-clip: text;
   background-clip: text;
