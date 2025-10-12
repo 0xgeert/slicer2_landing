@@ -1,5 +1,15 @@
 <template>
 <div class="relative">
+  <!-- SVG gradient definition for icons -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <linearGradient id="icon-gradient-violet-indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#9A5BFF;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+  </svg>
+  
   <!-- gradients: purple linear + black radial -->
   <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10" style="background: var(--gradient-purple);"></div>
   <header id="header" :class="['bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
@@ -48,12 +58,12 @@
               bg-white/5 border border-white/10 
               backdrop-blur-sm
               text-white 
-              focus:bg-white/10 focus:border-teal-500
+              focus:bg-white/10 focus:border-violet-500
               focus:outline-none
               transition duration-200
               placeholder-white/80"
           >
-          <button class="w-full bg-teal-500 hover:bg-teal-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow">
+          <button class="w-full bg-violet-500 hover:bg-violet-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -67,12 +77,12 @@
               bg-white/5 border border-white/10 
               backdrop-blur-sm
               text-white 
-              focus:bg-white/10 focus:border-teal-500 
+              focus:bg-white/10 focus:border-violet-500 
               focus:outline-none
               transition duration-200
               placeholder-white/80"
           >
-          <button class="bg-teal-500 hover:bg-teal-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow">
+          <button class="bg-violet-500 hover:bg-violet-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -82,7 +92,7 @@
         <p class="hero-text-line">Get early access when Slicer 2.0 opens private beta.</p>
         <p class="hero-text-line"> No spam. Unsubscribe anytime.</p>
          <div class="mt-4 hidden sm:block hero-link">
-           <button @click="scrollToSection('simulate', 100)" class="hover:underline  text-teal-300/80 transition-all duration-200 bg-transparent border-none outline-none cursor-pointer">Watch a 6-second sim <span class="arrow">→</span></button>
+           <button @click="scrollToSection('simulate', 100)" class="hover:underline  text-violet-300/80 transition-all duration-200 bg-transparent border-none outline-none cursor-pointer">Watch a 6-second sim <span class="arrow">→</span></button>
          </div>
       </div>
       
@@ -115,7 +125,7 @@
         <div class="step bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
           <div class="h-40 rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
-              <div class="text-teal-500/80 mb-2">
+              <div class="text-violet-500/80 mb-2">
                 <i-fa-solid-brain class="w-8 h-8" />
               </div>
               <span class="text-neutral-300 text-sm font-medium">English idea → Filter blocks</span>
@@ -128,7 +138,7 @@
         <div class="step bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
           <div class="h-40 rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
-              <div class="text-teal-500/80 mb-2">
+              <div class="text-violet-500/80 mb-2">
                 <i-fa-solid-chart-line class="w-8 h-8" />
               </div>
               <span class="text-neutral-300 text-sm font-medium">Performance chart rising</span>
@@ -141,7 +151,7 @@
         <div class="step bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
           <div class="h-40 rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
-              <div class="text-teal-500/80 mb-2">
+              <div class="text-violet-500/80 mb-2">
                 <i-fa-solid-rocket class="w-8 h-8" />
               </div>
               <span class="text-neutral-300 text-sm font-medium">Trade execution UI</span>
@@ -195,7 +205,7 @@
         <div class="mt-4 lg:mt-6 xl:pl-8 xl:-mr-8">
           <div class="mb-6">
             <div class="flex space-x-3 justify-center">
-              <div class="w-3 h-3 bg-teal-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-violet-500 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
               <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
@@ -230,9 +240,9 @@
                 <div class="p-2">
                   <!-- Buy -->
                   <div class="inline-block rounded-lg p-2">
-                    <div class="inline-block bg-teal-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
-                      <span class="text-teal-400/80 text-sm font-semibold">Buy at</span>
-                      <i-heroicons-solid-chevron-down class="w-3 h-3 text-teal-400/80 ml-1 inline" />
+                    <div class="inline-block bg-violet-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
+                      <span class="text-violet-400/80 text-sm font-semibold">Buy at</span>
+                      <i-heroicons-solid-chevron-down class="w-3 h-3 text-violet-400/80 ml-1 inline" />
                     </div>
                     <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
                       <span class="text-amber-100 text-sm font-medium">Smart money net flow</span>
@@ -276,10 +286,10 @@
           @click="toggleSignalSection"
           class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6 flex  items-center justify-center gap-2"
         >
-            <h3 class="text-xl font-bold text-teal-500/80/85 text-balance">Every signal, every slice, at your fingertips</h3>
+            <h3 class="text-xl font-bold text-violet-500/80/85 text-balance">Every signal, every slice, at your fingertips</h3>
             <i-heroicons-solid-chevron-down
               :class="[
-                'w-6 h-6 text-teal-500/80 group-hover:text-teal-400/80 transition-all duration-300',
+                'w-6 h-6 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',
                 isSignalSectionExpanded ? 'rotate-180' : 'rotate-0'
               ]"
             />
@@ -313,7 +323,9 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
-                <i-heroicons-solid-light-bulb class="w-10 h-10 text-teal-600/80" />
+                <div class="gradient-icon-wrapper">
+                  <i-heroicons-solid-light-bulb class="w-10 h-10" />
+                </div>
               </div>
               <h4 class="mb-2 font-semibold text-lg leading-tight">Natural Language</h4>
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Describe strategies in plain English</p>
@@ -323,7 +335,9 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
-                <i-heroicons-solid-funnel class="w-10 h-10 text-teal-600/80" />
+                <div class="gradient-icon-wrapper">
+                  <i-heroicons-solid-funnel class="w-10 h-10" />
+                </div>
               </div>
               <h4 class="mb-2 font-semibold text-lg leading-tight">Precision Filtering</h4>
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Hand-craft with 10,000+ metrics</p>
@@ -333,7 +347,9 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
-                <i-heroicons-solid-square-2-stack class="w-10 h-10 text-teal-600/80" />
+                <div class="gradient-icon-wrapper">
+                  <i-heroicons-solid-square-2-stack class="w-10 h-10" />
+                </div>
               </div>
               <h4 class="mb-2 font-semibold text-lg leading-tight">Stacked Sources</h4>
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Combine external signals with your filters</p>
@@ -343,7 +359,9 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
               <div class="flex items-center justify-center mx-auto mb-4">
-                <i-heroicons-solid-chart-bar class="w-10 h-10 text-teal-600/80" />
+                <div class="gradient-icon-wrapper">
+                  <i-heroicons-solid-chart-bar class="w-10 h-10" />
+                </div>
               </div>
               <h4 class="mb-2 font-semibold text-lg leading-tight">Behavioral Signals</h4>
               <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Track wallet patterns and holder dynamics</p>
@@ -359,7 +377,7 @@
           class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg p-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
         >
           More on expressing your strategy
-          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-teal-500/80 group-hover:text-teal-400/80 transition-all duration-300',isSignalSectionExpanded ? 'rotate-180' : 'rotate-0']" />
+          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',isSignalSectionExpanded ? 'rotate-180' : 'rotate-0']" />
         </button>
 
         <div
@@ -418,7 +436,7 @@
             
             <div class="grid grid-cols-2 gap-4 mb-6">
               <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
-                <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-teal-500 via-teal-400 to-teal-500 bg-clip-text text-transparent">+247%</div>
+                <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-violet-500 via-violet-400 to-violet-500 bg-clip-text text-transparent">+247%</div>
                 <div class="text-neutral-400 text-xs font-medium">ROI</div>
               </div>
               <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
@@ -445,7 +463,7 @@
             
             <div class="h-48 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-2xl mb-6 flex items-center justify-center border border-neutral-700/30">
               <div class="text-center">
-                <div class="text-teal-500/80 mb-3">
+                <div class="text-violet-500/80 mb-3">
                   <i-fa-solid-chart-area class="w-8 h-8" />
                 </div>
                 <span class="text-neutral-400 text-sm font-medium">Equity curve visualization</span>
@@ -463,7 +481,7 @@
                     <div class="flex items-center justify-center">
                       <i-heroicons-solid-chevron-down 
                         :class="[
-                          'w-4 h-4 text-teal-500/80 group-hover:text-teal-400/80 transition-all duration-300',
+                          'w-4 h-4 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',
                           isExitBreakdownExpanded ? 'rotate-180' : 'rotate-0'
                         ]"
                       />
@@ -500,7 +518,7 @@
                     <div class="flex items-center justify-center">
                       <i-heroicons-solid-chevron-down 
                         :class="[
-                          'w-4 h-4 text-teal-500/80 group-hover:text-teal-400/80 transition-all duration-300',
+                          'w-4 h-4 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',
                           isTradeSizeImpactExpanded ? 'rotate-180' : 'rotate-0'
                         ]"
                       />
@@ -517,15 +535,15 @@
                   <div class="space-y-2 text-sm pt-6">
                     <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
                       <span class="text-sm text-amber-100">$100</span>
-                      <span class="text-sm text-teal-400/80">+247% <span class=" text-blue-400">(0.3% slip)</span></span>
+                      <span class="text-sm text-violet-400/80">+247% <span class=" text-blue-400">(0.3% slip)</span></span>
                     </div>
                     <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
                       <span class="text-sm text-amber-100">$1,000</span>
-                      <span class="text-sm text-teal-400/80">+213% <span class=" text-blue-400">(2.1%)</span></span>
+                      <span class="text-sm text-violet-400/80">+213% <span class=" text-blue-400">(2.1%)</span></span>
                     </div>
                     <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
                       <span class="text-sm text-amber-100">$10,000</span>
-                      <span class="text-sm text-teal-400/80">+156% <span class=" text-blue-400">(8.7%)</span></span>
+                      <span class="text-sm text-violet-400/80">+156% <span class=" text-blue-400">(8.7%)</span></span>
                     </div>
                   </div>
                 </div>
@@ -538,11 +556,11 @@
                 <span>Progress: 100%</span>
               </div>
               <div class="w-full bg-neutral-700 rounded-full h-2 overflow-hidden">
-                <div class="bg-gradient-to-r from-teal-500 to-teal-400 h-2 rounded-full w-full transition-all duration-300"></div>
+                <div class="bg-gradient-to-r from-violet-500 to-violet-400 h-2 rounded-full w-full transition-all duration-300"></div>
               </div>
             </div>
             
-            <button class="w-full bg-teal-500 hover:bg-teal-600 text-black py-4 rounded-xl mt-6 transition-colors duration-200 font-semibold text-lg">
+            <button class="w-full bg-violet-500 hover:bg-violet-600 text-black py-4 rounded-xl mt-6 transition-colors duration-200 font-semibold text-lg">
               Run Simulation
             </button>
           </div>
@@ -571,11 +589,11 @@
                 class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-lg py-4 px-6 -my-4"
               >
                 <div class="flex items-center justify-between gap-2">
-                  <h3 class="w-full text-xl font-bold text-teal-500/80/80 text-balance transition-all lg:text-right">Flexible exits match your strategy</h3>
+                  <h3 class="w-full text-xl font-bold text-violet-500/80/80 text-balance transition-all lg:text-right">Flexible exits match your strategy</h3>
                   <div class="flex items-center justify-center">
                     <i-heroicons-solid-chevron-down 
                       :class="[
-                        'w-6 h-6 text-teal-500/80 group-hover:text-teal-400/80 transition-all duration-300',
+                        'w-6 h-6 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',
                         isExitsSectionExpanded ? 'rotate-180' : 'rotate-0'
                       ]"
                     />
@@ -606,7 +624,9 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
               <div class="flex items-center justify-center flex-shrink-0">
-                <i-heroicons-solid-clock class="w-10 h-10 text-teal-600/80" />
+                <div class="gradient-icon-wrapper">
+                  <i-heroicons-solid-clock class="w-10 h-10" />
+                </div>
               </div>
               <div class="flex-1">
                 <h4 class="mb-1 font-semibold text-lg leading-tight">Real-Time Backtesting</h4>
@@ -618,7 +638,9 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
               <div class="flex items-center justify-center flex-shrink-0">
-                <i-heroicons-solid-chart-bar-square class="w-10 h-10 text-teal-600/80" />
+                <div class="gradient-icon-wrapper">
+                  <i-heroicons-solid-chart-bar-square class="w-10 h-10" />
+                </div>
               </div>
               <div class="flex-1">
                 <h4 class="mb-1 font-semibold text-lg leading-tight">Slippage Analysis</h4>
@@ -630,7 +652,9 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
               <div class="flex items-center justify-center flex-shrink-0">
-                <i-heroicons-solid-shield-check class="w-10 h-10 text-teal-600/80" />
+                <div class="gradient-icon-wrapper">
+                  <i-heroicons-solid-shield-check class="w-10 h-10" />
+                </div>
               </div>
               <div class="flex-1">
                 <h4 class="mb-1 font-semibold text-lg leading-tight">Risk Metrics</h4>
@@ -647,7 +671,7 @@
           @click="toggleExitsSection"
           class="text-neutral-200 mx-auto w-full flex gap-2 items-center text-md font-semibold justify-center rounded-lg p-3 transition-all duration-300 bg-white/10 hover:bg-white/15"
         > Exits match your strategy
-          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-teal-500/80 group-hover:text-teal-400/80 transition-all duration-300',isExitsSectionExpanded ? 'rotate-180' : 'rotate-0']" />
+          <i-heroicons-solid-chevron-down :class="['w-6 h-6 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',isExitsSectionExpanded ? 'rotate-180' : 'rotate-0']" />
         </button>
         <div 
           :class="[
@@ -689,7 +713,7 @@
             :class="[
               'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200',
               activeTab === 'hands-off' 
-                ? 'bg-teal-500 text-black' 
+                ? 'bg-violet-500 text-black' 
                 : 'text-neutral-400 hover:text-white hover:bg-white/5'
             ]"
           >
@@ -700,7 +724,7 @@
             :class="[
               'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200',
               activeTab === 'human-loop' 
-                ? 'bg-teal-500 text-black' 
+                ? 'bg-violet-500 text-black' 
                 : 'text-neutral-400 hover:text-white hover:bg-white/5'
             ]"
           >
@@ -713,14 +737,14 @@
           <!-- Hands-Off Auto-Trading Tab -->
           <div v-if="activeTab === 'hands-off'" class="space-y-8">
             <div class="text-center mb-12">
-              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-teal-400/80/80">HANDS-OFF AUTO-TRADING</h3>
+              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-violet-400/80/80">HANDS-OFF AUTO-TRADING</h3>
               <p class="text-xl text-neutral-300 italic">Set it. Forget it. Smile.</p>
             </div>
             
             <div class="grid md:grid-cols-2 max-w-lg md:max-w-4xl mx-auto gap-8">
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/5 w-full">
                 <div class="flex items-center mb-4">
-                  <i-heroicons-solid-cog-6-tooth class="w-5 h-5 text-teal-500/80 mr-3" />
+                  <i-heroicons-solid-cog-6-tooth class="w-5 h-5 text-violet-500/80 mr-3" />
                   <h4 class="font-semibold text-xl">Trade Configuration</h4>
                 </div>
                 <div class="space-y-4">
@@ -779,44 +803,44 @@
               <div class="flex flex-col items-center justify-center gap-8 ">
                 <div class="space-y-3 text-xl py-6 text-neutral-300">
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-clock class="w-5 h-5 text-teal-500/80" />
+                    <i-heroicons-solid-clock class="w-5 h-5 text-violet-500/80" />
                     <span>Trades executed 24/7</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-document-text class="w-5 h-5 text-teal-500/80" />
+                    <i-heroicons-solid-document-text class="w-5 h-5 text-violet-500/80" />
                     <span>Every entry logged</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-eye class="w-5 h-5 text-teal-500/80" />
+                    <i-heroicons-solid-eye class="w-5 h-5 text-violet-500/80" />
                     <span>Every exit transparent</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-chart-bar class="w-5 h-5 text-teal-500/80" />
+                    <i-heroicons-solid-chart-bar class="w-5 h-5 text-violet-500/80" />
                     <span>Full P&L tracking</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-teal-500/80" />
+                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-violet-500/80" />
                     <span>Switch modes anytime</span>
                   </div>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full">
-                  <h5 class="mb-4 font-semibold text-teal-500/80">Security Features</h5>
+                  <h5 class="mb-4 font-semibold text-violet-500/80">Security Features</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Non-custodial wallet integration</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Configurable position limits</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Emergency stop functionality</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Real-time monitoring dashboard</span>
                     </div>
                   </div>
@@ -828,7 +852,7 @@
           <!-- Human-in-the-Loop Tab -->
           <div v-if="activeTab === 'human-loop'" class="space-y-8">
             <div class="text-center ">
-              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-teal-400/80/80">HUMAN-IN-THE-LOOP</h3>
+              <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-violet-400/80/80">HUMAN-IN-THE-LOOP</h3>
               <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
             </div>
             
@@ -836,7 +860,7 @@
               <div class="space-y-8 w-full mx-auto lg:mx-0  ">
                 <!-- Trade Alert Mockup -->
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
-                  <h4 class="mb-4 font-semibold text-teal-500/80">Trade Alert Example</h4>
+                  <h4 class="mb-4 font-semibold text-violet-500/80">Trade Alert Example</h4>
                   <div class="bg-neutral-900/50 rounded-xl p-4 border border-neutral-700/30">
                     <div class="mb-3">
                       <h5 class="text-lg font-semibold text-white">New Match: $TOKEN</h5>
@@ -844,7 +868,7 @@
                     <div class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <span class="text-neutral-400">Breakout Score:</span>
-                        <span class="text-teal-500/80 font-semibold">82</span>
+                        <span class="text-violet-500/80 font-semibold">82</span>
                       </div>
                       <div class="flex justify-between">
                         <span class="text-neutral-400">Smart Money:</span>
@@ -879,22 +903,22 @@
 
                 <!-- Notification Channels -->
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
-                  <h5 class="mb-4 font-semibold text-teal-500/80">Notification Channels</h5>
+                  <h5 class="mb-4 font-semibold text-violet-500/80">Notification Channels</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Email</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">In-browser push</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Telegram</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Webhooks</span>
                     </div>
                   </div>
@@ -904,44 +928,44 @@
               <div class="flex flex-col items-center justify-center gap-8 pt-6">
                 <div class="space-y-3 text-xl mb-4 lg:mb-0 text-neutral-300 ">
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-bolt class="w-5 h-5 text-teal-500/80" />
+                    <i-heroicons-solid-bolt class="w-5 h-5 text-violet-500/80" />
                     <span>Trade alerts sent instantly</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-cursor-arrow-rays class="w-5 h-5 text-teal-500/80" />
+                    <i-heroicons-solid-cursor-arrow-rays class="w-5 h-5 text-violet-500/80" />
                     <span>One-click approve/decline</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-information-circle class="w-5 h-5 text-teal-500/80" />
+                    <i-heroicons-solid-information-circle class="w-5 h-5 text-violet-500/80" />
                     <span>Full trade context provided</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-clipboard-document-list class="w-5 h-5 text-teal-500/80" />
+                    <i-heroicons-solid-clipboard-document-list class="w-5 h-5 text-violet-500/80" />
                     <span>Complete audit trail</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-teal-500/80" />
+                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-violet-500/80" />
                     <span>Switch modes anytime</span>
                   </div>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full ">
-                  <h5 class="mb-4 font-semibold text-teal-500/80">Control Features</h5>
+                  <h5 class="mb-4 font-semibold text-violet-500/80">Control Features</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Real-time trade notifications</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Detailed trade reasoning</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Emergency stop override</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
                       <span class="text-neutral-300">Approval history tracking</span>
                     </div>
                   </div>
@@ -949,7 +973,7 @@
 
                 <!-- Usage Philosophy -->
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full">
-                  <h5 class="mb-4 font-semibold text-teal-500/80">Usage Philosophy</h5>
+                  <h5 class="mb-4 font-semibold text-violet-500/80">Usage Philosophy</h5>
                   <p class="text-sm text-neutral-300 leading-relaxed">
                     Use as pure analytics, approve high-conviction setups only, or pipe signals to your own trading infrastructure.
                   </p>
@@ -964,7 +988,9 @@
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 flex">
           <div class="flex items-center space-x-4">
             <div class="flex items-center justify-center flex-shrink-0">
-              <i-heroicons-solid-cpu-chip class="w-10 h-10 text-teal-600/80" />
+              <div class="gradient-icon-wrapper">
+                <i-heroicons-solid-cpu-chip class="w-10 h-10" />
+              </div>
             </div>
             <div class="flex-1">
               <h4 class="mb-1 font-semibold text-lg leading-tight">Full Automation</h4>
@@ -976,7 +1002,9 @@
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
           <div class="flex items-center space-x-4">
             <div class="flex items-center justify-center flex-shrink-0">
-              <i-heroicons-solid-user-circle class="w-10 h-10 text-teal-600/80" />
+              <div class="gradient-icon-wrapper">
+                <i-heroicons-solid-user-circle class="w-10 h-10" />
+              </div>
             </div>
             <div class="flex-1">
               <h4 class="mb-1 font-semibold text-lg leading-tight">Human Oversight</h4>
@@ -988,7 +1016,9 @@
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
           <div class="flex items-center space-x-4">
             <div class="flex items-center justify-center flex-shrink-0">
-              <i-heroicons-solid-cog-6-tooth class="w-10 h-10 text-teal-600/80" />
+              <div class="gradient-icon-wrapper">
+                <i-heroicons-solid-cog-6-tooth class="w-10 h-10" />
+              </div>
             </div>
             <div class="flex-1">
               <h4 class="mb-1 font-semibold text-lg leading-tight">Custom Integration</h4>
@@ -1024,12 +1054,12 @@
               bg-white/5 border border-white/10 
               backdrop-blur-sm
               text-white 
-              focus:bg-white/10 focus:border-teal-500 
+              focus:bg-white/10 focus:border-violet-500 
               focus:outline-none
               transition duration-200
               placeholder-white/80"
           >
-          <button class="w-full bg-teal-500 hover:bg-teal-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow">
+          <button class="w-full bg-violet-500 hover:bg-violet-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -1043,12 +1073,12 @@
               bg-white/5 border border-white/10 
               backdrop-blur-sm
               text-white 
-              focus:bg-white/10 focus:border-teal-500 
+              focus:bg-white/10 focus:border-violet-500 
               focus:outline-none
               transition duration-200
               placeholder-white/80"
           >
-          <button class="bg-teal-500 hover:bg-teal-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow">
+          <button class="bg-violet-500 hover:bg-violet-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -1061,15 +1091,15 @@
       
       <div class="grid md:grid-cols-3 gap-2 max-w-2xl mx-auto">
         <div class="flex items-center justify-center space-x-3 text-neutral-400">
-          <i-heroicons-solid-user-group class="w-5 h-5 text-teal-600/80" />
+          <i-heroicons-solid-user-group class="w-5 h-5 text-violet-600/80" />
           <span class="text-sm">First 500 users</span>
         </div>
         <div class="flex items-center justify-center space-x-3 text-neutral-400">
-          <i-heroicons-solid-chat-bubble-bottom-center-text class="w-5 h-5 text-teal-600/80" />
+          <i-heroicons-solid-chat-bubble-bottom-center-text class="w-5 h-5 text-violet-600/80" />
           <span class="text-sm">Private feedback sessions</span>
         </div>
         <div class="flex items-center justify-center space-x-3 text-neutral-400">
-          <i-heroicons-solid-star class="w-5 h-5 text-teal-600/80" />
+          <i-heroicons-solid-star class="w-5 h-5 text-violet-600/80" />
           <span class="text-sm">Priority access</span>
         </div>
       </div>
@@ -1086,8 +1116,8 @@
         </div>
         
         <!-- <div class="flex items-center space-x-6">
-          <span class="text-sm hover:text-teal-500/80 transition-colors cursor-pointer">Terms</span>
-          <span class="text-sm hover:text-teal-500/80 transition-colors cursor-pointer">Privacy</span>
+          <span class="text-sm hover:text-violet-500/80 transition-colors cursor-pointer">Terms</span>
+          <span class="text-sm hover:text-violet-500/80 transition-colors cursor-pointer">Privacy</span>
         </div> -->
       </div>
     </div>
@@ -1212,10 +1242,10 @@ export default {
   --yellow-400: oklch(calc(85% * var(--lightness-bump)) calc(0.15 * var(--chroma-scale)) 85);
   --yellow-500: oklch(calc(80% * var(--lightness-bump)) calc(0.18 * var(--chroma-scale)) 85);
 
-  /* teal/aqua colors */
-  --teal-400:    oklch(calc(80% * var(--lightness-bump)) calc(0.14 * var(--chroma-scale)) 200);
-  --teal-500:    oklch(calc(70% * var(--lightness-bump)) calc(0.14 * var(--chroma-scale)) 200);
-  --teal-600:    oklch(calc(60% * var(--lightness-bump)) calc(0.14 * var(--chroma-scale)) 200);
+  /* electric violet colors */
+  --violet-400:    oklch(calc(80% * var(--lightness-bump)) calc(0.18 * var(--chroma-scale)) 300);
+  --violet-500:    oklch(calc(65% * var(--lightness-bump)) calc(0.18 * var(--chroma-scale)) 300);
+  --violet-600:    oklch(calc(55% * var(--lightness-bump)) calc(0.18 * var(--chroma-scale)) 300);
   --emerald-400: oklch(calc(75% * var(--lightness-bump)) calc(0.12 * var(--chroma-scale)) 160);
   --emerald-600: oklch(calc(55% * var(--lightness-bump)) calc(0.14 * var(--chroma-scale)) 160);
 
@@ -1228,16 +1258,16 @@ export default {
   --white-t-30:      color-mix(in oklch, var(--white) 30%, transparent);
   --amber-500-t-10:  color-mix(in oklch, var(--amber-500) 10%, transparent);
   --yellow-300-t-15: color-mix(in oklch, var(--yellow-300) 15%, transparent);
-  --teal-400-t-10:   color-mix(in oklch, var(--teal-400) 10%, transparent);
+  --violet-400-t-10:   color-mix(in oklch, var(--violet-400) 10%, transparent);
   --purple-900-t-80: color-mix(in oklch, var(--purple-900) 80%, transparent);
 
   /* gradients (exhaustive, incl. secondary) */
-  --gradient-secondary-color:          linear-gradient(to right, var(--teal-600), var(--emerald-400), var(--teal-500), var(--emerald-600));
+  --gradient-secondary-color:          linear-gradient(to right, var(--violet-600), var(--violet-400), var(--violet-500), var(--violet-600));
   --gradient-purple:        linear-gradient(to bottom, var(--purple-900-t-80), transparent);
   --gradient-yellow:        linear-gradient(to right, var(--yellow-400), var(--amber-300), var(--yellow-500), var(--amber-400));
   --gradient-yellow2:       linear-gradient(to right, var(--amber-200), var(--yellow-300), var(--amber-300));
   --gradient-hero-glow:     radial-gradient(48rem 20rem at 50% 18%, var(--yellow-300-t-15), transparent 50%),
-                             radial-gradient(52rem 26rem at 50% 42%, var(--teal-400-t-10), transparent 70%);
+                             radial-gradient(52rem 26rem at 50% 42%, var(--violet-400-t-10), transparent 70%);
   --gradient-radial-glow:        radial-gradient(circle, var(--white-t-15), var(--amber-500-t-10), transparent);
   --gradient-radial-glow-large:  radial-gradient(circle, var(--white-t-30), var(--amber-500-t-10), transparent);
 }
@@ -1277,6 +1307,40 @@ export default {
   color: transparent;
 }
 
+/* Real working gradient for SVG icons using inline SVG gradient definition */
+.gradient-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Set color on wrapper - SVG icons use currentColor */
+  color: #9A5BFF;
+}
+
+.gradient-icon-wrapper svg {
+  fill: url(#icon-gradient-violet-indigo) !important;
+}
+
+.gradient-icon-wrapper svg path {
+  fill: url(#icon-gradient-violet-indigo) !important;
+}
+
+.gradient-icon-wrapper svg circle {
+  fill: url(#icon-gradient-violet-indigo) !important;
+}
+
+.gradient-icon-wrapper svg rect {
+  fill: url(#icon-gradient-violet-indigo) !important;
+}
+
+.gradient-icon-wrapper svg polygon {
+  fill: url(#icon-gradient-violet-indigo) !important;
+}
+
+/* Also try with * selector to catch everything */
+.gradient-icon-wrapper svg * {
+  fill: url(#icon-gradient-violet-indigo) !important;
+}
+
 /* Hero cinematic depth */
 .hero-glow::before {
   display: block;
@@ -1293,18 +1357,18 @@ export default {
 
 /* CTA Ghost Button */
 .cta-ghost {
-  border: 2px solid #1FC9B5;
+  border: 2px solid #9A5BFF;
   color: #f5f5f5;
   padding: 0.9rem 1.2rem;
   border-radius: 14px;
-  box-shadow: 0 0 0 0 rgba(31,201,181,.18);
+  box-shadow: 0 0 0 0 rgba(154,91,255,.18);
   transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
 }
 
 .cta-ghost:hover {
   transform: translateY(-1px);
-  background: rgba(31,201,181,.08);
-  box-shadow: 0 0 28px 2px rgba(31,201,181,.18);
+  background: rgba(154,91,255,.08);
+  box-shadow: 0 0 28px 2px rgba(154,91,255,.18);
 }
 
 /* Arrow animation for all CTAs */
@@ -1398,10 +1462,10 @@ button:hover .arrow {
   position: absolute;
   inset: -2px;
   background: linear-gradient(45deg, 
-    rgba(31, 201, 181, 0.6), 
-    rgba(35, 226, 205, 0.4), 
-    rgba(31, 201, 181, 0.6), 
-    rgba(35, 226, 205, 0.4)
+    rgba(154, 91, 255, 0.6), 
+    rgba(176, 109, 255, 0.4), 
+    rgba(154, 91, 255, 0.6), 
+    rgba(176, 109, 255, 0.4)
   );
   border-radius: 18px;
   z-index: -1;
@@ -1457,11 +1521,11 @@ button:hover .arrow {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(31,201,181,0) 10%,
-    rgba(31,201,181,.6) 40%,
-    rgba(31,201,181,1) 50%,
-    rgba(31,201,181,.6) 60%,
-    rgba(31,201,181,0) 90%,
+    rgba(154,91,255,0) 10%,
+    rgba(154,91,255,.6) 40%,
+    rgba(154,91,255,1) 50%,
+    rgba(154,91,255,.6) 60%,
+    rgba(154,91,255,0) 90%,
     transparent 100%
   );
   animation: dataFlowOsc 1.6s ease-in-out infinite;
