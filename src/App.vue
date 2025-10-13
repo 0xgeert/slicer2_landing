@@ -295,10 +295,10 @@
       <!-- /grid -->
 
       <!-- BRIDGE: “Every signal…” now centered under both columns on desktop and mobile alike -->
-      <div class="flex mt-32 lg:mt-0 mb-2 max-w-2xl mx-auto  flex-col items-center ">
+      <div class="flex mt-32 lg:mt-0 mb-2   flex-col items-center ">
         <button
           @click="toggleSignalSection"
-          class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/10 hover:bg-white/15 rounded-xl py-4 px-6 flex  items-center justify-center gap-2"
+          class="max-w-2xl mx-auto group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/10 hover:bg-white/15 rounded-xl py-4 px-6 flex  items-center justify-center gap-2"
         >
             <h3 class="text-xl font-bold text-violet-500/80/85 text-balance">Every signal, every slice, at your fingertips</h3>
             <i-heroicons-solid-chevron-down
@@ -312,76 +312,72 @@
         <div
           :class="[
             'overflow-hidden transition-all duration-500 ease-in-out mt-3 will-change-transform',
-            isSignalSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+            isSignalSectionExpanded ? 'max-h-[800px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
           ]"
           :style="{ transform: 'translateZ(0)' }"
         >
-          <div class="space-y-5 text-lg leading-relaxed pt-3 px-6">
+          <div class="max-w-5xl mx-auto space-y-8 text-lg leading-relaxed pt-8 px-6">
             <p class="text-neutral-300 ">
               Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
             </p>
             <p class="text-neutral-300">
               Every entry and exit condition you can imagine — tokens, behavior, performance, risk — all addressable in plain English or precision filters you refine by hand.
             </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Subtle divider gradient before features -->
-      <div class="pointer-events-none mt-12 mb-16 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-
-      <!-- FEATURES -->
-      <div class="mt-14 lg:mt-28 max-w-2xl lg:max-w-none mx-auto">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
-            <div class="text-center">
-              <div class="flex items-center justify-center mx-auto mb-4">
-                <div class="gradient-icon-wrapper">
-                  <i-heroicons-solid-light-bulb class="w-10 h-10" />
+            
+            <!-- Features Grid -->
+            <div class="grid grid-cols-2 gap-4 lg:gap-8 mt-8">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
+                <div class="text-center">
+                  <div class="flex items-center justify-center mx-auto mb-4">
+                    <div class="gradient-icon-wrapper">
+                      <i-heroicons-solid-light-bulb class="w-10 h-10" />
+                    </div>
+                  </div>
+                  <h4 class="mb-2 font-semibold text-lg leading-tight">Natural Language</h4>
+                  <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Describe strategies in plain English</p>
                 </div>
               </div>
-              <h4 class="mb-2 font-semibold text-lg leading-tight">Natural Language</h4>
-              <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Describe strategies in plain English</p>
-            </div>
-          </div>
 
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
-            <div class="text-center">
-              <div class="flex items-center justify-center mx-auto mb-4">
-                <div class="gradient-icon-wrapper">
-                  <i-heroicons-solid-funnel class="w-10 h-10" />
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
+                <div class="text-center">
+                  <div class="flex items-center justify-center mx-auto mb-4">
+                    <div class="gradient-icon-wrapper">
+                      <i-heroicons-solid-funnel class="w-10 h-10" />
+                    </div>
+                  </div>
+                  <h4 class="mb-2 font-semibold text-lg leading-tight">Precision Filtering</h4>
+                  <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Hand-craft with 10,000+ metrics</p>
                 </div>
               </div>
-              <h4 class="mb-2 font-semibold text-lg leading-tight">Precision Filtering</h4>
-              <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Hand-craft with 10,000+ metrics</p>
-            </div>
-          </div>
 
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
-            <div class="text-center">
-              <div class="flex items-center justify-center mx-auto mb-4">
-                <div class="gradient-icon-wrapper">
-                  <i-heroicons-solid-square-2-stack class="w-10 h-10" />
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
+                <div class="text-center">
+                  <div class="flex items-center justify-center mx-auto mb-4">
+                    <div class="gradient-icon-wrapper">
+                      <i-heroicons-solid-square-2-stack class="w-10 h-10" />
+                    </div>
+                  </div>
+                  <h4 class="mb-2 font-semibold text-lg leading-tight">Stacked Sources</h4>
+                  <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Combine external signals with your filters</p>
                 </div>
               </div>
-              <h4 class="mb-2 font-semibold text-lg leading-tight">Stacked Sources</h4>
-              <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Combine external signals with your filters</p>
-            </div>
-          </div>
 
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
-            <div class="text-center">
-              <div class="flex items-center justify-center mx-auto mb-4">
-                <div class="gradient-icon-wrapper">
-                  <i-heroicons-solid-chart-bar class="w-10 h-10" />
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
+                <div class="text-center">
+                  <div class="flex items-center justify-center mx-auto mb-4">
+                    <div class="gradient-icon-wrapper">
+                      <i-heroicons-solid-chart-bar class="w-10 h-10" />
+                    </div>
+                  </div>
+                  <h4 class="mb-2 font-semibold text-lg leading-tight">Behavioral Signals</h4>
+                  <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Track wallet patterns and holder dynamics</p>
                 </div>
               </div>
-              <h4 class="mb-2 font-semibold text-lg leading-tight">Behavioral Signals</h4>
-              <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Track wallet patterns and holder dynamics</p>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 </div>
@@ -560,29 +556,24 @@
               <span class="text-yellow-200">WINS</span>
               <span class="gradient-text-yellow2"> BEFORE YOU TRADE IT</span>
             </h2>
-            <p class="text-xl text-neutral-300 mb-16 font-light leading-relaxed lg:text-balance text-balnce">
-              <span class="font-semibold text-white italic">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. <span class="font-semibold text-white">Just optimize → test → repeat.</span>
+            <p class="text-xl text-neutral-300 mb-8 font-light leading-relaxed lg:text-balance text-balance">
+              <span class="font-semibold text-white italic">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. 
             </p>
+            <p class="text-xl font-semibold text-white  mb-8 italic leading-relaxed max-w-2xl mx-auto text-balance">Just optimize → test → repeat.</p>
           </div>
-          
-          <div class="hidden lg:block">
-            <div class="space-y-8 text-lg -mt-36 lg:mt-0">
-              <p class="text-neutral-300 lg:text-balance leading-relaxed">
-                Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
-              </p>
-            
-            </div>
-          </div>
+          <p class="text-neutral-300 lg:text-balance leading-relaxed">
+            Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
+          </p>
         </div>
       </div>
       
-      <div class="flex mb-2 max-w-2xl mx-auto  flex-col items-center">
+      <div class="flex mb-2  flex-col items-center">
         <button 
           @click="toggleExitsSection"
-          class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/10 hover:bg-white/15 rounded-xl py-4 px-6 flex items-center justify-center gap-2"
+          class="mx-auto  max-w-2xl group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/10 hover:bg-white/15 rounded-xl py-4 px-6 flex items-center justify-center gap-2"
         >
           <div class="flex items-center justify-between gap-2">
-            <h3 class="w-full text-xl font-bold text-violet-500/80/80 text-balance transition-all lg:text-right">Flexible exits match your strategy</h3>
+            <h3 class="w-full text-xl font-bold text-violet-500/80/80 text-balance transition-all lg:text-right">Simulate & Validate Your Edge</h3>
             <div class="flex items-center justify-center">
               <i-heroicons-solid-chevron-down 
                 :class="[
@@ -596,64 +587,69 @@
         <div 
           :class="[
             'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
-            isExitsSectionExpanded ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+            isExitsSectionExpanded ? 'max-h-[600px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
           ]"
           :style="{ transform: 'translateZ(0)' }"
         >
-          <div class="space-y-6 text-lg leading-relaxed pt-4">
+          <div class="max-w-5xl mx-auto space-y-8 text-lg leading-relaxed pt-8 px-6">
+
+            <p class="text-center text-base md:text-lg mt-2 italic font-semibold text-white">
+              Every outcome quantified. No guessing. no surprises.
+            </p>
+
             <p class="text-neutral-300">
               Entry-based (TP/SL/time), behavior-based (liquidity drops, sentiment shifts), or combined. Your exit conditions are part of your expressed idea—simulated with complete accuracy.
             </p>
+            
+            <!-- Simulate Features Grid -->
+            <div class="grid md:grid-cols-3 gap-4 lg:gap-10 mt-8">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
+                <div class="flex items-center space-x-4">
+                  <div class="flex items-center justify-center flex-shrink-0">
+                    <div class="gradient-icon-wrapper">
+                      <i-heroicons-solid-clock class="w-10 h-10" />
+                    </div>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="mb-1 font-semibold text-lg leading-tight">Real-Time Backtesting</h4>
+                    <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Historical data with live market conditions simulation</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
+                <div class="flex items-center space-x-4">
+                  <div class="flex items-center justify-center flex-shrink-0">
+                    <div class="gradient-icon-wrapper">
+                      <i-heroicons-solid-chart-bar-square class="w-10 h-10" />
+                    </div>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="mb-1 font-semibold text-lg leading-tight">Slippage Analysis</h4>
+                    <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Accurate trade size impact modeling</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
+                <div class="flex items-center space-x-4">
+                  <div class="flex items-center justify-center flex-shrink-0">
+                    <div class="gradient-icon-wrapper">
+                      <i-heroicons-solid-shield-check class="w-10 h-10" />
+                    </div>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="mb-1 font-semibold text-lg leading-tight">Risk Metrics</h4>
+                    <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Comprehensive drawdown and volatility analysis</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
 
-      <div class="mt-14 lg:mt-28">
-        <div class="grid md:grid-cols-3 gap-4 lg:gap-10">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
-            <div class="flex items-center space-x-4">
-              <div class="flex items-center justify-center flex-shrink-0">
-                <div class="gradient-icon-wrapper">
-                  <i-heroicons-solid-clock class="w-10 h-10" />
-                </div>
-              </div>
-              <div class="flex-1">
-                <h4 class="mb-1 font-semibold text-lg leading-tight">Real-Time Backtesting</h4>
-                <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Historical data with live market conditions simulation</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
-            <div class="flex items-center space-x-4">
-              <div class="flex items-center justify-center flex-shrink-0">
-                <div class="gradient-icon-wrapper">
-                  <i-heroicons-solid-chart-bar-square class="w-10 h-10" />
-                </div>
-              </div>
-              <div class="flex-1">
-                <h4 class="mb-1 font-semibold text-lg leading-tight">Slippage Analysis</h4>
-                <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Accurate trade size impact modeling</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
-            <div class="flex items-center space-x-4">
-              <div class="flex items-center justify-center flex-shrink-0">
-                <div class="gradient-icon-wrapper">
-                  <i-heroicons-solid-shield-check class="w-10 h-10" />
-                </div>
-              </div>
-              <div class="flex-1">
-                <h4 class="mb-1 font-semibold text-lg leading-tight">Risk Metrics</h4>
-                <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Comprehensive drawdown and volatility analysis</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
     </div>
   </section>
@@ -968,49 +964,6 @@
         </div>
       </div>
       
-      <div class="mt-20 g:mt-20 grid md:grid-cols-3 gap-4 lg:gap-10">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 flex">
-          <div class="flex items-center space-x-4">
-            <div class="flex items-center justify-center flex-shrink-0">
-              <div class="gradient-icon-wrapper">
-                <i-heroicons-solid-cpu-chip class="w-10 h-10" />
-              </div>
-            </div>
-            <div class="flex-1">
-              <h4 class="mb-1 font-semibold text-lg leading-tight">Full Automation</h4>
-              <p class="text-neutral-400 text-sm leading-tight lg:text-balance">24/7 execution with complete transparency</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
-          <div class="flex items-center space-x-4">
-            <div class="flex items-center justify-center flex-shrink-0">
-              <div class="gradient-icon-wrapper">
-                <i-heroicons-solid-user-circle class="w-10 h-10" />
-              </div>
-            </div>
-            <div class="flex-1">
-              <h4 class="mb-1 font-semibold text-lg leading-tight">Human Oversight</h4>
-              <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Optionally review or approve trades before execution</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
-          <div class="flex items-center space-x-4">
-            <div class="flex items-center justify-center flex-shrink-0">
-              <div class="gradient-icon-wrapper">
-                <i-heroicons-solid-cog-6-tooth class="w-10 h-10" />
-              </div>
-            </div>
-            <div class="flex-1">
-              <h4 class="mb-1 font-semibold text-lg leading-tight">Custom Integration</h4>
-              <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Webhook support for external systems</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 </div>
