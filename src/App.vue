@@ -64,11 +64,11 @@
               backdrop-blur-sm
               text-white 
               focus:bg-white/10 focus:border-violet-500
-              focus:outline-none
+              focus:outline-none focus:ring-2 focus:ring-violet-500
               transition duration-200
               placeholder-white/80"
           >
-          <button class="w-full bg-violet-500 hover:bg-violet-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow ">
+          <button class="w-full bg-violet-500 hover:bg-violet-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -83,11 +83,11 @@
               backdrop-blur-sm
               text-white 
               focus:bg-white/10 focus:border-violet-500 
-              focus:outline-none
+              focus:outline-none focus:ring-2 focus:ring-violet-500
               transition duration-200
               placeholder-white/80"
           >
-          <button class="bg-violet-500 hover:bg-violet-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow">
+          <button class="bg-violet-500 hover:bg-violet-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -97,7 +97,7 @@
         <p class="hero-text-line">Get early access when Slicer 2.0 opens private beta.</p>
         <p class="hero-text-line"> No spam. Unsubscribe anytime.</p>
          <div class="mt-4 hidden sm:block hero-link">
-           <button @click="scrollToSection('simulate', 100)" class="hover:underline  text-violet-300/80 transition-all duration-200 bg-transparent border-none outline-none cursor-pointer">Watch a 6-second sim <span class="arrow">→</span></button>
+           <button @click="scrollToSection('simulate', 100)" class="hover:underline text-violet-300/80 transition-all duration-200 bg-transparent border-2 border-transparent outline-none focus:border-violet-500 cursor-pointer rounded-lg px-3 py-2">Watch a 6-second sim <span class="arrow">→</span></button>
          </div>
       </div>
       
@@ -107,7 +107,7 @@
             @click="scrollToSection('express', 100)"
             aria-label="Scroll to next section"
             class="group inline-flex p-4 rounded-full 
-                  text-neutral-200/80 outline-none transition-all duration-200
+                  text-neutral-200/80 outline-none focus:ring-4 focus:ring-violet-500 focus:ring-offset-4 focus:ring-offset-neutral-900 transition-all duration-200
                   border-2 md:border-4 border-neutral-200/20
                   bg-transparent
                   hover:bg-neutral-200/10
@@ -297,7 +297,7 @@
       <div class="flex mt-32 lg:mt-0 mb-2 max-w-2xl mx-auto  flex-col items-center ">
         <button
           @click="toggleSignalSection"
-          class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6 flex  items-center justify-center gap-2"
+          class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6 flex  items-center justify-center gap-2"
         >
             <h3 class="text-xl font-bold text-violet-500/80/85 text-balance">Every signal, every slice, at your fingertips</h3>
             <i-heroicons-solid-chevron-down
@@ -458,7 +458,7 @@
               <div>
                 <button 
                   @click="toggleExitBreakdown"
-                  class="group w-full text-left focus:outline-none transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-3 px-4 -my-3 cursor-pointer"
+                  class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-3 px-4 -my-3 cursor-pointer"
                 >
                   <div class="flex items-center justify-between">
                     <h4 class="font-semibold text-white/80 text-sm">Exit Breakdown</h4>
@@ -495,7 +495,7 @@
               <div>
                 <button 
                   @click="toggleTradeSizeImpact"
-                  class="group w-full text-left focus:outline-none transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-3 px-4 -my-3 cursor-pointer"
+                  class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-3 px-4 -my-3 cursor-pointer"
                 >
                   <div class="flex items-center justify-between">
                     <h4 class="font-semibold text-white/80 text-sm">Trade Size Impact</h4>
@@ -544,7 +544,7 @@
               </div>
             </div>
             
-            <button class="w-full bg-violet-500 hover:bg-violet-600 text-black py-4 rounded-xl mt-6 transition-colors duration-200 font-semibold text-lg">
+            <button class="w-full bg-violet-500 hover:bg-violet-600 text-black py-4 rounded-xl mt-6 transition-colors duration-200 font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
               Run Simulation
             </button>
           </div>
@@ -576,7 +576,7 @@
       <div class="flex mb-2 max-w-2xl mx-auto  flex-col items-center">
         <button 
           @click="toggleExitsSection"
-          class="group w-full text-left focus:outline-none transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6 flex items-center justify-center gap-2"
+          class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6 flex items-center justify-center gap-2"
         >
           <div class="flex items-center justify-between gap-2">
             <h3 class="w-full text-xl font-bold text-violet-500/80/80 text-balance transition-all lg:text-right">Flexible exits match your strategy</h3>
@@ -680,7 +680,7 @@
           <button 
             @click="activeTab = 'hands-off'"
             :class="[
-              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200',
+              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900',
               activeTab === 'hands-off' 
                 ? 'bg-violet-500 text-black' 
                 : 'text-neutral-400 hover:text-white hover:bg-white/5'
@@ -691,7 +691,7 @@
           <button 
             @click="activeTab = 'human-loop'"
             :class="[
-              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200',
+              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900',
               activeTab === 'human-loop' 
                 ? 'bg-violet-500 text-black' 
                 : 'text-neutral-400 hover:text-white hover:bg-white/5'
@@ -1029,11 +1029,11 @@
               backdrop-blur-sm
               text-white 
               focus:bg-white/10 focus:border-violet-500 
-              focus:outline-none
+              focus:outline-none focus:ring-2 focus:ring-violet-500
               transition duration-200
               placeholder-white/80"
           >
-          <button class="w-full bg-violet-500 hover:bg-violet-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow">
+          <button class="w-full bg-violet-500 hover:bg-violet-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -1048,11 +1048,11 @@
               backdrop-blur-sm
               text-white 
               focus:bg-white/10 focus:border-violet-500 
-              focus:outline-none
+              focus:outline-none focus:ring-2 focus:ring-violet-500
               transition duration-200
               placeholder-white/80"
           >
-          <button class="bg-violet-500 hover:bg-violet-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow">
+          <button class="bg-violet-500 hover:bg-violet-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
