@@ -1055,7 +1055,7 @@
     <div class="mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
         <div class="mb-6 ">
-          <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto mb-1">
+          <img src="/src/assets/logo bw.png" alt="Slicer" class="h-6 w-auto mb-1">
           <p class="text-sm text-neutral-500 text-balance"><span class="font-semibold text-white/80">Express. Simulate. Deploy. Repeat</span> — until profit feels inevitable.</p>
         </div>
         
@@ -1227,11 +1227,21 @@ html, body {
 }
 
 /* sRGB (non-P3) screens → richer but balanced */
-/* @media not (color-gamut: p3){
+@media not (color-gamut: p3){
   :root{
-   TODO: Add color adjustments for non-P3 screens
+    --gradient-violet: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 100%, transparent), transparent);
+    --gradient-section-linear: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.900') 55%, transparent), transparent);
+    --gradient-radial-feature-backdrop: radial-gradient(circle, color-mix(in oklch,theme('colors.violet.950') 90%, transparent), transparent);
+    --gradient-CTA-text2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.amber.200'), theme('colors.amber.300'), theme('colors.amber.300'));
+
+    --gradient-CTA-glow: radial-gradient(
+      100% 80% at 50% 50%,
+      color-mix(in oklch, theme('colors.yellow.300') 35%, transparent) 0%,
+      color-mix(in oklch, theme('colors.violet.800') 10%, transparent) 55%,
+      transparent 70%
+    );
   }
-} */
+}
 
 
 
