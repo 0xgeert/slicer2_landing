@@ -35,7 +35,7 @@
 
 <div class="relative overflow-hidden">  
 
-  <main id="hero" class="hero  text-white pt-28 md:pt-44 lg:pt-52 xl:pt-60 pb-20 lg:pb-32 xl:pb-32 px-4 sm:px-6 lg:px-8 xl:px-8 flex items-center relative">
+  <main id="hero" class="hero min-h-screen text-white pt-28 md:pt-44 lg:pt-52 xl:pt-60 pb-20 lg:pb-32 xl:pb-32 px-4 sm:px-6 lg:px-8 xl:px-8 flex items-center relative">
 
     <div class="max-w-6xl mx-auto text-center relative z-10">
 
@@ -1093,12 +1093,12 @@
     </div>
   </section>
 </div>
-<div class="relative">  
-  <footer id="footer" class="bg-black text-neutral-400 pt-16 pb-4 border-t border-white/5 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
+<div class="relative opacity-70">  
+  <footer id="footer" class="bg-black text-neutral-400 pt-16 pb- border-t border-white/5 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-        <div class="mb-6 md:mb-0">
-          <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto mb-3">
+        <div class="mb-6 ">
+          <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto mb-1">
           <p class="text-sm text-neutral-500 text-balance"><span class="font-semibold text-white/80">Express. Simulate. Deploy. Repeat</span> — until profit feels inevitable.</p>
         </div>
         
@@ -1202,6 +1202,7 @@ export default {
     // Throttled scroll handler for better performance
     let scrollTimeout
     const throttledScrollHandler = () => {
+      console.log("asdsa")
       if (scrollTimeout) return
       scrollTimeout = setTimeout(() => {
         this.checkJoinWaitlistVisibility()

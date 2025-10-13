@@ -6,9 +6,7 @@ const scrollbarPlugin = require("tailwind-scrollbar")
 
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  experimental: {
-    textBalance: true,
-  },
+
   theme: {
     extend: {
       fontFamily: {
