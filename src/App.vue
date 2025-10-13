@@ -412,7 +412,7 @@
           <!-- Large radial glow surrounding the card -->
           <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none overflow-hidden" style="background: var(--gradient-radial-feature-backdrop);"></div>
           
-          <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl max-w-2xl lg:max-w-none mx-auto ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 backdrop-blur-[1px]">
+          <div class="relative bg-white/[.03] rounded-3xl p-8 ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 max-w-2xl lg:max-w-none mx-auto">
             
             <div class="mb-6">
               <h3 class="text-lg mb-1 font-semibold ">Strategy: "Buy when smart money accumulates + sell at 5x or after 72h"</h3>
@@ -1251,7 +1251,7 @@ html, body {
   */
   --gradient-purple: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 80%, transparent), transparent);
   --gradient-section-linear: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 50%, transparent), transparent);
-  --gradient-radial-feature-backdrop: radial-gradient(circle, color-mix(in oklch,theme('colors.violet.950') 70%, transparent), transparent);
+  --gradient-radial-feature-backdrop: radial-gradient(circle, color-mix(in oklch,theme('colors.violet.950') 60%, transparent), transparent);
 
   --gradient-secondary-color: linear-gradient(to right, theme('colors.violet.700'), theme('colors.violet.300'), theme('colors.violet.700'));
   
