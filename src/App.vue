@@ -182,7 +182,7 @@
       
 
       <!-- Whisper text -->
-      <div class="text-center mb-8 hero-whisper">
+      <div class="text-center hero-whisper">
         <p class="text-white/80 text-lg font-light italic">For humans and AI agents alike</p>
       </div>
 
@@ -295,10 +295,10 @@
       <!-- /grid -->
 
       <!-- BRIDGE: “Every signal…” now centered under both columns on desktop and mobile alike -->
-      <div class="flex mt-32 lg:mt-0 mb-2   flex-col items-center ">
+      <div class="flex mt-24 lg:mt-0    flex-col items-center ">
         <button
           @click="toggleSignalSection"
-          class="max-w-2xl mx-auto group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/10 hover:bg-white/15 rounded-xl py-4 px-6 flex  items-center justify-center gap-2"
+          class="max-w-2xl mx-auto group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-300 bg-white/5 hover:bg-white/8 border-2 border-violet-500/30 hover:border-violet-400/50 backdrop-blur-sm rounded-xl py-4 px-6 flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
         >
             <h3 class="text-xl font-bold text-violet-500/80/85 text-balance">Every signal, every slice, at your fingertips</h3>
             <i-heroicons-solid-chevron-down
@@ -312,7 +312,7 @@
         <div
           :class="[
             'overflow-hidden transition-all duration-500 ease-in-out mt-3 will-change-transform',
-            isSignalSectionExpanded ? 'max-h-[800px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+            isSignalSectionExpanded ? 'max-h-[1200px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
           ]"
           :style="{ transform: 'translateZ(0)' }"
         >
@@ -386,7 +386,7 @@
 
 <div class="relative overflow-hidden">  
   <div class="absolute h-[300px] inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
-  <section id="simulate" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="simulate" class=" text-white pt-20 pb-16 lg:pt-32 lg:pb-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
       
       
@@ -562,17 +562,17 @@
               <span class="font-semibold text-white italic">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. 
             </p>
             <p class="text-xl font-semibold text-white  mb-8 italic leading-relaxed max-w-2xl mx-auto text-balance">Just optimize → test → repeat.</p>
+            <p class="text-neutral-300 lg:text-balance leading-relaxed">
+              Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
+            </p>
           </div>
-          <p class="text-neutral-300 lg:text-balance leading-relaxed">
-            Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
-          </p>
         </div>
       </div>
       
-      <div class="flex mb-2  flex-col items-center">
+      <div class="flex -mt-4 flex-col items-center">
         <button 
           @click="toggleExitsSection"
-          class="mx-auto  max-w-2xl group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/10 hover:bg-white/15 rounded-xl py-4 px-6 flex items-center justify-center gap-2"
+          class="mx-auto max-w-2xl group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-300 bg-white/5 hover:bg-white/8 border-2 border-violet-500/30 hover:border-violet-400/50 backdrop-blur-sm rounded-xl py-4 px-6 flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
         >
           <div class="flex items-center justify-between gap-2">
             <h3 class="w-full text-xl font-bold text-violet-500/80/80 text-balance transition-all lg:text-right">Simulate & Validate Your Edge</h3>
@@ -589,11 +589,11 @@
         <div 
           :class="[
             'overflow-hidden transition-all duration-500 ease-in-out mt-4 will-change-transform',
-            isExitsSectionExpanded ? 'max-h-[600px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+            isExitsSectionExpanded ? 'max-h-[1400px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
           ]"
           :style="{ transform: 'translateZ(0)' }"
         >
-          <div class="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed pt-8 px-6">
+          <div class="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed pt-4 px-6">
 
             <p class="text-base md:text-lg mt-2 italic font-semibold text-white">
               Every outcome quantified. No guessing. no surprises.
@@ -658,9 +658,6 @@
           </div>
         </div>
       </div>
-
-
-
     </div>
   </section>
 </div>
