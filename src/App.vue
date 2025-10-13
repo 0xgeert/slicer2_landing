@@ -39,7 +39,7 @@
 
     <div class="max-w-6xl mx-auto text-center relative z-10">
 
-      <div class="mb-16 relative  ">
+      <div class="relative">
         <h1 class="text-[3.3rem] leading-[1] text-6xl md:text-7xl lg:text-8xl mb-4 font-black tracking-tight leading-tighter hero-glow">
           <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">BAGHOLDING</span></span><br>
           <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">WAITING</span></span>
@@ -49,31 +49,15 @@
         </p>
       </div>
       
-      
+    
 
-
-      <!-- CTA container hidden -->
-      <!-- <div id='cta-container' class="cta-container backdrop-blur-sm rounded-2xl px-4 pt-4 sm:px-5 sm:pt-5 lg:px-6 lg:pt-6 max-w-2xl mx-4 sm:mx-auto -mt-10 lg:mt-0 hidden">
-        <div class="flex flex-col space-y-3 sm:hidden">
-          <button @click="scrollToSection('cta')" class="w-full bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 shadow-lg hover:shadow-xl hover:scale-105 transform-gpu">
-            Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
-          </button>
-        </div>
-        
-        <div class="hidden sm:flex justify-center">
-          <button @click="scrollToSection('cta')" class="bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transform-gpu">
-            Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
-          </button>
-        </div>
-      </div> -->
-
-      <div class="text-center mt-4 text-neutral-300 text-balance text-xs md:text-sm hero-text">
-         <div class="mt-4 hero-link">
+      <div class="-mt-4 lg:-mt-0 text-center  text-neutral-300 text-balance text-xs md:text-sm hero-text">
+         <div class="hero-link">
            <button @click="scrollToSimulationButton()" class="hover:underline text-violet-300/80 transition-all duration-200 bg-transparent border-2 border-transparent outline-none focus:border-violet-500 cursor-pointer rounded-lg px-3 py-2 whitespace-nowrap">Watch a 6-second sim <span class="arrow">→</span></button>
          </div>
       </div>
       
-       <div class="mt-12 mb-20 flex justify-center flex-col items-center gap-8 hero-scroll">
+       <div class="mt-16 mb-20 flex justify-center flex-col items-center gap-8 hero-scroll">
         <button 
             @click="scrollToSection('express')"
             aria-label="Scroll to next section"
@@ -390,6 +374,21 @@
               <p class="text-neutral-400 text-xs">(Example results for demo)</p>
             </div>
             
+            <div class="mb-6">
+              <div class="flex justify-between text-[11px] text-white/55 mb-1">
+                <span>6 months → 6 seconds</span><span>Progress: 100%</span>
+              </div>
+              <div class="h-1.5 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full w-full bg-violet-400 origin-left animate-[progress_6s_linear_1]"></div>
+              </div>
+            </div>
+            
+            <button class="mb-6 w-full h-11 rounded-xl bg-violet-500 hover:bg-violet-400 active:bg-violet-600
+                           text-black font-semibold relative neon-glow focus:outline-none
+                           focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950 transition-all duration-200">
+              Run Simulation
+            </button>
+            
             <div class="grid grid-cols-2 gap-3 mb-6">
               <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
                 <div class="text-2xl font-semibold text-emerald-400">+247%</div>
@@ -506,20 +505,6 @@
               </div>
             </div>
             
-            <div class="mt-6">
-              <div class="flex justify-between text-[11px] text-white/55 mb-1">
-                <span>6 months → 6 seconds</span><span>Progress: 100%</span>
-              </div>
-              <div class="h-1.5 bg-white/10 rounded-full overflow-hidden">
-                <div class="h-full w-full bg-violet-400 origin-left animate-[progress_6s_linear_1]"></div>
-              </div>
-            </div>
-            
-            <button class="mt-5 w-full h-11 rounded-xl bg-violet-500 hover:bg-violet-400 active:bg-violet-600
-                           text-black font-semibold relative neon-glow focus:outline-none
-                           focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950 transition-all duration-200">
-              Run Simulation
-            </button>
           </div>
         </div>
         
@@ -1100,29 +1085,24 @@ export default {
       this.isTradeSizeImpactExpanded = !this.isTradeSizeImpactExpanded
     },
     scrollToSimulationButton() {
-      // Find the Run Simulation button in the simulate section
+      // Find the simulation widget (the main card container)
       const simulateSection = document.getElementById('simulate')
       if (!simulateSection) {
         console.warn('Simulate section not found')
         return
       }
       
-      // Find the Run Simulation button within the simulate section
-      const runButton = simulateSection.querySelector('button')
-      if (!runButton) {
-        console.warn('Run Simulation button not found')
+      // Find the simulation widget container
+      const simulationWidget = simulateSection.querySelector('.bg-white\\/\\[\\.03\\]')
+      if (!simulationWidget) {
+        console.warn('Simulation widget not found')
         return
       }
       
-      // Calculate position to place button at bottom of viewport with 20px margin
+      // Calculate position to place widget at top of viewport with 32px margin
       const isiOS = /iP(ad|hone|od)/i.test(navigator.userAgent)
-
-      const elementPosition = runButton.getBoundingClientRect().top + window.pageYOffset
-      const viewportHeight = window.innerHeight 
-      const margin = 20 + (!isiOS ? 220 : 0)
-      
-      // Simple calculation: scroll so button appears at bottom of viewport with margin
-      const offsetPosition = elementPosition - viewportHeight + margin
+      const elementPosition = simulationWidget.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - (isiOS ? 200 : 32)
       
       window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
     },
@@ -1146,10 +1126,8 @@ export default {
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
       const isiOS = /iP(ad|hone|od)/i.test(navigator.userAgent)
       
-      // On mobile -> less 300px for safari + chrome in Iphone
-      // Matic numbers suck, but can't find rationale behind it.
-      // const adjustedOffset = isMobile ? offset + 300 : offset
-      const adjustedOffset = offset // for now
+      
+      const adjustedOffset = offset + (isiOS ? 200 - 32  : 0)
 
       // Shared measurements
       const docEl = document.documentElement
