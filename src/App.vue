@@ -1,5 +1,5 @@
 <template>
-<div class="relative">
+<div class="relative overflow-x-hidden">
   <!-- Top-left ghost logo -->
   <!-- <div class="absolute top-8 left-8 z-40">
     <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto opacity-30">
@@ -16,9 +16,9 @@
   </svg>
   
   <!-- gradients: purple linear + black radial -->
-  <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10" style="background: var(--gradient-purple);"></div>
+  <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-purple);"></div>
   <header id="header" :class="['bg-violet-950/40 backdrop-blur-xl text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
-    <div class="max-w-8xl mx-auto flex items-center justify-between">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
         <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto">
       </div>
@@ -191,9 +191,9 @@
 </div>
 
 <div class="relative overflow-hidden">  
-  <div class="absolute h-[300px] w-full -z-10" style="background: var(--gradient-section-linear);">&nbsp;</div>
+  <div class="absolute h-[300px] inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <section id="express" class="text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-8xl mx-auto">
+    <div class="max-w-6xl mx-auto">
 
       <!-- 2-col narrative: Copy (L) → Example (R) -->
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-28 items-start mb-6 lg:mb-16">
@@ -205,8 +205,8 @@
               <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span>
               INTO EXISTENCE
             </h2>
-            <p class="text-xl text-neutral-300 mb-0 italic font-light leading-relaxed text-balance  lg:ml-6">
-              <span class="text-white font-semibold">10,000+ on-chain and off-chain filters.</span> Pure creative freedom.
+            <p class="text-xl text-neutral-300 mb-0  font-light leading-relaxed text-balance  lg:ml-6">
+              <span class="text-white font-semibold italic">10,000+ on-chain and off-chain filters.</span> Pure creative freedom.
               <span class="text-white font-semibold">Compose by hand, describe in English, or mix both.</span> Total control either way.
             </p>
           </div>
@@ -229,7 +229,7 @@
               <!-- Speech bubble -->
               <div class="relative inline-block ">
                 <div class="bg-white rounded-3xl px-8 py-6 shadow-white/10 shadow-xl max-w-lg lg:max-w-xl relative neon-glow">
-                <div class="absolute inset-0 -inset-x-16 -inset-y-16 blur-3xl pointer-eventsnone -z-10" style="background: var(--gradient-radial-feature-backdrop);"></div>
+                <div class="absolute inset-0 -inset-x-16 -inset-y-16 blur-3xl pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-radial-feature-backdrop);"></div>
                   <p class="text-gray-800 text-lg lg:text-2xl lg:leading-relaxed font-medium italic text-center text-balance">
                     Buy when smart money accumulates for 48h while retail is exiting.<br>
                     Sell when price goes up 5x or after 72h.
@@ -248,7 +248,7 @@
               <!-- Filter blocks -->
                
               <div class="relative rounded-2xl border border-white/10 w-full max-w-2xl shadow-2xl">
-                <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10" style="background: var(--gradient-radial-feature-backdrop);"></div>
+                <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-radial-feature-backdrop);"></div>
                 <div class="w-full h-full bg-zinc-500/10 rounded-2xl">
                   <div class="p-2">
                     <!-- Buy -->
@@ -387,9 +387,9 @@
 </div>
 
 <div class="relative overflow-hidden">  
-  <div class="absolute h-[300px] w-full -z-10" style="background: var(--gradient-section-linear);">&nbsp;</div>
+  <div class="absolute h-[300px] inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <section id="simulate" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-8xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       
       
       <!-- Mobile-first text section -->
@@ -410,7 +410,7 @@
       <div class="grid lg:grid-cols-2 lg:gap-28 items-start lg:mb-24 mb-12">
         <div class="relative ">
           <!-- Large radial glow surrounding the card -->
-          <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none" style="background: var(--gradient-radial-feature-backdrop);"></div>
+          <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none overflow-hidden" style="background: var(--gradient-radial-feature-backdrop);"></div>
           
           <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl max-w-2xl lg:max-w-none mx-auto ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 backdrop-blur-[1px]">
             
@@ -662,9 +662,9 @@
   </section>
 </div>
 <div class="relative">  
-  <div class="absolute h-[300px] w-full -z-10" style="background: var(--gradient-section-linear);">&nbsp;</div>
+  <div class="absolute h-[300px] inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <section id="deploy" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-8xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       
       <div class="text-center mb-12 lg:mb-20 pt-8 lg:pt-16">
         <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 font-black tracking-tight text-balance">
@@ -739,7 +739,7 @@
             
             <div class="grid md:grid-cols-2 max-w-lg md:max-w-4xl mx-auto gap-8">
               <div class="relative">
-                <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10" style="background: var(--gradient-radial-feature-backdrop);"></div>
+                <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-radial-feature-backdrop);"></div>
                 <div class="rounded-3xl bg-white/[.03] ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 p-5">
                   <h3 class="mb-4 text-white/85 font-semibold flex items-center gap-2">
                     <i class="i-lucide-settings-2 h-4 w-4 text-violet-400"></i> Trade Configuration
@@ -782,6 +782,7 @@
                                  focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950">
                     Deploy Strategy
                   </button>
+                  
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center gap-8 ">
@@ -852,7 +853,7 @@
               <div class="space-y-8 w-full mx-auto lg:mx-0  ">
                 <!-- Trade Alert Mockup -->
                  <div class="relative">
-                  <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10" style="background: var(--gradient-radial-feature-backdrop);"></div>
+                  <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-radial-feature-backdrop);"></div>
                   <div class="rounded-3xl bg-white/[.03] ring-1 ring-white/10 shadow-xl shadow-violet-500/10 p-5">
                     <div class="text-white/80 text-sm mb-3 font-medium">Trade Alert Example</div>
                     <div class="rounded-2xl bg-white/4 p-4 ring-1 ring-white/10">
@@ -1017,9 +1018,9 @@
   </section>
 </div>
 <div class="relative">  
-  <div class="absolute h-[300px] w-full -z-10" style="background: var(--gradient-section-linear);">&nbsp;</div>
+  <div class="absolute h-[300px] inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <!-- gradients: purple linear + black radial -->
-  <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10" style="background: var(--gradient-purple);"></div>
+  <div class="absolute inset-x-0 h-[80vh] pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-purple);"></div>
 
   <section id="cta" class="text-white pt-20 lg:pt-32 pb-20 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
@@ -1094,7 +1095,7 @@
 </div>
 <div class="relative">  
   <footer id="footer" class="bg-black text-neutral-400 pt-16 pb-4 border-t border-white/5 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-8xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
         <div class="mb-6 md:mb-0">
           <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto mb-3">
@@ -1230,6 +1231,11 @@ export default {
 
 <style>
 
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+}
+
 /* ===== gamut-aware color system (OKLCH) ===== */
 :root {
 
@@ -1338,7 +1344,11 @@ export default {
   display: block;
   content: "";
   position: absolute;
-  inset: -200px;
+  top: -200px;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100vw + 80px);
   pointer-events: none;
   background: var(--gradient-CTA-glow);
   filter: blur(2px);
