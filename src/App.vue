@@ -23,8 +23,8 @@
         <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto">
       </div>
       <nav class="hidden md:flex items-center space-x-12">
-        <button @click="scrollToSection('express', 100)" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Express</button>
-        <button @click="scrollToSection('simulate', 100)" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Simulate</button>
+        <button @click="scrollToSection('express')" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Express</button>
+        <button @click="scrollToSection('simulate')" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Simulate</button>
         <button @click="scrollToSection('deploy', 100)" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Deploy</button>
       </nav>
       <button @click="scrollToSection('cta')" class="cta-ghost font-medium flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
@@ -52,32 +52,30 @@
       
 
 
-      <div id='cta-container' class="cta-container backdrop-blur-sm rounded-2xl px-4 pt-4 sm:px-5 sm:pt-5 lg:px-6 lg:pt-6 max-w-2xl mx-4 sm:mx-auto -mt-10 lg:mt-0">
-        <!-- Mobile: Button only -->
+      <!-- CTA container hidden -->
+      <!-- <div id='cta-container' class="cta-container backdrop-blur-sm rounded-2xl px-4 pt-4 sm:px-5 sm:pt-5 lg:px-6 lg:pt-6 max-w-2xl mx-4 sm:mx-auto -mt-10 lg:mt-0 hidden">
         <div class="flex flex-col space-y-3 sm:hidden">
           <button @click="scrollToSection('cta')" class="w-full bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 shadow-lg hover:shadow-xl hover:scale-105 transform-gpu">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
         
-        <!-- Desktop: Button only -->
         <div class="hidden sm:flex justify-center">
           <button @click="scrollToSection('cta')" class="bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transform-gpu">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
-      </div>
+      </div> -->
 
       <div class="text-center mt-4 text-neutral-300 text-balance text-xs md:text-sm hero-text">
          <div class="mt-4 hero-link">
-           <button @click="scrollToSection('simulate', 100)" class="hover:underline text-violet-300/80 transition-all duration-200 bg-transparent border-2 border-transparent outline-none focus:border-violet-500 cursor-pointer rounded-lg px-3 py-2">Watch a 6-second sim <span class="arrow">→</span></button>
+           <button @click="scrollToSimulationButton()" class="hover:underline text-violet-300/80 transition-all duration-200 bg-transparent border-2 border-transparent outline-none focus:border-violet-500 cursor-pointer rounded-lg px-3 py-2 whitespace-nowrap">Watch a 6-second sim <span class="arrow">→</span></button>
          </div>
       </div>
       
-       <!-- Scroll cue arrow -->
-       <div class="my-20 flex justify-center flex-col items-center gap-8 hero-scroll">
+       <div class="mt-12 mb-20 flex justify-center flex-col items-center gap-8 hero-scroll">
         <button 
-            @click="scrollToSection('express', 100)"
+            @click="scrollToSection('express')"
             aria-label="Scroll to next section"
             class="group inline-flex p-4 rounded-full 
                   text-neutral-200/80 outline-none focus:ring-4 focus:ring-violet-500 focus:ring-offset-4 focus:ring-offset-neutral-900 transition-all duration-200
@@ -388,34 +386,34 @@
           <div class="relative bg-white/[.03] rounded-3xl p-8 ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 max-w-2xl lg:max-w-none mx-auto">
             
             <div class="mb-6">
-              <h3 class="text-lg mb-1 font-semibold ">Strategy: "Buy when smart money accumulates + sell at 5x or after 72h"</h3>
+              <h3 class="text-lg mb-1 font-semibold ">Simulation: "Buy when smart money accumulates + sell at 5x or after 72h"</h3>
               <p class="text-neutral-400 text-xs">(Example results for demo)</p>
             </div>
             
-            <div class="grid grid-cols-2 gap-4 mb-6">
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
-                <div class="text-3xl font-semibold mb-1 text-emerald-400">+247%</div>
-                <div class="text-white/40 text-[11px] tracking-wide">ROI</div>
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
+                <div class="text-2xl font-semibold text-emerald-400">+247%</div>
+                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">ROI</div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
-                <div class="text-3xl text-white font-semibold mb-1">68%</div>
-                <div class="text-white/40 text-[11px] tracking-wide">Win Rate</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
+                <div class="text-2xl text-white font-semibold">68%</div>
+                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">Win Rate</div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
-                <div class="text-3xl font-semibold mb-1 text-rose-400">-18%</div>
-                <div class="text-white/40 text-[11px] tracking-wide">Max DD</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
+                <div class="text-2xl font-semibold text-rose-400">-18%</div>
+                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">Max DD</div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
-                <div class="text-3xl text-white font-semibold mb-1">2.4</div>
-                <div class="text-white/40 text-[11px] tracking-wide">Sharpe</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
+                <div class="text-2xl text-white font-semibold">2.4</div>
+                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">Sharpe</div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
-                <div class="text-3xl text-white font-semibold mb-1">4.2d</div>
-                <div class="text-white/40 text-[11px] tracking-wide">Avg Hold</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
+                <div class="text-2xl text-white font-semibold">4.2d</div>
+                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">Avg Hold</div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
-                <div class="text-3xl text-white font-semibold mb-1">32</div>
-                <div class="text-white/40 text-[11px] tracking-wide">Total Trades</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
+                <div class="text-2xl text-white font-semibold">32</div>
+                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">Total Trades</div>
               </div>
             </div>
             
@@ -658,13 +656,13 @@
         <div
           role="tablist" 
           aria-label="Deploy modes"
-          class="relative mx-auto mt-4 w-full max-w-3xl rounded-2xl bg-white/5 p-1 ring-1 ring-white/10 mb-16 focus-within:ring-2 focus-within:ring-violet-500/50"
+          class="relative mx-auto mt-4 w-full max-w-3xl rounded-2xl bg-violet-950/40 p-1 ring-1 ring-violet-800/30 mb-16 focus-within:ring-2 focus-within:ring-violet-500/50"
         >
           <!-- sliding indicator -->
           <span 
             id="mode-indicator"
             class="pointer-events-none absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)]
-                   rounded-xl bg-white/10 shadow-[0_0_0_1px_rgba(255,255,255,.08)_inset]
+                   rounded-xl bg-violet-600/40 shadow-[0_0_0_1px_rgba(109,40,217,.3)_inset]
                    transition-[transform] duration-300 ease-[cubic-bezier(.2,.8,.2,1)]"
             :style="{ transform: activeTab === 'hands-off' ? 'translateX(0%)' : 'translateX(100%)' }"
           ></span>
@@ -1101,6 +1099,33 @@ export default {
     toggleTradeSizeImpact() {
       this.isTradeSizeImpactExpanded = !this.isTradeSizeImpactExpanded
     },
+    scrollToSimulationButton() {
+      // Find the Run Simulation button in the simulate section
+      const simulateSection = document.getElementById('simulate')
+      if (!simulateSection) {
+        console.warn('Simulate section not found')
+        return
+      }
+      
+      // Find the Run Simulation button within the simulate section
+      const runButton = simulateSection.querySelector('button')
+      if (!runButton) {
+        console.warn('Run Simulation button not found')
+        return
+      }
+      
+      // Calculate position to place button at bottom of viewport with 20px margin
+      const isiOS = /iP(ad|hone|od)/i.test(navigator.userAgent)
+
+      const elementPosition = runButton.getBoundingClientRect().top + window.pageYOffset
+      const viewportHeight = window.innerHeight 
+      const margin = 20 + (!isiOS ? 220 : 0)
+      
+      // Simple calculation: scroll so button appears at bottom of viewport with margin
+      const offsetPosition = elementPosition - viewportHeight + margin
+      
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
+    },
     scrollToSection(sectionId, offset = 0) {
       const element = document.getElementById(sectionId)
       if (!element) {
@@ -1154,37 +1179,35 @@ export default {
         return
       }
       
-      const ctaContainer = document.getElementById('cta-container')
       const finalCtaContainer = document.getElementById('final-cta')
       
-      if (!ctaContainer) {
-        this.isHeaderVisible = true
+      // Check if final CTA is visible - hide header when bottom CTA is reached
+      const finalRect = finalCtaContainer ? finalCtaContainer.getBoundingClientRect() : null
+      const isFinalCtaVisible = finalRect ? finalRect.top < window.innerHeight && finalRect.bottom > 0 : false
+      
+      if (isFinalCtaVisible) {
+        this.isHeaderVisible = false
         return
       }
       
-      const rect = ctaContainer.getBoundingClientRect()
-      const finalRect = finalCtaContainer ? finalCtaContainer.getBoundingClientRect() : null
+      // Calculate scroll progress
+      const docEl = document.documentElement
+      const scrollTop = window.pageYOffset || docEl.scrollTop
+      const docHeight = Math.max(docEl.scrollHeight, docEl.offsetHeight, docEl.clientHeight)
+      const viewportHeight = window.innerHeight
+      const maxScroll = docHeight - viewportHeight
       
-      // Check if CTA section has started rolling in from bottom (100px after section start)
-      const ctaSection = document.getElementById('cta')
-      const ctaSectionRect = ctaSection ? ctaSection.getBoundingClientRect() : null
-      const isCtaSectionRollingIn = ctaSectionRect ? ctaSectionRect.top < (window.innerHeight - 100) : false
+      // Show header after 55% scroll
+      const scrollProgress = scrollTop / maxScroll
+      const showThreshold = 0.60
       
-      // More lenient visibility check for mobile
-      const isAnyWaitlistButtonVisible = rect.top < window.innerHeight && rect.bottom > 0
-      
-      // Check if final CTA is visible
-      const isFinalCtaVisible = finalRect ? finalRect.top < window.innerHeight && finalRect.bottom > 0 : false
-      
-      // Hide header if hero waitlist button is visible OR if final CTA is visible OR if CTA section is rolling in
-      this.isHeaderVisible = !isAnyWaitlistButtonVisible && !isFinalCtaVisible && !isCtaSectionRollingIn
+      this.isHeaderVisible = scrollProgress >= showThreshold
     }
   },
   mounted() {
     // Throttled scroll handler for better performance
     let scrollTimeout
     const throttledScrollHandler = () => {
-      console.log("asdsa")
       if (scrollTimeout) return
       scrollTimeout = setTimeout(() => {
         this.checkJoinWaitlistVisibility()
