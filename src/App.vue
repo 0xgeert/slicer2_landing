@@ -68,7 +68,7 @@
               transition duration-200
               placeholder-white/80"
           >
-          <button class="w-full bg-violet-500 hover:bg-violet-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
+          <button class="w-full bg-violet-500 hover:bg-violet-400 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -87,7 +87,7 @@
               transition duration-200
               placeholder-white/80"
           >
-          <button class="bg-violet-500 hover:bg-violet-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
+          <button class="bg-violet-500 hover:bg-violet-400 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -544,7 +544,9 @@
               </div>
             </div>
             
-            <button class="w-full bg-violet-500 hover:bg-violet-400 active:bg-violet-600 text-black py-4 rounded-xl mt-6 transition-all duration-200 font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 neon-glow-light relative">
+            <button class="mt-3 w-full h-11 rounded-xl bg-violet-500 hover:bg-violet-400 active:bg-violet-600
+                           text-black font-semibold relative neon-glow focus:outline-none
+                           focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950">
               Run Simulation
             </button>
           </div>
@@ -725,117 +727,105 @@
             id="panel-auto"
             role="tabpanel"
             aria-labelledby="tab-auto"
-            v-if="activeTab === 'hands-off'" 
-            class="space-y-8"
+            v-show="activeTab === 'hands-off'" 
+            class="space-y-8 transition-opacity duration-200"
+            :class="activeTab === 'hands-off' ? 'opacity-100' : 'opacity-0 pointer-events-none'"
           >
             <div class="text-center mb-12">
               <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-violet-400/80/80">HANDS-OFF AUTO-TRADING</h3>
               <p class="text-xl text-neutral-300 italic">Set it. Forget it. Smile.</p>
+              <p class="text-white/70 text-sm mt-2">Fully automated execution with complete transparency and control.</p>
             </div>
             
             <div class="grid md:grid-cols-2 max-w-lg md:max-w-4xl mx-auto gap-8">
               <div class="relative">
                 <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10" style="background: var(--gradient-radial-feature-backdrop);"></div>
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/5 w-full">
-                  <div class="flex items-center mb-4">
-                    <i-heroicons-solid-cog-6-tooth class="w-5 h-5 text-violet-500/80 mr-3" />
-                    <h4 class="font-semibold text-xl">Trade Configuration</h4>
-                  </div>
-                  <div class="space-y-4">
-                    <div>
-                      <label class="flex items-center text-sm text-neutral-400 mb-2 font-medium">
-                        <i-heroicons-solid-currency-dollar class="w-4 h-4 mr-2" />
-                        Trade Size
-                      </label>
-                      <div class="relative">
-                        <input type="text" value="$1,000" disabled class="w-full bg-white/10 border border-neutral-700/30 rounded-xl px-3 py-1.5 md:px-4 md:py-2 text-neutral-200 text-xs md:text-sm">
-                      </div>
-                    </div>
-                    <div>
-                      <label class="flex items-center text-sm text-neutral-400 mb-2 font-medium">
-                        <i-heroicons-solid-chart-bar class="w-4 h-4 mr-2" />
-                        Max Slippage
-                      </label>
-                      <div class="relative">
-                        <input type="text" value="2%" disabled class="w-full bg-white/10 border border-neutral-700/30 rounded-xl px-3 py-1.5 md:px-4 md:py-2 text-neutral-200text-xs md:text-sm">
-                      </div>
-                    </div>
-                    <div>
-                      <label class="flex items-center text-sm text-neutral-200 mb-2 font-medium ">
-                        <i-heroicons-solid-bolt class="w-4 h-4 mr-2" />
-                        Gas Priority
-                      </label>
-                      <div class="relative">
-                        <select disabled class="w-full bg-white/10 border border-neutral-700/30 rounded-xl px-3 py-1.5 md:px-4 md:py-2 text-neutral-200  appearance-none text-xs md:text-sm">
-                          <option>Medium</option>
-                          <option>High</option>
-                          <option>Low</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div>
-                      <label class="flex items-center text-sm text-neutral-200 mb-2 font-medium">
-                        <i-heroicons-solid-bell class="w-4 h-4 mr-2" />
-                        Notifications
-                      </label>
-                      <div class="relative">
-                        <select disabled class="w-full bg-white/10 border border-neutral-700/30 rounded-xl px-3 py-1.5 md:px-4 md:py-2 text-neutral-200 appearance-none text-xs md:text-sm">
-                          <option>Telegram</option>
-                          <option>Email</option>
-                          <option>Both</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
+                <div class="rounded-3xl bg-white/[.03] ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 p-5">
+                  <h3 class="mb-4 text-white/85 font-semibold flex items-center gap-2">
+                    <i class="i-lucide-settings-2 h-4 w-4 text-violet-400"></i> Trade Configuration
+                  </h3>
+
+                  <label class="block mb-3">
+                    <span class="text-xs text-white/60">Trade Size</span>
+                    <input class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                                  text-white placeholder-white/40 focus:outline-none focus:border-white/20" placeholder="$1,000">
+                  </label>
                   
-                  <button disabled class="w-full bg-neutral-600 text-neutral-400 py-3 rounded-xl mt-6 font-semibold text-lg flex items-center justify-center">
-                    <i-heroicons-solid-play class="w-5 h-5 mr-2" />
+                  <label class="block mb-3">
+                    <span class="text-xs text-white/60">Max Slippage</span>
+                    <input class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                                  text-white placeholder-white/40 focus:outline-none focus:border-white/20" placeholder="2%">
+                  </label>
+                  
+                  <label class="block mb-3">
+                    <span class="text-xs text-white/60">Gas Priority</span>
+                    <select class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                                   text-white focus:outline-none focus:border-white/20">
+                      <option>Medium</option>
+                      <option>High</option>
+                      <option>Low</option>
+                    </select>
+                  </label>
+                  
+                  <label class="block mb-3">
+                    <span class="text-xs text-white/60">Notifications</span>
+                    <select class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                                   text-white focus:outline-none focus:border-white/20">
+                      <option>Telegram</option>
+                      <option>Email</option>
+                      <option>Both</option>
+                    </select>
+                  </label>
+
+                  <button class="mt-3 w-full h-11 rounded-xl bg-violet-500 hover:bg-violet-400 active:bg-violet-600
+                                 text-black font-semibold relative neon-glow focus:outline-none
+                                 focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950">
                     Deploy Strategy
                   </button>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center gap-8 ">
-                <div class="space-y-3 text-xl py-6 text-neutral-300">
+                <div class="space-y-3 text-xl py-6">
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-clock class="w-5 h-5 text-violet-500/80" />
-                    <span>Trades executed 24/7</span>
+                    <span class="text-white/75">Trades executed 24/7</span>
                   </div>
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-document-text class="w-5 h-5 text-violet-500/80" />
-                    <span>Every entry logged</span>
+                    <span class="text-white/75">Every entry logged</span>
                   </div>
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-eye class="w-5 h-5 text-violet-500/80" />
-                    <span>Every exit transparent</span>
+                    <span class="text-white/75">Every exit transparent</span>
                   </div>
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-chart-bar class="w-5 h-5 text-violet-500/80" />
-                    <span>Full P&L tracking</span>
+                    <span class="text-white/75">Full P&L tracking</span>
                   </div>
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-arrow-path class="w-5 h-5 text-violet-500/80" />
-                    <span>Switch modes anytime</span>
+                    <span class="text-white/75">Switch modes anytime</span>
                   </div>
                 </div>
                 
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full">
-                  <h5 class="mb-4 font-semibold text-violet-500/80">Security Features</h5>
+                <div class="rounded-3xl bg-white/[.03] ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 p-5 w-full">
+                  <h5 class="mb-4 font-semibold text-white/65">Security Features</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Non-custodial wallet integration</span>
+                      <span class="text-white/55">Non-custodial wallet integration</span>
                     </div>
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Configurable position limits</span>
+                      <span class="text-white/55">Configurable position limits</span>
                     </div>
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Emergency stop functionality</span>
+                      <span class="text-white/55">Emergency stop functionality</span>
                     </div>
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Real-time monitoring dashboard</span>
+                      <span class="text-white/55">Real-time monitoring dashboard</span>
                     </div>
                   </div>
                 </div>
@@ -848,12 +838,14 @@
             id="panel-hil"
             role="tabpanel"
             aria-labelledby="tab-hil"
-            v-if="activeTab === 'human-loop'" 
-            class="space-y-8"
+            v-show="activeTab === 'human-loop'" 
+            class="space-y-8 transition-opacity duration-200"
+            :class="activeTab === 'human-loop' ? 'opacity-100' : 'opacity-0 pointer-events-none'"
           >
             <div class="text-center ">
               <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-violet-400/80/80">HUMAN-IN-THE-LOOP</h3>
               <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
+              <p class="text-white/70 text-sm mt-2">Review and approve trades before execution with full context.</p>
             </div>
             
             <div class="grid md:grid-cols-2 max-w-lg md:max-w-4xl mx-auto gap-8">
@@ -861,123 +853,114 @@
                 <!-- Trade Alert Mockup -->
                  <div class="relative">
                   <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10" style="background: var(--gradient-radial-feature-backdrop);"></div>
-                  <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
-                    <h4 class="mb-4 font-semibold text-violet-500/80">Trade Alert Example</h4>
-                    <div class="bg-neutral-900/50 rounded-xl p-4 border border-neutral-700/30">
-                      <div class="mb-3">
-                        <h5 class="text-lg font-semibold text-white">New Match: $TOKEN</h5>
+                  <div class="rounded-3xl bg-white/[.03] ring-1 ring-white/10 shadow-xl shadow-violet-500/10 p-5">
+                    <div class="text-white/80 text-sm mb-3 font-medium">Trade Alert Example</div>
+                    <div class="rounded-2xl bg-white/4 p-4 ring-1 ring-white/10">
+                      <div class="flex items-start justify-between">
+                        <div class="text-white/85 font-semibold">New Match: $TOKEN</div>
+                        <span class="text-violet-300 text-sm">Score 82</span>
                       </div>
-                      <div class="space-y-2 text-sm">
+                      <div class="space-y-2 text-sm mt-3">
                         <div class="flex justify-between">
-                          <span class="text-neutral-400">Breakout Score:</span>
-                          <span class="text-violet-500/80 font-semibold">82</span>
+                          <span class="text-white/55">Smart Money:</span>
+                          <span class="text-emerald-400 font-semibold">+$47k (6h)</span>
                         </div>
                         <div class="flex justify-between">
-                          <span class="text-neutral-400">Smart Money:</span>
-                          <span class="text-green-400 font-semibold">+$47k (6h)</span>
+                          <span class="text-white/55">Entry:</span>
+                          <span class="text-white/85 font-semibold">$0.02334</span>
                         </div>
                         <div class="flex justify-between">
-                          <span class="text-neutral-400">Entry:</span>
-                          <span class="text-white font-semibold">$0.02334</span>
+                          <span class="text-white/55">Exit:</span>
+                          <span class="text-white/85 font-semibold">TP 10x or SL 20%</span>
                         </div>
                         <div class="flex justify-between">
-                          <span class="text-neutral-400">Exit:</span>
-                          <span class="text-white font-semibold">TP 10x or SL 20%</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-neutral-400">Backtest ROI:</span>
-                          <span class="text-green-400 font-semibold">+156%</span>
+                          <span class="text-white/55">Backtest ROI:</span>
+                          <span class="text-emerald-400 font-semibold">+156%</span>
                         </div>
                       </div>
-                      <div class="flex space-x-2 mt-4">
-                        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-colors">
-                          Approve
-                        </button>
-                        <button class="flex-1 bg-neutral-600 hover:bg-neutral-700 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-colors">
-                          Skip
-                        </button>
-                        <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-colors">
-                          Info
-                        </button>
+                      <div class="mt-4 grid grid-cols-3 gap-2">
+                        <button class="h-9 rounded-lg bg-emerald-400/90 hover:bg-emerald-400 text-black font-medium" aria-label="Approve trade">Approve</button>
+                        <button class="h-9 rounded-lg bg-white/8 hover:bg-white/12 text-white/80" aria-label="Skip trade">Skip</button>
+                        <button class="h-9 rounded-lg bg-white/8 hover:bg-white/12 text-white/80" aria-label="View trade info">Info</button>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <!-- Notification Channels -->
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
-                  <h5 class="mb-4 font-semibold text-violet-500/80">Notification Channels</h5>
+                <div class="rounded-3xl bg-white/[.03] ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 p-5">
+                  <h5 class="mb-4 font-semibold text-white/65">Notification Channels</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Email</span>
+                      <span class="text-white/55">Email</span>
                     </div>
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">In-browser push</span>
+                      <span class="text-white/55">In-browser push</span>
                     </div>
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Telegram</span>
+                      <span class="text-white/55">Telegram</span>
                     </div>
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Webhooks</span>
+                      <span class="text-white/55">Webhooks</span>
                     </div>
                   </div>
                 </div>
               </div>
               
               <div class="flex flex-col items-center justify-center gap-8 pt-6">
-                <div class="space-y-3 text-xl mb-4 lg:mb-0 text-neutral-300 ">
+                <div class="space-y-3 text-xl mb-4 lg:mb-0">
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-bolt class="w-5 h-5 text-violet-500/80" />
-                    <span>Trade alerts sent instantly</span>
+                    <span class="text-white/75">Trade alerts sent instantly</span>
                   </div>
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-cursor-arrow-rays class="w-5 h-5 text-violet-500/80" />
-                    <span>One-click approve/decline</span>
+                    <span class="text-white/75">One-click approve/decline</span>
                   </div>
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-information-circle class="w-5 h-5 text-violet-500/80" />
-                    <span>Full trade context provided</span>
+                    <span class="text-white/75">Full trade context provided</span>
                   </div>
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-clipboard-document-list class="w-5 h-5 text-violet-500/80" />
-                    <span>Complete audit trail</span>
+                    <span class="text-white/75">Complete audit trail</span>
                   </div>
                   <div class="flex items-center space-x-3">
                     <i-heroicons-solid-arrow-path class="w-5 h-5 text-violet-500/80" />
-                    <span>Switch modes anytime</span>
+                    <span class="text-white/75">Switch modes anytime</span>
                   </div>
                 </div>
                 
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full ">
-                  <h5 class="mb-4 font-semibold text-violet-500/80">Control Features</h5>
+                <div class="rounded-3xl bg-white/[.03] ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 p-5 w-full">
+                  <h5 class="mb-4 font-semibold text-white/65">Control Features</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Real-time trade notifications</span>
+                      <span class="text-white/55">Real-time trade notifications</span>
                     </div>
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Detailed trade reasoning</span>
+                      <span class="text-white/55">Detailed trade reasoning</span>
                     </div>
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Emergency stop override</span>
+                      <span class="text-white/55">Emergency stop override</span>
                     </div>
                     <div class="flex items-center space-x-3">
                       <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
-                      <span class="text-neutral-300">Approval history tracking</span>
+                      <span class="text-white/55">Approval history tracking</span>
                     </div>
                   </div>
                 </div>
 
                 <!-- Usage Philosophy -->
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 w-full">
-                  <h5 class="mb-4 font-semibold text-violet-500/80">Usage Philosophy</h5>
-                  <p class="text-sm text-neutral-300 leading-relaxed">
+                <div class="rounded-3xl bg-white/[.03] ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 p-5 w-full">
+                  <h5 class="mb-4 font-semibold text-white/65">Usage Philosophy</h5>
+                  <p class="text-sm text-white/55 leading-relaxed">
                     Use as pure analytics, approve high-conviction setups only, or pipe signals to your own trading infrastructure.
                   </p>
                 </div>
@@ -1062,7 +1045,7 @@
               transition duration-200
               placeholder-white/80"
           >
-          <button class="w-full bg-violet-500 hover:bg-violet-600 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
+          <button class="w-full bg-violet-500 hover:bg-violet-400 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -1081,7 +1064,7 @@
               transition duration-200
               placeholder-white/80"
           >
-          <button class="bg-violet-500 hover:bg-violet-600 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
+          <button class="bg-violet-500 hover:bg-violet-400 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
