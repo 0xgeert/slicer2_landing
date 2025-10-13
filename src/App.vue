@@ -68,7 +68,7 @@
               transition duration-200
               placeholder-white/80"
           >
-          <button class="w-full bg-violet-500 hover:bg-violet-400 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
+          <button class="w-full bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 shadow-lg hover:shadow-xl hover:scale-105 transform-gpu">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -87,7 +87,7 @@
               transition duration-200
               placeholder-white/80"
           >
-          <button class="bg-violet-500 hover:bg-violet-400 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
+          <button class="bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transform-gpu">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -316,7 +316,7 @@
           ]"
           :style="{ transform: 'translateZ(0)' }"
         >
-          <div class="max-w-5xl mx-auto space-y-8 text-lg leading-relaxed pt-8 px-6">
+          <div class="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed pt-8 px-6">
             <p class="text-neutral-300 ">
               Stack curated slices from external sources—insider calls, ML models, KOL picks—then layer your own filters on top. Or build from scratch with 10,000+ metrics spanning social, market, holders, and safety.
             </p>
@@ -325,52 +325,54 @@
             </p>
             
             <!-- Features Grid -->
-            <div class="grid grid-cols-2 gap-4 lg:gap-8 mt-8">
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
-                <div class="text-center">
-                  <div class="flex items-center justify-center mx-auto mb-4">
-                    <div class="gradient-icon-wrapper">
-                      <i-heroicons-solid-light-bulb class="w-10 h-10" />
+            <div class="pt-8">
+              <div class="grid grid-cols-2 gap-4 lg:gap-8 ">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
+                  <div class="text-center">
+                    <div class="flex items-center justify-center mx-auto mb-4">
+                      <div class="gradient-icon-wrapper">
+                        <i-heroicons-solid-light-bulb class="w-10 h-10" />
+                      </div>
                     </div>
+                    <h4 class="mb-2 font-semibold text-lg leading-tight">Natural Language</h4>
+                    <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Describe strategies in plain English</p>
                   </div>
-                  <h4 class="mb-2 font-semibold text-lg leading-tight">Natural Language</h4>
-                  <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Describe strategies in plain English</p>
                 </div>
-              </div>
 
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
-                <div class="text-center">
-                  <div class="flex items-center justify-center mx-auto mb-4">
-                    <div class="gradient-icon-wrapper">
-                      <i-heroicons-solid-funnel class="w-10 h-10" />
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
+                  <div class="text-center">
+                    <div class="flex items-center justify-center mx-auto mb-4">
+                      <div class="gradient-icon-wrapper">
+                        <i-heroicons-solid-funnel class="w-10 h-10" />
+                      </div>
                     </div>
+                    <h4 class="mb-2 font-semibold text-lg leading-tight">Precision Filtering</h4>
+                    <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Hand-craft with 10,000+ metrics</p>
                   </div>
-                  <h4 class="mb-2 font-semibold text-lg leading-tight">Precision Filtering</h4>
-                  <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Hand-craft with 10,000+ metrics</p>
                 </div>
-              </div>
 
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
-                <div class="text-center">
-                  <div class="flex items-center justify-center mx-auto mb-4">
-                    <div class="gradient-icon-wrapper">
-                      <i-heroicons-solid-square-2-stack class="w-10 h-10" />
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
+                  <div class="text-center">
+                    <div class="flex items-center justify-center mx-auto mb-4">
+                      <div class="gradient-icon-wrapper">
+                        <i-heroicons-solid-square-2-stack class="w-10 h-10" />
+                      </div>
                     </div>
+                    <h4 class="mb-2 font-semibold text-lg leading-tight">Stacked Sources</h4>
+                    <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Combine external signals with your filters</p>
                   </div>
-                  <h4 class="mb-2 font-semibold text-lg leading-tight">Stacked Sources</h4>
-                  <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Combine external signals with your filters</p>
                 </div>
-              </div>
 
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
-                <div class="text-center">
-                  <div class="flex items-center justify-center mx-auto mb-4">
-                    <div class="gradient-icon-wrapper">
-                      <i-heroicons-solid-chart-bar class="w-10 h-10" />
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
+                  <div class="text-center">
+                    <div class="flex items-center justify-center mx-auto mb-4">
+                      <div class="gradient-icon-wrapper">
+                        <i-heroicons-solid-chart-bar class="w-10 h-10" />
+                      </div>
                     </div>
+                    <h4 class="mb-2 font-semibold text-lg leading-tight">Behavioral Signals</h4>
+                    <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Track wallet patterns and holder dynamics</p>
                   </div>
-                  <h4 class="mb-2 font-semibold text-lg leading-tight">Behavioral Signals</h4>
-                  <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Track wallet patterns and holder dynamics</p>
                 </div>
               </div>
             </div>
@@ -540,9 +542,9 @@
               </div>
             </div>
             
-            <button class="mt-3 w-full h-11 rounded-xl bg-violet-500 hover:bg-violet-400 active:bg-violet-600
+            <button class="mt-5 w-full h-11 rounded-xl bg-violet-500 hover:bg-violet-400 active:bg-violet-600
                            text-black font-semibold relative neon-glow focus:outline-none
-                           focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950">
+                           focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950 transition-all duration-200">
               Run Simulation
             </button>
           </div>
@@ -591,9 +593,9 @@
           ]"
           :style="{ transform: 'translateZ(0)' }"
         >
-          <div class="max-w-5xl mx-auto space-y-8 text-lg leading-relaxed pt-8 px-6">
+          <div class="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed pt-8 px-6">
 
-            <p class="text-center text-base md:text-lg mt-2 italic font-semibold text-white">
+            <p class="text-base md:text-lg mt-2 italic font-semibold text-white">
               Every outcome quantified. No guessing. no surprises.
             </p>
 
@@ -602,45 +604,53 @@
             </p>
             
             <!-- Simulate Features Grid -->
-            <div class="grid md:grid-cols-3 gap-4 lg:gap-10 mt-8">
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
-                <div class="flex items-center space-x-4">
-                  <div class="flex items-center justify-center flex-shrink-0">
-                    <div class="gradient-icon-wrapper">
-                      <i-heroicons-solid-clock class="w-10 h-10" />
+            <div class="pt-8">
+              <div class="space-y-6">
+                <!-- First row: 2 cards -->
+                <div class="grid md:grid-cols-2 gap-4 lg:gap-10">
+                  <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center justify-center flex-shrink-0">
+                        <div class="gradient-icon-wrapper">
+                          <i-heroicons-solid-clock class="w-10 h-10" />
+                        </div>
+                      </div>
+                      <div class="flex-1">
+                        <h4 class="mb-1 font-semibold text-lg leading-tight">Real-Time Backtesting</h4>
+                        <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Historical data with live market conditions simulation</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="flex-1">
-                    <h4 class="mb-1 font-semibold text-lg leading-tight">Real-Time Backtesting</h4>
-                    <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Historical data with live market conditions simulation</p>
+                  
+                  <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center justify-center flex-shrink-0">
+                        <div class="gradient-icon-wrapper">
+                          <i-heroicons-solid-chart-bar-square class="w-10 h-10" />
+                        </div>
+                      </div>
+                      <div class="flex-1">
+                        <h4 class="mb-1 font-semibold text-lg leading-tight">Slippage Analysis</h4>
+                        <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Accurate trade size impact modeling</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
-                <div class="flex items-center space-x-4">
-                  <div class="flex items-center justify-center flex-shrink-0">
-                    <div class="gradient-icon-wrapper">
-                      <i-heroicons-solid-chart-bar-square class="w-10 h-10" />
+                
+                <!-- Second row: 1 centered card -->
+                <div class="flex justify-center">
+                  <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex max-w-md w-full">
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center justify-center flex-shrink-0">
+                        <div class="gradient-icon-wrapper">
+                          <i-heroicons-solid-shield-check class="w-10 h-10" />
+                        </div>
+                      </div>
+                      <div class="flex-1">
+                        <h4 class="mb-1 font-semibold text-lg leading-tight">Risk Metrics</h4>
+                        <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Comprehensive drawdown and volatility analysis</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="flex-1">
-                    <h4 class="mb-1 font-semibold text-lg leading-tight">Slippage Analysis</h4>
-                    <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Accurate trade size impact modeling</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
-                <div class="flex items-center space-x-4">
-                  <div class="flex items-center justify-center flex-shrink-0">
-                    <div class="gradient-icon-wrapper">
-                      <i-heroicons-solid-shield-check class="w-10 h-10" />
-                    </div>
-                  </div>
-                  <div class="flex-1">
-                    <h4 class="mb-1 font-semibold text-lg leading-tight">Risk Metrics</h4>
-                    <p class="text-neutral-400 text-sm leading-tight lg:text-balance">Comprehensive drawdown and volatility analysis</p>
                   </div>
                 </div>
               </div>
@@ -772,7 +782,7 @@
 
                   <button class="mt-3 w-full h-11 rounded-xl bg-violet-500 hover:bg-violet-400 active:bg-violet-600
                                  text-black font-semibold relative neon-glow focus:outline-none
-                                 focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950">
+                                 focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950 transition-all duration-200">
                     Deploy Strategy
                   </button>
                   
@@ -996,7 +1006,7 @@
               transition duration-200
               placeholder-white/80"
           >
-          <button class="w-full bg-violet-500 hover:bg-violet-400 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
+          <button class="w-full bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 shadow-lg hover:shadow-xl hover:scale-105 transform-gpu">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -1015,7 +1025,7 @@
               transition duration-200
               placeholder-white/80"
           >
-          <button class="bg-violet-500 hover:bg-violet-400 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
+          <button class="bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transform-gpu">
             Claim Your Spot <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
@@ -1314,28 +1324,59 @@ html, body {
 .neon-glow::before {
   content: '';
   position: absolute;
-  inset: -2px;
+  inset: -3px;
   background: linear-gradient(45deg, 
-    rgba(154, 91, 255, 0.6), 
-    rgba(176, 109, 255, 0.4), 
-    rgba(154, 91, 255, 0.6), 
-    rgba(176, 109, 255, 0.4)
+    rgba(154, 91, 255, 0.8), 
+    rgba(196, 181, 253, 0.6), 
+    rgba(139, 92, 246, 0.8), 
+    rgba(196, 181, 253, 0.6),
+    rgba(154, 91, 255, 0.8)
   );
-  border-radius: 18px;
+  border-radius: 20px;
   z-index: -1;
-  filter: blur(8px);
-  opacity: 0.7;
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  filter: blur(10px);
+  opacity: 0.8;
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
 }
 
 .neon-glow:hover::before {
   opacity: 1;
-  filter: blur(12px);
+  filter: blur(15px);
+  transform: scale(1.05);
 }
 
 .neon-glow:focus::before {
   opacity: 1;
-  filter: blur(12px);
+  filter: blur(15px);
+  transform: scale(1.05);
+}
+
+.neon-glow:active::before {
+  opacity: 0.9;
+  filter: blur(8px);
+  transform: scale(0.98);
+}
+
+/* Enhanced 3D effects for gradient buttons */
+.transform-gpu {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.transform-gpu:hover {
+  transform: translateZ(0) translateY(-2px) scale(1.05);
+  box-shadow: 
+    0 20px 25px -5px rgba(154, 91, 255, 0.3),
+    0 10px 10px -5px rgba(154, 91, 255, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.transform-gpu:active {
+  transform: translateZ(0) translateY(0px) scale(1.02);
+  box-shadow: 
+    0 10px 15px -3px rgba(154, 91, 255, 0.4),
+    0 4px 6px -2px rgba(154, 91, 255, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 /* Lighter neon glow for simulation panel CTA */
