@@ -219,9 +219,9 @@
                   <div class="p-2">
                     <!-- Buy -->
                     <div class="inline-block rounded-lg p-2">
-                      <div class="inline-block bg-violet-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-violet-400 text-sm font-bold">Buy at</span>
-                        <i-heroicons-solid-chevron-down class="w-3 h-3 text-violet-400/80 ml-1 inline" />
+                      <div class="inline-block bg-emerald-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
+                        <span class="text-emerald-400 text-sm font-bold">Buy at</span>
+                        <i-heroicons-solid-chevron-down class="w-3 h-3 text-emerald-400/80 ml-1 inline" />
                       </div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
                         <span class="text-amber-100 text-sm font-medium">Smart money net flow</span>
