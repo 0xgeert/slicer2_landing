@@ -1204,7 +1204,7 @@ export default {
   --gradient-section-linear: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 50%, transparent), transparent);
   --gradient-radial-feature-backdrop: radial-gradient(circle, color-mix(in oklch,theme('colors.violet.950') 70%, transparent), transparent);
 
-  --gradient-secondary-color: linear-gradient(to right, theme('colors.violet.400'), theme('colors.violet.600'));
+  --gradient-secondary-color: linear-gradient(to right, theme('colors.violet.700'), theme('colors.violet.300'), theme('colors.violet.700'));
   
   --gradient-CTA-text: linear-gradient(to right, theme('colors.yellow.400'), theme('colors.amber.300'), theme('colors.yellow.500'), theme('colors.amber.400'));
   --gradient-CTA-text2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.yellow.300'), theme('colors.amber.300'));
