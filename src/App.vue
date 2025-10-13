@@ -17,7 +17,7 @@
   
   <!-- gradients: purple linear + black radial -->
   <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10" style="background: var(--gradient-purple);"></div>
-  <header id="header" :class="['bg-neutral-900/90 backdrop-blur-sm text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
+  <header id="header" :class="['bg-violet-950/40 backdrop-blur-xl text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
     <div class="max-w-8xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
         <img src="/src/assets/logo bw.png" alt="Slicer" class="h-8 w-auto">
@@ -328,11 +328,10 @@
       </div>
 
       <!-- Subtle divider gradient before features -->
-      <div class="pointer-events-none mt-16 mb-12 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      <div class="pointer-events-none mt-12 mb-16 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
       <!-- FEATURES -->
       <div class="mt-14 lg:mt-28 max-w-2xl lg:max-w-none mx-auto">
-        <h3 class="lg:hidden text-2xl log:text-4xl text-center mb-6 font-bold text-white/80">Advanced Expression Features</h3>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 group">
             <div class="text-center">
@@ -396,11 +395,12 @@
       <!-- Mobile-first text section -->
       <div class="lg:hidden mb-12 text-center pt-8  max-w-4xl  mx-auto">
         <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
-          KNOW IF IT WINS 
-          <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
+          KNOW IF IT
+          <span class="gradient-text-yellow2">WINS BEFORE YOU TRADE IT</span>
         </h2>
-        <p class="text-lg text-neutral-300 mb-8 italic font-light leading-relaxed text-balance">
-          <span class="font-semibold text-white">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. <br/><span class="font-semibold text-white">Just optimize → test → repeat.</span>
+        <p class="text-lg text-neutral-300 mb-8 font-light leading-relaxed max-w-2xl mx-auto text-balance">
+          <span class="font-semibold text-white italic">Replay six months in six seconds.</span>
+            See ROI, win rate, drawdown. No weeks of uncertainty. <span class="font-semibold text-white">Just optimize → test → repeat.</span>
         </p>
         <p class="text-neutral-300 text-balance max-w-2xl mx-auto">
           Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
@@ -412,7 +412,7 @@
           <!-- Large radial glow surrounding the card -->
           <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none" style="background: var(--gradient-radial-feature-backdrop);"></div>
           
-          <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl max-w-2xl lg:max-w-none mx-auto">
+          <div class="relative bg-zinc-950/80 rounded-3xl p-8 border border-white/10 shadow-3xl max-w-2xl lg:max-w-none mx-auto ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 backdrop-blur-[1px]">
             
             <div class="mb-6">
               <h3 class="text-lg mb-1 font-semibold ">Strategy: "Buy when smart money accumulates + sell at 5x or after 72h"</h3>
@@ -420,33 +420,33 @@
             </div>
             
             <div class="grid grid-cols-2 gap-4 mb-6">
-              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
-                <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-violet-500 via-violet-400 to-violet-500 bg-clip-text text-transparent">+247%</div>
-                <div class="text-neutral-400 text-xs font-medium">ROI</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
+                <div class="text-3xl font-semibold mb-1 text-emerald-400">+247%</div>
+                <div class="text-white/40 text-[11px] tracking-wide">ROI</div>
               </div>
-              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
-                <div class="text-3xl font-bold mb-1">68%</div>
-                <div class="text-neutral-400 text-xs font-medium">Win Rate</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
+                <div class="text-3xl text-white font-semibold mb-1">68%</div>
+                <div class="text-white/40 text-[11px] tracking-wide">Win Rate</div>
               </div>
-              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
-                <div class="text-3xl text-red-400 font-bold mb-1">-18%</div>
-                <div class="text-neutral-400 text-xs font-medium">Max DD</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
+                <div class="text-3xl font-semibold mb-1 text-rose-400">-18%</div>
+                <div class="text-white/40 text-[11px] tracking-wide">Max DD</div>
               </div>
-              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
-                <div class="text-3xl font-bold mb-1 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">2.4</div>
-                <div class="text-neutral-400 text-xs font-medium">Sharpe</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
+                <div class="text-3xl text-white font-semibold mb-1">2.4</div>
+                <div class="text-white/40 text-[11px] tracking-wide">Sharpe</div>
               </div>
-              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
-                <div class="text-3xl font-bold mb-1">4.2d</div>
-                <div class="text-neutral-400 text-xs font-medium">Avg Hold</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
+                <div class="text-3xl text-white font-semibold mb-1">4.2d</div>
+                <div class="text-white/40 text-[11px] tracking-wide">Avg Hold</div>
               </div>
-              <div class="bg-white/10 rounded-xl p-4 border border-neutral-700/30">
-                <div class="text-3xl font-bold mb-1">32</div>
-                <div class="text-neutral-400 text-xs font-medium">Total Trades</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-4 border border-white/5">
+                <div class="text-3xl text-white font-semibold mb-1">32</div>
+                <div class="text-white/40 text-[11px] tracking-wide">Total Trades</div>
               </div>
             </div>
             
-            <div class="h-48 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-2xl mb-6 flex items-center justify-center border border-neutral-700/30">
+            <div class="h-48 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl mb-6 flex items-center justify-center border border-white/5">
               <div class="text-center">
                 <div class="text-violet-500/80 mb-3">
                   <i-fa-solid-chart-area class="w-8 h-8" />
@@ -536,30 +536,30 @@
             </div>
             
             <div class="mt-6">
-              <div class="flex justify-between text-xs text-neutral-400 mb-2">
-                <span>6 months → 6 seconds animation</span>
-                <span>Progress: 100%</span>
+              <div class="flex justify-between text-[11px] text-white/55 mb-1">
+                <span>6 months → 6 seconds</span><span>Progress: 100%</span>
               </div>
-              <div class="w-full bg-neutral-700 rounded-full h-2 overflow-hidden">
-                <div class="bg-gradient-to-r from-violet-500 to-violet-400 h-2 rounded-full w-full transition-all duration-300"></div>
+              <div class="h-1.5 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full w-full bg-violet-400 origin-left animate-[progress_6s_linear_1]"></div>
               </div>
             </div>
             
-            <button class="w-full bg-violet-500 hover:bg-violet-600 text-black py-4 rounded-xl mt-6 transition-colors duration-200 font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
+            <button class="w-full bg-violet-500 hover:bg-violet-400 active:bg-violet-600 text-black py-4 rounded-xl mt-6 transition-all duration-200 font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 neon-glow-light relative">
               Run Simulation
             </button>
           </div>
         </div>
         
-        <div class="lg:text-right space-y-12 mt-8 lg:mt-44">
+        <div class="lg:text-right space-y-12 mt-8 lg:mt-32">
           <!-- Desktop-only text section -->
           <div class="hidden lg:block">
-            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight gradient-text-yellow">
-              KNOW IF IT WINS 
-              <span class="gradient-text-yellow2">BEFORE YOU TRADE IT</span>
+            <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight">
+              <span class=" gradient-text-yellow">KNOW IF IT  </span>
+              <span class="text-yellow-200">WINS</span>
+              <span class="gradient-text-yellow2"> BEFORE YOU TRADE IT</span>
             </h2>
-            <p class="text-xl text-neutral-300 mb-16 italic font-light leading-relaxed lg:text-balance text-balnce">
-              <span class="font-semibold text-white">Replay six months in six seconds.</span> <br/>See ROI, win rate, drawdown. <br/>No weeks of uncertainty. <br/><span class="font-semibold text-white">Just optimize → test → repeat.</span>
+            <p class="text-xl text-neutral-300 mb-16 font-light leading-relaxed lg:text-balance text-balnce">
+              <span class="font-semibold text-white italic">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. <span class="font-semibold text-white">Just optimize → test → repeat.</span>
             </p>
           </div>
           
@@ -607,11 +607,10 @@
       </div>
 
        <!-- Subtle divider gradient before features -->
-       <div class="pointer-events-none mt-16 mb-12 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+       <div class="pointer-events-none mt-12 mb-16 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
 
       <div class="mt-14 lg:mt-28">
-        <h3 class="text-2xl log:text-4xl text-center mb-6 font-bold lg:hidden text-white/80  lg:mt-0">Advanced Simulation Features</h3>
         <div class="grid md:grid-cols-3 gap-4 lg:gap-10">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5  transition-all duration-300 flex">
             <div class="flex items-center space-x-4">
@@ -1227,11 +1226,11 @@ export default {
 }
 
 /* sRGB (non-P3) screens → richer but balanced */
-@media not (color-gamut: p3){
+/* @media not (color-gamut: p3){
   :root{
-   /* TODO */
+   TODO: Add color adjustments for non-P3 screens
   }
-}
+} */
 
 
 
@@ -1338,6 +1337,29 @@ export default {
 
 .neon-glow:focus::before {
   opacity: 1;
+  filter: blur(12px);
+}
+
+/* Lighter neon glow for simulation panel CTA */
+.neon-glow-light::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, 
+    rgba(154, 91, 255, 0.6), 
+    rgba(176, 109, 255, 0.4), 
+    rgba(154, 91, 255, 0.6), 
+    rgba(176, 109, 255, 0.4)
+  );
+  border-radius: 14px;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.4;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.neon-glow-light:hover::after {
+  opacity: 0.7;
   filter: blur(12px);
 }
 
@@ -1495,6 +1517,11 @@ button:hover .arrow {
   45%  { transform: translateY(10%);  opacity: 1; }  /* just inside bottom */
   55%  { transform: translateY(10%);  opacity: 1; }  /* micro-hold */
   90%  { opacity: .5; }
+}
+
+@keyframes progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 
 </style>
