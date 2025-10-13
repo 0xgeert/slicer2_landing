@@ -280,7 +280,7 @@
                       <div class="inline-block px-1 py-2 mr-2 mb-2 italic text-xs text-neutral-400">OR</div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
                         <span class="text-amber-100 text-sm font-medium">Time held</span>
-                        <span class="text-blue-400 font-medium text-sm ml-2">≥ 72h</span>
+                        <span class="text-blue-400 font-medium text-sm ml-2">&gt; 72h</span>
                       </div>
                     </div>
                   </div>
@@ -744,19 +744,19 @@
 
                   <label class="block mb-3">
                     <span class="text-xs text-white/60">Trade Size</span>
-                    <input tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                    <input disabled tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
                                   text-white placeholder-white/40 focus:outline-none focus:border-white/20" placeholder="$1,000">
                   </label>
                   
                   <label class="block mb-3">
                     <span class="text-xs text-white/60">Max Slippage</span>
-                    <input tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                    <input disabled tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
                                   text-white placeholder-white/40 focus:outline-none focus:border-white/20" placeholder="2%">
                   </label>
                   
                   <label class="block mb-3">
                     <span class="text-xs text-white/60">Gas Priority</span>
-                    <select tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                    <select disabled tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
                                    text-white focus:outline-none focus:border-white/20">
                       <option>Medium</option>
                       <option>High</option>
@@ -766,7 +766,7 @@
                   
                   <label class="block mb-3">
                     <span class="text-xs text-white/60">Notifications</span>
-                    <select tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                    <select disabled tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
                                    text-white focus:outline-none focus:border-white/20">
                       <option>Telegram</option>
                       <option>Email</option>
@@ -877,9 +877,9 @@
                         </div>
                       </div>
                       <div class="mt-4 grid grid-cols-3 gap-2">
-                        <button tabindex="-1" class="h-9 rounded-lg bg-emerald-400/90 hover:bg-emerald-400 text-black font-medium" aria-label="Approve trade">Approve</button>
-                        <button tabindex="-1" class="h-9 rounded-lg bg-white/8 hover:bg-white/12 text-white/80" aria-label="Skip trade">Skip</button>
-                        <button tabindex="-1" class="h-9 rounded-lg bg-white/8 hover:bg-white/12 text-white/80" aria-label="View trade info">Info</button>
+                        <button disabled tabindex="-1" class="h-9 rounded-lg bg-emerald-400/90 text-black font-medium" aria-label="Approve trade">Approve</button>
+                        <button disabled tabindex="-1" class="h-9 rounded-lg bg-white/8 text-white/80" aria-label="Skip trade">Skip</button>
+                        <button disabled tabindex="-1" class="h-9 rounded-lg bg-white/8 text-white/80" aria-label="View trade info">Info</button>
                       </div>
                     </div>
                   </div>
