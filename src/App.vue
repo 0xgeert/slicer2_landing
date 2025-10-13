@@ -959,7 +959,7 @@
   <section id="cta" class="text-white pt-20 lg:pt-32 pb-20 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" style="padding-bottom: calc(5rem - 150px);">
     <div class="max-w-5xl mx-auto text-center">
       <div class="mb-12 lg:mb-16 pt-8 lg:pt-16 hero-glow">
-        <h2 class="text-[2.6rem] leading-[1] md:text-7xl lg:text-8xl mb-12  font-black tracking-tight gradient-text-yellow text-balance">
+        <h2 class="text-[3.2rem] leading-[1] md:text-7xl lg:text-8xl mb-8 lg:mb-12  font-black tracking-tight gradient-text-yellow text-balance">
           STOP GUESSING <span class="gradient-text-yellow2">START SLICING</span>
         </h2>
         <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance gradient-text-secondary">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
@@ -1027,7 +1027,7 @@
     </div>
   </section>
 </div>
-<div class="relative opacity-70">  
+<div class="relative opacity-70 mt-32">  
   <footer id="footer" class="bg-black text-neutral-400 pt-16 pb- border-t border-white/5 px-4 sm:px-6 lg:px-8">
     <div class="mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -1059,7 +1059,8 @@ export default {
       isExitsSectionExpanded: false,
       isExitBreakdownExpanded: false,
       isTradeSizeImpactExpanded: false,
-      isHeaderVisible: false
+      isHeaderVisible: false,
+      animatingToCTA: false
     }
   },
   methods: {
@@ -1107,6 +1108,15 @@ export default {
         return
       }
       
+      // Special handling for CTA animation - hide header immediately
+      if (sectionId === 'cta') {
+        this.animatingToCTA = true
+        // Reset the flag after animation completes
+        setTimeout(() => {
+          this.animatingToCTA = false
+        }, 1500) // Slightly longer than typical smooth scroll duration
+      }
+      
       // Detect mobile device
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
       const isiOS = /iP(ad|hone|od)/i.test(navigator.userAgent)
@@ -1123,7 +1133,7 @@ export default {
       // Special case: for CTA on mobiile, scroll near the very bottom minus 120px
       // For some reason it doesn't work without this.
       if (sectionId === 'cta' && isiOS) {
-        const bottomMargin = 120
+        const bottomMargin = 350
         const targetY = Math.max(0, maxScrollY - bottomMargin)
         window.scrollTo({ top: targetY, behavior: 'smooth' })
         return
@@ -1134,53 +1144,16 @@ export default {
 
       // Clamp target to avoid hitting the absolute bottom, which causes iOS overshoot
       let targetY = Math.min(offsetPosition, maxScrollY)
-      if (isiOS) {
-        const remaining = maxScrollY - targetY
-        // If we're close to the bottom, pre-compensate so smooth scroll doesn't overshoot when toolbars collapse
-        if (remaining < 160) {
-          const compensation = 160 - remaining // up to ~160px pre-shift
-          targetY = Math.max(0, targetY - compensation)
-        }
-      }
 
-      window.scrollTo({
-        top: targetY,
-        behavior: 'smooth'
-      })
-
-      // iOS Safari/Chrome often overshoot with smooth scrolling; correct after it settles
-      if (isiOS) {
-        const beforeViewportHeight = (window.visualViewport && window.visualViewport.height) || window.innerHeight
-        const startY = window.pageYOffset
-        let lastY = startY
-        let stillFrames = 0
-        const maxDurationMs = 1200
-        const startTs = performance.now()
-        const settleFramesNeeded = 3
-
-        const settleAndCorrect = (ts) => {
-          const y = window.pageYOffset
-          if (Math.abs(y - lastY) < 1) {
-            stillFrames += 1
-          } else {
-            stillFrames = 0
-            lastY = y
-          }
-
-          const timedOut = (ts - startTs) > maxDurationMs
-          if (stillFrames >= settleFramesNeeded || timedOut) {
-            // Compute exact viewport-relative delta to align element top to adjusted offset
-            const topInViewport = element.getBoundingClientRect().top
-            const delta = topInViewport - adjustedOffset
-            if (Math.abs(delta) > 1) window.scrollBy({ top: delta, left: 0, behavior: 'auto' })
-            return
-          }
-          requestAnimationFrame(settleAndCorrect)
-        }
-        requestAnimationFrame(settleAndCorrect)
-      }
+      window.scrollTo({top: targetY,behavior: 'smooth'})
     },
     checkJoinWaitlistVisibility() {
+      // Hide header immediately if animating to CTA
+      if (this.animatingToCTA) {
+        this.isHeaderVisible = false
+        return
+      }
+      
       const ctaContainer = document.getElementById('cta-container')
       const finalCtaContainer = document.getElementById('final-cta')
       
@@ -1192,14 +1165,19 @@ export default {
       const rect = ctaContainer.getBoundingClientRect()
       const finalRect = finalCtaContainer ? finalCtaContainer.getBoundingClientRect() : null
       
+      // Check if CTA section has started rolling in from bottom (100px after section start)
+      const ctaSection = document.getElementById('cta')
+      const ctaSectionRect = ctaSection ? ctaSection.getBoundingClientRect() : null
+      const isCtaSectionRollingIn = ctaSectionRect ? ctaSectionRect.top < (window.innerHeight - 100) : false
+      
       // More lenient visibility check for mobile
       const isAnyWaitlistButtonVisible = rect.top < window.innerHeight && rect.bottom > 0
       
       // Check if final CTA is visible
       const isFinalCtaVisible = finalRect ? finalRect.top < window.innerHeight && finalRect.bottom > 0 : false
       
-      // Hide header if hero waitlist button is visible OR if final CTA is visible
-      this.isHeaderVisible = !isAnyWaitlistButtonVisible && !isFinalCtaVisible
+      // Hide header if hero waitlist button is visible OR if final CTA is visible OR if CTA section is rolling in
+      this.isHeaderVisible = !isAnyWaitlistButtonVisible && !isFinalCtaVisible && !isCtaSectionRollingIn
     }
   },
   mounted() {
@@ -1616,5 +1594,6 @@ button:hover .arrow {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
 }
+
 
 </style>
