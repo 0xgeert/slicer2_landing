@@ -191,7 +191,7 @@
 </div>
 
 <div class="relative overflow-hidden">  
-  <div class="section-linear-bg">&nbsp;</div>
+  <div class="absolute h-[300px] w-full -z-10" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <section id="express" class="text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-8xl mx-auto">
 
@@ -387,7 +387,7 @@
 </div>
 
 <div class="relative overflow-hidden">  
-  <div class="section-linear-bg">&nbsp;</div>
+  <div class="absolute h-[300px] w-full -z-10" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <section id="simulate" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-8xl mx-auto">
       
@@ -660,7 +660,7 @@
   </section>
 </div>
 <div class="relative">  
-  <div class="section-linear-bg">&nbsp;</div>
+  <div class="absolute h-[300px] w-full -z-10" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <section id="deploy" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-8xl mx-auto">
       
@@ -1000,7 +1000,7 @@
   </section>
 </div>
 <div class="relative">  
-  <div class="section-linear-bg">&nbsp;</div>
+  <div class="absolute h-[300px] w-full -z-10" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <!-- gradients: purple linear + black radial -->
   <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10" style="background: var(--gradient-purple);"></div>
 
@@ -1187,68 +1187,37 @@ export default {
 </script>
 
 <style>
-.section-linear-bg{
-  @apply bg-gradient-to-b from-zinc-800 to-transparent absolute h-[300px] w-full -z-10;
-}
 
 /* ===== gamut-aware color system (OKLCH) ===== */
 :root {
-  /* knobs: neutral on P3, tuned for sRGB below */
-  --chroma-scale: 1;
-  --lightness-bump: 1;
 
-  /* neutrals */
-  --zinc-950:  oklch(5% 0 0);
-  --white:     oklch(100% 0 0);
+  /* Usage
+    --gradient-purple: CTA background (2x)
+    --gradient-section-linear: Section background (purple)
+    --gradient-radial-feature-backdrop: Feature background (purple)
+    --gradient-secondary-color: Secondary color (violet). Used for 1 liner: "JOIN THE WAITLIST FOR EARLY ACCESS"
+    --gradient-CTA-text: Yellow color (yellow), Used for yellow CTA + Section lead in. 
+    --gradient-CTA-text2: Yellow color (yellow), Used for yellow CTA + Section lead in. 
+    --gradient-CTA-glow: Hero glow (yellow and violet). Used for CTA glow
+  */
+  --gradient-purple: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 80%, transparent), transparent);
+  --gradient-section-linear: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 50%, transparent), transparent);
+  --gradient-radial-feature-backdrop: radial-gradient(circle, color-mix(in oklch,theme('colors.violet.950') 70%, transparent), transparent);
 
-  /* yellows / golds */
-  --amber-200:  oklch(calc(92% * var(--lightness-bump)) calc(0.08 * var(--chroma-scale)) 75);
-  --amber-300:  oklch(calc(88% * var(--lightness-bump)) calc(0.12 * var(--chroma-scale)) 75);
-  --amber-400:  oklch(calc(82% * var(--lightness-bump)) calc(0.16 * var(--chroma-scale)) 75);
-  --amber-500:  oklch(calc(70% * var(--lightness-bump)) calc(0.20 * var(--chroma-scale)) 75);
+  --gradient-secondary-color: linear-gradient(to right, theme('colors.violet.400'), theme('colors.violet.600'));
+  
+  --gradient-CTA-text: linear-gradient(to right, theme('colors.yellow.400'), theme('colors.amber.300'), theme('colors.yellow.500'), theme('colors.amber.400'));
+  --gradient-CTA-text2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.yellow.300'), theme('colors.amber.300'));
 
-  --yellow-300: oklch(calc(90% * var(--lightness-bump)) calc(0.12 * var(--chroma-scale)) 85);
-  --yellow-400: oklch(calc(85% * var(--lightness-bump)) calc(0.15 * var(--chroma-scale)) 85);
-  --yellow-500: oklch(calc(80% * var(--lightness-bump)) calc(0.18 * var(--chroma-scale)) 85);
+  --gradient-CTA-glow: radial-gradient(80% 40% at 50% 23%, color-mix(in oklch, theme('colors.yellow.300') 25%, transparent), transparent 50%);
+                             
 
-  /* electric violet colors */
-  --violet-400:    oklch(calc(80% * var(--lightness-bump)) calc(0.18 * var(--chroma-scale)) 300);
-  --violet-500:    oklch(calc(65% * var(--lightness-bump)) calc(0.18 * var(--chroma-scale)) 300);
-  --violet-600:    oklch(calc(55% * var(--lightness-bump)) calc(0.18 * var(--chroma-scale)) 300);
-  --emerald-400: oklch(calc(75% * var(--lightness-bump)) calc(0.12 * var(--chroma-scale)) 160);
-  --emerald-600: oklch(calc(55% * var(--lightness-bump)) calc(0.14 * var(--chroma-scale)) 160);
-
-  /* purples */
-  --purple-900:  oklch(calc(25% * var(--lightness-bump)) calc(0.12 * var(--chroma-scale)) 280);
-  --purple-950:  oklch(calc(15% * var(--lightness-bump)) calc(0.08 * var(--chroma-scale)) 280);
-
-  /* translucent helpers (lazy-resolve from base tokens) */
-  --white-t-15:      color-mix(in oklch, var(--white) 15%, transparent);
-  --white-t-30:      color-mix(in oklch, var(--white) 30%, transparent);
-  --amber-500-t-10:  color-mix(in oklch, var(--amber-500) 10%, transparent);
-  --yellow-300-t-15: color-mix(in oklch, var(--yellow-300) 15%, transparent);
-  --violet-400-t-10:   color-mix(in oklch, var(--violet-400) 10%, transparent);
-  --purple-900-t-80: color-mix(in oklch, var(--purple-900) 80%, transparent);
-
-  /* gradients (exhaustive, incl. secondary) */
-  --gradient-secondary-color:  linear-gradient(to right, var(--violet-400), var(--violet-600));
-  --gradient-purple:        linear-gradient(to bottom, var(--purple-900-t-80), transparent);
-  --gradient-yellow:        linear-gradient(to right, var(--yellow-400), var(--amber-300), var(--yellow-500), var(--amber-400));
-  --gradient-yellow2:       linear-gradient(to right, var(--amber-200), var(--yellow-300), var(--amber-300));
-  --gradient-hero-glow:     radial-gradient(48rem 20rem at 50% 18%, var(--yellow-300-t-15), transparent 50%),
-                             radial-gradient(52rem 26rem at 50% 42%, var(--violet-400-t-10), transparent 70%);
-  --gradient-radial-feature-backdrop: radial-gradient(
-    circle, 
-    color-mix(in oklch,theme('colors.violet.950') 70%, transparent), 
-    transparent
-  );
 }
 
 /* sRGB (non-P3) screens → richer but balanced */
 @media not (color-gamut: p3){
   :root{
-    --chroma-scale: 1.15;   /* try 1.25–1.45 */
-    --lightness-bump: 1.1; /* tiny lift to avoid muddy yellows */
+   /* TODO */
   }
 }
 
@@ -1256,7 +1225,7 @@ export default {
 
 /* Apply gradients to text */
 .gradient-text-yellow{
-  background: var(--gradient-yellow);
+  background: var(--gradient-CTA-text);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1264,7 +1233,7 @@ export default {
 }
 
 .gradient-text-yellow2 {
-  background: var(--gradient-yellow2);
+  background: var(--gradient-CTA-text2);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1323,7 +1292,7 @@ export default {
   right: 0;
   bottom: 0;
   pointer-events: none;
-  background: var(--gradient-hero-glow);
+  background: var(--gradient-CTA-glow);
   filter: blur(2px);
 }
 
