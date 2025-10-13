@@ -27,7 +27,7 @@
         <button @click="scrollToSection('simulate', 100)" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Simulate</button>
         <button @click="scrollToSection('deploy', 100)" class="text-neutral-300 hover:text-white transition-colors cursor-pointer font-medium bg-transparent border-none outline-none">Deploy</button>
       </nav>
-      <button class="cta-ghost font-medium flex items-center justify-center gap-2">
+      <button @click="scrollToSection('cta')" class="cta-ghost font-medium flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
         Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
       </button>
     </div>
@@ -53,49 +53,22 @@
 
 
       <div id='cta-container' class="cta-container backdrop-blur-sm rounded-2xl px-4 pt-4 sm:px-5 sm:pt-5 lg:px-6 lg:pt-6 max-w-2xl mx-4 sm:mx-auto -mt-10 lg:mt-0">
-        <!-- Mobile: Separate input and button -->
+        <!-- Mobile: Button only -->
         <div class="flex flex-col space-y-3 sm:hidden">
-          <input 
-            type="email" 
-            placeholder="Enter your email address" 
-            class="
-              w-full  px-4 py-4 rounded-2xl 
-              bg-white/5 border border-white/10 
-              backdrop-blur-sm
-              text-white 
-              focus:bg-white/10 focus:border-violet-500
-              focus:outline-none focus:ring-2 focus:ring-violet-500
-              transition duration-200
-              placeholder-white/80"
-          >
-          <button class="w-full bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 shadow-lg hover:shadow-xl hover:scale-105 transform-gpu">
+          <button @click="scrollToSection('cta')" class="w-full bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-6 py-4 transition-all duration-200 font-semibold text-base rounded-2xl flex items-center justify-center gap-2 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 shadow-lg hover:shadow-xl hover:scale-105 transform-gpu">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
         
-        <!-- Desktop: Separate input and button -->
-        <div class="hidden sm:flex gap-4">
-          <input 
-            type="email" 
-            placeholder="Enter your email address" 
-            class="flex-1 px-6 py-5 rounded-2xl 
-              bg-white/5 border border-white/10 
-              backdrop-blur-sm
-              text-white 
-              focus:bg-white/10 focus:border-violet-500 
-              focus:outline-none focus:ring-2 focus:ring-violet-500
-              transition duration-200
-              placeholder-white/80"
-          >
-          <button class="bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transform-gpu">
+        <!-- Desktop: Button only -->
+        <div class="hidden sm:flex justify-center">
+          <button @click="scrollToSection('cta')" class="bg-gradient-to-br from-violet-500 via-violet-400 to-violet-600 hover:from-violet-400 hover:via-violet-300 hover:to-violet-500 text-black px-10 py-5 transition-all duration-300 ease-out font-semibold text-lg rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 relative neon-glow focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transform-gpu">
             Join Waitlist <i-fa-solid-arrow-right class="w-4 h-4 arrow" />
           </button>
         </div>
       </div>
 
       <div class="text-center mt-4 text-neutral-300 text-balance text-xs md:text-sm hero-text">
-        <p class="hero-text-line">Get early access when Slicer 2.0 opens private beta.</p>
-        <p class="hero-text-line"> No spam. Unsubscribe anytime.</p>
          <div class="mt-4 hidden sm:block hero-link">
            <button @click="scrollToSection('simulate', 100)" class="hover:underline text-violet-300/80 transition-all duration-200 bg-transparent border-2 border-transparent outline-none focus:border-violet-500 cursor-pointer rounded-lg px-3 py-2">Watch a 6-second sim <span class="arrow">→</span></button>
          </div>
@@ -200,6 +173,7 @@
         <!-- LEFT: Headline + paragraph -->
         <div class="space-y-10">
           <div class="text-center lg:text-left pt-6 lg:pt-16">
+            <div class="text-xs font-bold tracking-widest text-violet-400/80 uppercase mb-1">EXPRESS 1/3</div>
             <h2 class="text-[2.6rem] leading-[1] md:text-6xl lg:text-6xl mb-6 leading-tighter font-black tracking-[-0.015em] gradient-text-yellow text-balance">
               BUILD VISUALLY OR
               <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span>
@@ -392,6 +366,7 @@
       
       <!-- Mobile-first text section -->
       <div class="lg:hidden mb-12 text-center pt-8  max-w-4xl  mx-auto">
+        <div class="text-xs font-bold tracking-widest text-violet-400/80 uppercase mb-1">SIMULATE 2/3</div>
         <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
           KNOW IF IT
           <span class="gradient-text-yellow2">WINS BEFORE YOU TRADE IT</span>
@@ -553,6 +528,7 @@
         <div class="lg:text-right space-y-12 mt-8 lg:mt-32">
           <!-- Desktop-only text section -->
           <div class="hidden lg:block">
+            <div class="text-xs font-bold tracking-widest text-violet-400/80 uppercase mb-1">SIMULATE 2/3</div>
             <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight">
               <span class=" gradient-text-yellow">KNOW IF IT  </span>
               <span class="text-yellow-200">WINS</span>
@@ -667,6 +643,7 @@
     <div class="max-w-6xl mx-auto">
       
       <div class="text-center mb-12 lg:mb-20 pt-8 lg:pt-16">
+        <div class="text-xs font-bold tracking-widest text-violet-400/80 uppercase mb-1">DEPLOY 3/3</div>
         <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 font-black tracking-tight text-balance">
           <span class="gradient-text-yellow">DEPLOY <span class="gradient-text-yellow2">ON YOUR TERMS</span></span>
         </h2>
@@ -979,7 +956,7 @@
   <!-- gradients: purple linear + black radial -->
   <div class="absolute inset-x-0 h-[80vh] pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-violet);"></div>
 
-  <section id="cta" class="text-white pt-20 lg:pt-32 pb-20 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="cta" class="text-white pt-20 lg:pt-32 pb-20 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" style="padding-bottom: calc(5rem - 150px);">
     <div class="max-w-5xl mx-auto text-center">
       <div class="mb-12 lg:mb-16 pt-8 lg:pt-16 hero-glow">
         <h2 class="text-[2.6rem] leading-[1] md:text-7xl lg:text-8xl mb-12  font-black tracking-tight gradient-text-yellow text-balance">
@@ -988,7 +965,7 @@
         <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance gradient-text-secondary">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
       </div>
       
-      <div class="max-w-2xl mx-auto mb-12">
+      <div id="final-cta" class="max-w-2xl mx-auto mb-12">
         <!-- Mobile: Separate input and button -->
         <div class="flex flex-col space-y-3 sm:hidden">
           <input 
@@ -1140,6 +1117,7 @@ export default {
     },
     checkJoinWaitlistVisibility() {
       const ctaContainer = document.getElementById('cta-container')
+      const finalCtaContainer = document.getElementById('final-cta')
       
       if (!ctaContainer) {
         this.isHeaderVisible = true
@@ -1147,12 +1125,16 @@ export default {
       }
       
       const rect = ctaContainer.getBoundingClientRect()
+      const finalRect = finalCtaContainer ? finalCtaContainer.getBoundingClientRect() : null
       
       // More lenient visibility check for mobile
       const isAnyWaitlistButtonVisible = rect.top < window.innerHeight && rect.bottom > 0
       
-      // Hide header if waitlist button is visible
-      this.isHeaderVisible = !isAnyWaitlistButtonVisible
+      // Check if final CTA is visible
+      const isFinalCtaVisible = finalRect ? finalRect.top < window.innerHeight && finalRect.bottom > 0 : false
+      
+      // Hide header if hero waitlist button is visible OR if final CTA is visible
+      this.isHeaderVisible = !isAnyWaitlistButtonVisible && !isFinalCtaVisible
     }
   },
   mounted() {
