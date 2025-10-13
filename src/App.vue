@@ -1158,12 +1158,17 @@ export default {
       }
       
       const finalCtaContainer = document.getElementById('final-cta')
+      const ctaSection = document.getElementById('cta')
       
       // Check if final CTA is visible - hide header when bottom CTA is reached
       const finalRect = finalCtaContainer ? finalCtaContainer.getBoundingClientRect() : null
       const isFinalCtaVisible = finalRect ? finalRect.top < window.innerHeight && finalRect.bottom > 0 : false
       
-      if (isFinalCtaVisible) {
+      // Check if we're in the CTA section area (more comprehensive check)
+      const ctaSectionRect = ctaSection ? ctaSection.getBoundingClientRect() : null
+      const isInCtaSection = ctaSectionRect ? ctaSectionRect.top < window.innerHeight && ctaSectionRect.bottom > 0 : false
+      
+      if (isFinalCtaVisible || isInCtaSection) {
         this.isHeaderVisible = false
         return
       }
@@ -1175,7 +1180,7 @@ export default {
       const viewportHeight = window.innerHeight
       const maxScroll = docHeight - viewportHeight
       
-      // Show header after 55% scroll
+      // Show header after 60% scroll
       const scrollProgress = scrollTop / maxScroll
       const showThreshold = 0.60
       
