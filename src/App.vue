@@ -69,7 +69,7 @@
       </div>
 
       <div class="text-center mt-4 text-neutral-300 text-balance text-xs md:text-sm hero-text">
-         <div class="mt-4 hidden sm:block hero-link">
+         <div class="mt-4 hero-link">
            <button @click="scrollToSection('simulate', 100)" class="hover:underline text-violet-300/80 transition-all duration-200 bg-transparent border-2 border-transparent outline-none focus:border-violet-500 cursor-pointer rounded-lg px-3 py-2">Watch a 6-second sim <span class="arrow">→</span></button>
          </div>
       </div>
@@ -1107,13 +1107,78 @@ export default {
         return
       }
       
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
-      const offsetPosition = elementPosition - offset
+      // Detect mobile device
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      const isiOS = /iP(ad|hone|od)/i.test(navigator.userAgent)
       
+      // On mobile -> less 300px for safari + chrome in Iphone
+      // Matic numbers suck, but can't find rationale behind it.
+      // const adjustedOffset = isMobile ? offset + 300 : offset
+      const adjustedOffset = offset // for now
+
+      // Shared measurements
+      const docEl = document.documentElement
+      const maxScrollY = Math.max(0, (docEl.scrollHeight - window.innerHeight))
+
+      // Special case: for CTA on mobiile, scroll near the very bottom minus 120px
+      // For some reason it doesn't work without this.
+      if (sectionId === 'cta' && isiOS) {
+        const bottomMargin = 120
+        const targetY = Math.max(0, maxScrollY - bottomMargin)
+        window.scrollTo({ top: targetY, behavior: 'smooth' })
+        return
+      }
+
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - adjustedOffset
+
+      // Clamp target to avoid hitting the absolute bottom, which causes iOS overshoot
+      let targetY = Math.min(offsetPosition, maxScrollY)
+      if (isiOS) {
+        const remaining = maxScrollY - targetY
+        // If we're close to the bottom, pre-compensate so smooth scroll doesn't overshoot when toolbars collapse
+        if (remaining < 160) {
+          const compensation = 160 - remaining // up to ~160px pre-shift
+          targetY = Math.max(0, targetY - compensation)
+        }
+      }
+
       window.scrollTo({
-        top: offsetPosition,
+        top: targetY,
         behavior: 'smooth'
       })
+
+      // iOS Safari/Chrome often overshoot with smooth scrolling; correct after it settles
+      if (isiOS) {
+        const beforeViewportHeight = (window.visualViewport && window.visualViewport.height) || window.innerHeight
+        const startY = window.pageYOffset
+        let lastY = startY
+        let stillFrames = 0
+        const maxDurationMs = 1200
+        const startTs = performance.now()
+        const settleFramesNeeded = 3
+
+        const settleAndCorrect = (ts) => {
+          const y = window.pageYOffset
+          if (Math.abs(y - lastY) < 1) {
+            stillFrames += 1
+          } else {
+            stillFrames = 0
+            lastY = y
+          }
+
+          const timedOut = (ts - startTs) > maxDurationMs
+          if (stillFrames >= settleFramesNeeded || timedOut) {
+            // Compute exact viewport-relative delta to align element top to adjusted offset
+            const topInViewport = element.getBoundingClientRect().top
+            const delta = topInViewport - adjustedOffset
+            if (Math.abs(delta) > 1) window.scrollBy({ top: delta, left: 0, behavior: 'auto' })
+            return
+          }
+          requestAnimationFrame(settleAndCorrect)
+        }
+        requestAnimationFrame(settleAndCorrect)
+      }
     },
     checkJoinWaitlistVisibility() {
       const ctaContainer = document.getElementById('cta-container')
