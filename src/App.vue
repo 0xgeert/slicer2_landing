@@ -673,38 +673,61 @@
         </p>
       </div>
       
-      <!-- Horizontal Tabs -->
+      <!-- Segmented Control Tabs -->
       <div class="max-w-4xl mx-auto">
-        <!-- Tab Navigation -->
-        <div class="flex space-x-1 mb-16 bg-white/10 rounded-2xl p-2 border border-white/5">
-          <button 
-            @click="activeTab = 'hands-off'"
-            :class="[
-              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500',
-              activeTab === 'hands-off' 
-                ? 'bg-transparent border-2 border-violet-500 text-violet-500' 
-                : 'text-neutral-400 hover:text-white hover:bg-white/5 border-2 border-transparent'
-            ]"
-          >
-            Hands-Off Auto-Trading
-          </button>
-          <button 
-            @click="activeTab = 'human-loop'"
-            :class="[
-              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500',
-              activeTab === 'human-loop' 
-                ? 'bg-transparent border-2 border-violet-500 text-violet-500' 
-                : 'text-neutral-400 hover:text-white hover:bg-white/5 border-2 border-transparent'
-            ]"
-          >
-            Human-in-the-Loop
-          </button>
+        <!-- Tablist -->
+        <div
+          role="tablist" 
+          aria-label="Deploy modes"
+          class="relative mx-auto mt-4 w-full max-w-3xl rounded-2xl bg-white/5 p-1 ring-1 ring-white/10 mb-16 focus-within:ring-2 focus-within:ring-violet-500/50"
+        >
+          <!-- sliding indicator -->
+          <span 
+            id="mode-indicator"
+            class="pointer-events-none absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)]
+                   rounded-xl bg-white/10 shadow-[0_0_0_1px_rgba(255,255,255,.08)_inset]
+                   transition-[transform] duration-300 ease-[cubic-bezier(.2,.8,.2,1)]"
+            :style="{ transform: activeTab === 'hands-off' ? 'translateX(0%)' : 'translateX(100%)' }"
+          ></span>
+
+          <div class="grid grid-cols-2 gap-2 relative">
+            <button
+              id="tab-auto" 
+              role="tab" 
+              :aria-selected="activeTab === 'hands-off'" 
+              aria-controls="panel-auto"
+              @click="activeTab = 'hands-off'"
+              @keydown="handleKeydown"
+              class="h-11 rounded-xl text-sm font-medium focus:outline-none"
+              :class="activeTab === 'hands-off' ? 'text-white/90' : 'text-white/70 hover:text-white/90'"
+            >
+              Hands-Off Auto-Trading
+            </button>
+            <button
+              id="tab-hil" 
+              role="tab" 
+              :aria-selected="activeTab === 'human-loop'" 
+              aria-controls="panel-hil"
+              @click="activeTab = 'human-loop'"
+              @keydown="handleKeydown"
+              class="h-11 rounded-xl text-sm font-medium focus:outline-none"
+              :class="activeTab === 'human-loop' ? 'text-white/90' : 'text-white/70 hover:text-white/90'"
+            >
+              Human-in-the-Loop
+            </button>
+          </div>
         </div>
 
         <!-- Tab Content -->
         <div class="min-h-[600px]">
           <!-- Hands-Off Auto-Trading Tab -->
-          <div v-if="activeTab === 'hands-off'" class="space-y-8">
+          <div 
+            id="panel-auto"
+            role="tabpanel"
+            aria-labelledby="tab-auto"
+            v-if="activeTab === 'hands-off'" 
+            class="space-y-8"
+          >
             <div class="text-center mb-12">
               <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-violet-400/80/80">HANDS-OFF AUTO-TRADING</h3>
               <p class="text-xl text-neutral-300 italic">Set it. Forget it. Smile.</p>
@@ -821,7 +844,13 @@
           </div>
 
           <!-- Human-in-the-Loop Tab -->
-          <div v-if="activeTab === 'human-loop'" class="space-y-8">
+          <div 
+            id="panel-hil"
+            role="tabpanel"
+            aria-labelledby="tab-hil"
+            v-if="activeTab === 'human-loop'" 
+            class="space-y-8"
+          >
             <div class="text-center ">
               <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-violet-400/80/80">HUMAN-IN-THE-LOOP</h3>
               <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
@@ -1116,6 +1145,31 @@ export default {
     }
   },
   methods: {
+    handleKeydown(event) {
+      const tabs = ['hands-off', 'human-loop']
+      const currentIndex = tabs.indexOf(this.activeTab)
+      
+      switch (event.key) {
+        case 'ArrowLeft':
+          event.preventDefault()
+          const prevIndex = currentIndex > 0 ? currentIndex - 1 : tabs.length - 1
+          this.activeTab = tabs[prevIndex]
+          break
+        case 'ArrowRight':
+          event.preventDefault()
+          const nextIndex = currentIndex < tabs.length - 1 ? currentIndex + 1 : 0
+          this.activeTab = tabs[nextIndex]
+          break
+        case 'Home':
+          event.preventDefault()
+          this.activeTab = tabs[0]
+          break
+        case 'End':
+          event.preventDefault()
+          this.activeTab = tabs[tabs.length - 1]
+          break
+      }
+    },
     toggleSignalSection() {
       this.isSignalSectionExpanded = !this.isSignalSectionExpanded
     },
