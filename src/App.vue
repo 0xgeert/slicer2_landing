@@ -111,10 +111,10 @@
                   border-2 md:border-4 border-neutral-200/20
                   bg-transparent
                   hover:bg-neutral-200/10
-                  motion-safe:animate-[nudge_3s_ease-in-out_infinite]
+                  motion-safe:animate-[nudge_4s_ease-in-out_infinite] md:animate-[nudge_3.5s_ease-in-out_infinite] lg:animate-[nudge_3s_ease-in-out_infinite]
                   cursor-pointer"
         >
-          <i-heroicons-solid-arrow-down class="w-8 h-8" />
+          <i-heroicons-solid-arrow-down class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
         </button>
        </div>
 
@@ -227,8 +227,9 @@
           <div class="lg:mb-6">
             <div class="flex flex-col items-center ">
               <!-- Speech bubble -->
-              <div class="relative inline-block">
-                <div class="bg-white rounded-3xl px-8 py-6 shadow-white/10 shadow-xl max-w-lg lg:max-w-xl relative ">
+              <div class="relative inline-block ">
+                <div class="bg-white rounded-3xl px-8 py-6 shadow-white/10 shadow-xl max-w-lg lg:max-w-xl relative neon-glow">
+                <div class="absolute inset-0 -inset-x-16 -inset-y-16 blur-3xl pointer-eventsnone -z-10" style="background: var(--gradient-radial-feature-backdrop);"></div>
                   <p class="text-gray-800 text-lg lg:text-2xl lg:leading-relaxed font-medium italic text-center text-balance">
                     Buy when smart money accumulates for 48h while retail is exiting.<br>
                     Sell when price goes up 5x or after 72h.
@@ -253,7 +254,7 @@
                     <!-- Buy -->
                     <div class="inline-block rounded-lg p-2">
                       <div class="inline-block bg-violet-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-violet-400/80 text-sm font-semibold">Buy at</span>
+                        <span class="text-violet-400 text-sm font-bold">Buy at</span>
                         <i-heroicons-solid-chevron-down class="w-3 h-3 text-violet-400/80 ml-1 inline" />
                       </div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
@@ -269,7 +270,7 @@
                     <!-- Sell -->
                     <div class="inline-block rounded-lg p-2">
                       <div class="inline-block bg-red-500/20 rounded-lg px-3 py-2 mr-2 mb-2">
-                        <span class="text-red-400 text-sm font-semibold">Sell at</span>
+                        <span class="text-red-400 text-sm font-bold">Sell at</span>
                         <i-heroicons-solid-chevron-down class="w-3 h-3 text-red-400 ml-1 inline" />
                       </div>
                       <div class="inline-block bg-white/5 rounded-lg px-3 py-2 mr-2 mb-2">
@@ -680,10 +681,10 @@
           <button 
             @click="activeTab = 'hands-off'"
             :class="[
-              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900',
+              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500',
               activeTab === 'hands-off' 
-                ? 'bg-violet-500 text-black' 
-                : 'text-neutral-400 hover:text-white hover:bg-white/5'
+                ? 'bg-transparent border-2 border-violet-500 text-violet-500' 
+                : 'text-neutral-400 hover:text-white hover:bg-white/5 border-2 border-transparent'
             ]"
           >
             Hands-Off Auto-Trading
@@ -691,10 +692,10 @@
           <button 
             @click="activeTab = 'human-loop'"
             :class="[
-              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900',
+              'flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500',
               activeTab === 'human-loop' 
-                ? 'bg-violet-500 text-black' 
-                : 'text-neutral-400 hover:text-white hover:bg-white/5'
+                ? 'bg-transparent border-2 border-violet-500 text-violet-500' 
+                : 'text-neutral-400 hover:text-white hover:bg-white/5 border-2 border-transparent'
             ]"
           >
             Human-in-the-Loop
@@ -1214,8 +1215,14 @@ export default {
   --gradient-CTA-text: linear-gradient(to right, theme('colors.yellow.400'), theme('colors.amber.300'), theme('colors.yellow.500'), theme('colors.amber.400'));
   --gradient-CTA-text2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.yellow.300'), theme('colors.amber.300'));
 
-  --gradient-CTA-glow: radial-gradient(100% 80% at 50% 50%, color-mix(in oklch, theme('colors.yellow.300') 25%, transparent), transparent 50%);
-                             
+
+  --gradient-CTA-glow: radial-gradient(
+    100% 80% at 50% 50%,
+    color-mix(in oklch, theme('colors.yellow.300') 30%, transparent) 0%,
+    color-mix(in oklch, theme('colors.violet.800') 10%, transparent) 40%,
+    transparent 70%
+  );
+
 
 }
 
