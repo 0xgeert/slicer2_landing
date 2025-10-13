@@ -12,6 +12,11 @@
         <stop offset="0%" style="stop-color:#9A5BFF;stop-opacity:1" />
         <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
       </linearGradient>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
     </defs>
   </svg>
   
@@ -169,14 +174,19 @@
         </div>
 
         <!-- RIGHT: Speech → Filter demo (scaled/uncrowded) -->
-        <div class="mt-4 lg:mt-6 lg:pl-4 xl:pl-8 xl:-mr-8">
+        <div class="mt-4 lg:mt-6 lg:pl-4  lg:-mr-4 xl:pl-8 xl:-mr-8">
           <div class="mb-6">
-            <div class="flex space-x-3 justify-center">
-              <div class="w-3 h-3 bg-violet-500 rounded-full"></div>
-              <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
-              <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
-              <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
-              <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
+            <div class="gooey-dots flex justify-center">
+              <div class="flex items-center gap-2">
+                <span
+                  v-for="(n, idx) in expressTotalDots"
+                  :key="'dot-' + idx"
+                  class="carousel-dot rounded-full"
+                  :class="[
+                    idx === expressActiveIndex ? 'is-active bg-violet-500' : (idx === nextExpressIndex ? 'is-next bg-violet-400/80' : 'bg-neutral-600')
+                  ]"
+                ></span>
+              </div>
             </div>
           </div>
 
@@ -186,7 +196,7 @@
               <div class="relative inline-block ">
                 <div class="bg-white rounded-3xl px-8 py-6 shadow-white/10 shadow-xl max-w-lg lg:max-w-xl relative neon-glow">
                 <div class="absolute inset-0 -inset-x-16 -inset-y-16 blur-3xl pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-radial-feature-backdrop);"></div>
-                  <p class="text-gray-800 text-lg lg:text-2xl lg:leading-relaxed font-medium italic text-center text-balance">
+                  <p class="text-gray-800 text-[1.28rem] lg:leading-relaxed font-medium italic text-center text-balance">
                     Buy when smart money accumulates for 48h while retail is exiting.<br>
                     Sell when price goes up 5x or after 72h.
                   </p>
@@ -203,7 +213,7 @@
 
               <!-- Filter blocks -->
                
-              <div class="relative rounded-2xl border border-white/10 w-full max-w-2xl shadow-2xl">
+              <div class="relative rounded-2xl border border-white/10 w-full max-w-lg lg:max-w-xl shadow-2xl">
                 <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-radial-feature-backdrop);"></div>
                 <div class="w-full h-full bg-zinc-500/10 rounded-2xl">
                   <div class="p-2">
@@ -1038,6 +1048,9 @@ export default {
   data() {
     return {
       activeTab: 'hands-off',
+      // carousel for Express section demo
+      expressActiveIndex: 0,
+      expressTotalDots: 5,
       isSignalSectionExpanded: false,
       isExitsSectionExpanded: false,
       isExitBreakdownExpanded: false,
@@ -1047,7 +1060,15 @@ export default {
       clickedDeployStrategy: false
     }
   },
+  computed: {
+    nextExpressIndex() {
+      return (this.expressActiveIndex + 1) % this.expressTotalDots
+    }
+  },
   methods: {
+    cycleExpressDots() {
+      this.expressActiveIndex = (this.expressActiveIndex + 1) % this.expressTotalDots
+    },
     handleKeydown(event) {
       const tabs = ['hands-off', 'human-loop']
       const currentIndex = tabs.indexOf(this.activeTab)
@@ -1206,6 +1227,9 @@ export default {
     // Check initial state
     this.checkJoinWaitlistVisibility()
     
+    // Auto-cycling disabled for now
+    // this._expressInterval = setInterval(this.cycleExpressDots, 2400)
+
     // Store handler for cleanup
     this.scrollHandler = throttledScrollHandler
   },
@@ -1215,6 +1239,9 @@ export default {
       window.removeEventListener('scroll', this.scrollHandler)
       window.removeEventListener('touchmove', this.scrollHandler)
     }
+    // if (this._expressInterval) {
+    //   clearInterval(this._expressInterval)
+    // }
   }
 }
 </script>
@@ -1602,5 +1629,27 @@ button:hover .arrow {
   to { transform: scaleX(1); }
 }
 
+
+/* ===== Gooey carousel dots ===== */
+.gooey-dots {
+  filter: url(#goo);
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  transition: width .35s ease, height .35s ease, background-color .2s ease, transform .35s ease;
+}
+
+.carousel-dot.is-active {
+  width: 16px;
+  height: 16px;
+  transform: translateX(1px);
+}
+
+.carousel-dot.is-next {
+  width: 12px;
+  height: 12px;
+}
 
 </style>
