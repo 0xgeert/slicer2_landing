@@ -169,7 +169,7 @@
         </div>
 
         <!-- RIGHT: Speech → Filter demo (scaled/uncrowded) -->
-        <div class="mt-4 lg:mt-6 xl:pl-8 xl:-mr-8">
+        <div class="mt-4 lg:mt-6 lg:pl-4 xl:pl-8 xl:-mr-8">
           <div class="mb-6">
             <div class="flex space-x-3 justify-center">
               <div class="w-3 h-3 bg-violet-500 rounded-full"></div>
@@ -389,30 +389,30 @@
               Run Simulation
             </button>
             
-            <div class="grid grid-cols-2 gap-3 mb-6">
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
-                <div class="text-2xl font-semibold text-emerald-400">+247%</div>
-                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">ROI</div>
+            <div class="grid grid-cols-2 gap-3 md:gap-4 mb-6">
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="text-2xl md:text-3xl font-semibold text-emerald-400">+247%</div>
+                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">ROI</div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
-                <div class="text-2xl text-white font-semibold">68%</div>
-                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">Win Rate</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="text-2xl md:text-3xl text-white font-semibold">68%</div>
+                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">Win Rate</div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
-                <div class="text-2xl font-semibold text-rose-400">-18%</div>
-                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">Max DD</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="text-2xl md:text-3xl font-semibold text-rose-400">-18%</div>
+                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">Max DD</div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
-                <div class="text-2xl text-white font-semibold">2.4</div>
-                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">Sharpe</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="text-2xl md:text-3xl text-white font-semibold">2.4</div>
+                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">Sharpe</div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
-                <div class="text-2xl text-white font-semibold">4.2d</div>
-                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">Avg Hold</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="text-2xl md:text-3xl text-white font-semibold">4.2d</div>
+                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">Avg Hold</div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 border border-white/5 relative">
-                <div class="text-2xl text-white font-semibold">32</div>
-                <div class="absolute top-1 right-2 text-white/40 text-[10px] tracking-wide">Total Trades</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="text-2xl md:text-3xl text-white font-semibold">32</div>
+                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">Total Trades</div>
               </div>
             </div>
             
