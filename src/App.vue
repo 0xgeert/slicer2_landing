@@ -16,7 +16,7 @@
   </svg>
   
   <!-- gradients: purple linear + black radial -->
-  <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-purple);"></div>
+  <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-violet);"></div>
   <header id="header" :class="['bg-violet-950/40 backdrop-blur-xl text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
@@ -298,7 +298,7 @@
       <div class="flex mt-32 lg:mt-0 mb-2 max-w-2xl mx-auto  flex-col items-center ">
         <button
           @click="toggleSignalSection"
-          class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6 flex  items-center justify-center gap-2"
+          class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/10 hover:bg-white/15 rounded-xl py-4 px-6 flex  items-center justify-center gap-2"
         >
             <h3 class="text-xl font-bold text-violet-500/80/85 text-balance">Every signal, every slice, at your fingertips</h3>
             <i-heroicons-solid-chevron-down
@@ -579,7 +579,7 @@
       <div class="flex mb-2 max-w-2xl mx-auto  flex-col items-center">
         <button 
           @click="toggleExitsSection"
-          class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/5 hover:bg-white/10 rounded-xl py-4 px-6 flex items-center justify-center gap-2"
+          class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 bg-white/10 hover:bg-white/15 rounded-xl py-4 px-6 flex items-center justify-center gap-2"
         >
           <div class="flex items-center justify-between gap-2">
             <h3 class="w-full text-xl font-bold text-violet-500/80/80 text-balance transition-all lg:text-right">Flexible exits match your strategy</h3>
@@ -607,9 +607,6 @@
           </div>
         </div>
       </div>
-
-       <!-- Subtle divider gradient before features -->
-       <div class="pointer-events-none mt-12 mb-16 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
 
       <div class="mt-14 lg:mt-28">
@@ -670,8 +667,8 @@
         <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 font-black tracking-tight text-balance">
           <span class="gradient-text-yellow">DEPLOY <span class="gradient-text-yellow2">ON YOUR TERMS</span></span>
         </h2>
-        <p class="text-xl text-neutral-300 italic font-light leading-relaxed max-w-4xl mx-auto text-balance">
-          Hands-free or hands-on — either way, you're in charge. <span class="font-semibold text-white">Full automation with complete transparency</span>, or human-in-the-loop for final calls.
+        <p class="text-xl text-neutral-300 font-light leading-relaxed max-w-4xl mx-auto text-balance">
+          <span class='italic font-semibold text-white'>Hands-free or hands-on</span> — either way, you're in charge. <span class="font-semibold text-white">Full automation with complete transparency</span>, or human-in-the-loop for final calls.
         </p>
       </div>
       
@@ -733,8 +730,8 @@
           >
             <div class="text-center mb-12">
               <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-violet-400/80/80">HANDS-OFF AUTO-TRADING</h3>
-              <p class="text-xl text-neutral-300 italic">Set it. Forget it. Smile.</p>
-              <p class="text-white/70 text-sm mt-2">Fully automated execution with complete transparency and control.</p>
+              <p class="text-xl text-neutral-300 italic text-balance">Set it. Forget it. Smile.</p>
+              <p class="text-white/70 text-sm mt-2 text-balance">Fully automated execution with complete transparency and control.</p>
             </div>
             
             <div class="grid md:grid-cols-2 max-w-lg md:max-w-4xl mx-auto gap-8">
@@ -747,19 +744,19 @@
 
                   <label class="block mb-3">
                     <span class="text-xs text-white/60">Trade Size</span>
-                    <input class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                    <input tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
                                   text-white placeholder-white/40 focus:outline-none focus:border-white/20" placeholder="$1,000">
                   </label>
                   
                   <label class="block mb-3">
                     <span class="text-xs text-white/60">Max Slippage</span>
-                    <input class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                    <input tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
                                   text-white placeholder-white/40 focus:outline-none focus:border-white/20" placeholder="2%">
                   </label>
                   
                   <label class="block mb-3">
                     <span class="text-xs text-white/60">Gas Priority</span>
-                    <select class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                    <select tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
                                    text-white focus:outline-none focus:border-white/20">
                       <option>Medium</option>
                       <option>High</option>
@@ -769,7 +766,7 @@
                   
                   <label class="block mb-3">
                     <span class="text-xs text-white/60">Notifications</span>
-                    <select class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
+                    <select tabindex="-1" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2
                                    text-white focus:outline-none focus:border-white/20">
                       <option>Telegram</option>
                       <option>Email</option>
@@ -845,8 +842,8 @@
           >
             <div class="text-center ">
               <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-violet-400/80/80">HUMAN-IN-THE-LOOP</h3>
-              <p class="text-xl text-neutral-300 italic">Get notified. Approve trades. Stay in control.</p>
-              <p class="text-white/70 text-sm mt-2">Review and approve trades before execution with full context.</p>
+              <p class="text-xl text-neutral-300 italic  text-balance">Get notified. Approve trades. Stay in control.</p>
+              <p class="text-white/70 text-sm mt-2 text-balance">Review and approve trades before execution with full context.</p>
             </div>
             
             <div class="grid md:grid-cols-2 max-w-lg md:max-w-4xl mx-auto gap-8">
@@ -880,9 +877,9 @@
                         </div>
                       </div>
                       <div class="mt-4 grid grid-cols-3 gap-2">
-                        <button class="h-9 rounded-lg bg-emerald-400/90 hover:bg-emerald-400 text-black font-medium" aria-label="Approve trade">Approve</button>
-                        <button class="h-9 rounded-lg bg-white/8 hover:bg-white/12 text-white/80" aria-label="Skip trade">Skip</button>
-                        <button class="h-9 rounded-lg bg-white/8 hover:bg-white/12 text-white/80" aria-label="View trade info">Info</button>
+                        <button tabindex="-1" class="h-9 rounded-lg bg-emerald-400/90 hover:bg-emerald-400 text-black font-medium" aria-label="Approve trade">Approve</button>
+                        <button tabindex="-1" class="h-9 rounded-lg bg-white/8 hover:bg-white/12 text-white/80" aria-label="Skip trade">Skip</button>
+                        <button tabindex="-1" class="h-9 rounded-lg bg-white/8 hover:bg-white/12 text-white/80" aria-label="View trade info">Info</button>
                       </div>
                     </div>
                   </div>
@@ -1020,7 +1017,7 @@
 <div class="relative">  
   <div class="absolute h-[300px] inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <!-- gradients: purple linear + black radial -->
-  <div class="absolute inset-x-0 h-[80vh] pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-purple);"></div>
+  <div class="absolute inset-x-0 h-[80vh] pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-violet);"></div>
 
   <section id="cta" class="text-white pt-20 lg:pt-32 pb-20 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto text-center">
@@ -1241,7 +1238,7 @@ html, body {
 :root {
 
   /* Usage
-    --gradient-purple: CTA background (2x)
+    --gradient-violet: CTA background (2x)
     --gradient-section-linear: Section background (purple)
     --gradient-radial-feature-backdrop: Feature background (purple)
     --gradient-secondary-color: Secondary color (violet). Used for 1 liner: "JOIN THE WAITLIST FOR EARLY ACCESS"
@@ -1249,7 +1246,7 @@ html, body {
     --gradient-CTA-text2: Yellow color (yellow), Used for yellow CTA + Section lead in. 
     --gradient-CTA-glow: Hero glow (yellow and violet). Used for CTA glow
   */
-  --gradient-purple: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 80%, transparent), transparent);
+  --gradient-violet: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 80%, transparent), transparent);
   --gradient-section-linear: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 50%, transparent), transparent);
   --gradient-radial-feature-backdrop: radial-gradient(circle, color-mix(in oklch,theme('colors.violet.950') 60%, transparent), transparent);
 
