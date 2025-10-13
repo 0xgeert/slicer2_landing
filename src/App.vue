@@ -367,9 +367,6 @@
           <span class="font-semibold text-white italic">Replay six months in six seconds.</span>
             See ROI, win rate, drawdown. No weeks of uncertainty. <span class="font-semibold text-white">Just optimize → test → repeat.</span>
         </p>
-        <p class="text-neutral-300 text-balance max-w-2xl mx-auto">
-          Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
-        </p>
       </div>
 
       <div class="grid lg:grid-cols-2 lg:gap-28 items-start lg:mb-24 mb-12">
@@ -518,7 +515,7 @@
           </div>
         </div>
         
-        <div class="lg:text-right space-y-12 mt-8 lg:mt-32">
+        <div class="text-right space-y-12 mt-[9rem]">
           <!-- Desktop-only text section -->
           <div class="hidden lg:block">
             <div class="text-xs font-bold tracking-widest text-violet-400/80 uppercase mb-1">SIMULATE 2/3</div>
@@ -531,9 +528,6 @@
               <span class="font-semibold text-white italic">Replay six months in six seconds.</span> See ROI, win rate, drawdown. No weeks of uncertainty. 
             </p>
             <p class="text-xl font-semibold text-white  mb-8 italic leading-relaxed max-w-2xl mx-auto text-balance">Just optimize → test → repeat.</p>
-            <p class="text-neutral-300 lg:text-balance leading-relaxed">
-              Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
-            </p>
           </div>
         </div>
       </div>
@@ -566,6 +560,10 @@
 
             <p class="text-base md:text-lg mt-2 italic font-semibold text-white">
               Every outcome quantified. No guessing. no surprises.
+            </p>
+
+            <p class="text-neutral-300">
+              Every trade size tested. Every parameter validated. See your edge before deploying capital. Iterate in seconds, not weeks.
             </p>
 
             <p class="text-neutral-300">
