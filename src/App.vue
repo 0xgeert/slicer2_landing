@@ -737,7 +737,7 @@
                     </select>
                   </label>
 
-                  <button class="mt-3 w-full h-11 rounded-xl bg-violet-500 hover:bg-violet-400 active:bg-violet-600
+                  <button @click="clickedDeployStrategy = true; scrollToSection('cta')" class="mt-3 w-full h-11 rounded-xl bg-violet-500 hover:bg-violet-400 active:bg-violet-600
                                  text-black font-semibold relative neon-glow focus:outline-none
                                  focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950 transition-all duration-200">
                     Deploy Strategy
@@ -945,7 +945,7 @@
         <h2 class="text-[3.2rem] leading-[1] md:text-7xl lg:text-8xl mb-8 lg:mb-12  font-black tracking-tight gradient-text-yellow text-balance">
           STOP GUESSING <span class="gradient-text-yellow2">START SLICING</span>
         </h2>
-        <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance gradient-text-secondary">JOIN THE WAITLIST FOR EARLY ACCESS</h3>
+        <h3 class="text-2xl lg:text-4xl mb-8 font-bold text-balance gradient-text-secondary">{{ clickedDeployStrategy ? 'READY TO DEPLOY? JOIN THE WAITLIST' : 'JOIN THE WAITLIST FOR EARLY ACCESS' }}</h3>
       </div>
       
       <div id="final-cta" class="max-w-2xl mx-auto mb-12">
@@ -1043,7 +1043,8 @@ export default {
       isExitBreakdownExpanded: false,
       isTradeSizeImpactExpanded: false,
       isHeaderVisible: false,
-      animatingToCTA: false
+      animatingToCTA: false,
+      clickedDeployStrategy: false
     }
   },
   methods: {
