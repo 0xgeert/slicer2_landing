@@ -45,7 +45,7 @@
     <div class="max-w-6xl mx-auto text-center relative z-10">
 
       <div class="relative">
-        <h1 class="text-[3.3rem] leading-[1] text-6xl md:text-7xl lg:text-8xl mb-4 font-black tracking-tight leading-tighter hero-glow">
+        <h1 class="text-[3.3rem] leading-[1] text-6xl sm:text-7xl lg:text-8xl xl:text-9xl mb-4 font-black tracking-tight leading-tighter hero-glow">
           <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">BAGHOLDING</span></span><br>
           <span class="gradient-text-yellow">NO MORE <span class="gradient-text-yellow2">WAITING</span></span>
         </h1>
