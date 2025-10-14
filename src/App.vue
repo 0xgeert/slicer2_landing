@@ -529,47 +529,7 @@
                   </div>
                 </div>
               </div>
-              
-              <div>
-                <button 
-                  @click="toggleTradeSizeImpact"
-                  class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-3 px-4 -my-3 cursor-pointer"
-                >
-                  <div class="flex items-center justify-between">
-                    <h4 class="font-semibold text-white/80 text-sm">Trade Size Impact</h4>
-                    <div class="flex items-center justify-center">
-                      <i-heroicons-solid-chevron-down 
-                        :class="[
-                          'w-4 h-4 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',
-                          isTradeSizeImpactExpanded ? 'rotate-180' : 'rotate-0'
-                        ]"
-                      />
-                    </div>
-                  </div>
-                </button>
-                <div 
-                  :class="[
-                    'overflow-hidden transition-all duration-500 ease-in-out will-change-transform',
-                    isTradeSizeImpactExpanded ? 'max-h-40 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
-                  ]"
-                  :style="{ transform: 'translateZ(0)' }"
-                >
-                  <div class="space-y-2 text-sm pt-6">
-                    <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
-                      <span class="text-sm text-amber-100">$100</span>
-                      <span class="text-sm text-violet-400/80">+247% <span class=" text-blue-400">(0.3% slip)</span></span>
-                    </div>
-                    <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
-                      <span class="text-sm text-amber-100">$1,000</span>
-                      <span class="text-sm text-violet-400/80">+213% <span class=" text-blue-400">(2.1%)</span></span>
-                    </div>
-                    <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
-                      <span class="text-sm text-amber-100">$10,000</span>
-                      <span class="text-sm text-violet-400/80">+156% <span class=" text-blue-400">(8.7%)</span></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            
             </div>
             
           </div>
@@ -727,7 +687,7 @@
               :aria-selected="activeTab === 'hands-off'" 
               aria-controls="panel-auto"
               @click="activeTab = 'hands-off'"
-              @keydown="handleKeydown"
+              @keydown="carouselHandleKeydown"
               class="h-11 rounded-xl text-sm font-medium focus:outline-none"
               :class="activeTab === 'hands-off' ? 'text-white/90' : 'text-white/70 hover:text-white/90'"
             >
@@ -739,7 +699,7 @@
               :aria-selected="activeTab === 'human-loop'" 
               aria-controls="panel-hil"
               @click="activeTab = 'human-loop'"
-              @keydown="handleKeydown"
+              @keydown="carouselHandleKeydown"
               class="h-11 rounded-xl text-sm font-medium focus:outline-none"
               :class="activeTab === 'human-loop' ? 'text-white/90' : 'text-white/70 hover:text-white/90'"
             >
@@ -1112,7 +1072,6 @@ export default {
       isSignalSectionExpanded: false,
       isExitsSectionExpanded: false,
       isExitBreakdownExpanded: false,
-      isTradeSizeImpactExpanded: false,
       isHeaderVisible: false,
       animatingToCTA: false,
       clickedDeployStrategy: false
@@ -1127,7 +1086,7 @@ export default {
     cycleExpressDots() {
       this.expressActiveIndex = (this.expressActiveIndex + 1) % this.expressTotalDots
     },
-    handleKeydown(event) {
+    carouselHandleKeydown(event) {
       const tabs = ['hands-off', 'human-loop']
       const currentIndex = tabs.indexOf(this.activeTab)
       
@@ -1160,9 +1119,6 @@ export default {
     },
     toggleExitBreakdown() {
       this.isExitBreakdownExpanded = !this.isExitBreakdownExpanded
-    },
-    toggleTradeSizeImpact() {
-      this.isTradeSizeImpactExpanded = !this.isTradeSizeImpactExpanded
     },
     scrollToSimulationButton() {
       // Find the simulation widget (the main card container)
