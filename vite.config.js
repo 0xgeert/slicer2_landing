@@ -20,11 +20,12 @@ export default defineConfig({
       resolvers: [
         HeadlessUiResolver(),
         IconsResolver({
-          enabledCollections: ['heroicons-solid', 'fa-solid', 'fa-brands'],
+          enabledCollections: ['heroicons-solid', 'fa-solid', 'fa-brands', 'lucide'],
           alias: {
             his: "heroicons-solid", // Solid variant
             fa: "fa-solid", // Font Awesome Solid
             fab: "fa-brands", // Font Awesome Brands
+            lucide: "lucide", // Lucide icons
           },
         }),
       ],

@@ -40,7 +40,7 @@
 
 <div class="relative overflow-hidden">  
 
-  <main id="hero" class="hero min-h-screen text-white pt-28 md:pt-44 lg:pt-52 xl:pt-60 pb-20 lg:pb-32 xl:pb-32 px-4 sm:px-6 lg:px-8 xl:px-8 flex items-center relative">
+  <main id="hero" class="hero min-h-screen text-white pt-28 md:pt-44 lg:pt-52 xl:pt-60 px-4 sm:px-6 lg:px-8 xl:px-8 flex items-center relative">
 
     <div class="max-w-6xl mx-auto text-center relative z-10">
 
@@ -86,7 +86,8 @@
         </p>
       </div> -->
       
-      <div class="hero-steps grid md:grid-cols-3 gap-8 lg:gap-12 mb-16 max-w-5xl mx-auto px-4">
+      <!-- Hero steps -->
+      <!-- <div class="hero-steps grid md:grid-cols-3 gap-8 lg:gap-12 mb-16 max-w-5xl mx-auto px-4">
         <div class="step bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
           <div class="h-40 rounded-xl mb-6 flex items-center justify-center border border-neutral-700/50 transition-all duration-300">
             <div class="text-center">
@@ -131,20 +132,79 @@
           <h3 class="text-xl mb-1 font-semibold">Deploy & Execute</h3>
           <p class="text-neutral-400 text-sm leading-relaxed">Auto-trading with full transparency</p>
         </div>
-      </div>
+      </div> -->
       
-      <!-- <div class="bg-neutral-900/30 backdrop-blur-sm rounded-xl p-6 border border-neutral-700/30 max-w-md mx-auto mb-12">
-        <p class="text-neutral-300 lg:text-balance text-sm italic">
-          "If this existed six months ago, I wouldn't have missed that trade."
-        </p>
-        <p class="text-neutral-500 text-xs mt-2">— Beta tester</p>
+      <!-- Testimonials 
+        Beta Tester:
+
+        "Tested my strategy in six seconds. Saved weeks of real-money regret."
+
+        AI Agent:
+
+        "Natural language queries. Real-time data. No API wrestling."
+
+
+        Option 2: Make Them More Specific
+        Crypto Trader:
+
+        "Backtested six months in seconds. Knew it was trash before I bought."
+
+        Quant Developer:
+
+        "10,000 filters. Plain English. My algo writes itself now."
+
+
+        Option 3: Focus on Transformation
+        Before Slicer:
+
+        "Spent weeks bagholding. Lost 60%. Quit trading."
+
+        After Slicer:
+
+        "Test first. Deploy confident. Haven't held a bag since."
+
+
+        Option 4: One-Liner Format
+        Just quote marks, no attribution boxes:
+
+        "Six seconds to backtest what used to take six weeks."
+
+
+        "I write strategies in English. Slicer writes the code."
+      
+      -->
+      <!-- <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto ">
+        <div class="bg-neutral-900/30 backdrop-blur-sm rounded-xl pt-12 px-6 border border-neutral-700/30 relative">
+          <div class="text-6xl text-violet-500/60 font-bold leading-none mb-4 absolute top-4 left-4 opacity-50">
+            <i-lucide-quote class="w-16 h-16" />
+          </div>
+          <p class="text-neutral-300 text-balance text-lg italic mb-4">Tested my strategy in six seconds. Saved weeks of real-money regret.</p>
+          <p class="text-neutral-400 text-sm italic flex items-center gap-3 justify-end">
+            Beta Tester
+            <div class="w-8 h-8 rounded-full bg-violet-500/20 flex items-center justify-center">
+              <i-heroicons-solid-user class="w-5 h-5 text-violet-400" />
+            </div>  
+          </p>
+        </div>
+        <div class="bg-neutral-900/30 backdrop-blur-sm rounded-xl pt-12 px-6 border border-neutral-700/30 relative">
+          <div class="text-6xl text-emerald-500/60 font-bold leading-none mb-4 absolute top-4 left-4 opacity-50">
+            <i-lucide-quote class="w-16 h-16" />
+          </div>
+          <p class="text-neutral-300 text-balance text-lg italic mb-4">Natural language queries. Real-time data. No API wrestling.</p>
+          <p class="text-neutral-400 text-sm italic flex items-center gap-3 justify-end">
+            AI Agent
+            <div class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+              <i-heroicons-solid-cpu-chip class="w-5 h-5 text-emerald-400" />
+            </div>  
+          </p>
+        </div>
       </div> -->
       
 
       <!-- Whisper text -->
-      <div class="text-center hero-whisper">
+      <!-- <div class="text-center hero-whisper">
         <p class="text-white/80 text-lg font-light italic">For humans and AI agents alike</p>
-      </div>
+      </div> -->
 
     </div>
   </main>
