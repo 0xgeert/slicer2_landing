@@ -1,5 +1,4 @@
-import { Chart, registerables } from 'chart.js'
-Chart.register(...registerables)
+import Plotly from 'plotly.js-dist-min'
 
 export default {
   data() {
@@ -49,10 +48,131 @@ export default {
   beforeUnmount() {
     // Clean up chart
     if (this._chartInstance) {
-      this._chartInstance.destroy()
+      const container = this.$refs.simulationChart
+      if (container) {
+        Plotly.purge(container)
+      }
     }
   },
   methods: {
+    // Symlog transformation for smooth zero-crossing
+    symlog(x, linthresh = 100) {
+      return Math.sign(x) * Math.log10(1 + Math.abs(x / linthresh))
+    },
+    
+    inverseSymlog(y, linthresh = 100) {
+      return Math.sign(y) * linthresh * (Math.pow(10, Math.abs(y)) - 1)
+    },
+    
+    generateSymlogTicks(minVal, maxVal, linthresh = 100) {
+      // Generate tick values in symlog space and their corresponding real values
+      const ticks = []
+      
+      // Generate ticks around zero and at exponential intervals
+      const realValues = [-10000, -1000, -100, 0, 100, 1000, 10000]
+      
+      realValues.forEach(realVal => {
+        if (realVal >= minVal && realVal <= maxVal) {
+          ticks.push({
+            transformed: this.symlog(realVal, linthresh),
+            real: realVal
+          })
+        }
+      })
+      
+      return {
+        tickvals: ticks.map(t => t.transformed),
+        ticktext: ticks.map(t => '$' + (t.real >= 0 ? '' : '-') + Math.abs(t.real).toLocaleString())
+      }
+    },
+    
+    // Chart configuration methods
+    getChartLayout(tickvals = null, ticktext = null) {
+      return {
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent',
+        autosize: true,
+        margin: { l: 0, r: 0,t: 0, b: 0},
+        showlegend: false,
+        hovermode: 'x unified',
+        xaxis: {
+          gridcolor: 'rgba(255, 255, 255, 0.05)',
+          showgrid: false,
+          color: 'rgba(255, 255, 255, 0.4)',
+          tickfont: {
+            size: 10,
+            color: 'rgba(255, 255, 255, 0.4)'
+          },
+          automargin: true
+        },
+        yaxis: {
+          type: 'linear',
+          gridcolor: 'rgba(255, 255, 255, 0.05)',
+          showgrid: true,
+          color: 'rgba(255, 255, 255, 0.4)',
+          tickfont: {
+            size: 10,
+            color: 'rgba(255, 255, 255, 0.4)'
+          },
+          automargin: true,
+          fixedrange: false,
+          // Custom tick labels for symlog scale
+          ...(tickvals && ticktext ? {
+            tickmode: 'array',
+            tickvals: tickvals,
+            ticktext: ticktext
+          } : {})
+        },
+        hoverlabel: {
+          bgcolor: 'rgba(0, 0, 0, 0.9)',
+          bordercolor: 'rgba(255, 255, 255, 0.1)',
+          font: {
+            color: 'rgb(229, 231, 235)',
+            size: 12
+          }
+        }
+      }
+    },
+    
+    getChartConfig() {
+      return {
+        responsive: true,
+        displayModeBar: false
+      }
+    },
+    
+    createTraces(labels = [], pointPnLs = [], cumulativePnLs = [], barColors = [], barCustomData = [], lineCustomData = []) {
+      return [
+        {
+          type: 'bar',
+          name: 'Delta P&L',
+          x: labels,
+          y: pointPnLs,
+          marker: {
+            color: barColors,
+            line: {
+              width: 0
+            }
+          },
+          hovertemplate: '<b>Delta P&L:</b> %{customdata[0]}<br><b>Delta Trades:</b> %{customdata[1]}<extra></extra>',
+          customdata: barCustomData
+        },
+        {
+          type: 'scatter',
+          name: 'Cumulative P&L',
+          x: labels,
+          y: cumulativePnLs,
+          mode: 'lines',
+          line: {
+            color: 'rgb(147, 197, 253)',
+            width: 3
+          },
+          hovertemplate: '<b>Cumulative P&L:</b> %{customdata[0]}<br><b>Cumulative ROI:</b> %{customdata[1]}<br><b>Cumulative Spend:</b> %{customdata[2]}<br><b>Total Trades:</b> %{customdata[3]}<extra></extra>',
+          customdata: lineCustomData
+        }
+      ]
+    },
+    
     // Simulation methods
     randomBetween(min, max) {
       return Math.random() * (max - min) + min
@@ -291,165 +411,18 @@ export default {
     },
     
     initChart() {
-      const canvas = this.$refs.simulationChart
-      if (!canvas) return
-      
-      const ctx = canvas.getContext('2d')
+      const container = this.$refs.simulationChart
+      if (!container) return
       
       if (this._chartInstance) {
-        this._chartInstance.destroy()
+        Plotly.purge(container)
       }
       
-      this._chartInstance = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: [],
-          datasets: [
-            {
-              type: 'bar',
-              label: 'Point P&L',
-              data: [],
-              backgroundColor: [],
-              borderColor: [],
-              borderWidth: 0,
-              yAxisID: 'y',
-              order: 2
-            },
-            {
-              type: 'line',
-              label: 'ROI %',
-              data: [],
-              borderColor: [],
-              backgroundColor: 'transparent',
-              borderWidth: 3,
-              pointRadius: 0,
-              pointHoverRadius: 5,
-              tension: 0.3,
-              yAxisID: 'y1',
-              order: 1,
-              segment: {
-                borderColor: (ctx) => {
-                  const value = ctx.p1.parsed.y
-                  return value >= 0 ? 'rgb(52, 211, 153)' : 'rgb(248, 113, 113)'
-                }
-              }
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          backgroundColor: 'rgba(255, 255, 255, 0.03)',
-          interaction: {
-            mode: 'index',
-            intersect: false
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-              backgroundColor: 'rgba(0, 0, 0, 0.9)',
-              padding: 12,
-              titleColor: 'rgb(255, 255, 255)',
-              bodyColor: 'rgb(229, 231, 235)',
-              borderColor: 'rgba(255, 255, 255, 0.1)',
-              borderWidth: 1,
-              displayColors: false,
-              callbacks: {
-                title: (items) => {
-                  if (items[0]) {
-                    const index = items[0].dataIndex
-                    const point = this.simulation.pointsData[index]
-                    if (point) {
-                      return point.date.toLocaleDateString('en-US', { 
-                        month: 'short', 
-                        day: 'numeric',
-                        year: 'numeric'
-                      })
-                    }
-                  }
-                  return ''
-                },
-                label: (context) => {
-                  const index = context.dataIndex
-                  const point = this.simulation.pointsData[index]
-                  if (!point) return ''
-                  
-                  if (context.dataset.label === 'Point P&L') {
-                    return [
-                      `Delta P&L: ${this.formatCurrency(point.pointPnL)}`,
-                      `Delta Trades: ${point.numTrades}`
-                    ]
-                  } else {
-                    return [
-                      `ROI: ${this.formatPercent(point.roi)}`,
-                      `Cumulative P&L: ${this.formatCurrency(point.cumulativePnL)}`,
-                      `Total Investment: ${this.formatCurrency(point.totalInvestment)}`,
-                      `Total Trades: ${this.simulation.metrics.totalTrades}`
-                    ]
-                  }
-                }
-              }
-            }
-          },
-          scales: {
-            x: {
-              grid: {
-                display: false,
-                color: 'rgba(255, 255, 255, 0.05)'
-              },
-              ticks: {
-                color: 'rgba(255, 255, 255, 0.4)',
-                font: {
-                  size: 10
-                },
-                maxRotation: 0,
-                autoSkip: true,
-                maxTicksLimit: 6
-              }
-            },
-            y: {
-              type: 'linear',
-              position: 'left',
-              title: {
-                display: false
-              },
-              grid: {
-                color: 'rgba(255, 255, 255, 0.05)'
-              },
-              ticks: {
-                color: 'rgba(255, 255, 255, 0.4)',
-                font: {
-                  size: 10
-                },
-                callback: (value) => {
-                  return '$' + value.toFixed(0)
-                }
-              }
-            },
-            y1: {
-              type: 'linear',
-              position: 'right',
-              title: {
-                display: false
-              },
-              grid: {
-                display: false
-              },
-              ticks: {
-                color: 'rgba(255, 255, 255, 0.4)',
-                font: {
-                  size: 10
-                },
-                callback: (value) => {
-                  return value.toFixed(0) + '%'
-                }
-              }
-            }
-          }
-        }
-      })
+      // Initialize with empty traces
+      const traces = this.createTraces()
+      
+      Plotly.newPlot(container, traces, this.getChartLayout(), this.getChartConfig())
+      this._chartInstance = true
     },
     
     updateChart() {
@@ -458,29 +431,52 @@ export default {
         if (!this._chartInstance) return
       }
       
-      // Create new arrays to avoid reactivity issues
+      const container = this.$refs.simulationChart
+      if (!container) return
+      
+      // Prepare data from simulation
       const data = this.simulation.pointsData
       const labels = []
       const pointPnLs = []
-      const roiValues = []
+      const cumulativePnLs = []
       const barColors = []
+      const barCustomData = []
+      const lineCustomData = []
       
       for (let i = 0; i < data.length; i++) {
         const p = data[i]
         labels.push(p.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }))
-        pointPnLs.push(p.pointPnL)
-        roiValues.push(p.roi)
+        
+        // Apply symlog transformation to y-values for smooth zero-crossing
+        pointPnLs.push(this.symlog(p.pointPnL))
+        cumulativePnLs.push(this.symlog(p.cumulativePnL))
+        
         barColors.push(p.pointPnL >= 0 ? 'rgba(52, 211, 153, 0.8)' : 'rgba(248, 113, 113, 0.8)')
+        
+        // Custom data for hover tooltips (use original values, not transformed)
+        barCustomData.push([
+          this.formatCurrency(p.pointPnL),
+          p.numTrades
+        ])
+        lineCustomData.push([
+          this.formatCurrency(p.cumulativePnL),
+          this.formatPercent(p.roi),
+          this.formatCurrency(p.totalInvestment),
+          this.simulation.metrics.totalTrades
+        ])
       }
       
-      // Update chart data directly
-      this._chartInstance.data.labels = labels
-      this._chartInstance.data.datasets[0].data = pointPnLs
-      this._chartInstance.data.datasets[0].backgroundColor = barColors
-      this._chartInstance.data.datasets[1].data = roiValues
+      // Create traces with symlog-transformed data
+      const traces = this.createTraces(labels, pointPnLs, cumulativePnLs, barColors, barCustomData, lineCustomData)
       
-      // Use 'none' mode to skip animation during updates
-      this._chartInstance.update('none')
+      // Generate custom tick labels for symlog scale
+      const allRealValues = data.map(p => [p.pointPnL, p.cumulativePnL]).flat()
+      const minVal = Math.min(...allRealValues)
+      const maxVal = Math.max(...allRealValues)
+      const { tickvals, ticktext } = this.generateSymlogTicks(minVal, maxVal)
+      
+      // Use Plotly.react for efficient updates without animation
+      Plotly.react(container, traces, this.getChartLayout(tickvals, ticktext))
     }
   },
 

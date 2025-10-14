@@ -441,7 +441,7 @@
               <p class="text-neutral-400 text-xs">(Example results for demo)</p>
             </div>
             
-            <div class="mb-3">q
+            <div class="mb-3">
               <div class="flex justify-between text-[11px] text-white/55 mb-1">
                 <span>6 months → 6 seconds</span>
                 <span>Progress: {{ simulation.progress.toFixed(0) }}%</span>
@@ -577,7 +577,7 @@
             </div>
             
             <div class="h-48 rounded-xl  p-4 border border-white/5 bg-white/5">
-              <canvas ref="simulationChart"></canvas>
+              <div ref="simulationChart" class="w-full h-full"></div>
             </div>
             
             

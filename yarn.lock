@@ -625,11 +625,6 @@
     string-argv "^0.3.1"
     type-detect "^4.0.8"
 
-"@kurkle/color@^0.3.0":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@kurkle/color/-/color-0.3.4.tgz#4d4ff677e1609214fc71c580125ddddd86abcabf"
-  integrity sha512-M5UknZPHRu3DEDWoipU6sE8PdkZ6Z/S+v4dD+Ke8IaNlpdSQah50lz1KtcFBa2vsdOnwbbnxJwVM4wty6udA5w==
-
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -1418,13 +1413,6 @@ chalk@^4.0.0:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
-
-chart.js@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-4.5.1.tgz#19dd1a9a386a3f6397691672231cb5fc9c052c35"
-  integrity sha512-GIjfiT9dbmHRiYi6Nl2yFCq7kkwdkp1W/lp2J99rX0yo9tgJGn3lKQATztIjb5tVtevcBtIdICNWqlq5+E8/Pw==
-  dependencies:
-    "@kurkle/color" "^0.3.0"
 
 check-error@^1.0.3:
   version "1.0.3"
@@ -2984,6 +2972,11 @@ pkg-types@^2.3.0:
     confbox "^0.2.2"
     exsolve "^1.0.7"
     pathe "^2.0.3"
+
+plotly.js-dist-min@^2.35.2:
+  version "2.35.3"
+  resolved "https://registry.yarnpkg.com/plotly.js-dist-min/-/plotly.js-dist-min-2.35.3.tgz#b80c79546fe21c1f585657b59d80caf1a0d8f563"
+  integrity sha512-sz2HLP8gkysLx/BanM2PtJTtZ1PLPwdHwMWNri2YxLBy3IOeuDsVQtlmWa4hoK3j/fi4naaD3uZJqH5ozM3zGg==
 
 postcss-import@^15.1.0:
   version "15.1.0"
