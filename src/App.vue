@@ -1260,7 +1260,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 /* Prevent horizontal scroll on mobile */
 html, body {
@@ -1269,7 +1269,6 @@ html, body {
 
 /* ===== gamut-aware color system (OKLCH) ===== */
 :root {
-
   /* Usage
     --gradient-violet: CTA background (2x)
     --gradient-section-linear: Section background (purple)
@@ -1288,15 +1287,12 @@ html, body {
   --gradient-CTA-text: linear-gradient(to right, theme('colors.yellow.400'), theme('colors.amber.300'), theme('colors.yellow.500'), theme('colors.amber.400'));
   --gradient-CTA-text2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.yellow.300'), theme('colors.amber.300'));
 
-
   --gradient-CTA-glow: radial-gradient(
     100% 80% at 50% 50%,
     color-mix(in oklch, theme('colors.yellow.300') 30%, transparent) 0%,
     color-mix(in oklch, theme('colors.violet.800') 10%, transparent) 40%,
     transparent 70%
   );
-
-
 }
 
 /* sRGB (non-P3) screens → richer but balanced */
@@ -1319,7 +1315,7 @@ html, body {
 
 
 /* Apply gradients to text */
-.gradient-text-yellow{
+.gradient-text-yellow {
   background: var(--gradient-CTA-text);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1332,8 +1328,9 @@ html, body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: transparent;  
 }
+
 
 .gradient-text-secondary {
   background: var(--gradient-secondary-color);
@@ -1350,141 +1347,105 @@ html, body {
   justify-content: center;
   /* Set color on wrapper - SVG icons use currentColor */
   color: #9A5BFF;
-}
 
-.gradient-icon-wrapper svg {
-  fill: url(#icon-gradient-violet-indigo) !important;
-}
+  svg {
+    fill: url(#icon-gradient-violet-indigo) !important;
 
-.gradient-icon-wrapper svg path {
-  fill: url(#icon-gradient-violet-indigo) !important;
-}
-
-.gradient-icon-wrapper svg circle {
-  fill: url(#icon-gradient-violet-indigo) !important;
-}
-
-.gradient-icon-wrapper svg rect {
-  fill: url(#icon-gradient-violet-indigo) !important;
-}
-
-.gradient-icon-wrapper svg polygon {
-  fill: url(#icon-gradient-violet-indigo) !important;
-}
-
-/* Also try with * selector to catch everything */
-.gradient-icon-wrapper svg * {
-  fill: url(#icon-gradient-violet-indigo) !important;
+    path,
+    circle,
+    rect,
+    polygon,
+    * {
+      fill: url(#icon-gradient-violet-indigo) !important;
+    }
+  }
 }
 
 /* Hero cinematic depth */
 .hero-glow {
   position: relative;
-}
-.hero-glow::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: -200px;
-  bottom: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100vw + 80px);
-  pointer-events: none;
-  background: var(--gradient-CTA-glow);
-  filter: blur(2px);
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -200px;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw + 80px);
+    pointer-events: none;
+    background: var(--gradient-CTA-glow);
+    filter: blur(2px);
+  }
 }
 
 
 /* Neon glow effect for primary CTAs */
 .neon-glow {
   position: relative;
-}
 
-.neon-glow::before {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  background: linear-gradient(45deg, 
-    rgba(154, 91, 255, 0.8), 
-    rgba(196, 181, 253, 0.6), 
-    rgba(139, 92, 246, 0.8), 
-    rgba(196, 181, 253, 0.6),
-    rgba(154, 91, 255, 0.8)
-  );
-  border-radius: 20px;
-  z-index: -1;
-  filter: blur(10px);
-  opacity: 0.8;
-  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
-}
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(45deg, 
+      rgba(154, 91, 255, 0.8), 
+      rgba(196, 181, 253, 0.6), 
+      rgba(139, 92, 246, 0.8), 
+      rgba(196, 181, 253, 0.6),
+      rgba(154, 91, 255, 0.8)
+    );
+    border-radius: 20px;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.8;
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+  }
 
-.neon-glow:hover::before {
-  opacity: 1;
-  filter: blur(15px);
-  transform: scale(1.05);
-}
+  &:hover::before {
+    opacity: 1;
+    filter: blur(15px);
+    transform: scale(1.05);
+  }
 
-.neon-glow:focus::before {
-  opacity: 1;
-  filter: blur(15px);
-  transform: scale(1.05);
-}
+  &:focus::before {
+    opacity: 1;
+    filter: blur(15px);
+    transform: scale(1.05);
+  }
 
-.neon-glow:active::before {
-  opacity: 0.9;
-  filter: blur(8px);
-  transform: scale(0.98);
+  &:active::before {
+    opacity: 0.9;
+    filter: blur(8px);
+    transform: scale(0.98);
+  }
+
 }
 
 /* Enhanced 3D effects for gradient buttons */
 .transform-gpu {
   transform: translateZ(0);
   will-change: transform;
+
+  &:hover {
+    transform: translateZ(0) translateY(-2px) scale(1.05);
+    box-shadow: 
+      0 20px 25px -5px rgba(154, 91, 255, 0.3),
+      0 10px 10px -5px rgba(154, 91, 255, 0.2),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  &:active {
+    transform: translateZ(0) translateY(0px) scale(1.02);
+    box-shadow: 
+      0 10px 15px -3px rgba(154, 91, 255, 0.4),
+      0 4px 6px -2px rgba(154, 91, 255, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.2);
+  }
 }
 
-.transform-gpu:hover {
-  transform: translateZ(0) translateY(-2px) scale(1.05);
-  box-shadow: 
-    0 20px 25px -5px rgba(154, 91, 255, 0.3),
-    0 10px 10px -5px rgba(154, 91, 255, 0.2),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
-}
-
-.transform-gpu:active {
-  transform: translateZ(0) translateY(0px) scale(1.02);
-  box-shadow: 
-    0 10px 15px -3px rgba(154, 91, 255, 0.4),
-    0 4px 6px -2px rgba(154, 91, 255, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.2);
-}
-
-/* Lighter neon glow for simulation panel CTA */
-.neon-glow-light::after {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(45deg, 
-    rgba(154, 91, 255, 0.6), 
-    rgba(176, 109, 255, 0.4), 
-    rgba(154, 91, 255, 0.6), 
-    rgba(176, 109, 255, 0.4)
-  );
-  border-radius: 14px;
-  z-index: -1;
-  filter: blur(8px);
-  opacity: 0.4;
-  transition: opacity 0.3s ease, filter 0.3s ease;
-}
-
-.neon-glow-light:hover::after {
-  opacity: 0.7;
-  filter: blur(12px);
-}
-
-
-
-/* CTA Ghost Button */
+/* ===== CTA Ghost Button ===== */
 .cta-ghost {
   border: 2px solid #9A5BFF;
   color: #f5f5f5;
@@ -1492,12 +1453,16 @@ html, body {
   border-radius: 14px;
   box-shadow: 0 0 0 0 rgba(154,91,255,.18);
   transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
-}
 
-.cta-ghost:hover {
-  transform: translateY(-1px);
-  background: rgba(154,91,255,.08);
-  box-shadow: 0 0 28px 2px rgba(154,91,255,.18);
+  &:hover {
+    transform: translateY(-1px);
+    background: rgba(154,91,255,.08);
+    box-shadow: 0 0 28px 2px rgba(154,91,255,.18);
+
+    .arrow {
+      transform: translateX(4px) !important;
+    }
+  }
 }
 
 /* Arrow animation for all CTAs */
@@ -1507,7 +1472,6 @@ html, body {
   transition: transform .22s ease !important;
 }
 
-.cta-ghost:hover .arrow,
 button:hover .arrow {
   transform: translateX(4px) !important;
 }
@@ -1516,6 +1480,125 @@ button:hover .arrow {
 .step {
   position: relative;
   z-index: 1;
+}
+
+
+
+/* ===== hero including step wise fade in===== */
+.hero {
+  h1 {
+    animation: fadeInUp 0.8s ease 0.1s both;
+  }
+
+  .sub {
+    animation: fadeInUp 0.8s ease 0.3s both;
+  }
+
+  .cta-container {
+    animation: fadeInUp 0.8s ease 0.5s both;
+  }
+
+  .hero-link {
+    animation: fadeInUp 0.8s ease 0.7s both;
+  }
+
+  .hero-text-line {
+    animation: fadeInUp 0.8s ease 0.6s both;
+
+    &:nth-child(2) {
+      animation: fadeInUp 0.8s ease 0.65s both;
+    }
+  }
+
+  .hero-scroll {
+    animation: fadeInUp 0.8s ease 0.8s both;
+  }
+
+  .hero-whisper {
+    animation: fadeInUp 0.8s ease 0.9s both;
+  }
+}
+
+.hero-steps .step {
+  &:nth-child(1) {
+    animation: fadeInUp 0.6s ease 0.7s both;
+  }
+
+  &:nth-child(2) {
+    animation: fadeInUp 0.6s ease 0.82s both;
+  }
+
+  &:nth-child(3) {
+    animation: fadeInUp 0.6s ease 0.94s both;
+  }
+}
+
+
+
+/* ===== moving pulse ===== */
+.data-flow-line {
+  position: relative;
+  width: 2px;
+  height: 2.5rem;           /* tweak as needed */
+  border-radius: 9999px;
+  overflow: hidden;         /* ensures perfect symmetry at ends */
+  background: transparent;  /* no bg animation here */
+
+  /* the moving pulse */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    width: 100%;
+    /* make the pulse a bit taller than the container
+       so it can fade in/out inside the clip */
+    height: 120%;
+    top: -10%;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(154,91,255,0) 10%,
+      rgba(154,91,255,.6) 40%,
+      rgba(154,91,255,1) 50%,
+      rgba(154,91,255,.6) 60%,
+      rgba(154,91,255,0) 90%,
+      transparent 100%
+    );
+    animation: dataFlowOsc 1.6s ease-in-out infinite;
+    will-change: transform;
+  }
+}
+
+/* ===== Gooey carousel dots ===== */
+.gooey-dots {
+  filter: url(#goo);
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  transition: width .35s ease, height .35s ease, background-color .2s ease, transform .35s ease;
+
+  &.is-active {
+    width: 16px;
+    height: 16px;
+    transform: translateX(1px);
+  }
+
+  &.is-next {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
 }
 
 /* Animation sequence */
@@ -1530,103 +1613,9 @@ button:hover .arrow {
   }
 }
 
-.hero h1 {
-  animation: fadeInUp 0.8s ease 0.1s both;
-}
-
-.hero .sub {
-  animation: fadeInUp 0.8s ease 0.3s both;
-}
-
-.hero .cta-container {
-  animation: fadeInUp 0.8s ease 0.5s both;
-}
-
-.hero .hero-link {
-  animation: fadeInUp 0.8s ease 0.7s both;
-}
-
-.hero .hero-text-line {
-  animation: fadeInUp 0.8s ease 0.6s both;
-}
-
-.hero .hero-text-line:nth-child(2) {
-  animation: fadeInUp 0.8s ease 0.65s both;
-}
-
-.hero .hero-scroll {
-  animation: fadeInUp 0.8s ease 0.8s both;
-}
-
-.hero .hero-whisper {
-  animation: fadeInUp 0.8s ease 0.9s both;
-}
-
-.hero-steps .step:nth-child(1) {
-  animation: fadeInUp 0.6s ease 0.7s both;
-}
-
-.hero-steps .step:nth-child(2) {
-  animation: fadeInUp 0.6s ease 0.82s both;
-}
-
-.hero-steps .step:nth-child(3) {
-  animation: fadeInUp 0.6s ease 0.94s both;
-}
-
-
 @keyframes nudge {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(6px); }
-}
-
-
-/* Accessibility: respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition: none !important;
-  }
-  
-  .neon-glow::before {
-    filter: blur(4px) !important;
-    opacity: 0.5 !important;
-  }
-}
-
-/* container: fixed size, clips the moving pulse */
-.data-flow-line{
-  position: relative;
-  width: 2px;
-  height: 2.5rem;           /* tweak as needed */
-  border-radius: 9999px;
-  overflow: hidden;         /* ensures perfect symmetry at ends */
-  background: transparent;  /* no bg animation here */
-}
-
-/* the moving pulse */
-.data-flow-line::before{
-  content: "";
-  position: absolute;
-  left: 0; right: 0;
-  width: 100%;
-  /* make the pulse a bit taller than the container
-     so it can fade in/out inside the clip */
-  height: 120%;
-  top: -10%;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(154,91,255,0) 10%,
-    rgba(154,91,255,.6) 40%,
-    rgba(154,91,255,1) 50%,
-    rgba(154,91,255,.6) 60%,
-    rgba(154,91,255,0) 90%,
-    transparent 100%
-  );
-  animation: dataFlowOsc 1.6s ease-in-out infinite;
-  will-change: transform;
 }
 
 /* top -> bottom -> top with a tiny dwell at each end */
@@ -1643,27 +1632,5 @@ button:hover .arrow {
   to { transform: scaleX(1); }
 }
 
-
-/* ===== Gooey carousel dots ===== */
-.gooey-dots {
-  filter: url(#goo);
-}
-
-.carousel-dot {
-  width: 10px;
-  height: 10px;
-  transition: width .35s ease, height .35s ease, background-color .2s ease, transform .35s ease;
-}
-
-.carousel-dot.is-active {
-  width: 16px;
-  height: 16px;
-  transform: translateX(1px);
-}
-
-.carousel-dot.is-next {
-  width: 12px;
-  height: 12px;
-}
 
 </style>
