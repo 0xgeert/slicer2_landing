@@ -437,100 +437,149 @@
           <div class="relative bg-white/[.03] rounded-3xl p-8 ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 max-w-2xl lg:max-w-none mx-auto">
             
             <div class="mb-6">
-              <h3 class="text-lg mb-1 font-semibold ">Simulation: "Buy when smart money accumulates + sell at 5x or after 72h"</h3>
+              <h3 class="text-lg mb-1 ">Simulation: <span class='font-bold text-white'>"Buy when smart money accumulates + sell at 5x or after 72h"</span></h3>
               <p class="text-neutral-400 text-xs">(Example results for demo)</p>
             </div>
             
-            <div class="mb-6">
+            <div class="mb-3">q
               <div class="flex justify-between text-[11px] text-white/55 mb-1">
-                <span>6 months → 6 seconds</span><span>Progress: 100%</span>
+                <span>6 months → 6 seconds</span>
+                <span>Progress: {{ simulation.progress.toFixed(0) }}%</span>
               </div>
               <div class="h-1.5 bg-white/10 rounded-full overflow-hidden">
-                <div class="h-full w-full bg-violet-400 origin-left animate-[progress_6s_linear_1]"></div>
+                <div 
+                  class="h-full bg-violet-400 origin-left transition-all duration-200"
+                  :style="{ width: simulation.progress + '%' }"
+                ></div>
               </div>
             </div>
             
-            <button class="mb-6 w-full h-11 rounded-xl bg-violet-500 hover:bg-violet-400 active:bg-violet-600
-                           text-black font-semibold relative neon-glow focus:outline-none
-                           focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950 transition-all duration-200">
-              Run Simulation
+            <button 
+              @click="runSimulation"
+              :disabled="simulation.isRunning"
+              :class="[
+                'mb-6 w-full h-11 rounded-xl font-semibold relative neon-glow focus:outline-none',
+                'focus:ring-2 focus:ring-violet-500/40 focus:ring-offset-2 focus:ring-offset-neutral-950 transition-all duration-200',
+                simulation.isRunning 
+                  ? 'bg-violet-400/50 text-black/50 cursor-not-allowed' 
+                  : 'bg-violet-500 hover:bg-violet-400 active:bg-violet-600 text-black cursor-pointer'
+              ]"
+            >
+              {{ simulation.isRunning ? 'Running...' : (simulation.hasRun ? 'Run Again' : 'Run Simulation') }}
             </button>
             
             <div class="grid grid-cols-2 gap-3 md:gap-4 mb-6">
               <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="text-2xl md:text-3xl font-semibold text-emerald-400">+247%</div>
-                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">ROI</div>
-              </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="text-2xl md:text-3xl text-white font-semibold">68%</div>
-                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">Win Rate</div>
-              </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="text-2xl md:text-3xl font-semibold text-rose-400">-18%</div>
-                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">Max DD</div>
-              </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="text-2xl md:text-3xl text-white font-semibold">2.4</div>
-                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">Sharpe</div>
-              </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="text-2xl md:text-3xl text-white font-semibold">4.2d</div>
-                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">Avg Hold</div>
-              </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="text-2xl md:text-3xl text-white font-semibold">32</div>
-                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide">Total Trades</div>
-              </div>
-            </div>
-            
-            <div class="h-48 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl mb-6 flex items-center justify-center border border-white/5">
-              <div class="text-center">
-                <div class="text-violet-500/80 mb-3">
-                  <i-fa-solid-chart-area class="w-8 h-8" />
-                </div>
-                <span class="text-neutral-400 text-sm font-medium">Equity curve visualization</span>
-              </div>
-            </div>
-            
-            <div class="space-y-8">
-              <div>
-                <button 
-                  @click="toggleExitBreakdown"
-                  class="group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all duration-200 hover:bg-white/10 bg-white/5 rounded-lg py-3 px-4 -my-3 cursor-pointer"
-                >
-                  <div class="flex items-center justify-between">
-                    <h4 class="font-semibold text-white/80 text-sm">Exit Breakdown</h4>
-                    <div class="flex items-center justify-center">
-                      <i-heroicons-solid-chevron-down 
-                        :class="[
-                          'w-4 h-4 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',
-                          isExitBreakdownExpanded ? 'rotate-180' : 'rotate-0'
-                        ]"
-                      />
-                    </div>
-                  </div>
-                </button>
                 <div 
                   :class="[
-                    'overflow-hidden transition-all duration-500 ease-in-out will-change-transform',
-                    isExitBreakdownExpanded ? 'max-h-32 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+                    'text-2xl md:text-3xl font-semibold',
+                    simulation.metrics.roi >= 0 ? 'text-emerald-400' : 'text-rose-400'
                   ]"
-                  :style="{ transform: 'translateZ(0)' }"
                 >
-                  <div class="space-y-2 text-sm pt-6">
-                    <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
-                      <span class="text-sm text-amber-100">TP 500%</span>
-                      <span class=" text-blue-400">7 trades</span>
-                    </div>
-                    <div class="flex justify-between items-center bg-white/5 rounded-lg p-2.5">
-                      <span class="text-sm text-amber-100">Time 72h</span>
-                      <span class=" text-blue-400">25 trades</span>
+                  {{ simulation.metrics.roi >= 0 ? '+' : '' }}{{ simulation.metrics.roi.toFixed(1) }}%
+                </div>
+                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide flex items-center gap-1">
+                  ROI
+                  <div class="group relative inline-block">
+                    <svg class="w-3 h-3 text-white/30 hover:text-white/50 cursor-help transition" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                    </svg>
+                    <div class="invisible group-hover:visible absolute bottom-full right-0 mb-2 w-48 p-2 bg-black/95 text-white/90 text-xs rounded border border-white/10 shadow-lg z-10 pointer-events-none">
+                      Return on Investment. Total percentage gain or loss from all trades over the simulation period.
                     </div>
                   </div>
                 </div>
               </div>
-            
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="text-2xl md:text-3xl text-white font-semibold">{{ simulation.metrics.winRate.toFixed(0) }}%</div>
+                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide flex items-center gap-1">
+                  Win Rate
+                  <div class="group relative inline-block">
+                    <svg class="w-3 h-3 text-white/30 hover:text-white/50 cursor-help transition" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                    </svg>
+                    <div class="invisible group-hover:visible absolute bottom-full right-0 mb-2 w-48 p-2 bg-black/95 text-white/90 text-xs rounded border border-white/10 shadow-lg z-10 pointer-events-none">
+                      Percentage of profitable trades out of total trades executed.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="text-2xl md:text-3xl font-semibold text-rose-400">-{{ simulation.metrics.maxDrawdown.toFixed(1) }}%</div>
+                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide flex items-center gap-1">
+                  Max DD
+                  <div class="group relative inline-block">
+                    <svg class="w-3 h-3 text-white/30 hover:text-white/50 cursor-help transition" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                    </svg>
+                    <div class="invisible group-hover:visible absolute bottom-full right-0 mb-2 w-48 p-2 bg-black/95 text-white/90 text-xs rounded border border-white/10 shadow-lg z-10 pointer-events-none">
+                      Maximum peak-to-trough decline in your cumulative P&L. Shows worst loss from a previous high.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center">
+                    <div class="text-white/40 text-[10px] md:text-[11px] tracking-wide">Total Trades</div>
+                    <div class="text-lg md:text-xl font-semibold text-white">
+                      {{ simulation.metrics.totalTrades }}
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <div class="text-white/40 text-[10px] md:text-[11px] tracking-wide">Bet Size</div>
+                    <div class="text-lg md:text-xl font-semibold text-white">
+                      ${{ simulation.config.betSize }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="text-2xl md:text-3xl text-white font-semibold">{{ simulation.metrics.avgHold.toFixed(1) }}d</div>
+                <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide flex items-center gap-1">
+                  Avg Hold
+                  <div class="group relative inline-block">
+                    <svg class="w-3 h-3 text-white/30 hover:text-white/50 cursor-help transition" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                    </svg>
+                    <div class="invisible group-hover:visible absolute bottom-full right-0 mb-2 w-48 p-2 bg-black/95 text-white/90 text-xs rounded border border-white/10 shadow-lg z-10 pointer-events-none">
+                      Average time positions are held before selling, measured in days.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center">
+                    <div class="text-white/40 text-[10px] md:text-[11px] tracking-wide">Best Trade</div>
+                    <div 
+                      :class="[
+                        'text-lg md:text-xl font-semibold',
+                        simulation.metrics.bestTrade >= 0 ? 'text-emerald-400' : 'text-white'
+                      ]"
+                    >
+                      {{ simulation.metrics.bestTrade >= 0 ? '+' : '' }}{{ simulation.metrics.bestTrade.toFixed(0) }}%
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <div class="text-white/40 text-[10px] md:text-[11px] tracking-wide">Worst Trade</div>
+                    <div 
+                      :class="[
+                        'text-lg md:text-xl font-semibold',
+                        simulation.metrics.worstTrade < 0 ? 'text-rose-400' : 'text-white'
+                      ]"
+                    >
+                      {{ simulation.metrics.worstTrade.toFixed(0) }}%
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            
+            <div class="h-48 rounded-xl  p-4 border border-white/5 bg-white/5">
+              <canvas ref="simulationChart"></canvas>
+            </div>
+            
             
           </div>
         </div>
@@ -1060,9 +1109,11 @@
 </template>
 
 <script>
+import simulationChartMixin from './mixins/simulationChartMixin.js'
 
 export default {
   name: "App",
+  mixins: [simulationChartMixin],
   data() {
     return {
       activeTab: 'hands-off',
@@ -1071,7 +1122,6 @@ export default {
       expressTotalDots: 5,
       isSignalSectionExpanded: false,
       isExitsSectionExpanded: false,
-      isExitBreakdownExpanded: false,
       isHeaderVisible: false,
       animatingToCTA: false,
       clickedDeployStrategy: false
@@ -1116,9 +1166,6 @@ export default {
     },
     toggleExitsSection() {
       this.isExitsSectionExpanded = !this.isExitsSectionExpanded
-    },
-    toggleExitBreakdown() {
-      this.isExitBreakdownExpanded = !this.isExitBreakdownExpanded
     },
     scrollToSimulationButton() {
       // Find the simulation widget (the main card container)
