@@ -957,7 +957,7 @@
                         </div>
                       </div>
                       <div class="mt-4 grid grid-cols-3 gap-2">
-                        <button disabled tabindex="-1" class="h-9 rounded-lg bg-emerald-400/90 text-black font-medium" aria-label="Approve trade">Approve</button>
+                        <button disabled tabindex="-1" class="h-9 rounded-lg bg-gray-500/50 text-gray-300 font-medium " aria-label="Approve trade">Approve</button>
                         <button disabled tabindex="-1" class="h-9 rounded-lg bg-white/8 text-white/80" aria-label="Skip trade">Skip</button>
                         <button disabled tabindex="-1" class="h-9 rounded-lg bg-white/8 text-white/80" aria-label="View trade info">Info</button>
                       </div>
@@ -1109,7 +1109,7 @@
         <p class="text-neutral-500 text-sm">No spam. Unsubscribe anytime.</p>
       </div>
       
-      <div class="grid md:grid-cols-3 gap-2 max-w-2xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-2 max-w-2xl mx-auto pt-8">
         <div class="flex items-center justify-center space-x-3 text-neutral-400">
           <i-heroicons-solid-user-group class="w-5 h-5 text-violet-600/80" />
           <span class="text-sm">First 500 users</span>
@@ -1126,7 +1126,7 @@
     </div>
   </section>
 </div>
-<div class="relative opacity-70 mt-32">  
+<div class="relative opacity-70 mt-52">  
   <footer id="footer" class="bg-black text-neutral-400 pt-16 pb- border-t border-white/5 px-4 sm:px-6 lg:px-8">
     <div class="mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
