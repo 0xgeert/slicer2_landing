@@ -211,8 +211,8 @@
 </div>
 
 <div class="relative overflow-hidden">  
-  <div class="absolute h-full inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
-  <section id="express" class="text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="absolute h-full inset-x-0 -z-10 overflow-hidden border-t border-violet-600/45" style="background: var(--gradient-section-linear);">&nbsp;</div>
+  <section id="express" class="text-white py-36 lg:py-56 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
 
       <!-- 2-col narrative: Copy (L) → Example (R) -->
@@ -220,7 +220,7 @@
         <!-- LEFT: Headline + paragraph -->
         <div class="space-y-10">
           <div class="text-center lg:text-left pt-6 lg:pt-16">
-            <div class="text-xs font-bold tracking-widest text-white/50 uppercase mb-1 border-l-4 border-purple-400/80 px-3 inline-block">EXPRESS 1/3</div>
+            <div class="text-xs font-bold tracking-widest text-white/50 uppercase mb-1 border-l-4 border-violet-500/80 px-3 inline-block">EXPRESS 1/3</div>
             <h2 class="text-[2.6rem] leading-[1] md:text-6xl lg:text-6xl mb-6 leading-tighter font-black tracking-[-0.015em] gradient-text-yellow text-balance">
               BUILD VISUALLY OR
               <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span>
@@ -234,7 +234,7 @@
         </div>
 
         <!-- RIGHT: Speech → Filter demo (scaled/uncrowded) -->
-        <div class="mt-4 lg:mt-6 lg:pl-4  lg:-mr-4 xl:pl-8 xl:-mr-8">
+        <div class="mt-24 lg:mt-6 lg:pl-4  lg:-mr-4 xl:pl-8 xl:-mr-8">
           <div class="mb-6">
             <div class="gooey-dots flex justify-center">
               <div class="flex items-center gap-2">
@@ -321,7 +321,7 @@
       <!-- /grid -->
 
       <!-- BRIDGE: “Every signal…” now centered under both columns on desktop and mobile alike -->
-      <div class="flex mt-24 lg:mt-0    flex-col items-center ">
+      <div class="flex mt-16 lg:mt-32    flex-col items-center ">
         <button
           @click="toggleSignalSection"
           class="max-w-2xl mx-auto group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-300 bg-white/5 hover:bg-white/8 border-2 border-violet-500/30 hover:border-violet-400/50 backdrop-blur-sm rounded-xl py-4 px-6 flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
@@ -411,14 +411,14 @@
 </div>
 
 <div class="relative overflow-hidden">  
-  <div class="absolute h-full inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
-  <section id="simulate" class=" text-white pt-20 pb-16 lg:pt-32 lg:pb-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="absolute h-full inset-x-0 -z-10 overflow-hidden border-t border-violet-600/45" style="background: var(--gradient-section-linear);">&nbsp;</div>
+  <section id="simulate" class=" text-white py-36 lg:py-56  lg:pb-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
       
       
       <!-- Mobile-first text section -->
       <div class="lg:hidden mb-12 text-center pt-8  max-w-4xl  mx-auto">
-        <div class="text-xs font-bold tracking-widest text-white/50 uppercase  border-l-4 border-purple-400/80 px-3 inline-block">SIMULATE 2/3</div>
+        <div class="text-xs font-bold tracking-widest text-white/50 uppercase  border-l-4 border-violet-500/80 px-3 inline-block">SIMULATE 2/3</div>
         <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
           KNOW IF IT
           <span class="gradient-text-yellow2">WINS BEFORE YOU TRADE IT</span>
@@ -429,7 +429,7 @@
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 lg:gap-28 items-start lg:mb-24 mb-12">
+      <div class="mt-24 lg:mt-0 grid lg:grid-cols-2 lg:gap-28 items-start lg:mb-24 mb-12">
         <div class="relative ">
           <!-- Large radial glow surrounding the card -->
           <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none overflow-hidden" style="background: var(--gradient-radial-feature-backdrop);"></div>
@@ -469,6 +469,46 @@
             </button>
             
             <div class="grid grid-cols-2 gap-3 md:gap-4 mb-4">
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg px-3 py-3 md:p-4 lg:p-5 border border-white/5 relative col-span-2">
+                <div class="grid grid-cols-2 gap-3 md:gap-4">
+                  <div class="flex flex-col">
+                    <div class="text-white/40 text-[10px] md:text-[11px] tracking-wide uppercase flex items-center gap-1">
+                      Capital Deployed
+                      <div class="group relative inline-block">
+                        <svg class="w-3 h-3 text-white/30 hover:text-white/50 cursor-help transition" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        <div class="invisible group-hover:visible absolute bottom-full right-0 mb-2 w-48 p-2 bg-black/95 text-white/90 text-xs rounded border border-white/10 shadow-lg z-10 pointer-events-none normal-case">
+                          Total amount of capital invested across all trades during the simulation period.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-lg md:text-xl lg:text-2xl font-semibold text-white">
+                      {{ formatCurrencyUnsigned(simulation.metrics.totalCapitalDeployed) }}
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="text-white/40 text-[10px] md:text-[11px] tracking-wide uppercase flex items-center gap-1">
+                      Cumulative P&L
+                      <div class="group relative inline-block">
+                        <svg class="w-3 h-3 text-white/30 hover:text-white/50 cursor-help transition" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        <div class="invisible group-hover:visible absolute bottom-full right-0 mb-2 w-48 p-2 bg-black/95 text-white/90 text-xs rounded border border-white/10 shadow-lg z-10 pointer-events-none normal-case">
+                          Total profit or loss accumulated from all trades over the simulation period.
+                        </div>
+                      </div>
+                    </div>
+                    <div :class="[
+                      'text-lg md:text-xl lg:text-2xl font-semibold',
+                      simulation.metrics.cumulativePnL >= 0 ? 'text-emerald-300' : 'text-rose-300'
+                    ]">
+                      {{ formatCurrency(simulation.metrics.cumulativePnL) }}
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
               <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg px-3 py-2 md:p-3 lg:p-4 border border-white/5 relative flex items-center lg:block">
                 <div 
                   :class="[
@@ -576,7 +616,7 @@
               </div>
             </div>
             
-            <div class="h-48 rounded-xl p-4 border border-white/5 bg-white/5">
+            <div class="h-48 rounded-xl pt-4 px-4 pb-2 border border-white/5 bg-white/5">
               <div ref="simulationChart" class="w-full h-full"></div>
             </div>
             
@@ -587,7 +627,7 @@
         <div class="text-right space-y-12 mt-[9rem]">
           <!-- Desktop-only text section -->
           <div class="hidden lg:block">
-            <div class="text-xs font-bold tracking-widest text-white/50 uppercase mb-1 border-r-4 border-purple-400/80 px-3">SIMULATE 2/3</div>
+            <div class="text-xs font-bold tracking-widest text-white/50 uppercase mb-1 border-r-4 border-violet-500/80 px-3">SIMULATE 2/3</div>
             <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight">
               <span class=" gradient-text-yellow">KNOW IF IT  </span>
               <span class="text-yellow-200">WINS</span>
@@ -601,7 +641,7 @@
         </div>
       </div>
       
-      <div class="flex -mt-4 flex-col items-center">
+      <div class="flex -mt-24 lg:-mt-8 flex-col items-center">
         <button 
           @click="toggleExitsSection"
           class="mx-auto max-w-2xl group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-300 bg-white/5 hover:bg-white/8 border-2 border-violet-500/30 hover:border-violet-400/50 backdrop-blur-sm rounded-xl py-4 px-6 flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
@@ -698,12 +738,12 @@
   </section>
 </div>
 <div class="relative">  
-  <div class="absolute h-full inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
-  <section id="deploy" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="absolute h-full inset-x-0 -z-10 overflow-hidden border-t border-violet-600/45" style="background: var(--gradient-section-linear);">&nbsp;</div>
+  <section id="deploy" class=" text-white py-36 lg:py-56 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
       
-      <div class="text-center mb-12 lg:mb-20 pt-8 lg:pt-16">
-        <div class="text-xs font-bold tracking-widest text-white/50 uppercase  border-l-4 border-purple-400/80 px-3 inline-block">DEPLOY 3/3</div>
+      <div class="text-center mb-12 lg:mb-20">
+        <div class="text-xs font-bold tracking-widest text-white/50 uppercase  border-l-4 border-violet-500/80 px-3 inline-block">DEPLOY 3/3</div>
         <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 font-black tracking-tight text-balance">
           <span class="gradient-text-yellow">DEPLOY <span class="gradient-text-yellow2">ON YOUR TERMS</span></span>
         </h2>
@@ -713,7 +753,7 @@
       </div>
       
       <!-- Segmented Control Tabs -->
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-4xl mx-auto mt-24 lg:mt-0">
         <!-- Tablist -->
         <div
           role="tablist" 
@@ -724,7 +764,7 @@
           <span 
             id="mode-indicator"
             class="pointer-events-none absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)]
-                   rounded-xl bg-violet-600/35 shadow-[0_0_0_1px_rgba(109,40,217,.3)_inset]
+                   rounded-xl bg-violet-800/30 shadow-[0_0_0_1px_rgba(109,40,217,.3)_inset]
                    transition-[transform] duration-300 ease-[cubic-bezier(.2,.8,.2,1)]"
             :style="{ transform: activeTab === 'hands-off' ? 'translateX(0%)' : 'translateX(100%)' }"
           ></span>
@@ -768,7 +808,7 @@
             class="space-y-8 transition-opacity duration-200"
             :class="activeTab === 'hands-off' ? 'opacity-100' : 'opacity-0 pointer-events-none'"
           >
-            <div class="text-center mb-12">
+            <div class="text-center mb-12 py-8 lg:py-12">
               <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-violet-400/80/80">HANDS-OFF AUTO-TRADING</h3>
               <p class="text-xl text-neutral-300 italic text-balance">Set it. Forget it. Smile.</p>
               <p class="text-white/70 text-sm mt-2 text-balance">Fully automated execution with complete transparency and control.</p>
@@ -880,7 +920,7 @@
             class="space-y-8 transition-opacity duration-200"
             :class="activeTab === 'human-loop' ? 'opacity-100' : 'opacity-0 pointer-events-none'"
           >
-            <div class="text-center ">
+            <div class="text-center py-8 lg:py-12">
               <h3 class="text-2xl lg:text-4xl mb-4 font-bold text-violet-400/80/80">HUMAN-IN-THE-LOOP</h3>
               <p class="text-xl text-neutral-300 italic  text-balance">Get notified. Approve trades. Stay in control.</p>
               <p class="text-white/70 text-sm mt-2 text-balance">Review and approve trades before execution with full context.</p>
@@ -1015,7 +1055,7 @@
   <!-- gradients: purple linear + black radial -->
   <div class="absolute inset-x-0 h-full pointer-events-none -z-10 overflow-hidden opacity-60" style="background: var(--gradient-violet);"></div>
 
-  <section id="cta" class="text-white pt-20 lg:pt-32 pb-20 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" style="padding-bottom: calc(5rem - 150px);">
+  <section id="cta" class="text-white py-36 lg:py-56 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" style="padding-bottom: calc(5rem - 150px);">
     <div class="max-w-5xl mx-auto text-center">
       <div class="mb-12 lg:mb-16 pt-8 lg:pt-16 hero-glow">
         <h2 class="text-[3.2rem] leading-[1] md:text-7xl lg:text-8xl mb-8 lg:mb-12  font-black tracking-tight gradient-text-yellow text-balance">
@@ -1188,6 +1228,46 @@ export default {
       
       window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
     },
+    setupSimulationObserver() {
+      // Wait for DOM to be ready
+      this.$nextTick(() => {
+        const simulateSection = document.getElementById('simulate')
+        if (!simulateSection) {
+          console.warn('Simulate section not found for observer')
+          return
+        }
+        
+        // Find the simulation widget container
+        const simulationWidget = simulateSection.querySelector('.bg-white\\/\\[\\.03\\]')
+        if (!simulationWidget) {
+          console.warn('Simulation widget not found for observer')
+          return
+        }
+        
+        // Create IntersectionObserver
+        this.simulationObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !this.simulation.hasRun) {
+                // Widget is visible and simulation hasn't run before
+                this.runSimulation()
+                // Disconnect observer after first trigger
+                this.simulationObserver.disconnect()
+              }
+            })
+          },
+          {
+            // Trigger when widget is 50% visible
+            threshold: 0.5,
+            // Add some margin to trigger slightly before fully visible
+            rootMargin: '0px 0px -10% 0px'
+          }
+        )
+        
+        // Start observing the simulation widget
+        this.simulationObserver.observe(simulationWidget)
+      })
+    },
     scrollToSection(sectionId, offset = 0) {
       const element = document.getElementById(sectionId)
       if (!element) {
@@ -1292,6 +1372,9 @@ export default {
 
     // Store handler for cleanup
     this.scrollHandler = throttledScrollHandler
+
+    // Set up IntersectionObserver for auto-starting simulation
+    this.setupSimulationObserver()
   },
   beforeUnmount() {
     // Clean up scroll listeners
@@ -1299,6 +1382,12 @@ export default {
       window.removeEventListener('scroll', this.scrollHandler)
       window.removeEventListener('touchmove', this.scrollHandler)
     }
+    
+    // Clean up simulation observer
+    if (this.simulationObserver) {
+      this.simulationObserver.disconnect()
+    }
+    
     // if (this._expressInterval) {
     //   clearInterval(this._expressInterval)
     // }

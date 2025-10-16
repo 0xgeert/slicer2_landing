@@ -21,7 +21,8 @@ export default {
           totalTrades: 0,
           cumulativePnL: 0,
           currentEquity: 0,
-          peakEquity: 0
+          peakEquity: 0,
+          totalCapitalDeployed: 0
         },
         config: {
           totalPoints: 30, // M
@@ -92,7 +93,7 @@ export default {
         paper_bgcolor: 'transparent',
         plot_bgcolor: 'transparent',
         autosize: true,
-        margin: { l: 0, r: 0,t: 0, b: 0},
+        margin: { l: 0, r: 0, t: 0, b: 42 },
         showlegend: false,
         hovermode: 'x unified',
         xaxis: {
@@ -253,6 +254,10 @@ export default {
       return sign + '$' + value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
     },
     
+    formatCurrencyUnsigned(value) {
+      return '$' + Math.abs(value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+    },
+
     formatPercent(value) {
       const sign = value >= 0 ? '+' : ''
       return sign + value.toFixed(2) + '%'
@@ -370,6 +375,11 @@ export default {
         
         // Update cumulative metrics
         metrics.cumulativePnL = runningPnL
+        
+        // Calculate total capital deployed (betSize * total trades)
+        const totalCapitalDeployed = config.betSize * metrics.totalTrades
+        metrics.totalCapitalDeployed = totalCapitalDeployed
+        
         metrics.winRate = metrics.totalTrades > 0 ? (totalWins / metrics.totalTrades) * 100 : 0
         metrics.avgHold = metrics.totalTrades > 0 ? totalHoldTime / metrics.totalTrades : 0
         
@@ -380,7 +390,6 @@ export default {
         }
         
         // ROI: return on total capital deployed (betSize * total trades)
-        const totalCapitalDeployed = config.betSize * metrics.totalTrades
         metrics.roi = totalCapitalDeployed > 0 ? (runningPnL / totalCapitalDeployed) * 100 : 0
         
         // Store point data
