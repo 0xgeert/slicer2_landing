@@ -21,7 +21,7 @@
   </svg>
   
   <!-- gradients: purple linear + black radial -->
-  <div class="absolute inset-0 h-[80vh] pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-violet);"></div>
+  <div class="absolute inset-0 h-[100vh] pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-violet);"></div>
   <header id="header" :class="['bg-violet-950/40 backdrop-blur-xl text-white py-6 px-8 border-b border-white/5 fixed w-full z-50 transition-all duration-300', { 'opacity-0 pointer-events-none -translate-y-full': !isHeaderVisible, 'opacity-100 translate-y-0': isHeaderVisible }]">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
@@ -211,7 +211,7 @@
 </div>
 
 <div class="relative overflow-hidden">  
-  <div class="absolute h-[300px] inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
+  <div class="absolute h-full inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <section id="express" class="text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
 
@@ -411,7 +411,7 @@
 </div>
 
 <div class="relative overflow-hidden">  
-  <div class="absolute h-[300px] inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
+  <div class="absolute h-full inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <section id="simulate" class=" text-white pt-20 pb-16 lg:pt-32 lg:pb-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
       
@@ -698,7 +698,7 @@
   </section>
 </div>
 <div class="relative">  
-  <div class="absolute h-[300px] inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
+  <div class="absolute h-full inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <section id="deploy" class=" text-white py-20 lg:py-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
       
@@ -718,13 +718,13 @@
         <div
           role="tablist" 
           aria-label="Deploy modes"
-          class="relative mx-auto mt-4 w-full max-w-3xl rounded-2xl bg-violet-950/40 p-1 ring-1 ring-violet-800/30 mb-16 focus-within:ring-2 focus-within:ring-violet-500/50"
+          class="relative mx-auto mt-4 w-full max-w-3xl rounded-2xl bg-violet-950/40 p-1 ring-1 ring-violet-800/30 mb-16 focus-within:ring-2 focus-within:ring-violet-500 "
         >
           <!-- sliding indicator -->
           <span 
             id="mode-indicator"
             class="pointer-events-none absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)]
-                   rounded-xl bg-violet-600/40 shadow-[0_0_0_1px_rgba(109,40,217,.3)_inset]
+                   rounded-xl bg-violet-600/35 shadow-[0_0_0_1px_rgba(109,40,217,.3)_inset]
                    transition-[transform] duration-300 ease-[cubic-bezier(.2,.8,.2,1)]"
             :style="{ transform: activeTab === 'hands-off' ? 'translateX(0%)' : 'translateX(100%)' }"
           ></span>
@@ -1012,9 +1012,8 @@
   </section>
 </div>
 <div class="relative">  
-  <div class="absolute h-[300px] inset-x-0 -z-10 overflow-hidden" style="background: var(--gradient-section-linear);">&nbsp;</div>
   <!-- gradients: purple linear + black radial -->
-  <div class="absolute inset-x-0 h-[80vh] pointer-events-none -z-10 overflow-hidden" style="background: var(--gradient-violet);"></div>
+  <div class="absolute inset-x-0 h-full pointer-events-none -z-10 overflow-hidden opacity-60" style="background: var(--gradient-violet);"></div>
 
   <section id="cta" class="text-white pt-20 lg:pt-32 pb-20 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" style="padding-bottom: calc(5rem - 150px);">
     <div class="max-w-5xl mx-auto text-center">
@@ -1325,9 +1324,9 @@ html, body {
     --gradient-CTA-text2: Yellow color (yellow), Used for yellow CTA + Section lead in. 
     --gradient-CTA-glow: Hero glow (yellow and violet). Used for CTA glow
   */
-  --gradient-violet: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 80%, transparent), transparent);
-  --gradient-section-linear: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 50%, transparent), transparent);
-  --gradient-radial-feature-backdrop: radial-gradient(circle, color-mix(in oklch,theme('colors.violet.950') 60%, transparent), transparent);
+  --gradient-violet: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 80%, transparent), color-mix(in oklch, theme('colors.violet.950') 20%, transparent), transparent);
+  --gradient-section-linear: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 35%, transparent), transparent);
+  --gradient-radial-feature-backdrop: radial-gradient(circle, color-mix(in oklch,theme('colors.violet.950') 50%, transparent), transparent);
 
   --gradient-secondary-color: linear-gradient(to right, theme('colors.violet.700'), theme('colors.violet.300'), theme('colors.violet.700'));
   
@@ -1345,10 +1344,10 @@ html, body {
 /* sRGB (non-P3) screens → richer but balanced */
 @media not (color-gamut: p3){
   :root{
-    --gradient-violet: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 100%, transparent), transparent);
-    --gradient-section-linear: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.900') 55%, transparent), transparent);
-    --gradient-radial-feature-backdrop: radial-gradient(circle, color-mix(in oklch,theme('colors.violet.950') 90%, transparent), transparent);
-    --gradient-CTA-text2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.amber.200'), theme('colors.amber.300'), theme('colors.amber.300'));
+    --gradient-violet: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 100%, transparent), color-mix(in oklch, theme('colors.violet.950') 70%, transparent), transparent);
+    --gradient-section-linear: linear-gradient(to bottom, color-mix(in oklch, theme('colors.violet.950') 60%, transparent), transparent);
+    --gradient-radial-feature-backdrop: radial-gradient(circle, color-mix(in oklch,theme('colors.violet.950') 75%, transparent), transparent);
+    --gradient-CTA-text2: linear-gradient(to right, theme('colors.amber.200'), theme('colors.yellow.300'), theme('colors.amber.300'));
 
     --gradient-CTA-glow: radial-gradient(
       100% 80% at 50% 50%,
@@ -1446,24 +1445,24 @@ html, body {
     border-radius: 20px;
     z-index: -1;
     filter: blur(10px);
-    opacity: 0.8;
+    opacity: 0.5;
     transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
   }
 
   &:hover::before {
-    opacity: 1;
+    opacity: 0.8;
     filter: blur(15px);
     transform: scale(1.05);
   }
 
   &:focus::before {
-    opacity: 1;
+    opacity: 0.8;
     filter: blur(15px);
     transform: scale(1.05);
   }
 
   &:active::before {
-    opacity: 0.9;
+    opacity: 0.7;
     filter: blur(8px);
     transform: scale(0.98);
   }
