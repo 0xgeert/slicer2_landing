@@ -326,10 +326,10 @@
           @click="toggleSignalSection"
           class="max-w-2xl mx-auto group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-300 bg-white/5 hover:bg-white/8 border-2 border-violet-500/30 hover:border-violet-400/50 backdrop-blur-sm rounded-xl py-4 px-6 flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
         >
-            <h3 class="text-xl font-bold text-violet-500/80/85 text-balance">Every signal, every slice, at your fingertips</h3>
+            <h3 class="text-xl font-bold text-amber-500/80/85 text-balance">Every signal, every slice, at your fingertips</h3>
             <i-heroicons-solid-chevron-down
               :class="[
-                'w-6 h-6 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',
+                'w-6 h-6 text-amber-500/80 group-hover:text-violet-400/80 transition-all duration-300',
                 isSignalSectionExpanded ? 'rotate-180' : 'rotate-0'
               ]"
             />
@@ -647,11 +647,11 @@
           class="mx-auto max-w-2xl group w-full text-left focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-300 bg-white/5 hover:bg-white/8 border-2 border-violet-500/30 hover:border-violet-400/50 backdrop-blur-sm rounded-xl py-4 px-6 flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
         >
           <div class="flex items-center justify-between gap-2">
-            <h3 class="w-full text-xl font-bold text-violet-500/80/80 text-balance transition-all lg:text-right">Simulate & Validate Your Edge</h3>
+            <h3 class="w-full text-xl font-bold text-amber-500/80/80 text-balance transition-all lg:text-right">Simulate & Validate Your Edge</h3>
             <div class="flex items-center justify-center">
               <i-heroicons-solid-chevron-down 
                 :class="[
-                  'w-6 h-6 text-violet-500/80 group-hover:text-violet-400/80 transition-all duration-300',
+                  'w-6 h-6 text-amber-500/80 group-hover:text-violet-400/80 transition-all duration-300',
                   isExitsSectionExpanded ? 'rotate-180' : 'rotate-0'
                 ]"
               />
@@ -865,23 +865,23 @@
               <div class="flex flex-col items-center justify-center gap-8 ">
                 <div class="space-y-3 text-xl py-6">
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-clock class="w-5 h-5 text-violet-500/80" />
+                    <i-heroicons-solid-clock class="w-5 h-5 text-amber-500/80" />
                     <span class="text-white/75">Trades executed 24/7</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-document-text class="w-5 h-5 text-violet-500/80" />
+                    <i-heroicons-solid-document-text class="w-5 h-5 text-amber-500/80" />
                     <span class="text-white/75">Every entry logged</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-eye class="w-5 h-5 text-violet-500/80" />
+                    <i-heroicons-solid-eye class="w-5 h-5 text-amber-500/80" />
                     <span class="text-white/75">Every exit transparent</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-chart-bar class="w-5 h-5 text-violet-500/80" />
+                    <i-heroicons-solid-chart-bar class="w-5 h-5 text-amber-500/80" />
                     <span class="text-white/75">Full P&L tracking</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-violet-500/80" />
+                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-amber-500/80" />
                     <span class="text-white/75">Switch modes anytime</span>
                   </div>
                 </div>
@@ -890,19 +890,19 @@
                   <h5 class="mb-4 font-semibold text-white/65">Security Features</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Non-custodial wallet integration</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Configurable position limits</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Emergency stop functionality</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Real-time monitoring dashboard</span>
                     </div>
                   </div>
@@ -970,19 +970,19 @@
                   <h5 class="mb-4 font-semibold text-white/65">Notification Channels</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Email</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">In-browser push</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Telegram</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Webhooks</span>
                     </div>
                   </div>
@@ -992,23 +992,23 @@
               <div class="flex flex-col items-center justify-center gap-8 pt-6">
                 <div class="space-y-3 text-xl mb-4 lg:mb-0">
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-bolt class="w-5 h-5 text-violet-500/80" />
+                    <i-heroicons-solid-bolt class="w-5 h-5 text-amber-500/80" />
                     <span class="text-white/75">Trade alerts sent instantly</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-cursor-arrow-rays class="w-5 h-5 text-violet-500/80" />
+                    <i-heroicons-solid-cursor-arrow-rays class="w-5 h-5 text-amber-500/80" />
                     <span class="text-white/75">One-click approve/decline</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-information-circle class="w-5 h-5 text-violet-500/80" />
+                    <i-heroicons-solid-information-circle class="w-5 h-5 text-amber-500/80" />
                     <span class="text-white/75">Full trade context provided</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-clipboard-document-list class="w-5 h-5 text-violet-500/80" />
+                    <i-heroicons-solid-clipboard-document-list class="w-5 h-5 text-amber-500/80" />
                     <span class="text-white/75">Complete audit trail</span>
                   </div>
                   <div class="flex items-center space-x-3">
-                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-violet-500/80" />
+                    <i-heroicons-solid-arrow-path class="w-5 h-5 text-amber-500/80" />
                     <span class="text-white/75">Switch modes anytime</span>
                   </div>
                 </div>
@@ -1017,19 +1017,19 @@
                   <h5 class="mb-4 font-semibold text-white/65">Control Features</h5>
                   <div class="space-y-3 text-sm">
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Real-time trade notifications</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Detailed trade reasoning</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Emergency stop override</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                      <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                      <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
                       <span class="text-white/55">Approval history tracking</span>
                     </div>
                   </div>
@@ -1136,8 +1136,8 @@
         </div>
         
         <!-- <div class="flex items-center space-x-6">
-          <span class="text-sm hover:text-violet-500/80 transition-colors cursor-pointer">Terms</span>
-          <span class="text-sm hover:text-violet-500/80 transition-colors cursor-pointer">Privacy</span>
+          <span class="text-sm hover:text-amber-500/80 transition-colors cursor-pointer">Terms</span>
+          <span class="text-sm hover:text-amber-500/80 transition-colors cursor-pointer">Privacy</span>
         </div> -->
       </div>
     </div>
