@@ -434,7 +434,7 @@
           <!-- Large radial glow surrounding the card -->
           <div class="absolute inset-0 -inset-x-32 -inset-y-32 blur-3xl pointer-events-none overflow-hidden" style="background: var(--gradient-radial-feature-backdrop);"></div>
           
-          <div class="relative bg-white/[.03] rounded-3xl p-8 ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 max-w-2xl lg:max-w-none mx-auto">
+          <div class="relative bg-white/[.03] rounded-3xl p-6 lg:p-8 ring-1 ring-white/10 shadow-2xl shadow-violet-500/10 max-w-2xl lg:max-w-none mx-auto">
             
             <div class="mb-6">
               <h3 class="text-lg mb-1 ">Simulation: <span class='font-bold text-white'>"Buy when smart money accumulates + sell at 5x or after 72h"</span></h3>
@@ -468,11 +468,11 @@
               {{ simulation.isRunning ? 'Running...' : (simulation.hasRun ? 'Run Again' : 'Run Simulation') }}
             </button>
             
-            <div class="grid grid-cols-2 gap-3 md:gap-4 mb-6">
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
+            <div class="grid grid-cols-2 gap-3 md:gap-4 mb-4">
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg px-3 py-2 md:p-3 lg:p-4 border border-white/5 relative flex items-center lg:block">
                 <div 
                   :class="[
-                    'text-2xl md:text-3xl font-semibold',
+                    'text-xl md:text-2xl font-semibold',
                     simulation.metrics.roi >= 0 ? 'text-emerald-400' : 'text-rose-400'
                   ]"
                 >
@@ -490,8 +490,8 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="text-2xl md:text-3xl text-white font-semibold">{{ simulation.metrics.winRate.toFixed(0) }}%</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg px-3 py-2 md:p-3 lg:p-4 border border-white/5 relative flex items-center lg:block">
+                <div class="text-xl md:text-2xl text-white font-semibold">{{ simulation.metrics.winRate.toFixed(0) }}%</div>
                 <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide flex items-center gap-1">
                   Win Rate
                   <div class="group relative inline-block">
@@ -504,8 +504,8 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="text-2xl md:text-3xl font-semibold text-rose-400">-{{ simulation.metrics.maxDrawdown.toFixed(1) }}%</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg px-3 py-2 md:p-3 lg:p-4 border border-white/5 relative flex items-center lg:block ">
+                <div class="text-xl md:text-2xl font-semibold text-rose-400">-{{ simulation.metrics.maxDrawdown.toFixed(1) }}%</div>
                 <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide flex items-center gap-1">
                   Max DD
                   <div class="group relative inline-block">
@@ -518,8 +518,8 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="space-y-2">
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg px-3 py-2 md:p-3 lg:p-4 border border-white/5 relative">
+                <div class="lg:space-y-2 -space-y-1">
                   <div class="flex justify-between items-center">
                     <div class="text-white/40 text-[10px] md:text-[11px] tracking-wide">Total Trades</div>
                     <div class="text-lg md:text-xl font-semibold text-white">
@@ -534,8 +534,8 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="text-2xl md:text-3xl text-white font-semibold">{{ simulation.metrics.avgHold.toFixed(1) }}d</div>
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg px-3 py-2 md:p-3 lg:p-4 border border-white/5 relative flex items-center lg:block">
+                <div class="text-xl md:text-2xl text-white font-semibold">{{ simulation.metrics.avgHold.toFixed(1) }}d</div>
                 <div class="absolute top-1 right-2 md:static md:mt-1 text-white/40 text-[10px] md:text-[11px] tracking-wide flex items-center gap-1">
                   Avg Hold
                   <div class="group relative inline-block">
@@ -548,8 +548,8 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg p-3 md:p-4 border border-white/5 relative">
-                <div class="space-y-2">
+              <div class="bg-white/5 hover:bg-white/[.06] transition rounded-lg px-3 py-2 md:p-3 lg:p-4 border border-white/5 relative ">
+                <div class="lg:space-y-2 -space-y-1">
                   <div class="flex justify-between items-center">
                     <div class="text-white/40 text-[10px] md:text-[11px] tracking-wide">Best Trade</div>
                     <div 
@@ -576,7 +576,7 @@
               </div>
             </div>
             
-            <div class="h-48 rounded-xl  p-4 border border-white/5 bg-white/5">
+            <div class="h-48 rounded-xl p-4 border border-white/5 bg-white/5">
               <div ref="simulationChart" class="w-full h-full"></div>
             </div>
             
