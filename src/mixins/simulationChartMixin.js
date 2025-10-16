@@ -471,12 +471,16 @@ export default {
       
       // Generate custom tick labels for symlog scale
       const allRealValues = data.map(p => [p.pointPnL, p.cumulativePnL]).flat()
-      const minVal = Math.min(...allRealValues)
-      const maxVal = Math.max(...allRealValues)
+      const minVal = Math.min(...allRealValues, -250) // Minimum $250 range
+      const maxVal = Math.max(...allRealValues, 250)   // Minimum $250 range
       const { tickvals, ticktext } = this.generateSymlogTicks(minVal, maxVal)
       
+      // Update layout with dynamic range
+      const layout = this.getChartLayout(tickvals, ticktext)
+      layout.yaxis.range = [this.symlog(minVal), this.symlog(maxVal)]
+      
       // Use Plotly.react for efficient updates without animation
-      Plotly.react(container, traces, this.getChartLayout(tickvals, ticktext))
+      Plotly.react(container, traces, layout)
     }
   },
 
