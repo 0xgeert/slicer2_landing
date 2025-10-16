@@ -220,7 +220,7 @@
         <!-- LEFT: Headline + paragraph -->
         <div class="space-y-10">
           <div class="text-center lg:text-left pt-6 lg:pt-16">
-            <div class="text-xs font-bold tracking-widest text-violet-400/80 uppercase mb-1">EXPRESS 1/3</div>
+            <div class="text-xs font-bold tracking-widest text-white/50 uppercase mb-1 border-l-4 border-purple-400/80 px-3 inline-block">EXPRESS 1/3</div>
             <h2 class="text-[2.6rem] leading-[1] md:text-6xl lg:text-6xl mb-6 leading-tighter font-black tracking-[-0.015em] gradient-text-yellow text-balance">
               BUILD VISUALLY OR
               <span class="gradient-text-yellow2">SPEAK YOUR STRATEGY</span>
@@ -418,7 +418,7 @@
       
       <!-- Mobile-first text section -->
       <div class="lg:hidden mb-12 text-center pt-8  max-w-4xl  mx-auto">
-        <div class="text-xs font-bold tracking-widest text-violet-400/80 uppercase mb-1">SIMULATE 2/3</div>
+        <div class="text-xs font-bold tracking-widest text-white/50 uppercase  border-l-4 border-purple-400/80 px-3 inline-block">SIMULATE 2/3</div>
         <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 leading-tighter font-black tracking-tight gradient-text-yellow text-balance">
           KNOW IF IT
           <span class="gradient-text-yellow2">WINS BEFORE YOU TRADE IT</span>
@@ -587,7 +587,7 @@
         <div class="text-right space-y-12 mt-[9rem]">
           <!-- Desktop-only text section -->
           <div class="hidden lg:block">
-            <div class="text-xs font-bold tracking-widest text-violet-400/80 uppercase mb-1">SIMULATE 2/3</div>
+            <div class="text-xs font-bold tracking-widest text-white/50 uppercase mb-1 border-r-4 border-purple-400/80 px-3">SIMULATE 2/3</div>
             <h2 class="text-6xl mb-10 leading-tighter font-black tracking-tight">
               <span class=" gradient-text-yellow">KNOW IF IT  </span>
               <span class="text-yellow-200">WINS</span>
@@ -703,7 +703,7 @@
     <div class="max-w-6xl mx-auto">
       
       <div class="text-center mb-12 lg:mb-20 pt-8 lg:pt-16">
-        <div class="text-xs font-bold tracking-widest text-violet-400/80 uppercase mb-1">DEPLOY 3/3</div>
+        <div class="text-xs font-bold tracking-widest text-white/50 uppercase  border-l-4 border-purple-400/80 px-3 inline-block">DEPLOY 3/3</div>
         <h2 class="text-[2.6rem] leading-[1] md:text-6xl mb-4 font-black tracking-tight text-balance">
           <span class="gradient-text-yellow">DEPLOY <span class="gradient-text-yellow2">ON YOUR TERMS</span></span>
         </h2>
